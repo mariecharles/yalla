@@ -2,10 +2,17 @@
 
 $Source: 'Source Serif Pro', sans-serif;
 $Fira: 'Fira Sans', sans-serif;
+$Roboto: 'Roboto', sans-serif;
 
 // COLORS VARIABLES
 
 $yellow: #FFD52B;
+
+$lgrey: #FAFAFA;
+
+// WIDTHS VARIABLES
+
+$headerWidth: 90%;
 
 
 // IMPORTING FILES
@@ -13,6 +20,7 @@ $yellow: #FFD52B;
 @import "partials/clearfix";
 @import "partials/fonts";
 @import "partials/reset";
+@import "partials/ctas";
 
 @import "partials/header";
 @import "index";

@@ -1,0 +1,14 @@
+.cta {
+  padding: .7em 2em;
+  font-weight: 500;
+
+  a {
+    font-weight: 500;
+  }
+
+  &.cta-yellow {
+    background: $yellow;
+
+    a { color: #fff; }
+  }
+}
