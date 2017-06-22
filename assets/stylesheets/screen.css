@@ -1,3 +1,6 @@
+b {
+  font-weight: bold; }
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -345,8 +348,13 @@ h1 {
     clear: both; }
 #footer .logo-footer {
   width: 30%;
-  float: left;
-  background: #FFD52B; }
+  float: left; }
+  @media screen and (max-width: 580px) {
+    #footer .logo-footer {
+      float: none;
+      display: block;
+      margin: 10% auto;
+      padding-top: 10%; } }
   #footer .logo-footer img {
     display: block;
     margin: 10% auto; }
@@ -362,26 +370,37 @@ h1 {
   #footer .resume-footer div {
     width: 23%;
     float: left; }
+    @media screen and (max-width: 880px) {
+      #footer .resume-footer div {
+        width: 50%;
+        margin: 2% auto; } }
+    @media screen and (max-width: 580px) {
+      #footer .resume-footer div {
+        width: 100%; } }
   #footer .resume-footer a {
     line-height: 2em;
     color: #000; }
   #footer .resume-footer a:hover {
     color: #fff; }
 #footer .legal-footer {
-  background: #fff; }
-  #footer .legal-footer:after {
-    content: "";
-    display: table;
-    clear: both; }
+  background: #fff;
+  margin: 3% auto; }
   #footer .legal-footer ul {
-    display: block;
-    margin: 0 auto; }
+    text-align: center;
+    width: 100%; }
   #footer .legal-footer li {
-    color: #000;
-    float: left;
-    font-size: 14px; }
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 2%; }
+    @media screen and (max-width: 580px) {
+      #footer .legal-footer li {
+        width: 100%; } }
   #footer .legal-footer a {
-    color: #000;
-    font-size: 14px; }
+    font-size: 14px;
+    font-weight: bold; }
+  #footer .legal-footer b {
+    font-size: 14px;
+    color: #000; }
 
 /*# sourceMappingURL=screen.css.map */

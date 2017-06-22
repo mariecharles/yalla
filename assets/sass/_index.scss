@@ -181,8 +181,6 @@
   }
 }
     #footer {
-        // @include clearfix;
-
         .information {
         background: $yellow;
         @include clearfix;
@@ -192,7 +190,13 @@
         .logo-footer {
             width: 30%;
             float: left;
-            background: $yellow;
+
+            @media screen and (max-width: 580px) {
+              float: none;
+              display: block;
+              margin: 10% auto;
+              padding-top: 10%;
+            }
 
             img {
                 display: block;
@@ -210,6 +214,14 @@
             div {
                 width: 23%;
                 float: left;
+                @media screen and (max-width: 880px) {
+                  width: 50%;
+                  margin: 2% auto;
+                }
+
+                @media screen and (max-width: 580px) {
+                  width: 100%;
+                }
             }
 
             a {
@@ -223,24 +235,34 @@
         }
 
         .legal-footer {
-            @include clearfix;
             background: #fff;
+            margin: 3% auto;
+
 
             ul {
-                display: block;
-                margin: 0 auto;
-                // @include clearfix;
+                text-align: center;
+                width: 100%;
             }
 
             li {
-                color: #000;
-                float: left;
                 font-size: 14px;
+                font-weight: bold;
+                display: inline-block;
+                margin: 0 2%;
+
+                @media screen and (max-width: 580px) {
+                  width: 100%;
+                }
             }
 
             a {
-                color: #000;
                 font-size: 14px;
+                font-weight: bold;
+            }
+
+            b {
+                font-size: 14px;
+                color: #000;
             }
         }
     }
