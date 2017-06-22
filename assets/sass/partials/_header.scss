@@ -1,8 +1,22 @@
 header {
-    width: $headerWidth;
-    margin: 0 auto;
-    @include clearfix;
-    padding-top: 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 555;
+    padding: 2em 0;
+    background: #fff;
+    transition: .4s ease-out;
+
+    &.active {
+      top: -50%;
+      transition: .6s ease-in;
+    }
+
+    .inner {
+      width: $headerWidth;
+      margin: 0 auto;
+      @include clearfix;
+    }
 
     ul {
         font-size: 0;
@@ -14,15 +28,15 @@ header {
         padding: 0.3em 1em;
 
         &.active a {
-          padding-bottom: .8em;
-          border-bottom: 3px solid $yellow;
+            padding-bottom: 0.8em;
+            border-bottom: 3px solid $yellow;
         }
     }
 }
 
 h1 {
     float: left;
-    padding-top: .7em;
+    padding-top: 0.7em;
 }
 
 #inner-header {
@@ -43,6 +57,5 @@ h1 {
         background: transparent;
         padding: 0.7em 1em;
         border-radius: 100px;
-
     }
 }

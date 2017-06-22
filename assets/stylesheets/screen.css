@@ -204,52 +204,66 @@ ul {
 
 /* line 1, ../sass/partials/_header.scss */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 555;
+  padding: 2em 0;
+  background: #fff;
+  transition: .4s ease-out;
+}
+/* line 10, ../sass/partials/_header.scss */
+header.active {
+  top: -50%;
+  transition: .6s ease-in;
+}
+/* line 15, ../sass/partials/_header.scss */
+header .inner {
   width: 90%;
   margin: 0 auto;
-  padding-top: 2em;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
-header:after {
+header .inner:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 7, ../sass/partials/_header.scss */
+/* line 21, ../sass/partials/_header.scss */
 header ul {
   font-size: 0;
 }
-/* line 11, ../sass/partials/_header.scss */
+/* line 25, ../sass/partials/_header.scss */
 header li {
   font-size: initial;
   display: inline-block;
   padding: 0.3em 1em;
 }
-/* line 16, ../sass/partials/_header.scss */
+/* line 30, ../sass/partials/_header.scss */
 header li.active a {
-  padding-bottom: .8em;
+  padding-bottom: 0.8em;
   border-bottom: 3px solid #FFD52B;
 }
 
-/* line 23, ../sass/partials/_header.scss */
+/* line 37, ../sass/partials/_header.scss */
 h1 {
   float: left;
-  padding-top: .7em;
+  padding-top: 0.7em;
 }
 
-/* line 28, ../sass/partials/_header.scss */
+/* line 42, ../sass/partials/_header.scss */
 #inner-header {
   float: right;
 }
-/* line 31, ../sass/partials/_header.scss */
+/* line 45, ../sass/partials/_header.scss */
 #inner-header #header-actions,
 #inner-header nav {
   display: inline-block;
 }
-/* line 36, ../sass/partials/_header.scss */
+/* line 50, ../sass/partials/_header.scss */
 #inner-header .cta {
   margin: 0 1.5em;
 }
-/* line 40, ../sass/partials/_header.scss */
+/* line 54, ../sass/partials/_header.scss */
 #inner-header select {
   -webkit-appearance: none;
   border: 1px solid #FFD52B;
@@ -260,41 +274,40 @@ h1 {
 
 /* line 1, ../sass/_index.scss */
 #intro {
-  margin-top: -5em;
-  padding: 11em 0 6em 0;
+  padding: 10em 0 6em 0;
   background: #FAFAFA;
 }
-/* line 6, ../sass/_index.scss */
+/* line 5, ../sass/_index.scss */
 #intro img {
   display: block;
   width: 90%;
   margin: 0 auto;
 }
-/* line 12, ../sass/_index.scss */
+/* line 11, ../sass/_index.scss */
 #intro h2 {
   width: 40%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.5em;
 }
-/* line 18, ../sass/_index.scss */
+/* line 17, ../sass/_index.scss */
 #intro h2 span.bolder {
   font-size: inherit;
   font-weight: bolder;
 }
 
-/* line 25, ../sass/_index.scss */
+/* line 24, ../sass/_index.scss */
 #last-news {
   background: #FFD52B;
   padding: 5em 0;
   color: #fff;
 }
-/* line 30, ../sass/_index.scss */
+/* line 29, ../sass/_index.scss */
 #last-news > .inner {
   width: 90%;
   margin: 0 auto;
 }
-/* line 35, ../sass/_index.scss */
+/* line 34, ../sass/_index.scss */
 #last-news h2 {
   font-size: 2em;
   font-weight: bold;
@@ -306,7 +319,7 @@ h1 {
   display: table;
   clear: both;
 }
-/* line 45, ../sass/_index.scss */
+/* line 44, ../sass/_index.scss */
 #last-news article {
   float: left;
   position: relative;
@@ -320,11 +333,11 @@ h1 {
   box-shadow: -2px 2px 7px rgba(0, 0, 0, 0.13);
   transition: .4s ease-out;
 }
-/* line 58, ../sass/_index.scss */
+/* line 57, ../sass/_index.scss */
 #last-news article:last-child {
   margin-right: 0;
 }
-/* line 62, ../sass/_index.scss */
+/* line 61, ../sass/_index.scss */
 #last-news article img.thumbnail {
   position: absolute;
   top: -25%;
@@ -332,67 +345,67 @@ h1 {
   opacity: 0;
   z-index: 33;
 }
-/* line 70, ../sass/_index.scss */
+/* line 69, ../sass/_index.scss */
 #last-news article:hover {
   background: #000;
   color: #fff;
   transition: .2s ease-in;
 }
-/* line 76, ../sass/_index.scss */
+/* line 75, ../sass/_index.scss */
 #last-news article:hover img.thumbnail {
   opacity: .5;
 }
-/* line 80, ../sass/_index.scss */
+/* line 79, ../sass/_index.scss */
 #last-news article .top-article {
   position: relative;
   z-index: 44;
   border-bottom: 2px solid rgba(34, 30, 34, 0.1);
 }
-/* line 85, ../sass/_index.scss */
+/* line 84, ../sass/_index.scss */
 #last-news article .top-article .inner {
   padding: 1em 2em;
 }
-/* line 90, ../sass/_index.scss */
+/* line 89, ../sass/_index.scss */
 #last-news article:hover .top-article {
   border: none;
 }
-/* line 94, ../sass/_index.scss */
+/* line 93, ../sass/_index.scss */
 #last-news article .category {
   background: #FFD52B;
   color: #fff;
   padding: .4em 1em;
   border-radius: 100px;
 }
-/* line 101, ../sass/_index.scss */
+/* line 100, ../sass/_index.scss */
 #last-news article h3 {
   font-family: "Fira Sans", sans-serif;
   margin: 1em 0 .7em 0;
   font-size: 1.6em;
   font-weight: 500;
 }
-/* line 108, ../sass/_index.scss */
+/* line 107, ../sass/_index.scss */
 #last-news article .content {
   position: relative;
   z-index: 44;
   padding: 2em 2em 1em 2em;
 }
-/* line 114, ../sass/_index.scss */
+/* line 113, ../sass/_index.scss */
 #last-news article p {
   font-size: 16px;
 }
-/* line 118, ../sass/_index.scss */
+/* line 117, ../sass/_index.scss */
 #last-news article a.read-more {
   display: block;
   margin-top: 1em;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 125, ../sass/_index.scss */
+/* line 124, ../sass/_index.scss */
 #last-news article:hover a.read-more {
   color: #fff;
 }
 
-/* line 131, ../sass/_index.scss */
+/* line 130, ../sass/_index.scss */
 #know-more {
   width: 90%;
   margin: 4em auto;
@@ -403,29 +416,29 @@ h1 {
   display: table;
   clear: both;
 }
-/* line 136, ../sass/_index.scss */
+/* line 135, ../sass/_index.scss */
 #know-more .one-fact {
   float: left;
   width: 31%;
   margin-right: 3%;
   text-align: center;
 }
-/* line 142, ../sass/_index.scss */
+/* line 141, ../sass/_index.scss */
 #know-more .one-fact:last-child {
   margin-right: 0;
 }
-/* line 146, ../sass/_index.scss */
+/* line 145, ../sass/_index.scss */
 #know-more .one-fact h3 {
   font-weight: bold;
   font-size: 1.4em;
 }
-/* line 151, ../sass/_index.scss */
+/* line 150, ../sass/_index.scss */
 #know-more .one-fact img {
   display: block;
   width: 30%;
   margin: 0 auto 2em auto;
 }
-/* line 157, ../sass/_index.scss */
+/* line 156, ../sass/_index.scss */
 #know-more .one-fact p {
   width: 70%;
   margin: 1em auto;
