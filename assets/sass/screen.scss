@@ -1,0 +1,25 @@
+// FONTS VARIABLES
+
+$Source: 'Source Serif Pro', sans-serif;
+$Fira: 'Fira Sans', sans-serif;
+
+// COLORS VARIABLES
+
+$yellow: #FFD52B;
+
+
+// IMPORTING FILES
+
+@import "partials/clearfix";
+@import "partials/fonts";
+@import "partials/reset";
+
+@import "partials/header";
+@import "index";
+@import "aboutus";
+@import "ouractions";
+@import "ournews";
+@import "supportus";
+@import "contact";
+
+@import "partials/footer";
