@@ -224,26 +224,31 @@ header li {
   display: inline-block;
   padding: 0.3em 1em;
 }
+/* line 16, ../sass/partials/_header.scss */
+header li.active a {
+  padding-bottom: .8em;
+  border-bottom: 3px solid #FFD52B;
+}
 
-/* line 18, ../sass/partials/_header.scss */
+/* line 23, ../sass/partials/_header.scss */
 h1 {
   float: left;
 }
 
-/* line 22, ../sass/partials/_header.scss */
+/* line 27, ../sass/partials/_header.scss */
 #inner-header {
   float: right;
 }
-/* line 25, ../sass/partials/_header.scss */
+/* line 30, ../sass/partials/_header.scss */
 #inner-header #header-actions,
 #inner-header nav {
   display: inline-block;
 }
-/* line 30, ../sass/partials/_header.scss */
+/* line 35, ../sass/partials/_header.scss */
 #inner-header .cta {
   margin: 0 1.5em;
 }
-/* line 34, ../sass/partials/_header.scss */
+/* line 39, ../sass/partials/_header.scss */
 #inner-header select {
   -webkit-appearance: none;
   border: 1px solid #FFD52B;
