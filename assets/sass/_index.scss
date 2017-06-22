@@ -54,6 +54,16 @@
     box-shadow: -2px 2px 7px rgba(0,0,0,.13);
     transition: .4s ease-out;
 
+    @media screen and (max-width: 880px) {
+      width: 43%;
+      margin: 3% 3%;
+    }
+
+    @media screen and (max-width: 580px) {
+      width: 100%;
+      margin: 3% 0;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -138,6 +148,17 @@
     margin-right: 3%;
     text-align: center;
 
+    @media screen and (max-width: 880px) {
+      width: 50%;
+      margin: 3% 0;
+    }
+
+    @media screen and (max-width: 580px) {
+      width: 100%;
+      margin: 3% 0;
+    }
+
+
     &:last-child {
       margin-right: 0;
     }
@@ -159,3 +180,67 @@
     }
   }
 }
+    #footer {
+        // @include clearfix;
+
+        .information {
+        background: $yellow;
+        @include clearfix;
+        }
+
+
+        .logo-footer {
+            width: 30%;
+            float: left;
+            background: $yellow;
+
+            img {
+                display: block;
+                margin: 10% auto;
+            }
+        }
+
+        .resume-footer {
+            @include clearfix;
+            width: 70%;
+            margin: 2% auto;
+            float: right;
+            background: $yellow;
+
+            div {
+                width: 23%;
+                float: left;
+            }
+
+            a {
+                line-height: 2em;
+                color: #000;
+            }
+
+            a:hover {
+                color: #fff;
+            }
+        }
+
+        .legal-footer {
+            @include clearfix;
+            background: #fff;
+
+            ul {
+                display: block;
+                margin: 0 auto;
+                // @include clearfix;
+            }
+
+            li {
+                color: #000;
+                float: left;
+                font-size: 14px;
+            }
+
+            a {
+                color: #000;
+                font-size: 14px;
+            }
+        }
+    }
