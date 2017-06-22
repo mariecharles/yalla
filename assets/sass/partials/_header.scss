@@ -1,29 +1,42 @@
 header {
-  width: $headerWidth;
-  margin: 0 auto;
-  @include clearfix;
-  padding-top: 2em;
+    width: $headerWidth;
+    margin: 0 auto;
+    @include clearfix;
+    padding-top: 2em;
 
-  ul { font-size: 0; }
-  li {
-    font-size: initial;
-    display: inline-block;
-    padding: .3em 1em;
-  }
+    ul {
+        font-size: 0;
+    }
+
+    li {
+        font-size: initial;
+        display: inline-block;
+        padding: 0.3em 1em;
+    }
 }
 
 h1 {
-  float: left;
+    float: left;
 }
 
 #inner-header {
-  float: right;
+    float: right;
 
-  nav, #header-actions {
-    display: inline-block;
-  }
+    #header-actions,
+    nav {
+        display: inline-block;
+    }
 
-  .cta {
-    margin: 0 1.5em;
-  }
+    .cta {
+        margin: 0 1.5em;
+    }
+
+    select {
+        -webkit-appearance: none;
+        border: 1px solid $yellow;
+        background: transparent;
+        padding: 0.7em 1em;
+        border-radius: 100px;
+
+    }
 }
