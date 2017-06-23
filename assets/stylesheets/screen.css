@@ -165,7 +165,7 @@ ul {
     .cta.cta-yellow a {
       color: #fff; }
 
-header {
+body:not([id*="admin-"]) header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -173,43 +173,95 @@ header {
   padding: 2em 0;
   background: #fff;
   transition: .4s ease-out; }
-  header.active {
+  @media screen and (max-width: 580px) {
+    body:not([id*="admin-"]) header {
+      padding-top: 0;
+      padding-bottom: 3%; } }
+  body:not([id*="admin-"]) header.active {
     top: -50%;
     transition: .6s ease-in; }
-  header .inner {
+  body:not([id*="admin-"]) header .inner {
     width: 90%;
     margin: 0 auto; }
-    header .inner:after {
+    body:not([id*="admin-"]) header .inner:after {
       content: "";
       display: table;
       clear: both; }
-  header ul {
+    body:not([id*="admin-"]) header .inner .logo-desktop {
+      display: block; }
+    @media screen and (max-width: 580px) {
+      body:not([id*="admin-"]) header .inner .logo-desktop {
+        display: none; } }
+    body:not([id*="admin-"]) header .inner .logo-mobile {
+      display: none;
+      margin: 0 auto;
+      width: 100px;
+      height: auto; }
+    @media screen and (max-width: 580px) {
+      body:not([id*="admin-"]) header .inner .logo-mobile {
+        display: block; } }
+    body:not([id*="admin-"]) header .inner .menu-burger {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      width: 26px; }
+      body:not([id*="admin-"]) header .inner .menu-burger span {
+        position: absolute;
+        width: 69%;
+        height: 2px;
+        background: #000; }
+        body:not([id*="admin-"]) header .inner .menu-burger span:nth-child(2) {
+          top: 7px;
+          width: 100%; }
+        body:not([id*="admin-"]) header .inner .menu-burger span:nth-child(3) {
+          top: 14px;
+          width: 69%; }
+    body:not([id*="admin-"]) header .inner .share-header {
+      display: none;
+      position: absolute;
+      width: 30px;
+      height: auto;
+      top: 30px;
+      right: 20px; }
+    @media screen and (max-width: 580px) {
+      body:not([id*="admin-"]) header .inner .menu-burger, body:not([id*="admin-"]) header .inner .share-header {
+        display: block; } }
+  body:not([id*="admin-"]) header ul {
     font-size: 0; }
-  header li {
+  body:not([id*="admin-"]) header li {
     font-size: initial;
     display: inline-block;
     padding: 0.3em 1em; }
-    header li.active a {
+    body:not([id*="admin-"]) header li.active a {
       padding-bottom: 0.8em;
       border-bottom: 3px solid #FFD52B; }
 
-h1 {
+body:not([id*="admin-"]) h1 {
   float: left;
   padding-top: 0.7em; }
+  @media screen and (max-width: 580px) {
+    body:not([id*="admin-"]) h1 {
+      float: none;
+      width: 100px;
+      margin: 0 auto; } }
 
-#inner-header {
+body:not([id*="admin-"]) #inner-header {
   float: right; }
-  #inner-header #header-actions,
-  #inner-header nav {
+  body:not([id*="admin-"]) #inner-header #header-actions,
+  body:not([id*="admin-"]) #inner-header nav {
     display: inline-block; }
-  #inner-header .cta {
+  body:not([id*="admin-"]) #inner-header .cta {
     margin: 0 1.5em; }
-  #inner-header select {
+  body:not([id*="admin-"]) #inner-header select {
     -webkit-appearance: none;
     border: 1px solid #FFD52B;
     background: transparent;
     padding: 0.7em 1em;
     border-radius: 100px; }
+  @media screen and (max-width: 580px) {
+    body:not([id*="admin-"]) #inner-header #header-actions, body:not([id*="admin-"]) #inner-header nav {
+      display: none; } }
 
 #intro {
   padding: 10em 0 6em 0;
