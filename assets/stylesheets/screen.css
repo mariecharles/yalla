@@ -1,162 +1,197 @@
+
 b {
   font-weight: bold; }
 
 .clearfix:before,
 .clearfix:after {
   content: " ";
-  display: table; }
+  display: table;
+}
 
+/* line 16, ../sass/partials/_clearfix.scss */
 .clearfix:after {
-  clear: both; }
+  clear: both;
+}
 
 @font-face {
   font-family: 'Source Serif Pro';
   src: url("../fontsSourceSerifPro-Semibold.eot");
   src: url("../fontsSourceSerifPro-Semibold.eot?#iefix") format("embedded-opentype"), url("../fontsSourceSerifPro-Semibold.woff") format("woff"), url("../fontsSourceSerifPro-Semibold.ttf") format("truetype");
   font-weight: 600;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Source Serif Pro';
   src: url("../fontsSourceSerifPro-Bold.eot");
   src: url("../fontsSourceSerifPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fontsSourceSerifPro-Bold.woff") format("woff"), url("../fontsSourceSerifPro-Bold.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Source Serif Pro';
   src: url("../fontsSourceSerifPro-Regular.eot");
   src: url("../fontsSourceSerifPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fontsSourceSerifPro-Regular.woff") format("woff"), url("../fontsSourceSerifPro-Regular.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-ExtraLight.eot");
   src: url("../fonts/FiraSans-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-ExtraLight.woff") format("woff"), url("../fonts/FiraSans-ExtraLight.ttf") format("truetype");
   font-weight: 200;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-Thin.eot");
   src: url("../fonts/FiraSans-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Thin.woff") format("woff"), url("../fonts/FiraSans-Thin.ttf") format("truetype");
   font-weight: 100;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-Black.eot");
   src: url("../fonts/FiraSans-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Black.woff") format("woff"), url("../fonts/FiraSans-Black.ttf") format("truetype");
   font-weight: 900;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-Medium.eot");
   src: url("../fonts/FiraSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Medium.woff") format("woff"), url("../fonts/FiraSans-Medium.ttf") format("truetype");
   font-weight: 500;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-ExtraLightItalic.eot");
   src: url("../fonts/FiraSans-ExtraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-ExtraLightItalic.woff") format("woff"), url("../fonts/FiraSans-ExtraLightItalic.ttf") format("truetype");
   font-weight: 200;
-  font-style: italic; }
+  font-style: italic;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-Bold.eot");
   src: url("../fonts/FiraSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Bold.woff") format("woff"), url("../fonts/FiraSans-Bold.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-SemiBold.eot");
   src: url("../fonts/FiraSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-SemiBold.woff") format("woff"), url("../fonts/FiraSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-LightItalic.eot");
   src: url("../fonts/FiraSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-LightItalic.woff") format("woff"), url("../fonts/FiraSans-LightItalic.ttf") format("truetype");
   font-weight: 300;
-  font-style: italic; }
+  font-style: italic;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-Italic.eot");
   src: url("../fonts/FiraSans-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Italic.woff") format("woff"), url("../fonts/FiraSans-Italic.ttf") format("truetype");
   font-weight: normal;
-  font-style: italic; }
+  font-style: italic;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-ExtraBold.eot");
   src: url("../fonts/FiraSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-ExtraBold.woff") format("woff"), url("../fonts/FiraSans-ExtraBold.ttf") format("truetype");
   font-weight: 800;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-Regular.eot");
   src: url("../fonts/FiraSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Regular.woff") format("woff"), url("../fonts/FiraSans-Regular.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-ExtraBoldItalic.eot");
   src: url("../fonts/FiraSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-ExtraBoldItalic.woff") format("woff"), url("../fonts/FiraSans-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 800;
-  font-style: italic; }
+  font-style: italic;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-BoldItalic.eot");
   src: url("../fonts/FiraSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-BoldItalic.woff") format("woff"), url("../fonts/FiraSans-BoldItalic.ttf") format("truetype");
   font-weight: bold;
-  font-style: italic; }
+  font-style: italic;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-Light.eot");
   src: url("../fonts/FiraSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Light.woff") format("woff"), url("../fonts/FiraSans-Light.ttf") format("truetype");
   font-weight: 300;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-SemiBoldItalic.eot");
   src: url("../fonts/FiraSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-SemiBoldItalic.woff") format("woff"), url("../fonts/FiraSans-SemiBoldItalic.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic; }
+  font-style: italic;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-MediumItalic.eot");
   src: url("../fonts/FiraSans-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-MediumItalic.woff") format("woff"), url("../fonts/FiraSans-MediumItalic.ttf") format("truetype");
   font-weight: 500;
-  font-style: italic; }
+  font-style: italic;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-BlackItalic.eot");
   src: url("../fonts/FiraSans-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-BlackItalic.woff") format("woff"), url("../fonts/FiraSans-BlackItalic.ttf") format("truetype");
   font-weight: 900;
-  font-style: italic; }
+  font-style: italic;
+}
 @font-face {
   font-family: 'Fira Sans';
   src: url("../fonts/FiraSans-ThinItalic.eot");
   src: url("../fonts/FiraSans-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-ThinItalic.woff") format("woff"), url("../fonts/FiraSans-ThinItalic.ttf") format("truetype");
   font-weight: 100;
-  font-style: italic; }
+  font-style: italic;
+}
+/* line 3, ../sass/partials/_reset.scss */
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
+/* line 8, ../sass/partials/_reset.scss */
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   font-size: 17px;
   font-family: "Roboto", sans-serif;
-  font-weight: lighter; }
+  font-weight: lighter;
+}
 
+/* line 17, ../sass/partials/_reset.scss */
 a, a:visited {
   text-decoration: none;
-  color: initial; }
+  color: initial;
+}
 
+/* line 22, ../sass/partials/_reset.scss */
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
+/* line 1, ../sass/partials/_ctas.scss */
 .cta {
   padding: .7em 2em;
   font-weight: 500;
+
   border-radius: 23px; }
   .cta a {
     font-weight: 500; }
@@ -165,156 +200,243 @@ ul {
     .cta.cta-yellow a {
       color: #fff; }
 
-header {
+/* line 1, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 555;
   padding: 2em 0;
   background: #fff;
-  transition: .4s ease-out; }
-  header.active {
-    top: -50%;
-    transition: .6s ease-in; }
-  header .inner {
-    width: 90%;
-    margin: 0 auto; }
-    header .inner:after {
-      content: "";
-      display: table;
-      clear: both; }
-  header ul {
-    font-size: 0; }
-  header li {
-    font-size: initial;
-    display: inline-block;
-    padding: 0.3em 1em; }
-    header li.active a {
-      padding-bottom: 0.8em;
-      border-bottom: 3px solid #FFD52B; }
+  transition: .4s ease-out;
+}
+/* line 10, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) header.active {
+  top: -50%;
+  transition: .6s ease-in;
+}
+/* line 15, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) header .inner {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+body:not([id*="admin-"]) header .inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 21, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) header ul {
+  font-size: 0;
+}
+/* line 25, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) header li {
+  font-size: initial;
+  display: inline-block;
+  padding: 0.3em 1em;
+}
+/* line 30, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) header li.active a {
+  padding-bottom: 0.8em;
+  border-bottom: 3px solid #FFD52B;
+}
 
-h1 {
+/* line 37, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) h1 {
   float: left;
-  padding-top: 0.7em; }
+  padding-top: 0.7em;
+}
 
-#inner-header {
-  float: right; }
-  #inner-header #header-actions,
-  #inner-header nav {
-    display: inline-block; }
-  #inner-header .cta {
-    margin: 0 1.5em; }
-  #inner-header select {
-    -webkit-appearance: none;
-    border: 1px solid #FFD52B;
-    background: transparent;
-    padding: 0.7em 1em;
-    border-radius: 100px; }
+/* line 42, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) #inner-header {
+  float: right;
+}
+/* line 45, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) #inner-header #header-actions,
+body:not([id*="admin-"]) #inner-header nav {
+  display: inline-block;
+}
+/* line 50, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) #inner-header .cta {
+  margin: 0 1.5em;
+}
+/* line 54, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) #inner-header select {
+  -webkit-appearance: none;
+  border: 1px solid #FFD52B;
+  background: transparent;
+  padding: 0.7em 1em;
+  border-radius: 100px;
+}
 
+/* line 1, ../sass/_index.scss */
 #intro {
   padding: 10em 0 6em 0;
-  background: #FAFAFA; }
-  #intro img {
-    display: block;
-    width: 90%;
-    margin: 0 auto; }
-  #intro h2 {
-    width: 40%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.5em; }
-    #intro h2 span.bolder {
-      font-size: inherit;
-      font-weight: bolder; }
+  background: #FAFAFA;
+}
+/* line 5, ../sass/_index.scss */
+#intro img {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 11, ../sass/_index.scss */
+#intro h2 {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+/* line 17, ../sass/_index.scss */
+#intro h2 span.bolder {
+  font-size: inherit;
+  font-weight: bolder;
+}
 
+/* line 24, ../sass/_index.scss */
 #last-news {
   background: #FFD52B;
   padding: 5em 0;
-  color: #fff; }
-  #last-news > .inner {
-    width: 90%;
-    margin: 0 auto; }
-  #last-news h2 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 1em; }
-  #last-news .all-articles:after {
-    content: "";
-    display: table;
-    clear: both; }
+  color: #fff;
+}
+/* line 29, ../sass/_index.scss */
+#last-news > .inner {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 34, ../sass/_index.scss */
+#last-news h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#last-news .all-articles:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 44, ../sass/_index.scss */
+#last-news article {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  width: 31%;
+  margin-right: 3%;
+  padding: 2em 0;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+  box-shadow: -2px 2px 7px rgba(0, 0, 0, 0.13);
+  transition: .4s ease-out;
+}
+@media screen and (max-width: 880px) {
+  /* line 44, ../sass/_index.scss */
   #last-news article {
-    float: left;
-    position: relative;
-    overflow: hidden;
-    width: 31%;
-    margin-right: 3%;
-    padding: 2em 0;
-    border-radius: 5px;
-    background: #fff;
-    color: #000;
-    box-shadow: -2px 2px 7px rgba(0, 0, 0, 0.13);
-    transition: .4s ease-out; }
-    @media screen and (max-width: 880px) {
-      #last-news article {
-        width: 43%;
-        margin: 3% 3%; } }
-    @media screen and (max-width: 580px) {
-      #last-news article {
-        width: 100%;
-        margin: 3% 0; } }
-    #last-news article:last-child {
-      margin-right: 0; }
-    #last-news article img.thumbnail {
-      position: absolute;
-      top: -25%;
-      left: -50%;
-      opacity: 0;
-      z-index: 33; }
-    #last-news article:hover {
-      background: #000;
-      color: #fff;
-      transition: .2s ease-in; }
-    #last-news article:hover img.thumbnail {
-      opacity: .5; }
-    #last-news article .top-article {
-      position: relative;
-      z-index: 44;
-      border-bottom: 2px solid rgba(34, 30, 34, 0.1); }
-      #last-news article .top-article .inner {
-        padding: 1em 2em; }
-    #last-news article:hover .top-article {
-      border: none; }
-    #last-news article .category {
-      background: #FFD52B;
-      color: #fff;
-      padding: .4em 1em;
-      border-radius: 100px; }
-    #last-news article h3 {
-      font-family: "Fira Sans", sans-serif;
-      margin: 1em 0 .7em 0;
-      font-size: 1.6em;
-      font-weight: 500; }
-    #last-news article .content {
-      position: relative;
-      z-index: 44;
-      padding: 2em 2em 1em 2em; }
-    #last-news article p {
-      font-size: 16px; }
-    #last-news article a.read-more {
-      display: block;
-      margin-top: 1em;
-      font-weight: bold;
-      text-transform: uppercase; }
-    #last-news article:hover a.read-more {
-      color: #fff; }
+    width: 43%;
+    margin: 3% 3%;
+  }
+}
+@media screen and (max-width: 580px) {
+  /* line 44, ../sass/_index.scss */
+  #last-news article {
+    width: 100%;
+    margin: 3% 0;
+  }
+}
+/* line 67, ../sass/_index.scss */
+#last-news article:last-child {
+  margin-right: 0;
+}
+/* line 71, ../sass/_index.scss */
+#last-news article img.thumbnail {
+  position: absolute;
+  top: -25%;
+  left: -50%;
+  opacity: 0;
+  z-index: 33;
+}
+/* line 79, ../sass/_index.scss */
+#last-news article:hover {
+  background: #000;
+  color: #fff;
+  transition: .2s ease-in;
+}
+/* line 85, ../sass/_index.scss */
+#last-news article:hover img.thumbnail {
+  opacity: .5;
+}
+/* line 89, ../sass/_index.scss */
+#last-news article .top-article {
+  position: relative;
+  z-index: 44;
+  border-bottom: 2px solid rgba(34, 30, 34, 0.1);
+}
+/* line 94, ../sass/_index.scss */
+#last-news article .top-article .inner {
+  padding: 1em 2em;
+}
+/* line 99, ../sass/_index.scss */
+#last-news article:hover .top-article {
+  border: none;
+}
+/* line 103, ../sass/_index.scss */
+#last-news article .category {
+  background: #FFD52B;
+  color: #fff;
+  padding: .4em 1em;
+  border-radius: 100px;
+}
+/* line 110, ../sass/_index.scss */
+#last-news article h3 {
+  font-family: "Fira Sans", sans-serif;
+  margin: 1em 0 .7em 0;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+/* line 117, ../sass/_index.scss */
+#last-news article .content {
+  position: relative;
+  z-index: 44;
+  padding: 2em 2em 1em 2em;
+}
+/* line 123, ../sass/_index.scss */
+#last-news article p {
+  font-size: 16px;
+}
+/* line 127, ../sass/_index.scss */
+#last-news article a.read-more {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 134, ../sass/_index.scss */
+#last-news article:hover a.read-more {
+  color: #fff;
+}
 
+/* line 140, ../sass/_index.scss */
 #know-more {
   width: 90%;
-  margin: 4em auto; }
-  #know-more:after {
-    content: "";
-    display: table;
-    clear: both; }
+  margin: 4em auto;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#know-more:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 145, ../sass/_index.scss */
+#know-more .one-fact {
+  float: left;
+  width: 31%;
+  margin-right: 3%;
+  text-align: center;
+}
+@media screen and (max-width: 880px) {
+  /* line 145, ../sass/_index.scss */
   #know-more .one-fact {
     float: left;
     width: 31%;
@@ -348,14 +470,20 @@ h1 {
       display: block;
       margin: 0 auto; }
 
+/* line 186, ../sass/_index.scss */
 #footer .information {
-  background: #FFD52B; }
-  #footer .information:after {
-    content: "";
-    display: table;
-    clear: both; }
+  background: #FFD52B;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#footer .information:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 192, ../sass/_index.scss */
 #footer .logo-footer {
   width: 30%;
+
   float: left; }
   @media screen and (max-width: 580px) {
     #footer .logo-footer {
@@ -370,6 +498,7 @@ h1 {
   width: 70%;
   margin: 2% auto;
   float: right;
+
   background: #FFD52B; }
   #footer .resume-footer:after {
     content: "";
