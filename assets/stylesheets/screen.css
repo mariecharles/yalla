@@ -156,7 +156,8 @@ ul {
 
 .cta {
   padding: .7em 2em;
-  font-weight: 500; }
+  font-weight: 500;
+  border-radius: 23px; }
   .cta a {
     font-weight: 500; }
   .cta.cta-yellow {
@@ -339,6 +340,13 @@ h1 {
     #know-more .one-fact p {
       width: 70%;
       margin: 1em auto; }
+    #know-more .one-fact .jt-cta {
+      background: #FFD52B;
+      width: 210px;
+      border-radius: 23px;
+      padding: 2%;
+      display: block;
+      margin: 0 auto; }
 
 #footer .information {
   background: #FFD52B; }
