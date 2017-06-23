@@ -7,6 +7,11 @@ body:not([id*="admin-"]) header {
     background: #fff;
     transition: .4s ease-out;
 
+    @media screen and (max-width: 580px) {
+        padding-top: 0;
+        padding-bottom: 3%;
+    }
+
     &.active {
       top: -50%;
       transition: .6s ease-in;
@@ -16,8 +21,74 @@ body:not([id*="admin-"]) header {
       width: $headerWidth;
       margin: 0 auto;
       @include clearfix;
+
+      .logo-desktop {
+          display: block;
+      }
+      @media screen and (max-width: 580px) {
+          .logo-desktop {
+              display: none;
+          }
+      }
+
+      .logo-mobile {
+          display: none;
+          margin: 0 auto;
+          width: 100px;
+          height: auto;
+      }
+      @media screen and (max-width: 580px) {
+          .logo-mobile {
+              display: block;
+          }
+      }
+
+      .menu-burger {
+          display: none;
+          position: absolute;
+          top: 30px;
+          left: 20px;
+          width: 26px;
+
+          span {
+              position: absolute;
+              width: 69%;
+              height: 2px;
+              background: #000;
+
+              &:nth-child(2) {
+                  //background: blue;
+                  top: 7px;
+                  width: 100%;
+              }
+
+              &:nth-child(3) {
+                  //background: green;
+                  top: 14px;
+                  width: 69%;
+              }
+          }
+      }
+
+    .share-header {
+        display: none;
+        position: absolute;
+        width: 30px;
+        height: auto;
+        top : 30px;
+        right: 20px;
     }
- 
+
+    @media screen and (max-width: 580px) {
+        .menu-burger, .share-header {
+            display: block;
+        }
+      }
+
+    }
+
+    // END OF INNER
+
     ul {
         font-size: 0;
     }
@@ -37,6 +108,12 @@ body:not([id*="admin-"]) header {
 body:not([id*="admin-"]) h1 {
     float: left;
     padding-top: 0.7em;
+
+    @media screen and (max-width: 580px) {
+        float: none;
+        width: 100px;
+        margin: 0 auto;
+    }
 }
 
 body:not([id*="admin-"]) #inner-header {
@@ -57,5 +134,11 @@ body:not([id*="admin-"]) #inner-header {
         background: transparent;
         padding: 0.7em 1em;
         border-radius: 100px;
+    }
+
+    @media screen and (max-width: 580px) {
+        #header-actions, nav {
+            display: none;
+        }
     }
 }
