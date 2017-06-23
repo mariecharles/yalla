@@ -242,7 +242,8 @@ body:not([id*="admin-"]) header {
   @media screen and (max-width: 580px) {
     body:not([id*="admin-"]) header nav {
       width: 100%;
-      text-align: center; } }
+      text-align: center;
+      padding: 10%; } }
   body:not([id*="admin-"]) header ul {
     font-size: 0; }
   body:not([id*="admin-"]) header li {
@@ -251,7 +252,8 @@ body:not([id*="admin-"]) header {
     padding: 0.3em 1em; }
     @media screen and (max-width: 580px) {
       body:not([id*="admin-"]) header li {
-        display: block; } }
+        display: block;
+        padding-top: 9%; } }
     body:not([id*="admin-"]) header li.active a {
       padding-bottom: 0.8em;
       border-bottom: 3px solid #FFD52B; }
@@ -259,6 +261,9 @@ body:not([id*="admin-"]) header {
         body:not([id*="admin-"]) header li.active a {
           border: 0;
           font-weight: bold; } }
+    @media screen and (max-width: 580px) {
+      body:not([id*="admin-"]) header li a {
+        font-size: 24px; } }
 
 body:not([id*="admin-"]) h1 {
   float: left;
@@ -276,20 +281,41 @@ body:not([id*="admin-"]) #inner-header {
   @media screen and (max-width: 580px) {
     body:not([id*="admin-"]) #inner-header {
       display: none;
-      height: 100vh; }
-      body:not([id*="admin-"]) #inner-header.hidde {
-        display: block; } }
-  body:not([id*="admin-"]) #inner-header #header-actions,
-  body:not([id*="admin-"]) #inner-header nav {
-    display: inline-block; }
-  body:not([id*="admin-"]) #inner-header .cta {
+      height: 100vh; } }
+  body:not([id*="admin-"]) #inner-header.hidde {
+    display: block; }
+
+#header-actions,
+nav {
+  display: inline-block; }
+  @media screen and (max-width: 580px) {
+    #header-actions,
+    nav {
+      text-align: center;
+      width: 100%; } }
+  #header-actions .cta,
+  nav .cta {
     margin: 0 1.5em; }
-  body:not([id*="admin-"]) #inner-header select {
+    @media screen and (max-width: 580px) {
+      #header-actions .cta,
+      nav .cta {
+        margin: 0 auto;
+        width: 70%;
+        display: block;
+        margin-bottom: 11%;
+        margin-top: 4%; } }
+  #header-actions select,
+  nav select {
     -webkit-appearance: none;
     border: 1px solid #FFD52B;
     background: transparent;
     padding: 0.7em 1em;
     border-radius: 100px; }
+    @media screen and (max-width: 580px) {
+      #header-actions select,
+      nav select {
+        display: block;
+        margin: 0 auto; } }
 
 #intro {
   padding: 10em 0 6em 0;

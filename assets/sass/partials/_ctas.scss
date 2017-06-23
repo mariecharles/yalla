@@ -10,6 +10,11 @@
   &.cta-yellow {
     background: $yellow;
 
+    // @media screen and (max-width: 580px) {
+    //     display: block;
+    //     margin: 0 auto;
+    // }
+
     a { color: #fff; }
   }
 }
