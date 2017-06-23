@@ -1,18 +1,10 @@
-/*
-Error: Invalid CSS after "  cursor: pointer": expected "{", was ";"
-        on line 5 of /Users/alisonsayarath/yalla/assets/sass/partials/_ctas.scss
-        from line 29 of /Users/alisonsayarath/yalla/assets/sass/screen.scss
+b {
+  font-weight: bold; }
 
-1: .cta {
-2:   padding: .7em 2em;
-3:   font-weight: 500;
-4: <<<<<<< HEAD
-5:   cursor: pointer;
-6: =======
-7:   border-radius: 23px;
-8: >>>>>>> afef0e300af3fe6bc30ab04d26e85dbb46886155
-9: 
-10:   a {
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
 
 .clearfix:after {
   clear: both; }
@@ -161,6 +153,14 @@ a, a:visited {
 
 ul {
   list-style: none; }
+
+body[id*="admin-"]:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+select {
+  -webkit-appearance: none; }
 
 .cta {
   padding: .7em 2em;
@@ -471,3 +471,169 @@ body:not([id*="admin-"]) #inner-header {
     font-size: 14px;
     color: #000; }
 
+body[id*="admin-"] header {
+  padding: 2.5em 0;
+  border-bottom: 1px solid #000; }
+  body[id*="admin-"] header:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body[id*="admin-"] header .inner {
+    width: 90%;
+    margin: 0 auto; }
+body[id*="admin-"] #admin-actions {
+  float: right; }
+  body[id*="admin-"] #admin-actions:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body[id*="admin-"] #admin-actions > div {
+    float: left; }
+  body[id*="admin-"] #admin-actions .cta {
+    border: 1px solid #000;
+    margin: 0 .5em; }
+  body[id*="admin-"] #admin-actions .icon-action:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body[id*="admin-"] #admin-actions .icon-action > span {
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: .4em;
+    cursor: pointer;
+    font-size: 1.8em;
+    line-height: .8; }
+  body[id*="admin-"] #admin-actions .icon-action span.push {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 100%;
+    background: red;
+    color: #fff;
+    line-height: initial; }
+
+#admin-aside {
+  width: 15%;
+  float: left;
+  height: 87vh;
+  border-right: 1px solid #000; }
+  #admin-aside li.active {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1); }
+    #admin-aside li.active::before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 50%;
+      background: darkgrey;
+      left: 10px;
+      top: 25%; }
+  #admin-aside a {
+    display: block;
+    padding: 1.5em 2em;
+    border-bottom: 1px solid #000; }
+
+body[id*="admin-"] main {
+  width: 85%;
+  float: right; }
+  body[id*="admin-"] main .inner {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 2em; }
+    body[id*="admin-"] main .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+#admin-home:after {
+  content: "";
+  display: table;
+  clear: both; }
+#admin-home .all-articles {
+  width: 45%;
+  float: left;
+  background: #FAFAFA;
+  border-radius: 10px;
+  margin-right: 3%;
+  padding: 2em 0; }
+  #admin-home .all-articles .head {
+    padding-bottom: 1.6em;
+    border-bottom: 1px solid #000; }
+    #admin-home .all-articles .head a {
+      font-size: 16px;
+      font-weight: bolder;
+      margin: 0 10px; }
+    #admin-home .all-articles .head a:not(.active) {
+      color: grey; }
+    #admin-home .all-articles .head h2 {
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-block;
+      padding-left: 2em; }
+  #admin-home .all-articles article {
+    padding: 1em 2em; }
+    #admin-home .all-articles article:first-child {
+      padding-top: 1.4em; }
+    #admin-home .all-articles article h3 {
+      margin-bottom: 0.4em; }
+    #admin-home .all-articles article:hover {
+      background: grey; }
+      #admin-home .all-articles article:hover .actions {
+        display: inline-block; }
+    #admin-home .all-articles article > div {
+      display: inline-block; }
+      #admin-home .all-articles article > div.actions {
+        display: none;
+        margin-left: 6em; }
+    #admin-home .all-articles article .actions a,
+    #admin-home .all-articles article span {
+      font-size: 14px; }
+#admin-home .stats {
+  width: 52%;
+  float: right; }
+  #admin-home .stats .quick-stats > div {
+    background: #FAFAFA;
+    width: 31%;
+    margin-right: 3%;
+    float: left;
+    padding: 1.7em .8em; }
+    #admin-home .stats .quick-stats > div:last-child {
+      margin-right: 0; }
+  #admin-home .stats .quick-stats .head {
+    margin-bottom: 1em; }
+    #admin-home .stats .quick-stats .head h3 {
+      font-weight: bolder;
+      text-transform: uppercase;
+      font-size: 15px; }
+    #admin-home .stats .quick-stats .head span.last-date {
+      font-size: .8em; }
+  #admin-home .stats .quick-stats .nb {
+    font-size: 3.8em;
+    font-weight: bolder; }
+  #admin-home .stats .tab {
+    clear: both;
+    float: none;
+    width: 100%;
+    padding-top: 3em; }
+    #admin-home .stats .tab:after {
+      content: "";
+      display: table;
+      clear: both; }
+    #admin-home .stats .tab h2 {
+      font-size: 1.5em;
+      display: inline-block;
+      margin-bottom: 1.8em;
+      padding-top: .2em; }
+    #admin-home .stats .tab select {
+      float: right;
+      border-radius: 0;
+      padding: .6em 1.3em; }
+    #admin-home .stats .tab .stats-frame {
+      padding: 3em;
+      background: #FAFAFA; }
+
+/*# sourceMappingURL=screen.css.map */
