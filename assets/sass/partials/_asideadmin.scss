@@ -1,0 +1,27 @@
+#admin-aside {
+  width: 15%;
+  float: left;
+  height: 87vh;
+  border-right: 1px solid #000;
+
+  li.active {
+    position: relative;
+    background: rgba(0,0,0,.1);
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 50%;
+      background: darkgrey;
+      left: 10px;
+      top: 25%;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 1.5em 2em;
+    border-bottom: 1px solid #000;
+  }
+}

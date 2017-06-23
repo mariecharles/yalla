@@ -184,20 +184,33 @@ ul {
   list-style: none;
 }
 
+/* line 3, ../sass/partials/_clearfix.scss */
+body[id*="admin-"]:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 30, ../sass/partials/_reset.scss */
+select {
+  -webkit-appearance: none;
+}
+
 /* line 1, ../sass/partials/_ctas.scss */
 .cta {
   padding: .7em 2em;
   font-weight: 500;
+  cursor: pointer;
 }
-/* line 5, ../sass/partials/_ctas.scss */
+/* line 6, ../sass/partials/_ctas.scss */
 .cta a {
   font-weight: 500;
 }
-/* line 9, ../sass/partials/_ctas.scss */
+/* line 10, ../sass/partials/_ctas.scss */
 .cta.cta-yellow {
   background: #FFD52B;
 }
-/* line 12, ../sass/partials/_ctas.scss */
+/* line 13, ../sass/partials/_ctas.scss */
 .cta.cta-yellow a {
   color: #fff;
 }
@@ -545,4 +558,255 @@ body:not([id*="admin-"]) #inner-header select {
 #footer .legal-footer a {
   color: #000;
   font-size: 14px;
+}
+
+/* line 3, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] header {
+  padding: 2.5em 0;
+  border-bottom: 1px solid #000;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+body[id*="admin-"] header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 8, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] header .inner {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 15, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions {
+  float: right;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+body[id*="admin-"] #admin-actions:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 19, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions > div {
+  float: left;
+}
+/* line 23, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .cta {
+  border: 1px solid #000;
+  margin: 0 .5em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+body[id*="admin-"] #admin-actions .icon-action:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 31, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action > span {
+  display: block;
+  position: relative;
+  float: left;
+  margin-right: .4em;
+  cursor: pointer;
+  font-size: 1.8em;
+  line-height: .8;
+}
+/* line 41, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action span.push {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 100%;
+  background: red;
+  color: #fff;
+  line-height: initial;
+}
+
+/* line 1, ../sass/partials/_asideadmin.scss */
+#admin-aside {
+  width: 15%;
+  float: left;
+  height: 87vh;
+  border-right: 1px solid #000;
+}
+/* line 7, ../sass/partials/_asideadmin.scss */
+#admin-aside li.active {
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 11, ../sass/partials/_asideadmin.scss */
+#admin-aside li.active::before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 50%;
+  background: darkgrey;
+  left: 10px;
+  top: 25%;
+}
+/* line 22, ../sass/partials/_asideadmin.scss */
+#admin-aside a {
+  display: block;
+  padding: 1.5em 2em;
+  border-bottom: 1px solid #000;
+}
+
+/* line 2, ../sass/_adminhome.scss */
+body[id*="admin-"] main {
+  width: 85%;
+  float: right;
+}
+/* line 6, ../sass/_adminhome.scss */
+body[id*="admin-"] main .inner {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+body[id*="admin-"] main .inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-home:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 18, ../sass/_adminhome.scss */
+#admin-home .all-articles {
+  width: 45%;
+  float: left;
+  background: #FAFAFA;
+  border-radius: 10px;
+  margin-right: 3%;
+  padding: 2em 0;
+}
+/* line 26, ../sass/_adminhome.scss */
+#admin-home .all-articles .head {
+  padding-bottom: 1.6em;
+  border-bottom: 1px solid #000;
+}
+/* line 30, ../sass/_adminhome.scss */
+#admin-home .all-articles .head a {
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 0 10px;
+}
+/* line 36, ../sass/_adminhome.scss */
+#admin-home .all-articles .head a:not(.active) {
+  color: grey;
+}
+/* line 40, ../sass/_adminhome.scss */
+#admin-home .all-articles .head h2 {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding-left: 2em;
+}
+/* line 49, ../sass/_adminhome.scss */
+#admin-home .all-articles article {
+  padding: 1em 2em;
+}
+/* line 52, ../sass/_adminhome.scss */
+#admin-home .all-articles article:first-child {
+  padding-top: 1.4em;
+}
+/* line 56, ../sass/_adminhome.scss */
+#admin-home .all-articles article h3 {
+  margin-bottom: 0.4em;
+}
+/* line 60, ../sass/_adminhome.scss */
+#admin-home .all-articles article:hover {
+  background: grey;
+}
+/* line 63, ../sass/_adminhome.scss */
+#admin-home .all-articles article:hover .actions {
+  display: inline-block;
+}
+/* line 68, ../sass/_adminhome.scss */
+#admin-home .all-articles article > div {
+  display: inline-block;
+}
+/* line 71, ../sass/_adminhome.scss */
+#admin-home .all-articles article > div.actions {
+  display: none;
+  margin-left: 6em;
+}
+/* line 77, ../sass/_adminhome.scss */
+#admin-home .all-articles article .actions a,
+#admin-home .all-articles article span {
+  font-size: 14px;
+}
+/* line 85, ../sass/_adminhome.scss */
+#admin-home .stats {
+  width: 52%;
+  float: right;
+}
+/* line 90, ../sass/_adminhome.scss */
+#admin-home .stats .quick-stats > div {
+  background: #FAFAFA;
+  width: 31%;
+  margin-right: 3%;
+  float: left;
+  padding: 1.7em .8em;
+}
+/* line 97, ../sass/_adminhome.scss */
+#admin-home .stats .quick-stats > div:last-child {
+  margin-right: 0;
+}
+/* line 102, ../sass/_adminhome.scss */
+#admin-home .stats .quick-stats .head {
+  margin-bottom: 1em;
+}
+/* line 105, ../sass/_adminhome.scss */
+#admin-home .stats .quick-stats .head h3 {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+/* line 111, ../sass/_adminhome.scss */
+#admin-home .stats .quick-stats .head span.last-date {
+  font-size: .8em;
+}
+/* line 116, ../sass/_adminhome.scss */
+#admin-home .stats .quick-stats .nb {
+  font-size: 3.8em;
+  font-weight: bolder;
+}
+/* line 122, ../sass/_adminhome.scss */
+#admin-home .stats .tab {
+  clear: both;
+  float: none;
+  width: 100%;
+  padding-top: 3em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-home .stats .tab:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 129, ../sass/_adminhome.scss */
+#admin-home .stats .tab h2 {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-bottom: 1.8em;
+  padding-top: .2em;
+}
+/* line 136, ../sass/_adminhome.scss */
+#admin-home .stats .tab select {
+  float: right;
+  border-radius: 0;
+  padding: .6em 1.3em;
+}
+/* line 142, ../sass/_adminhome.scss */
+#admin-home .stats .tab .stats-frame {
+  padding: 3em;
+  background: #FAFAFA;
 }
