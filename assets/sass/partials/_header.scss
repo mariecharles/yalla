@@ -1,3 +1,7 @@
+body:not([id*="admin-"]).header-active {
+    overflow: hidden;
+}
+
 body:not([id*="admin-"]) header {
     position: fixed;
     top: 0;
@@ -49,6 +53,7 @@ body:not([id*="admin-"]) header {
           top: 30px;
           left: 20px;
           width: 26px;
+          height: 26px;
 
           span {
               position: absolute;
@@ -88,6 +93,13 @@ body:not([id*="admin-"]) header {
     }
 
     // END OF INNER
+    nav {
+        @media screen and (max-width: 580px) {
+                width: 100%;
+                text-align: center;
+        }
+    }
+
 
     ul {
         font-size: 0;
@@ -98,9 +110,19 @@ body:not([id*="admin-"]) header {
         display: inline-block;
         padding: 0.3em 1em;
 
+        @media screen and (max-width: 580px) {
+                display: block;
+        }
+
+
         &.active a {
             padding-bottom: 0.8em;
             border-bottom: 3px solid $yellow;
+
+        @media screen and (max-width: 580px) {
+            border: 0;
+            font-weight: bold;
+            }
         }
     }
 }
@@ -114,10 +136,23 @@ body:not([id*="admin-"]) h1 {
         width: 100px;
         margin: 0 auto;
     }
+
+    &.active #header {
+        display: block;
+    }
 }
 
 body:not([id*="admin-"]) #inner-header {
     float: right;
+    @media screen and (max-width: 580px) {
+        display: none;
+        height: 100vh;
+
+        &.hidde {
+            display: block;
+        }
+    }
+
 
     #header-actions,
     nav {
@@ -134,11 +169,5 @@ body:not([id*="admin-"]) #inner-header {
         background: transparent;
         padding: 0.7em 1em;
         border-radius: 100px;
-    }
-
-    @media screen and (max-width: 580px) {
-        #header-actions, nav {
-            display: none;
-        }
     }
 }

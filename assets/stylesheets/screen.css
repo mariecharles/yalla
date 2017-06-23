@@ -173,6 +173,9 @@ select {
     .cta.cta-yellow a {
       color: #fff; }
 
+body:not([id*="admin-"]).header-active {
+  overflow: hidden; }
+
 body:not([id*="admin-"]) header {
   position: fixed;
   top: 0;
@@ -213,7 +216,8 @@ body:not([id*="admin-"]) header {
       position: absolute;
       top: 30px;
       left: 20px;
-      width: 26px; }
+      width: 26px;
+      height: 26px; }
       body:not([id*="admin-"]) header .inner .menu-burger span {
         position: absolute;
         width: 69%;
@@ -235,15 +239,26 @@ body:not([id*="admin-"]) header {
     @media screen and (max-width: 580px) {
       body:not([id*="admin-"]) header .inner .menu-burger, body:not([id*="admin-"]) header .inner .share-header {
         display: block; } }
+  @media screen and (max-width: 580px) {
+    body:not([id*="admin-"]) header nav {
+      width: 100%;
+      text-align: center; } }
   body:not([id*="admin-"]) header ul {
     font-size: 0; }
   body:not([id*="admin-"]) header li {
     font-size: initial;
     display: inline-block;
     padding: 0.3em 1em; }
+    @media screen and (max-width: 580px) {
+      body:not([id*="admin-"]) header li {
+        display: block; } }
     body:not([id*="admin-"]) header li.active a {
       padding-bottom: 0.8em;
       border-bottom: 3px solid #FFD52B; }
+      @media screen and (max-width: 580px) {
+        body:not([id*="admin-"]) header li.active a {
+          border: 0;
+          font-weight: bold; } }
 
 body:not([id*="admin-"]) h1 {
   float: left;
@@ -253,9 +268,17 @@ body:not([id*="admin-"]) h1 {
       float: none;
       width: 100px;
       margin: 0 auto; } }
+  body:not([id*="admin-"]) h1.active #header {
+    display: block; }
 
 body:not([id*="admin-"]) #inner-header {
   float: right; }
+  @media screen and (max-width: 580px) {
+    body:not([id*="admin-"]) #inner-header {
+      display: none;
+      height: 100vh; }
+      body:not([id*="admin-"]) #inner-header.hidde {
+        display: block; } }
   body:not([id*="admin-"]) #inner-header #header-actions,
   body:not([id*="admin-"]) #inner-header nav {
     display: inline-block; }
@@ -267,9 +290,6 @@ body:not([id*="admin-"]) #inner-header {
     background: transparent;
     padding: 0.7em 1em;
     border-radius: 100px; }
-  @media screen and (max-width: 580px) {
-    body:not([id*="admin-"]) #inner-header #header-actions, body:not([id*="admin-"]) #inner-header nav {
-      display: none; } }
 
 #intro {
   padding: 10em 0 6em 0;
