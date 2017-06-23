@@ -22,3 +22,11 @@ a, a:visited {
 ul {
 	list-style: none;
 }
+
+body[id*="admin-"] {
+	@include clearfix;
+}
+
+select {
+	-webkit-appearance: none;
+}
