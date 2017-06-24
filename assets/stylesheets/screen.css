@@ -830,7 +830,16 @@ body[id*="admin-"] #admin-actions .icon-action:after {
   clear: both;
 }
 /* line 31, ../sass/partials/_headeradmin.scss */
-body[id*="admin-"] #admin-actions .icon-action > span {
+body[id*="admin-"] #admin-actions .icon-action > div {
+  float: left;
+  position: relative;
+}
+/* line 36, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action > div:hover > div[class*="my-"] {
+  display: block;
+}
+/* line 40, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action div > span {
   display: block;
   position: relative;
   float: left;
@@ -839,7 +848,25 @@ body[id*="admin-"] #admin-actions .icon-action > span {
   font-size: 1.8em;
   line-height: .8;
 }
-/* line 41, ../sass/partials/_headeradmin.scss */
+/* line 50, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action div > div {
+  display: none;
+  position: absolute;
+  z-index: 666;
+  background: #FAFAFA;
+  width: 200px;
+  top: 3em;
+  left: -100%;
+  padding: 1em;
+  text-align: center;
+  border: 1px solid #000;
+}
+/* line 62, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action div > div h3 {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+/* line 68, ../sass/partials/_headeradmin.scss */
 body[id*="admin-"] #admin-actions .icon-action span.push {
   position: absolute;
   top: 0;
@@ -876,6 +903,15 @@ body[id*="admin-"] #admin-actions .icon-action span.push {
   top: 25%;
 }
 /* line 22, ../sass/partials/_asideadmin.scss */
+#admin-aside li {
+  transition: .4s ease-out;
+}
+/* line 26, ../sass/partials/_asideadmin.scss */
+#admin-aside li:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transition: .3s ease;
+}
+/* line 31, ../sass/partials/_asideadmin.scss */
 #admin-aside a {
   display: block;
   padding: 1.5em 2em;
@@ -1071,19 +1107,19 @@ body[id*="admin-"] main .inner:after {
 #admin-add-article h2 span.more {
   display: inline-block;
 }
-/* line 29, ../sass/_adminarticles.scss */
+/* line 27, ../sass/_adminarticles.scss */
 #admin-add-article.opened h2 {
   border-bottom: 1px solid #000;
 }
-/* line 32, ../sass/_adminarticles.scss */
+/* line 30, ../sass/_adminarticles.scss */
 #admin-add-article.opened h2 .more {
   display: none;
 }
-/* line 35, ../sass/_adminarticles.scss */
+/* line 33, ../sass/_adminarticles.scss */
 #admin-add-article.opened h2 .less {
   display: inline-block;
 }
-/* line 40, ../sass/_adminarticles.scss */
+/* line 38, ../sass/_adminarticles.scss */
 #admin-add-article .wrapper {
   display: block;
   position: relative;
@@ -1096,7 +1132,7 @@ body[id*="admin-"] main .inner:after {
   overflow: hidden;
   transition: .5s ease-out;
 }
-/* line 52, ../sass/_adminarticles.scss */
+/* line 50, ../sass/_adminarticles.scss */
 #admin-add-article .wrapper.show {
   margin: 2em auto;
   transition: .6s ease-in-out;
@@ -1104,12 +1140,12 @@ body[id*="admin-"] main .inner:after {
   opacity: 1;
   max-height: 999px;
 }
-/* line 61, ../sass/_adminarticles.scss */
+/* line 59, ../sass/_adminarticles.scss */
 #admin-add-article .main-content {
   width: 65%;
   float: left;
 }
-/* line 65, ../sass/_adminarticles.scss */
+/* line 63, ../sass/_adminarticles.scss */
 #admin-add-article .main-content input {
   display: block;
   width: 100%;
@@ -1118,7 +1154,7 @@ body[id*="admin-"] main .inner:after {
   background: #FAFAFA;
   border: none;
 }
-/* line 75, ../sass/_adminarticles.scss */
+/* line 73, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content {
   width: 30%;
   margin-left: 5%;
@@ -1130,14 +1166,14 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 81, ../sass/_adminarticles.scss */
+/* line 79, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content h3 {
   background: #FAFAFA;
   font-weight: bolder;
   text-transform: uppercase;
   padding: 1.2em 1em;
 }
-/* line 88, ../sass/_adminarticles.scss */
+/* line 86, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div {
   border-bottom: 1px solid #000;
   padding: 1em 0;
@@ -1149,24 +1185,24 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 94, ../sass/_adminarticles.scss */
+/* line 92, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div.add-tags {
   border: none;
 }
-/* line 98, ../sass/_adminarticles.scss */
+/* line 96, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div span {
   display: block;
   float: left;
   margin-left: 1em;
   line-height: 2;
 }
-/* line 105, ../sass/_adminarticles.scss */
+/* line 103, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div select {
   float: right;
   margin-right: 1em;
   padding: .4em 1em;
 }
-/* line 111, ../sass/_adminarticles.scss */
+/* line 109, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div input {
   outline: none;
   display: block;
@@ -1177,7 +1213,7 @@ body[id*="admin-"] main .inner:after {
   border: none;
   border-bottom: 1px solid #000;
 }
-/* line 122, ../sass/_adminarticles.scss */
+/* line 120, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div .all-tags .tag {
   background: red;
   padding: .2em 1.5em;
@@ -1189,7 +1225,7 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 128, ../sass/_adminarticles.scss */
+/* line 126, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div .all-tags .tag i {
   display: none;
   float: left;
@@ -1201,11 +1237,11 @@ body[id*="admin-"] main .inner:after {
   color: #fff;
   margin-right: 1em;
 }
-/* line 140, ../sass/_adminarticles.scss */
+/* line 138, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div .all-tags .tag:hover i {
   display: block;
 }
-/* line 147, ../sass/_adminarticles.scss */
+/* line 145, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content button {
   display: block;
   float: left;
@@ -1215,7 +1251,7 @@ body[id*="admin-"] main .inner:after {
   font-size: 16px;
   padding: .7em 1em;
 }
-/* line 156, ../sass/_adminarticles.scss */
+/* line 154, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content button:last-child {
   margin-right: 0;
   background: #FAFAFA;
@@ -1227,26 +1263,26 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 171, ../sass/_adminarticles.scss */
+/* line 169, ../sass/_adminarticles.scss */
 #admin-all-articles > .head {
   background: #FAFAFA;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
-/* line 176, ../sass/_adminarticles.scss */
+/* line 174, ../sass/_adminarticles.scss */
 #admin-all-articles .head > .actions > div {
   display: inline-block;
   padding: 1em 3em;
   border-right: 1px solid #000;
   cursor: pointer;
 }
-/* line 182, ../sass/_adminarticles.scss */
+/* line 180, ../sass/_adminarticles.scss */
 #admin-all-articles .head > .actions > div select {
   border: none;
   background: transparent;
 }
 
-/* line 190, ../sass/_adminarticles.scss */
+/* line 188, ../sass/_adminarticles.scss */
 #admin-filter-articles {
   width: 90%;
   margin: 2em auto;
@@ -1257,24 +1293,24 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 195, ../sass/_adminarticles.scss */
+/* line 193, ../sass/_adminarticles.scss */
 #admin-filter-articles span.nb {
   font-weight: bolder;
   line-height: 2.8;
 }
-/* line 200, ../sass/_adminarticles.scss */
+/* line 198, ../sass/_adminarticles.scss */
 #admin-filter-articles select {
   float: right;
   background: transparent;
   padding: .5em 2em;
 }
 
-/* line 207, ../sass/_adminarticles.scss */
+/* line 205, ../sass/_adminarticles.scss */
 #admin-view-articles {
   width: 90%;
   margin: 0 auto;
 }
-/* line 211, ../sass/_adminarticles.scss */
+/* line 209, ../sass/_adminarticles.scss */
 #admin-view-articles article {
   width: 100%;
   padding: 1.7em 2em;
@@ -1288,34 +1324,34 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 219, ../sass/_adminarticles.scss */
+/* line 217, ../sass/_adminarticles.scss */
 #admin-view-articles article .content {
   float: left;
 }
-/* line 222, ../sass/_adminarticles.scss */
+/* line 220, ../sass/_adminarticles.scss */
 #admin-view-articles article .content h3 {
   font-weight: bolder;
 }
-/* line 227, ../sass/_adminarticles.scss */
+/* line 225, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions {
   float: right;
 }
-/* line 230, ../sass/_adminarticles.scss */
+/* line 228, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .author, #admin-view-articles article .actions .return {
   display: block;
   text-align: right;
 }
-/* line 235, ../sass/_adminarticles.scss */
+/* line 233, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .ctas {
   clear: both;
   margin-top: 1.5em;
 }
-/* line 240, ../sass/_adminarticles.scss */
+/* line 238, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .cta {
   border: 1px solid #000;
   padding: .5em 2em;
 }
-/* line 247, ../sass/_adminarticles.scss */
+/* line 245, ../sass/_adminarticles.scss */
 #admin-view-articles .pagination {
   text-align: center;
 }
