@@ -1310,11 +1310,26 @@ body[id*="admin-"] main .inner:after {
   width: 90%;
   margin: 0 auto;
 }
-/* line 209, ../sass/_adminarticles.scss */
+/* line 210, ../sass/_adminarticles.scss */
+#admin-view-articles.actions-on .checkbox {
+  opacity: 1;
+  width: 10%;
+  max-width: 999px;
+}
+/* line 216, ../sass/_adminarticles.scss */
+#admin-view-articles.actions-on .wrapper {
+  width: 90%;
+  background: #F1F1F1;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-view-articles.actions-on .wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 223, ../sass/_adminarticles.scss */
 #admin-view-articles article {
   width: 100%;
-  padding: 1.7em 2em;
-  background: #F1F1F1;
   border-radius: 15px;
   margin-bottom: 1em;
 }
@@ -1324,34 +1339,55 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 217, ../sass/_adminarticles.scss */
+/* line 229, ../sass/_adminarticles.scss */
+#admin-view-articles article .checkbox {
+  opacity: 0;
+  float: left;
+  max-width: 0;
+  text-align: center;
+  line-height: 5;
+  overflow: hidden;
+}
+/* line 238, ../sass/_adminarticles.scss */
+#admin-view-articles article .wrapper {
+  width: 100%;
+  float: right;
+  background: #F1F1F1;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-view-articles article .wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 245, ../sass/_adminarticles.scss */
 #admin-view-articles article .content {
   float: left;
 }
-/* line 220, ../sass/_adminarticles.scss */
+/* line 248, ../sass/_adminarticles.scss */
 #admin-view-articles article .content h3 {
   font-weight: bolder;
 }
-/* line 225, ../sass/_adminarticles.scss */
+/* line 251, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions {
   float: right;
 }
-/* line 228, ../sass/_adminarticles.scss */
+/* line 254, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .author, #admin-view-articles article .actions .return {
   display: block;
   text-align: right;
 }
-/* line 233, ../sass/_adminarticles.scss */
+/* line 259, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .ctas {
   clear: both;
   margin-top: 1.5em;
 }
-/* line 238, ../sass/_adminarticles.scss */
+/* line 264, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .cta {
   border: 1px solid #000;
   padding: .5em 2em;
 }
-/* line 245, ../sass/_adminarticles.scss */
+/* line 271, ../sass/_adminarticles.scss */
 #admin-view-articles .pagination {
   text-align: center;
 }
