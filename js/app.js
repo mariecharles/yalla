@@ -33,3 +33,10 @@ title_add_article.addEventListener('click', function() {
   section_add_article.classList.toggle('opened');
   content_add_article.classList.toggle('show');
 });
+
+var section_view_article = document.querySelector('#admin-view-articles');
+var checkbox_select = document.querySelector('#admin-all-articles .selected input[type="checkbox"]');
+
+checkbox_select.addEventListener('click', function() {
+    section_view_article.classList.toggle('actions-on');
+});

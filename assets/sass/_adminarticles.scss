@@ -206,20 +206,46 @@
   width: $adminMainWidth;
   margin: 0 auto;
 
+  &.actions-on {
+    .checkbox {
+      opacity: 1;
+      width: 10%;
+      max-width: 999px;
+    }
+
+    .wrapper {
+      width: 90%;
+      background: #F1F1F1;
+      @include clearfix;
+    }
+  }
+
   article {
     width: 100%;
-    padding: 1.7em 2em;
-    background: #F1F1F1;
     border-radius: 15px;
     margin-bottom: 1em;
     @include clearfix;
 
+    .checkbox {
+      opacity: 0;
+      float: left;
+      max-width: 0;
+      text-align: center;
+      line-height: 5;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      width: 100%;
+      float: right;
+      background: #F1F1F1;
+      @include clearfix;
+    }
+
     .content {
       float: left;
 
-      h3 {
-        font-weight: bolder;
-      }
+      h3 { font-weight: bolder; }
 
     }
     .actions {
@@ -242,8 +268,6 @@
     }
   }
 
-  .pagination {
-    text-align: center;
-  }
+  .pagination { text-align: center; }
 
 }
