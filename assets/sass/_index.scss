@@ -9,7 +9,7 @@
   }
 
   h2 {
-    width: 40%;
+    width: 28%;
     margin: 0 auto;
     text-align: center;
     font-size: 1.5em;
@@ -18,6 +18,16 @@
       font-size: inherit;
       font-weight: bolder;
     }
+  }
+
+  .social-network-intro {
+      width: $headerWidth;
+      margin: 0 auto;
+
+      li {
+          display: inline-block;
+          margin: 0 1%;
+      }
   }
 }
 
@@ -180,7 +190,8 @@
     }
 
     .jt-cta {
-        background: $yellow;
+        background: #000;
+        color: #fff;
         width: 210px;
         border-radius: 23px;
         padding: 2%;
@@ -189,89 +200,143 @@
     }
   }
 }
-    #footer {
-        .information {
-        background: $yellow;
-        @include clearfix;
-        }
 
+#newsletter-home {
+    background: #000;
+    color: #fff;
+    text-align: center; //peut-etre le retirer
+    @include clearfix;
 
-        .logo-footer {
-            width: 30%;
-            float: left;
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 35px;
+        padding-top: 3%;
+    }
 
-            @media screen and (max-width: 580px) {
-              float: none;
-              display: block;
-              margin: 10% auto;
-              padding-top: 10%;
-            }
+    p {
+        font-size: inherit;
+        text-align: center;
+        padding-top: 1%;
+    }
 
-            img {
-                display: block;
-                margin: 10% auto;
-            }
-        }
+    div {
+        padding: 2%;
 
-        .resume-footer {
-            @include clearfix;
-            width: 70%;
-            margin: 2% auto;
-            float: right;
-            background: $yellow;
-
-            div {
-                width: 23%;
-                float: left;
-                @media screen and (max-width: 880px) {
-                  width: 50%;
-                  margin: 2% auto;
-                }
-
-                @media screen and (max-width: 580px) {
-                  width: 100%;
-                }
-            }
-
-            a {
-                line-height: 2em;
-                color: #000;
-            }
-
-            a:hover {
-                color: #fff;
-            }
-        }
-
-        .legal-footer {
+        #newsletter {
+            position: absolute;
+            text-align: left;
+            width: 320px;
+            padding: 10px 46px;
+            border-radius: 23px;
+            border: 1px solid #fff;
             background: #fff;
-            margin: 3% auto;
+        }
 
+        #validation {
+            position: relative;
+            border-radius: 23px;
+            border: 1px solid #f3f3f3;
+            background: #f3f3f3;
+            margin-left: 268px;
+            padding: 10px 53px;
+            font-weight: bold;
+        }
 
-            ul {
-                text-align: center;
-                width: 100%;
-            }
+        .input-group-addo {
+            position: absolute;
+        }
 
-            li {
-                font-size: 14px;
-                font-weight: bold;
-                display: inline-block;
-                margin: 0 2%;
-
-                @media screen and (max-width: 580px) {
-                  width: 100%;
-                }
-            }
-
-            a {
-                font-size: 14px;
-                font-weight: bold;
-            }
-
-            b {
-                font-size: 14px;
-                color: #000;
-            }
+        .fa-envelope {
+            background:url(assets/img-layout/mail.svg) no-repeat center center;
+            position: absolute;
         }
     }
+}
+
+#footer {
+    .information {
+    background: #f3f3f3;
+    color: #000;
+    @include clearfix;
+    }
+
+
+    .logo-footer {
+        width: 30%;
+        float: left;
+
+        @media screen and (max-width: 580px) {
+          float: none;
+          display: block;
+          margin: 10% auto;
+          padding-top: 10%;
+        }
+
+        img {
+            display: block;
+            margin: 10% auto;
+        }
+    }
+
+    .resume-footer {
+        @include clearfix;
+        width: 70%;
+        margin: 2% auto;
+        float: right;
+
+        div {
+            width: 23%;
+            float: left;
+            @media screen and (max-width: 880px) {
+              width: 50%;
+              margin: 2% auto;
+            }
+
+            @media screen and (max-width: 580px) {
+              width: 100%;
+            }
+        }
+
+        a {
+            line-height: 2em;
+            color: #000;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+    }
+
+    .legal-footer {
+        background: #fff;
+        margin: 3% auto;
+
+
+        ul {
+            text-align: center;
+            width: 100%;
+        }
+
+        li {
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0 2%;
+
+            @media screen and (max-width: 580px) {
+              width: 100%;
+            }
+        }
+
+        a {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        b {
+            font-size: 14px;
+            color: #000;
+        }
+    }
+}
