@@ -1,17 +1,107 @@
 #admin-add-article {
-  padding: 1em 0;
-  background: rgba(0,0,0,.2);
-  border-bottom: 1px solid #000;
+  @include clearfix;
+  background: #fff;
 
   h2 {
+    padding: 1em 0;
     font-weight: bolder;
     padding-left: 2em;
     font-size: 1.2em;
+    background: rgba(0,0,0,.2);
+    border-bottom: 1px solid #000;
+    margin-bottom: 2em;
 
     span {
       font-size: inherit;
     }
   }
+
+  .wrapper {
+    width: $adminMainWidth;
+    margin: 2em auto;
+    padding-bottom: 4em;
+  }
+
+  .main-content {
+    width: 65%;
+    float: left;
+
+      input {
+        display: block;
+        width: 100%;
+        padding: .6em 1em;
+        margin-bottom: 2em;
+        background: $lgrey;
+        border: none;
+      }
+  }
+
+  .aside-content {
+    width: 30%;
+    margin-left: 5%;
+    float: right;
+    @include clearfix;
+
+    h3 {
+      background: $lgrey;
+      font-weight: bolder;
+      text-transform: uppercase;
+      padding: 1.2em 1em;
+    }
+
+    & > div {
+      border-bottom: 1px solid #000;
+      padding: 1em 0;
+      @include clearfix;
+      background: rgba(0,0,0,.2);
+
+      &.add-tags {
+        border: none;
+      }
+
+      span {
+        display: block;
+        float: left;
+        margin-left: 1em;
+        line-height: 2;
+
+        &:last-child {
+          background: red;
+        }
+      }
+
+      select {
+        float: right;
+        margin-right: 1em;
+        padding: .4em 1em;
+      }
+
+      textarea {
+        display: block;
+        width: 90%;
+        margin: 1em auto;
+        padding: 1em;
+      }
+    } // END OF DIVS
+
+  button {
+    display: block;
+    float: left;
+    margin: 1em 10px 1em 0;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    padding: .7em 1em;
+
+    &:last-child {
+      margin-right: 0;
+      background: $lgrey;
+    }
+  }
+
+  } // END OF ASIDE CONTENT
+
+
 }
 
 #admin-all-articles {
@@ -20,6 +110,7 @@
 
   & > .head {
     background: rgba(0,0,0,.2);
+    border-top: 1px solid #000;
     border-bottom: 1px solid #000;
   }
   .head > .actions > div {

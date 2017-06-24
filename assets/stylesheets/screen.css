@@ -206,6 +206,30 @@ select {
   -webkit-appearance: none;
 }
 
+/* line 34, ../sass/partials/_reset.scss */
+body[id*="admin-"] {
+  overflow: hidden;
+}
+/* line 37, ../sass/partials/_reset.scss */
+body[id*="admin-"] main {
+  height: 83vh;
+  overflow-y: auto;
+}
+/* line 41, ../sass/partials/_reset.scss */
+body[id*="admin-"] main::-webkit-scrollbar {
+  width: .5em;
+}
+/* line 45, ../sass/partials/_reset.scss */
+body[id*="admin-"] main::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background: transparent;
+}
+/* line 50, ../sass/partials/_reset.scss */
+body[id*="admin-"] main::-webkit-scrollbar-thumb {
+  background-color: #FAFAFA;
+  outline: 1px solid slategrey;
+}
+
 /* line 1, ../sass/partials/_ctas.scss */
 .cta {
   padding: .7em 2em;
@@ -1017,19 +1041,121 @@ body[id*="admin-"] main .inner:after {
 
 /* line 1, ../sass/_adminarticles.scss */
 #admin-add-article {
-  padding: 1em 0;
-  background: rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid #000;
+  background: #fff;
 }
-/* line 6, ../sass/_adminarticles.scss */
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-add-article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 5, ../sass/_adminarticles.scss */
 #admin-add-article h2 {
+  padding: 1em 0;
   font-weight: bolder;
   padding-left: 2em;
   font-size: 1.2em;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #000;
+  margin-bottom: 2em;
 }
-/* line 11, ../sass/_adminarticles.scss */
+/* line 14, ../sass/_adminarticles.scss */
 #admin-add-article h2 span {
   font-size: inherit;
+}
+/* line 19, ../sass/_adminarticles.scss */
+#admin-add-article .wrapper {
+  width: 90%;
+  margin: 2em auto;
+  padding-bottom: 4em;
+}
+/* line 25, ../sass/_adminarticles.scss */
+#admin-add-article .main-content {
+  width: 65%;
+  float: left;
+}
+/* line 29, ../sass/_adminarticles.scss */
+#admin-add-article .main-content input {
+  display: block;
+  width: 100%;
+  padding: .6em 1em;
+  margin-bottom: 2em;
+  background: #FAFAFA;
+  border: none;
+}
+/* line 39, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content {
+  width: 30%;
+  margin-left: 5%;
+  float: right;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-add-article .aside-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 45, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content h3 {
+  background: #FAFAFA;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 1.2em 1em;
+}
+/* line 52, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div {
+  border-bottom: 1px solid #000;
+  padding: 1em 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-add-article .aside-content > div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 58, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div.add-tags {
+  border: none;
+}
+/* line 62, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div span {
+  display: block;
+  float: left;
+  margin-left: 1em;
+  line-height: 2;
+}
+/* line 68, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div span:last-child {
+  background: red;
+}
+/* line 73, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div select {
+  float: right;
+  margin-right: 1em;
+  padding: .4em 1em;
+}
+/* line 79, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div textarea {
+  display: block;
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em;
+}
+/* line 87, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content button {
+  display: block;
+  float: left;
+  margin: 1em 10px 1em 0;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  padding: .7em 1em;
+}
+/* line 96, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content button:last-child {
+  margin-right: 0;
+  background: #FAFAFA;
 }
 
 /* line 3, ../sass/partials/_clearfix.scss */
@@ -1038,27 +1164,28 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 21, ../sass/_adminarticles.scss */
+/* line 111, ../sass/_adminarticles.scss */
 #admin-all-articles > .head {
   background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
-/* line 25, ../sass/_adminarticles.scss */
+/* line 116, ../sass/_adminarticles.scss */
 #admin-all-articles .head > .actions > div {
   display: inline-block;
   padding: 1em 3em;
   border-right: 1px solid #000;
   cursor: pointer;
 }
-/* line 31, ../sass/_adminarticles.scss */
+/* line 122, ../sass/_adminarticles.scss */
 #admin-all-articles .head > .actions > div select {
   border: none;
   background: transparent;
 }
 
-/* line 39, ../sass/_adminarticles.scss */
+/* line 130, ../sass/_adminarticles.scss */
 #admin-filter-articles {
-  width: 85%;
+  width: 90%;
   margin: 2em auto;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
@@ -1067,24 +1194,24 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 44, ../sass/_adminarticles.scss */
+/* line 135, ../sass/_adminarticles.scss */
 #admin-filter-articles span.nb {
   font-weight: bolder;
   line-height: 2.8;
 }
-/* line 49, ../sass/_adminarticles.scss */
+/* line 140, ../sass/_adminarticles.scss */
 #admin-filter-articles select {
   float: right;
   background: transparent;
   padding: .5em 2em;
 }
 
-/* line 56, ../sass/_adminarticles.scss */
+/* line 147, ../sass/_adminarticles.scss */
 #admin-view-articles {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
-/* line 60, ../sass/_adminarticles.scss */
+/* line 151, ../sass/_adminarticles.scss */
 #admin-view-articles article {
   width: 100%;
   padding: 1.7em 2em;
@@ -1098,34 +1225,34 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 68, ../sass/_adminarticles.scss */
+/* line 159, ../sass/_adminarticles.scss */
 #admin-view-articles article .content {
   float: left;
 }
-/* line 71, ../sass/_adminarticles.scss */
+/* line 162, ../sass/_adminarticles.scss */
 #admin-view-articles article .content h3 {
   font-weight: bolder;
 }
-/* line 76, ../sass/_adminarticles.scss */
+/* line 167, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions {
   float: right;
 }
-/* line 79, ../sass/_adminarticles.scss */
+/* line 170, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .author, #admin-view-articles article .actions .return {
   display: block;
   text-align: right;
 }
-/* line 84, ../sass/_adminarticles.scss */
+/* line 175, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .ctas {
   clear: both;
   margin-top: 1.5em;
 }
-/* line 89, ../sass/_adminarticles.scss */
+/* line 180, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .cta {
   border: 1px solid #000;
   padding: .5em 2em;
 }
-/* line 96, ../sass/_adminarticles.scss */
+/* line 187, ../sass/_adminarticles.scss */
 #admin-view-articles .pagination {
   text-align: center;
 }
