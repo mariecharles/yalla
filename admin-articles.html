@@ -60,7 +60,8 @@
 
     <main>
       <section id="admin-add-article">
-        <h2><span>+</span> Nouvel article</h2>
+        <h2><span class="more">+</span><span class="less">-</span> Nouvel article</h2>
+
         <div class="wrapper">
           <div class="main-content">
             <input type="text" placeholder="Entrer un titre">
@@ -90,7 +91,11 @@
             </div>
             <div class="add-tags">
               <span>Tags (3 maximum)</span>
-              <textarea placeholder="Commencez à taper..."></textarea>
+              <input type="text" name="tags" placeholder="Commencez à taper...">
+              <input type="hidden" name="tags" value="">
+              <div class="all-tags">
+                <span class="tag"><i>x</i>salut</span>
+              </div>
             </div>
             <button type="submit" class="publish">Publier</button>
             <button class="set-draft">Enregistrer comme brouillon</button>
@@ -98,6 +103,8 @@
           <!-- end of aside content -->
         </div>
       </section>
+
+
       <section id="admin-all-articles">
         <div class="head">
           <!-- <h2><span>-</span> Tous les articles</h2> -->
@@ -166,5 +173,6 @@
     </main>
 
   </body>
+  <script src="js/app.js"></script>
 
   </html>

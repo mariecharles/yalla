@@ -3,23 +3,57 @@
   background: #fff;
 
   h2 {
-    padding: 1em 0;
+    display: block;
+    position: relative;
+    z-index: 555;
+    padding: 1em 0 1em 2em;
     font-weight: bolder;
-    padding-left: 2em;
     font-size: 1.2em;
-    background: rgba(0,0,0,.2);
-    border-bottom: 1px solid #000;
-    margin-bottom: 2em;
+    background: $lgrey;
 
     span {
       font-size: inherit;
+
+      &.less {
+        display: none;
+      }
+      &.more {
+        display: inline-block;
+      }
+    }
+
+  }
+
+  &.opened h2 {
+    border-bottom: 1px solid #000;
+
+    .more {
+      display: none;
+    }
+    .less {
+      display: inline-block;
     }
   }
 
   .wrapper {
+    display: block;
+    position: relative;
     width: $adminMainWidth;
-    margin: 2em auto;
-    padding-bottom: 4em;
+    margin: 0 auto;
+    z-index: 11;
+    opacity: 0;
+    transform: translateY(-100%);
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s ease-out;
+
+    &.show {
+      margin: 2em auto;
+      transition: .6s ease-in-out;
+      transform: none;
+      opacity: 1;
+      max-height: 999px;
+    }
   }
 
   .main-content {
@@ -53,7 +87,7 @@
       border-bottom: 1px solid #000;
       padding: 1em 0;
       @include clearfix;
-      background: rgba(0,0,0,.2);
+      background: $lgrey;
 
       &.add-tags {
         border: none;
@@ -64,10 +98,6 @@
         float: left;
         margin-left: 1em;
         line-height: 2;
-
-        &:last-child {
-          background: red;
-        }
       }
 
       select {
@@ -76,11 +106,39 @@
         padding: .4em 1em;
       }
 
-      textarea {
+      input {
+        outline: none;
         display: block;
         width: 90%;
         margin: 1em auto;
-        padding: 1em;
+        padding: .3em 0;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000;
+      }
+
+      .all-tags .tag {
+        background: red;
+        padding: .2em 1.5em;
+        cursor: pointer;
+        @include clearfix;
+
+        i {
+          display: none;
+          float: left;
+          width: 20px;
+          height: 20px;
+          background: rgba(0,0,0,.7);
+          border-radius: 100px;
+          text-align: center;
+          color: #fff;
+          margin-right: 1em;
+        }
+
+        &:hover i {
+          display: block;
+        }
+
       }
     } // END OF DIVS
 
@@ -109,7 +167,7 @@
   @include clearfix;
 
   & > .head {
-    background: rgba(0,0,0,.2);
+    background: $lgrey;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
   }
