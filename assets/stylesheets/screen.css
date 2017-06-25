@@ -328,12 +328,18 @@ nav {
     margin: 0 auto;
     text-align: center;
     font-size: 1.5em; }
+    @media screen and (max-width: 880px) {
+      #intro h2 {
+        width: 55%; } }
     #intro h2 span.bolder {
       font-size: inherit;
       font-weight: bolder; }
   #intro .social-network-intro {
     width: 90%;
     margin: 0 auto; }
+    @media screen and (max-width: 880px) {
+      #intro .social-network-intro {
+        display: none; } }
     #intro .social-network-intro li {
       display: inline-block;
       margin: 0 1%; }
@@ -348,7 +354,7 @@ nav {
   #know-more .one-fact {
     float: left;
     width: 33%;
-    height: 130vh;
+    height: 110vh;
     padding: 3%;
     /* margin-right: 3%; */
     text-align: center; }
@@ -413,7 +419,7 @@ nav {
     position: relative;
     overflow: hidden;
     width: 31%;
-    height: 85vh;
+    height: 70vh;
     margin-right: 3%;
     padding: 2em 0;
     border-radius: 5px;
@@ -501,6 +507,10 @@ nav {
   #act article {
     position: relative;
     text-align: center; }
+    @media screen and (max-width: 880px) {
+      #act article {
+        height: 50vh;
+        overflow: hidden; } }
   #act .content-act {
     position: absolute;
     top: 25%;
@@ -509,6 +519,9 @@ nav {
     bottom: 0;
     padding: 25px 20px;
     color: #fff; }
+    @media screen and (max-width: 880px) {
+      #act .content-act {
+        top: 8%; } }
   #act h3 {
     position: relative;
     font-size: 45px;

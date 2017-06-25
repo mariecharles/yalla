@@ -14,6 +14,10 @@
     text-align: center;
     font-size: 1.5em;
 
+    @media screen and (max-width: 880px) {
+      width: 55%;
+    }
+
     span.bolder {
       font-size: inherit;
       font-weight: bolder;
@@ -23,6 +27,10 @@
   .social-network-intro {
       width: $headerWidth;
       margin: 0 auto;
+
+      @media screen and (max-width: 880px) {
+        display: none;
+      }
 
       li {
           display: inline-block;
@@ -39,7 +47,7 @@
   .one-fact {
       float: left;
       width: 33%;
-      height: 130vh;
+      height: 110vh;
       padding: 3%;
       /* margin-right: 3%; */
       text-align: center;
@@ -130,7 +138,7 @@
     position: relative;
     overflow: hidden;
     width: 31%;
-    height: 85vh;
+    height: 70vh;
     margin-right: 3%;
     padding: 2em 0;
     border-radius: 5px;
@@ -261,6 +269,11 @@
     article {
         position: relative;
         text-align: center;
+
+        @media screen and (max-width: 880px) {
+            height: 50vh;
+            overflow: hidden;
+        }
     }
 
     .content-act {
@@ -271,6 +284,10 @@
         bottom: 0;
         padding: 25px 20px;
         color: #fff;
+
+        @media screen and (max-width: 880px) {
+            top: 8%;
+        }
     }
 
     h3 {
