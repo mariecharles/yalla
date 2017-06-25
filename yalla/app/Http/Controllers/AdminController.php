@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Member;
 use App\Post;
 use App\Category;
+use App\Archive;
+
 
 class AdminController extends Controller
 {
@@ -19,26 +21,26 @@ class AdminController extends Controller
 
         $members = Member::all();
 
-        $view = view('adminIndex', compact('posts','categories','members'));
+        $view = view('admin.adminIndex', compact('posts','categories','members'));
 
 
         return $view;
 
     }
 
+
     //DETAILS POST
 
-    public function actuDetails($param)
+    public function actuDetails($slug)
     {
 
         $post = Post::with('category','tag')
-            ->where('slug', $param)
-            ->orWhere('id', $param)->get();
+            ->where('slug', $slug)->get();
 
 
         $post = $post->first();
 
-        $view = view('adminDetailsActu', compact('post'));
+        $view = view('admin.adminDetailsActu', compact('post'));
 
         return $view;
 
@@ -50,11 +52,162 @@ class AdminController extends Controller
     {
        Post::where('id', $id)->delete();
 
-        return redirect()->action(
-        'AdminController@index');
+        return redirect()->action('AdminController@index');
+    }
+
+    //AJOUTER UN POST
+
+    public function postAddAction(Request $request)
+    {
+
+      $requete = $request->all();
+
+      $post = Post::create($requete);
+
+        $post->saveTags($request->get('tags'));
+
+        return redirect()->action('AdminController@index');
+
+    }
+
+    //MODIFIER UN POST
+
+    public function postUpdateAction($id, Request $request)
+    {
+        $requete = $request->all();
+
+        $post = Post::find($id);
+
+        $post->update($requete);
+
+        $post->saveTags($request->get('tags'));
+
+        return redirect()->action('AdminController@index');
+
+    }
+
+    //ARCHIVER UN POST
+
+    public function postSaveAction($id)
+    {
+        $post = Post::where('id', $id)->get();
+
+        $post = $post->first();
+
+        $save = new Archive();
+
+        $save->saved_id = $post->id;
+        $save->slug = $post->slug;
+        $save->title = $post->title;
+        $save->content = $post->content;
+        $save->img = $post->img;
+        $save->active = $post->active;
+        $save->lang = $post->lang;
+        $save->created_at = $post->created_at;
+
+        $save->save();
+
+        $post->delete();
+
+
+      return redirect()->action('AdminController@index');
+    }
+
+    //PUBLIER/DEPUBLIER UN POST
+
+    public function postPublishAction($id)
+    {
+
+        $post = Post::find($id);
+
+       if ($post->active == 1)
+       {
+           $post->active = 0;
+
+       } else {
+
+           $post->active = 1;
+       }
+
+        $post->update();
+
+        return redirect()->action('AdminController@index');
+
+
     }
 
 
+    //DETAILS MEMBRE
+
+    public function memberDetails($id)
+    {
+
+        $member = Member::where('id', $id)->get();
+
+        $member = $member->first();
+
+        $view = view('admin.adminDetailsMember', compact('member'));
+
+        return $view;
+
+    }
+
+    public function memberDeleteAction($id)
+    {
+        Member::where('id', $id)->delete();
+
+        return redirect()->action('AdminController@index');
+    }
+
+    //AJOUTER UN MEMBRE
+
+    public function memberAddAction(Request $request)
+    {
+
+        $requete = $request->all();
+
+        Member::create($requete);
+
+        return redirect()->action('AdminController@index');
+
+    }
+
+    //MODIFIER UN MEMBRE
+
+    public function memberUpdateAction($id, Request $request)
+    {
+        $requete = $request->all();
+
+        $member = Member::find($id);
+
+        $member->update($requete);
+
+        return redirect()->action('AdminController@index');
+
+    }
+
+
+    public function getArchives()
+    {
+        $archives = Archive::all();
+
+        $view = view('admin.postsArchives', compact('archives'));
+
+
+        return $view;
+
+    }
+
+    public function getMessages()
+    {
+        $messages = Message::all();
+
+        $view = view('admin.postsArchives', compact('messages'));
+
+
+        return $view;
+
+    }
 
 
 }
