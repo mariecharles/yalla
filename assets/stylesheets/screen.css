@@ -357,7 +357,8 @@ nav {
     height: 110vh;
     padding: 3%;
     /* margin-right: 3%; */
-    text-align: center; }
+    text-align: center;
+    position: relative; }
     @media screen and (max-width: 880px) {
       #know-more .one-fact {
         width: 50%;
@@ -395,7 +396,12 @@ nav {
       border-radius: 23px;
       padding: 2%;
       display: block;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-bottom: 20%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; }
 
 #last-news {
   background: #f3f3f3;
@@ -482,13 +488,21 @@ nav {
       padding: 2em 2em 1em 2em; }
     #last-news article p {
       font-size: 16px; }
-    #last-news article a.read-more {
-      display: block;
-      margin-top: 1em;
-      font-weight: bold;
-      text-transform: uppercase; }
-    #last-news article:hover a.read-more {
-      color: #fff; }
+    #last-news article .read-more {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+      #last-news article .read-more a {
+        display: inline-block;
+        margin-top: 1em;
+        font-weight: bold;
+        text-transform: uppercase; }
+      #last-news article .read-more:hover a {
+        color: #fff; }
+      #last-news article .read-more img {
+        width: 20px;
+        height: auto; }
 
 #act {
   width: 90%;
@@ -531,7 +545,11 @@ nav {
     font-size: 25px;
     font-weight: 500; }
   #act .more-act {
-    margin-bottom: 2%; }
+    margin-bottom: 15%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; }
     @media screen and (max-width: 580px) {
       #act .more-act {
         display: none; } }
