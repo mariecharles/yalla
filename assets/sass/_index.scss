@@ -39,7 +39,7 @@
   .one-fact {
       float: left;
       width: 33%;
-      height: 765px;
+      height: 130vh;
       padding: 3%;
       /* margin-right: 3%; */
       text-align: center;
@@ -61,10 +61,18 @@
 
     &:nth-child(2) {
         background: #c5c5c5;
+
+        @media screen and (max-width: 580px) {
+             display: none;
+        }
     }
 
     &:nth-child(3) {
         background: #b8b8b8;
+
+        @media screen and (max-width: 580px) {
+          display: none;
+        }
     }
 
     h3 {
@@ -122,6 +130,7 @@
     position: relative;
     overflow: hidden;
     width: 31%;
+    height: 85vh;
     margin-right: 3%;
     padding: 2em 0;
     border-radius: 5px;
@@ -142,6 +151,18 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:nth-child(2) {
+        @media screen and (max-width: 580px) {
+             display: none;
+        }
+    }
+
+    &:nth-child(3) {
+        @media screen and (max-width: 580px) {
+          display: none;
+        }
     }
 
     img.thumbnail {
@@ -226,6 +247,15 @@
         position: relative;
         display: inline-block;
         width: 32%;
+
+        @media screen and (max-width: 880px) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: 580px) {
+          width: 100%;
+        }
+
     }
 
     article {
@@ -257,6 +287,10 @@
 
     .more-act {
         margin-bottom: 2%;
+
+        @media screen and (max-width: 580px) {
+             display: none;
+        }
     }
 }
 
