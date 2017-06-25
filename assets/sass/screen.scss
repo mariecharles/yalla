@@ -13,6 +13,17 @@ $lgrey: #FAFAFA;
 // WIDTHS VARIABLES
 
 $headerWidth: 90%;
+$adminMainWidth: 90%;
+
+//bolder
+
+b {
+font-weight: bold;
+}
+
+span.return {
+  display: block;
+}
 
 
 // IMPORTING FILES
@@ -29,5 +40,10 @@ $headerWidth: 90%;
 @import "ournews";
 @import "supportus";
 @import "contact";
+
+@import "partials/headeradmin";
+@import "partials/asideadmin";
+@import "adminhome";
+@import "adminarticles";
 
 @import "partials/footer";

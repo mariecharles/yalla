@@ -1,4 +1,8 @@
-header {
+body:not([id*="admin-"]).header-active {
+    overflow: hidden;
+}
+
+body:not([id*="admin-"]) header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -6,6 +10,11 @@ header {
     padding: 2em 0;
     background: #fff;
     transition: .4s ease-out;
+
+    @media screen and (max-width: 580px) {
+        padding-top: 0;
+        padding-bottom: 3%;
+    }
 
     &.active {
       top: -50%;
@@ -16,7 +25,80 @@ header {
       width: $headerWidth;
       margin: 0 auto;
       @include clearfix;
+
+      .logo-desktop {
+          display: block;
+      }
+      @media screen and (max-width: 580px) {
+          .logo-desktop {
+              display: none;
+          }
+      }
+
+      .logo-mobile {
+          display: none;
+          margin: 0 auto;
+          width: 100px;
+          height: auto;
+      }
+      @media screen and (max-width: 580px) {
+          .logo-mobile {
+              display: block;
+          }
+      }
+
+      .menu-burger {
+          display: none;
+          position: absolute;
+          top: 30px;
+          left: 20px;
+          width: 26px;
+          height: 26px;
+
+          span {
+              position: absolute;
+              width: 69%;
+              height: 2px;
+              background: #000;
+
+              &:nth-child(2) {
+                  top: 7px;
+                  width: 100%;
+              }
+
+              &:nth-child(3) {
+                  top: 14px;
+                  width: 69%;
+              }
+          }
+      }
+
+    .share-header {
+        display: none;
+        position: absolute;
+        width: 30px;
+        height: auto;
+        top : 30px;
+        right: 20px;
     }
+
+    @media screen and (max-width: 580px) {
+        .menu-burger, .share-header {
+            display: block;
+        }
+      }
+
+    }
+
+    // END OF INNER
+    nav {
+        @media screen and (max-width: 580px) {
+                width: 100%;
+                text-align: center;
+                padding: 10%;
+        }
+    }
+
 
     ul {
         font-size: 0;
@@ -27,28 +109,77 @@ header {
         display: inline-block;
         padding: 0.3em 1em;
 
+        @media screen and (max-width: 580px) {
+                display: block;
+                padding-top: 9%;
+        }
+
+
         &.active a {
             padding-bottom: 0.8em;
             border-bottom: 3px solid $yellow;
+
+        @media screen and (max-width: 580px) {
+            border: 0;
+            font-weight: bold;
+            }
+        }
+
+        @media screen and (max-width: 580px) {
+            a {
+                font-size: 24px;
+            }
         }
     }
 }
 
-h1 {
+body:not([id*="admin-"]) h1 {
     float: left;
     padding-top: 0.7em;
+
+    @media screen and (max-width: 580px) {
+        float: none;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    &.active #header {
+        display: block;
+    }
 }
 
-#inner-header {
+body:not([id*="admin-"]) #inner-header {
     float: right;
+    @media screen and (max-width: 580px) {
+        display: none;
+        height: 100vh;
+    }
+
+        &.hidde {
+            display: block;
+        }
+    }
+
 
     #header-actions,
     nav {
         display: inline-block;
+
+        @media screen and (max-width: 580px) {
+            text-align: center;
+            width: 100%;
     }
 
     .cta {
         margin: 0 1.5em;
+
+        @media screen and (max-width: 580px) {
+            margin: 0 auto;
+            width: 70%;
+            display: block;
+            margin-bottom: 11%;
+            margin-top:4%; 
+    }
     }
 
     select {
@@ -57,5 +188,10 @@ h1 {
         background: transparent;
         padding: 0.7em 1em;
         border-radius: 100px;
+
+        @media screen and (max-width: 580px) {
+            display: block;
+            margin: 0 auto;
+    }
     }
 }

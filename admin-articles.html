@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/stylesheets/screen.css">
+    <title>Yalla! Pour les Enfants - Défendons les droits humains</title>
+
+    <meta property="og:site_name" content="Amnesty France">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site" content="@amnestyfrance">
+    <meta name="description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
+
+    <!-- balises facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Amnesty International France - Défendons les droits humains">
+    <meta property="og:description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
+    <meta property="og:image" content="">
+
+    <!-- balises twitter -->
+    <meta name="twitter:title" content="Amnesty International France - Défendons les droits humains">
+    <meta name="twitter:description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
+    <meta name="twitter:image" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- tinyMCE links -->
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea.article-content' });</script>
+</head>
+
+<body id="admin-articles">
+
+    <header>
+        <div class="inner">
+          <div id="admin-actions">
+              <div class="ctas">
+                  <span class="cta"><a href="">+ Ajouter un bénévole</a></span>
+                  <span class="cta"><a href="">+ Nouvel article</a></span>
+              </div>
+              <div class="icon-action">
+                  <div class="messages">
+                    <span class="nb-message">OO<span class="push">2</span></span>
+                    <div class="my-messages">
+                      <h3>Mes messages reçus</h3>
+                    </div>
+                  </div>
+                  <div class="notifications">
+                    <span class="nb-notifs">UU <span class="push">1</span></span>
+                    <div class="my-notifs">
+                      <h3>Mes notifications reçues</h3>
+                    </div>
+                  </div>
+                  <span>MM</span>
+              </div>
+          </div>
+        </div>
+    </header>
+
+    <nav id="admin-aside">
+        <ul>
+            <li><a href="">Tableau de bord</a></li>
+            <li class="active"><a href="">Articles</a></li>
+            <li><a href="">Membres</a></li>
+            <li><a href="">Bénévoles</a></li>
+        </ul>
+    </nav>
+
+    <main>
+      <section id="admin-add-article">
+        <h2><span class="more">+</span><span class="less">-</span> Nouvel article</h2>
+
+        <div class="wrapper">
+          <div class="main-content">
+            <input type="text" placeholder="Entrer un titre">
+            <textarea class="article-content">Next, get a free TinyMCE Cloud API key!</textarea>
+          </div>
+          <!-- end of main-content -->
+          <div class="aside-content">
+            <h3>Options de publication</h3>
+            <div class="status">
+              <span>Status</span>
+              <select name="" id="">
+                <option value="">Brouillon <i>i</i></option>
+                <option value="">En ligne</option>
+              </select>
+            </div>
+            <div class="visibility">
+              <span>Visibilité</span>
+              <select name="" id="">
+                <option value="">Public <i>i</i></option>
+              </select>
+            </div>
+            <div class="visibility">
+              <span>Publication</span>
+              <select name="" id="">
+                <option value="">Immédiate <i>i</i></option>
+              </select>
+            </div>
+            <div class="add-tags">
+              <span>Tags (3 maximum)</span>
+              <input type="text" name="tags" placeholder="Commencez à taper...">
+              <input type="hidden" name="tags" value="">
+              <div class="all-tags">
+                <span class="tag"><i>x</i>salut</span>
+              </div>
+            </div>
+            <button type="submit" class="publish">Publier</button>
+            <button class="set-draft">Enregistrer comme brouillon</button>
+          </div>
+          <!-- end of aside content -->
+        </div>
+      </section>
+
+
+      <section id="admin-all-articles">
+        <div class="head">
+          <!-- <h2><span>-</span> Tous les articles</h2> -->
+          <div class="actions">
+            <div class="selected">
+              <input type="checkbox">
+              <label for="">Tous les articles</label>
+            </div>
+            <div class="uncheck">
+              <span>Décocher toutes les cases</span>
+            </div>
+            <div class="action-status">
+              <select name="" id="">
+                <option value="">Mettre : En ligne</option>
+                <option value="">Mettre : Hors ligne</option>
+              </select>
+            </div>
+            <div class="delete">
+              <span><i>pp</i> Supprimer</span>
+            </div>
+          </div>
+          <!-- end of actions -->
+        </div>
+        <!-- end of head -->
+
+        <div id="admin-filter-articles">
+            <span class="nb">4 articles</span>
+            <select name="" id="">
+              <option value="">Trier par :</option>
+              <option value="">Date</option>
+              <option value="">Catégories</option>
+            </select>
+        </div>
+
+          <div id="admin-view-articles">
+            <article>
+              <div class="checkbox">
+                <input type="checkbox">
+              </div>
+              <div class="wrapper">
+                <div class="content">
+                  <h3>Fest-noz solidaire du 29 octobre à Paris</h3>
+                  <span class="date">27 septembre 2016</span>
+                  <span class="category">Education</span>
+                </div>
+
+                <div class="actions">
+                  <span class="author">Posté par <span class="return">Mary LEMELAND</span></span>
+                  <div class="ctas">
+                    <span class="cta status">En ligne</span>
+                    <span class="cta modify">Modifier</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <div class="pagination">
+              <span><<</span>
+              <span><</span>
+              <span>1/1</span>
+              <span>></span>
+              <span>>></span>
+            </div>
+            <!-- end of pagination -->
+          </div>
+          <!-- end of admin view articles -->
+
+        </div>
+      </section>
+
+    </main>
+
+  </body>
+  <script src="js/app.js"></script>
+
+  </html>

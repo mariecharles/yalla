@@ -14,3 +14,13 @@ window.addEventListener('scroll', function(e) {
 
     last_position = body.scrollTop;
 });
+
+//menu-burger
+
+var menu_burger = document.querySelector('.menu-burger');
+var inner_header = document.querySelector('#inner-header');
+
+menu_burger.addEventListener('click', function() {
+    inner_header.classList.toggle('hidde');
+    body.classList.toggle('header-active');
+});

@@ -1,6 +1,7 @@
 .cta {
   padding: .7em 2em;
   font-weight: 500;
+  border-radius: 23px;
 
   a {
     font-weight: 500;
@@ -8,6 +9,11 @@
 
   &.cta-yellow {
     background: $yellow;
+
+    // @media screen and (max-width: 580px) {
+    //     display: block;
+    //     margin: 0 auto;
+    // }
 
     a { color: #fff; }
   }

@@ -22,3 +22,35 @@ a, a:visited {
 ul {
 	list-style: none;
 }
+
+body[id*="admin-"] {
+	@include clearfix;
+}
+
+select {
+	-webkit-appearance: none;
+}
+
+body[id*="admin-"] {
+	overflow: hidden;
+
+	main {
+		height: 83vh;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+        width: .5em;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: none;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $lgrey;
+      outline: 1px solid slategrey;
+    }
+	}
+
+}
