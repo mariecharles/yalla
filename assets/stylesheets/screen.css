@@ -482,7 +482,7 @@ nav {
   #act article {
     position: relative;
     text-align: center; }
-  #act div {
+  #act .content-act {
     position: absolute;
     top: 25%;
     right: 0;
@@ -498,6 +498,8 @@ nav {
   #act p {
     font-size: 25px;
     font-weight: 500; }
+  #act .more-act {
+    margin-bottom: 2%; }
 
 #newsletter-home {
   background: #000;

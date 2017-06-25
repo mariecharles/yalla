@@ -233,7 +233,7 @@
         text-align: center;
     }
 
-    div {
+    .content-act {
         position: absolute;
         top: 25%;
         right: 0;
@@ -253,6 +253,10 @@
     p {
         font-size: 25px;
         font-weight: 500;
+    }
+
+    .more-act {
+        margin-bottom: 2%;
     }
 }
 
