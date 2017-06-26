@@ -1,5 +1,5 @@
 #intro {
-  padding: 10em 0 6em 0;
+  padding: 10em 0 1.8em 0;
   background: $lgrey;
 
   img {
@@ -24,9 +24,9 @@
     }
   }
 
-  .social-network-intro {
+  .social-network {
       width: $headerWidth;
-      margin: 0 auto;
+      margin: 4em auto 0 auto;
 
       @media screen and (max-width: 880px) {
         display: none;

@@ -226,8 +226,8 @@ body:not([id*="admin-"]) header {
   top: 0;
   width: 100%;
   z-index: 555;
-  padding: 2em 0;
-  background: #fff;
+  padding: 1.7em 0 1em 0;
+  background: transparent;
   transition: .4s ease-out;
 }
 @media screen and (max-width: 580px) {
@@ -243,6 +243,10 @@ body:not([id*="admin-"]) header.active {
   transition: .6s ease-in;
 }
 /* line 24, ../sass/partials/_header.scss */
+body:not([id*="admin-"]) header.not-top {
+  background: #fff;
+}
+/* line 28, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header .inner {
   width: 90%;
   margin: 0 auto;
@@ -253,17 +257,17 @@ body:not([id*="admin-"]) header .inner:after {
   display: table;
   clear: both;
 }
-/* line 29, ../sass/partials/_header.scss */
+/* line 33, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header .inner .logo-desktop {
   display: block;
 }
 @media screen and (max-width: 580px) {
-  /* line 33, ../sass/partials/_header.scss */
+  /* line 37, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) header .inner .logo-desktop {
     display: none;
   }
 }
-/* line 38, ../sass/partials/_header.scss */
+/* line 42, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header .inner .logo-mobile {
   display: none;
   margin: 0 auto;
@@ -271,12 +275,12 @@ body:not([id*="admin-"]) header .inner .logo-mobile {
   height: auto;
 }
 @media screen and (max-width: 580px) {
-  /* line 45, ../sass/partials/_header.scss */
+  /* line 49, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) header .inner .logo-mobile {
     display: block;
   }
 }
-/* line 50, ../sass/partials/_header.scss */
+/* line 54, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header .inner .menu-burger {
   display: none;
   position: absolute;
@@ -285,24 +289,24 @@ body:not([id*="admin-"]) header .inner .menu-burger {
   width: 26px;
   height: 26px;
 }
-/* line 58, ../sass/partials/_header.scss */
+/* line 62, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header .inner .menu-burger span {
   position: absolute;
   width: 69%;
   height: 2px;
   background: #000;
 }
-/* line 64, ../sass/partials/_header.scss */
+/* line 68, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header .inner .menu-burger span:nth-child(2) {
   top: 7px;
   width: 100%;
 }
-/* line 69, ../sass/partials/_header.scss */
+/* line 73, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header .inner .menu-burger span:nth-child(3) {
   top: 14px;
   width: 69%;
 }
-/* line 76, ../sass/partials/_header.scss */
+/* line 80, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header .inner .share-header {
   display: none;
   position: absolute;
@@ -312,112 +316,112 @@ body:not([id*="admin-"]) header .inner .share-header {
   right: 20px;
 }
 @media screen and (max-width: 580px) {
-  /* line 86, ../sass/partials/_header.scss */
+  /* line 90, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) header .inner .menu-burger, body:not([id*="admin-"]) header .inner .share-header {
     display: block;
   }
 }
 @media screen and (max-width: 580px) {
-  /* line 94, ../sass/partials/_header.scss */
+  /* line 98, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) header nav {
     width: 100%;
     text-align: center;
     padding: 10%;
   }
 }
-/* line 103, ../sass/partials/_header.scss */
+/* line 107, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header ul {
   font-size: 0;
 }
-/* line 107, ../sass/partials/_header.scss */
+/* line 111, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header li {
   font-size: initial;
   display: inline-block;
   padding: 0.3em 1em;
 }
 @media screen and (max-width: 580px) {
-  /* line 107, ../sass/partials/_header.scss */
+  /* line 111, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) header li {
     display: block;
     padding-top: 9%;
   }
 }
-/* line 117, ../sass/partials/_header.scss */
+/* line 121, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header li img {
   width: 6px;
 }
-/* line 122, ../sass/partials/_header.scss */
+/* line 126, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) header li.active a {
   padding-bottom: 0.8em;
 }
 @media screen and (max-width: 580px) {
-  /* line 122, ../sass/partials/_header.scss */
+  /* line 126, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) header li.active a {
     border: 0;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 580px) {
-  /* line 133, ../sass/partials/_header.scss */
+  /* line 137, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) header li a {
     font-size: 24px;
   }
 }
 
-/* line 140, ../sass/partials/_header.scss */
+/* line 144, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) h1 {
   float: left;
   padding-top: 0.7em;
 }
 @media screen and (max-width: 580px) {
-  /* line 140, ../sass/partials/_header.scss */
+  /* line 144, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) h1 {
     float: none;
     width: 100px;
     margin: 0 auto;
   }
 }
-/* line 150, ../sass/partials/_header.scss */
+/* line 154, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) h1.active #header {
   display: block;
 }
 
-/* line 155, ../sass/partials/_header.scss */
+/* line 159, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) #inner-header {
   float: right;
 }
 @media screen and (max-width: 580px) {
-  /* line 155, ../sass/partials/_header.scss */
+  /* line 159, ../sass/partials/_header.scss */
   body:not([id*="admin-"]) #inner-header {
     display: none;
     height: 100vh;
   }
 }
-/* line 162, ../sass/partials/_header.scss */
+/* line 166, ../sass/partials/_header.scss */
 body:not([id*="admin-"]) #inner-header.hidde {
   display: block;
 }
 
-/* line 168, ../sass/partials/_header.scss */
+/* line 172, ../sass/partials/_header.scss */
 #header-actions,
 nav {
   display: inline-block;
 }
 @media screen and (max-width: 580px) {
-  /* line 168, ../sass/partials/_header.scss */
+  /* line 172, ../sass/partials/_header.scss */
   #header-actions,
   nav {
     text-align: center;
     width: 100%;
   }
 }
-/* line 177, ../sass/partials/_header.scss */
+/* line 181, ../sass/partials/_header.scss */
 #header-actions .cta,
 nav .cta {
   margin: 0 1.5em;
 }
 @media screen and (max-width: 580px) {
-  /* line 177, ../sass/partials/_header.scss */
+  /* line 181, ../sass/partials/_header.scss */
   #header-actions .cta,
   nav .cta {
     margin: 0 auto;
@@ -427,7 +431,7 @@ nav .cta {
     margin-top: 4%;
   }
 }
-/* line 189, ../sass/partials/_header.scss */
+/* line 193, ../sass/partials/_header.scss */
 #header-actions select,
 nav select {
   -webkit-appearance: none;
@@ -437,7 +441,7 @@ nav select {
   border-radius: 100px;
 }
 @media screen and (max-width: 580px) {
-  /* line 189, ../sass/partials/_header.scss */
+  /* line 193, ../sass/partials/_header.scss */
   #header-actions select,
   nav select {
     display: block;
@@ -447,7 +451,7 @@ nav select {
 
 /* line 1, ../sass/_index.scss */
 #intro {
-  padding: 10em 0 6em 0;
+  padding: 10em 0 1.8em 0;
   background: #FAFAFA;
 }
 /* line 5, ../sass/_index.scss */
@@ -475,18 +479,18 @@ nav select {
   font-weight: bolder;
 }
 /* line 27, ../sass/_index.scss */
-#intro .social-network-intro {
+#intro .social-network {
   width: 90%;
-  margin: 0 auto;
+  margin: 4em auto 0 auto;
 }
 @media screen and (max-width: 880px) {
   /* line 27, ../sass/_index.scss */
-  #intro .social-network-intro {
+  #intro .social-network {
     display: none;
   }
 }
 /* line 35, ../sass/_index.scss */
-#intro .social-network-intro li {
+#intro .social-network li {
   display: inline-block;
   margin: 0 1%;
 }
