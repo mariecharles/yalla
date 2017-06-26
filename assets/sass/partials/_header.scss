@@ -117,7 +117,7 @@ body:not([id*="admin-"]) header {
 
         &.active a {
             padding-bottom: 0.8em;
-            border-bottom: 3px solid $yellow;
+            //border-bottom: 3px solid $yellow;
 
         @media screen and (max-width: 580px) {
             border: 0;
@@ -178,13 +178,13 @@ body:not([id*="admin-"]) #inner-header {
             width: 70%;
             display: block;
             margin-bottom: 11%;
-            margin-top:4%; 
+            margin-top:4%;
     }
     }
 
     select {
         -webkit-appearance: none;
-        border: 1px solid $yellow;
+        border: 1px solid #000;
         background: transparent;
         padding: 0.7em 1em;
         border-radius: 100px;
