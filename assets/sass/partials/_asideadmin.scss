@@ -26,6 +26,10 @@
     }
   }
 
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+
   li {
     transition: .4s ease-out;
   }

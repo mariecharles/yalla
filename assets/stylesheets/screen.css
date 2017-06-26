@@ -1,9 +1,9 @@
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 b {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-/* line 30, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 span.return {
   display: block;
 }
@@ -976,6 +976,63 @@ nav select {
   color: #000;
 }
 
+/* line 3, ../sass/_aboutus.scss */
+#about main .wrapper {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
+/* line 9, ../sass/_aboutus.scss */
+#about main section {
+  margin-bottom: 5em;
+}
+/* line 12, ../sass/_aboutus.scss */
+#about main .our-story {
+  text-align: center;
+}
+/* line 14, ../sass/_aboutus.scss */
+#about main .our-story h3 {
+  color: #e28413;
+  font-weight: bolder;
+  font-size: 1.5em;
+  margin-bottom: .7em;
+}
+/* line 19, ../sass/_aboutus.scss */
+#about main .our-story h3 span {
+  font-size: inherit;
+  font-style: italic;
+}
+/* line 24, ../sass/_aboutus.scss */
+#about main .our-story p {
+  width: 70%;
+  margin: 0 auto .8em auto;
+  line-height: 1.5;
+  text-align: justify;
+}
+/* line 31, ../sass/_aboutus.scss */
+#about main .our-story.intro {
+  height: 100vh;
+  width: 70%;
+  margin: 1em auto 2em auto;
+  text-align: center;
+  padding-bottom: 1.2em;
+}
+/* line 34, ../sass/_aboutus.scss */
+#about main .our-story.intro .content {
+  transform: translateY(145%);
+}
+/* line 38, ../sass/_aboutus.scss */
+#about main .our-story.intro h2 {
+  font-size: 2.3em;
+  font-weight: bold;
+  color: #e28413;
+}
+/* line 49, ../sass/_aboutus.scss */
+#about main .our-story.intro p {
+  margin: 1em auto 0 auto;
+  line-height: 1.7;
+}
+
 /* line 1, ../sass/partials/_headeradmin.scss */
 body[id*="admin-"] {
   position: relative;
@@ -1049,7 +1106,6 @@ body[id*="admin-"] header.opn #bm {
 }
 /* line 65, ../sass/partials/_headeradmin.scss */
 body[id*="admin-"] #admin-actions {
-  display: none;
   float: right;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
@@ -1058,16 +1114,20 @@ body[id*="admin-"] #admin-actions:after {
   display: table;
   clear: both;
 }
-/* line 71, ../sass/partials/_headeradmin.scss */
+/* line 70, ../sass/partials/_headeradmin.scss */
 body[id*="admin-"] #admin-actions > div {
   float: left;
 }
-/* line 75, ../sass/partials/_headeradmin.scss */
+/* line 74, ../sass/partials/_headeradmin.scss */
 body[id*="admin-"] #admin-actions .cta {
   border: 1px solid #000;
   margin: 0 .5em;
 }
 @media screen and (max-width: 880px) {
+  /* line 65, ../sass/partials/_headeradmin.scss */
+  body[id*="admin-"] #admin-actions {
+    display: none;
+  }
   /* line 82, ../sass/partials/_headeradmin.scss */
   body[id*="admin-"] #admin-actions .ctas {
     display: block;
@@ -1199,16 +1259,22 @@ body[id*="admin-"] #admin-actions .icon-action span.push {
     display: none;
   }
 }
-/* line 29, ../sass/partials/_asideadmin.scss */
+@media screen and (max-width: 880px) {
+  /* line 1, ../sass/partials/_asideadmin.scss */
+  #admin-aside {
+    display: none;
+  }
+}
+/* line 33, ../sass/partials/_asideadmin.scss */
 #admin-aside li {
   transition: .4s ease-out;
 }
-/* line 33, ../sass/partials/_asideadmin.scss */
+/* line 37, ../sass/partials/_asideadmin.scss */
 #admin-aside li:hover {
   background: rgba(0, 0, 0, 0.1);
   transition: .3s ease;
 }
-/* line 38, ../sass/partials/_asideadmin.scss */
+/* line 42, ../sass/partials/_asideadmin.scss */
 #admin-aside a {
   display: block;
   padding: 1.5em 2em;
@@ -1228,15 +1294,15 @@ body[id*="admin-"] #admin-actions .icon-action span.push {
     padding-top: 10em;
     text-align: center;
   }
-  /* line 56, ../sass/partials/_asideadmin.scss */
+  /* line 60, ../sass/partials/_asideadmin.scss */
   #admin-aside a {
     font-size: 1.5em;
   }
-  /* line 60, ../sass/partials/_asideadmin.scss */
+  /* line 64, ../sass/partials/_asideadmin.scss */
   #admin-aside li:first-child {
     border-top: 1px solid #000;
   }
-  /* line 64, ../sass/partials/_asideadmin.scss */
+  /* line 68, ../sass/partials/_asideadmin.scss */
   #admin-aside li:hover {
     background: initial;
   }
