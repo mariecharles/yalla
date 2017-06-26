@@ -9,10 +9,12 @@
 </head>
 <body>
 
+<a href="<?=url('admin/messages')?>">Accéder aux messages</a>
+
 <a href="<?=url('admin/ajouter-un-article')?>">Ajouter un article</a>
 
     <section>
-        <a href="<?=url('admin/ajouter-une-catégorie')?>">Ajouter une catégorie</a>
+        <a href="<?=url('admin/ajouter-une-categorie')?>">Ajouter une catégorie</a>
         <?php foreach ($categories as $category):?>
 
             <button><?=$category->name?></button>
