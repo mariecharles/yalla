@@ -5,7 +5,7 @@ var tags = document.querySelector('.add-tags .all-tags');
 
 input.addEventListener('keyup', function(e) {
 
-   if (e.key == ',') {
+   if (e.key == ',' || e.keyCode == 13) {
        var span = document.createElement('SPAN');
        var content = input.value;
 
@@ -16,8 +16,9 @@ input.addEventListener('keyup', function(e) {
        }
 
        hidden_input.setAttribute('value', content_hidden);
+       console.log(hidden_input.getAttribute('value'));
        span.classList.add('tag');
-       content = content.substring(0, content.length - 1);
+      //  content = content.substring(0, content.length - 1);
        span.innerHTML = content;
        tags.appendChild(span);
        input.value = '';
@@ -43,6 +44,40 @@ checkbox_select.addEventListener('click', function() {
     section_view_article.classList.toggle('actions-on');
 });
 
-// for (var i = 0; i < article_checkboxs.length; i++) {
-//
+var cats_select = document.querySelectorAll('#admin-filter-articles  select[name="filter-categories"] option');
+
+var select_cat = document.querySelector('#admin-filter-articles select[name="filter-categories"]');
+
+select_cat.addEventListener('change', function() {
+  var admin_all_articles = document.querySelectorAll('#admin-view-articles article');
+  var myCat = this.value;
+  var xhr = new XMLHttpRequest();
+  var parameters = 'filterby=' + myCat;
+
+  xhr.open('POST', 'filters-categories-php.php', true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.send(parameters);
+
+  xhr.onreadystatechange = function() {
+      if ((xhr.status === 200 || xhr.status === 0) && xhr.readyState === 4) {
+
+          var lol = JSON.parse(xhr.responseText);
+
+          console.log(lol);
+
+          // for (var i = 0; i < lol.length; i++) {
+          //     var div = document.createElement('DIV');
+          //     div.className = 'article ' + myCat;
+          //     div.innerHTML = lol[i].name;
+          //     result.append(div);
+          // }
+      }
+  };
+
+});
+
+// for (var i = 0; cats_select.length; i++) {
+//   cats_select[i].addEventListener('click', function() {
+//     console.log('salut' +  i);
+//   });
 // }
