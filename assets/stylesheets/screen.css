@@ -822,10 +822,10 @@ nav select {
 
 /* line 338, ../sass/_index.scss */
 #newsletter-home {
-  display: none;
   background: #000;
   color: #fff;
   text-align: center;
+  padding: 2em 0;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
 #newsletter-home:after {
@@ -838,19 +838,18 @@ nav select {
   text-align: center;
   font-weight: bold;
   font-size: 35px;
-  padding-top: 3%;
 }
-/* line 352, ../sass/_index.scss */
+/* line 351, ../sass/_index.scss */
 #newsletter-home p {
   font-size: inherit;
   text-align: center;
-  padding-top: 1%;
+  margin-bottom: .7em;
 }
-/* line 358, ../sass/_index.scss */
+/* line 357, ../sass/_index.scss */
 #newsletter-home div {
   padding: 2%;
 }
-/* line 361, ../sass/_index.scss */
+/* line 360, ../sass/_index.scss */
 #newsletter-home div #newsletter {
   position: absolute;
   text-align: left;
@@ -860,127 +859,34 @@ nav select {
   border: 1px solid #fff;
   background: #fff;
 }
-/* line 371, ../sass/_index.scss */
+/* line 370, ../sass/_index.scss */
 #newsletter-home div #validation {
   position: relative;
   border-radius: 23px;
-  border: 1px solid #f3f3f3;
-  background: #f3f3f3;
+  border: none;
+  background: #FAFAFA;
   margin-left: 245px;
-  padding: 10px 53px;
+  padding: 11px 53px;
   font-weight: bold;
 }
-/* line 381, ../sass/_index.scss */
+@media screen and (max-width: 580px) {
+  /* line 381, ../sass/_index.scss */
+  #newsletter-home div #newsletter {
+    width: 300px;
+  }
+  /* line 385, ../sass/_index.scss */
+  #newsletter-home div #validation {
+    padding: 11px 25px;
+  }
+}
+/* line 390, ../sass/_index.scss */
 #newsletter-home div .input-group-addo {
   position: absolute;
 }
-/* line 385, ../sass/_index.scss */
+/* line 394, ../sass/_index.scss */
 #newsletter-home div .fa-envelope {
   background: url("../img-layout/mail.svg") no-repeat center center;
   position: absolute;
-}
-
-/* line 393, ../sass/_index.scss */
-#footer .information {
-  background: #f3f3f3;
-  color: #000;
-}
-/* line 3, ../sass/partials/_clearfix.scss */
-#footer .information:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 400, ../sass/_index.scss */
-#footer .logo-footer {
-  width: 30%;
-  float: left;
-}
-@media screen and (max-width: 580px) {
-  /* line 400, ../sass/_index.scss */
-  #footer .logo-footer {
-    float: none;
-    display: block;
-    margin: 10% auto;
-    padding-top: 10%;
-  }
-}
-/* line 411, ../sass/_index.scss */
-#footer .logo-footer img {
-  display: block;
-  margin: 10% auto;
-}
-/* line 417, ../sass/_index.scss */
-#footer .resume-footer {
-  width: 70%;
-  margin: 2% auto;
-  float: right;
-}
-/* line 3, ../sass/partials/_clearfix.scss */
-#footer .resume-footer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 423, ../sass/_index.scss */
-#footer .resume-footer div {
-  width: 23%;
-  float: left;
-}
-@media screen and (max-width: 880px) {
-  /* line 423, ../sass/_index.scss */
-  #footer .resume-footer div {
-    width: 50%;
-    margin: 2% auto;
-  }
-}
-@media screen and (max-width: 580px) {
-  /* line 423, ../sass/_index.scss */
-  #footer .resume-footer div {
-    width: 100%;
-  }
-}
-/* line 436, ../sass/_index.scss */
-#footer .resume-footer a {
-  line-height: 2em;
-  color: #000;
-}
-/* line 441, ../sass/_index.scss */
-#footer .resume-footer a:hover {
-  color: #fff;
-}
-/* line 446, ../sass/_index.scss */
-#footer .legal-footer {
-  background: #fff;
-  margin: 3% auto;
-}
-/* line 450, ../sass/_index.scss */
-#footer .legal-footer ul {
-  text-align: center;
-  width: 100%;
-}
-/* line 455, ../sass/_index.scss */
-#footer .legal-footer li {
-  font-size: 14px;
-  font-weight: bold;
-  display: inline-block;
-  margin: 0 2%;
-}
-@media screen and (max-width: 580px) {
-  /* line 455, ../sass/_index.scss */
-  #footer .legal-footer li {
-    width: 100%;
-  }
-}
-/* line 466, ../sass/_index.scss */
-#footer .legal-footer a {
-  font-size: 14px;
-  font-weight: bold;
-}
-/* line 471, ../sass/_index.scss */
-#footer .legal-footer b {
-  font-size: 14px;
-  color: #000;
 }
 
 /* line 3, ../sass/_aboutus.scss */
