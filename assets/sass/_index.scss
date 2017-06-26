@@ -153,12 +153,12 @@
     box-shadow: -2px 2px 7px rgba(0,0,0,.13);
     transition: .4s ease-out;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: 880px) {
       width: 43%;
       margin: 3% 3%;
     }
 
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 580px) {
       width: 100%;
       margin: 3% 0;
     }
@@ -274,15 +274,14 @@
         display: inline-block;
         width: 32%;
 
+        @media screen and (max-width: 880px) {
+          width: 50%;
+        }
 
-    @media screen and (max-width: $tablet) {
-      width: 50%;
-      margin: 3% 0;
-    }
+        @media screen and (max-width: 580px) {
+          width: 100%;
+        }
 
-    @media screen and (max-width: $mobile) {
-      width: 100%;
-      margin: 3% 0;
     }
 
     article {
@@ -398,36 +397,38 @@
     .logo-footer {
         width: 30%;
         float: left;
-            @media screen and (max-width: $mobile) {
-              float: none;
-              display: block;
-              margin: 10% auto;
-              padding-top: 10%;
-            }
+
+        @media screen and (max-width: 580px) {
+          float: none;
+          display: block;
+          margin: 10% auto;
+          padding-top: 10%;
+        }
+
         img {
             display: block;
             margin: 10% auto;
         }
     }
-        .resume-footer {
-            @include clearfix;
-            width: 70%;
-            margin: 2% auto;
-            float: right;
 
-            div {
-                width: 23%;
-                float: left;
-                @media screen and (max-width: $tablet) {
-                  width: 50%;
-                  margin: 2% auto;
-                }
+    .resume-footer {
+        @include clearfix;
+        width: 70%;
+        margin: 2% auto;
+        float: right;
 
-                @media screen and (max-width: $mobile) {
-                  width: 100%;
-                }
+        div {
+            width: 23%;
+            float: left;
+            @media screen and (max-width: 880px) {
+              width: 50%;
+              margin: 2% auto;
             }
 
+            @media screen and (max-width: 580px) {
+              width: 100%;
+            }
+        }
 
         a {
             line-height: 2em;
@@ -443,7 +444,8 @@
         background: #fff;
         margin: 3% auto;
 
-      ul {
+
+        ul {
             text-align: center;
             width: 100%;
         }

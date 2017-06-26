@@ -114,6 +114,10 @@ body:not([id*="admin-"]) header {
                 padding-top: 9%;
         }
 
+        img {
+          width: 6px;
+        }
+
 
         &.active a {
             padding-bottom: 0.8em;
