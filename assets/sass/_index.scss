@@ -336,6 +336,7 @@
 }
 
 #newsletter-home {
+    display: none;
     background: #000;
     color: #fff;
     text-align: center; //peut-etre le retirer
@@ -382,7 +383,7 @@
         }
 
         .fa-envelope {
-            background:url(assets/img-layout/mail.svg) no-repeat center center;
+            background:url('../img-layout/mail.svg') no-repeat center center;
             position: absolute;
         }
     }
@@ -390,9 +391,9 @@
 
 #footer {
     .information {
-    background: #f3f3f3;
-    color: #000;
-    @include clearfix;
+      background: #f3f3f3;
+      color: #000;
+      @include clearfix;
     }
 
 
@@ -445,7 +446,6 @@
     .legal-footer {
         background: #fff;
         margin: 3% auto;
-
 
         ul {
             text-align: center;
