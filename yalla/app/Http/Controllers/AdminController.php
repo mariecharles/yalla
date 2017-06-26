@@ -8,6 +8,9 @@ use App\Member;
 use App\Post;
 use App\Category;
 use App\Archive;
+use App\Message;
+use Illuminate\Support\Facades\Mail;
+
 
 
 class AdminController extends Controller
@@ -23,8 +26,17 @@ class AdminController extends Controller
 
         $view = view('admin.adminIndex', compact('posts','categories','members'));
 
-
         return $view;
+
+    }
+
+    public function categoryAddAction(Request $request)
+    {
+        $requete = $request->all();
+
+        Category::create($requete);
+
+        return redirect()->action('AdminController@index');
 
     }
 
@@ -103,6 +115,8 @@ class AdminController extends Controller
         $save->img = $post->img;
         $save->active = $post->active;
         $save->lang = $post->lang;
+        $save->resume = $post->resume;
+        $save->meta_description = $post->meta_description;
         $save->created_at = $post->created_at;
 
         $save->save();
@@ -151,6 +165,8 @@ class AdminController extends Controller
         return $view;
 
     }
+
+    // SUPPRIMER UN MEMBRE
 
     public function memberDeleteAction($id)
     {
@@ -202,12 +218,47 @@ class AdminController extends Controller
     {
         $messages = Message::all();
 
-        $view = view('admin.postsArchives', compact('messages'));
+        $view = view('admin.messages', compact('messages'));
 
 
         return $view;
 
     }
+
+    public function messageDetails($id)
+    {
+        $message = Message::where('id', $id)->get();
+
+        $message = $message->first();
+
+        $view = view('admin.messageDetails', compact('message'));
+
+        return $view;
+    }
+
+    public function sendMessageAction(Request $request)
+    {
+        Mail::send('admin.messageDetails',  array(
+
+            'message' => $request->get('message')
+
+        ), function($message) {
+
+                $message->to('marie-charles@sfr.fr');
+
+        });
+    }
+
+    public function messageDeleteAction($id)
+    {
+
+        Message::where('id', $id)->delete();
+
+        return redirect()->action('AdminController@getMessages');
+
+    }
+
+
 
 
 }
