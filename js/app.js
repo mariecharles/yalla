@@ -39,9 +39,18 @@ var section_view_article = document.querySelector('#admin-view-articles');
 var checkbox_select = document.querySelector('#admin-all-articles .selected input[type="checkbox"]');
 var article_checkboxs = document.querySelectorAll('#admin-all-articles article input[type="checkbox"]');
 var count_checkboxs = 0;
+var doing_check = false;
 
 checkbox_select.addEventListener('click', function() {
     section_view_article.classList.toggle('actions-on');
+
+    if (section_view_article.classList.contains('actions-on')) {
+      doing_check = true;
+    } else {
+      doing_check = false;
+    }
+
+    return doing_check;
 });
 
 var cats_select = document.querySelectorAll('#admin-filter-articles  select[name="filter-categories"] option');
@@ -81,3 +90,13 @@ select_cat.addEventListener('change', function() {
 //     console.log('salut' +  i);
 //   });
 // }
+
+var admin_uncheck = document.querySelector('#admin-all-articles .uncheck');
+
+admin_uncheck.addEventListener('click', function() {
+  if (doing_check == true) {
+    for (var i = 0; article_checkboxs.length; i++) {
+      article_checkboxs[i].checked = false;
+    }
+  }
+});
