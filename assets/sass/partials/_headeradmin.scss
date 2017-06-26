@@ -12,21 +12,16 @@ body[id*="admin-"] {
       @include clearfix;
     }
 
-    @media scren and (max-width: $tablet) {
-      position: absolute;
-      width: $adminRWD;
-      height: 100vh;
-      background: red;
-    }
-
     #bm {
       position: relative;
+      margin-left: 5%;
       width: 30px;
       display: none;
 
       span {
         position: absolute;
-        background: red;
+        z-index: 888;
+        background: #000;
         width: 100%;
         height: 3px;
 
@@ -42,22 +37,35 @@ body[id*="admin-"] {
           top: 17px;
         }
       }
+
+      &.opn {
+        span:first-child {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:last-child {
+          transform: rotate(45deg);
+          top: 0;
+        }
+      }
+    }
+
+    &.opn #bm {
+      display: block;
     }
   }
 
+
   // CTAS AND ICON ACTION
   #admin-actions {
+    display: none;
     float: right;
     @include clearfix;
-
-    @media screen and (max-width: $tablet) {
-      left: 0;
-      top: 15%;
-      width: 100%;
-      float: none;
-      z-index: 777;
-      padding-top: 5em;
-    }
 
     // CTAS AND ICON ACTION
     & > div {
@@ -70,10 +78,6 @@ body[id*="admin-"] {
     }
 
     @media screen and (max-width: $tablet) {
-      & > div {
-        float: none;
-        display: none;
-      }
 
       .ctas {
         display: block;
@@ -83,7 +87,9 @@ body[id*="admin-"] {
         .cta {
           display: block;
           width: 100%;
-          border: 0;
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid #000;
           margin: 0;
           padding: 2em;
         }
