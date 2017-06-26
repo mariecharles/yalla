@@ -49,7 +49,6 @@
       width: 33%;
       height: 110vh;
       padding: 3%;
-      /* margin-right: 3%; */
       text-align: center;
       position: relative;
 
@@ -187,6 +186,8 @@
       z-index: 33;
     }
 
+    // WHEN ARTICLE IS HOVERED
+
     &:hover {
       background: #000;
       color: #fff;
@@ -197,9 +198,14 @@
       opacity: .5;
     }
 
+    &:hover .read-more a {
+      color: #fff;
+    }
+
     .top-article {
       position: relative;
       z-index: 44;
+      padding-bottom: 1em;
       border-bottom: 2px solid rgba(34, 30, 34, .1);
 
       .inner {
@@ -228,22 +234,16 @@
       font-size: 1.6em;
       font-weight: 500;
     }
-
-    .content {
-      position: relative;
-      z-index: 44;
-      padding: 2em 2em 1em 2em;
-    }
-
     p {
+      padding: 2em;
       font-size: 16px;
+      line-height: 1.6;
     }
 
     .read-more {
-        position: absolute;
-    	bottom: 0;
-    	left: 0;
-    	right: 0;
+      position: absolute;
+    	bottom: 2em;
+    	left: 2em;
 
         a {
             display: inline-block;

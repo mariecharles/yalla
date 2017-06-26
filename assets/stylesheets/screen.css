@@ -512,7 +512,6 @@ nav select {
   width: 33%;
   height: 110vh;
   padding: 3%;
-  /* margin-right: 3%; */
   text-align: center;
   position: relative;
 }
@@ -530,47 +529,47 @@ nav select {
     margin: 3% 0;
   }
 }
-/* line 67, ../sass/_index.scss */
+/* line 66, ../sass/_index.scss */
 #know-more .one-fact:last-child {
   margin-right: 0;
 }
-/* line 71, ../sass/_index.scss */
+/* line 70, ../sass/_index.scss */
 #know-more .one-fact:nth-child(2) {
   background: #c5c5c5;
 }
 @media screen and (max-width: 580px) {
-  /* line 71, ../sass/_index.scss */
+  /* line 70, ../sass/_index.scss */
   #know-more .one-fact:nth-child(2) {
     display: none;
   }
 }
-/* line 79, ../sass/_index.scss */
+/* line 78, ../sass/_index.scss */
 #know-more .one-fact:nth-child(3) {
   background: #b8b8b8;
 }
 @media screen and (max-width: 580px) {
-  /* line 79, ../sass/_index.scss */
+  /* line 78, ../sass/_index.scss */
   #know-more .one-fact:nth-child(3) {
     display: none;
   }
 }
-/* line 87, ../sass/_index.scss */
+/* line 86, ../sass/_index.scss */
 #know-more .one-fact h3 {
   font-weight: bold;
   font-size: 1.4em;
 }
-/* line 92, ../sass/_index.scss */
+/* line 91, ../sass/_index.scss */
 #know-more .one-fact img {
   display: block;
   width: 30%;
   margin: 0 auto 2em auto;
 }
-/* line 98, ../sass/_index.scss */
+/* line 97, ../sass/_index.scss */
 #know-more .one-fact p {
   width: 70%;
   margin: 1em auto;
 }
-/* line 103, ../sass/_index.scss */
+/* line 102, ../sass/_index.scss */
 #know-more .one-fact .jt-cta {
   background: #000;
   color: #fff;
@@ -586,18 +585,18 @@ nav select {
   right: 0;
 }
 
-/* line 120, ../sass/_index.scss */
+/* line 119, ../sass/_index.scss */
 #last-news {
   background: #f3f3f3;
   padding: 5em 0;
   color: #000;
 }
-/* line 125, ../sass/_index.scss */
+/* line 124, ../sass/_index.scss */
 #last-news > .inner {
   width: 90%;
   margin: 0 auto;
 }
-/* line 130, ../sass/_index.scss */
+/* line 129, ../sass/_index.scss */
 #last-news h2 {
   display: inline-block;
   font-size: 2em;
@@ -611,7 +610,7 @@ nav select {
   display: table;
   clear: both;
 }
-/* line 142, ../sass/_index.scss */
+/* line 141, ../sass/_index.scss */
 #last-news article {
   float: left;
   position: relative;
@@ -627,36 +626,36 @@ nav select {
   transition: .4s ease-out;
 }
 @media screen and (max-width: 880px) {
-  /* line 142, ../sass/_index.scss */
+  /* line 141, ../sass/_index.scss */
   #last-news article {
     width: 43%;
     margin: 3% 3%;
   }
 }
 @media screen and (max-width: 580px) {
-  /* line 142, ../sass/_index.scss */
+  /* line 141, ../sass/_index.scss */
   #last-news article {
     width: 100%;
     margin: 3% 0;
   }
 }
-/* line 166, ../sass/_index.scss */
+/* line 165, ../sass/_index.scss */
 #last-news article:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 580px) {
-  /* line 170, ../sass/_index.scss */
+  /* line 169, ../sass/_index.scss */
   #last-news article:nth-child(2) {
     display: none;
   }
 }
 @media screen and (max-width: 580px) {
-  /* line 176, ../sass/_index.scss */
+  /* line 175, ../sass/_index.scss */
   #last-news article:nth-child(3) {
     display: none;
   }
 }
-/* line 182, ../sass/_index.scss */
+/* line 181, ../sass/_index.scss */
 #last-news article img.thumbnail {
   position: absolute;
   top: -25%;
@@ -664,31 +663,36 @@ nav select {
   opacity: 0;
   z-index: 33;
 }
-/* line 190, ../sass/_index.scss */
+/* line 191, ../sass/_index.scss */
 #last-news article:hover {
   background: #000;
   color: #fff;
   transition: .2s ease-in;
 }
-/* line 196, ../sass/_index.scss */
+/* line 197, ../sass/_index.scss */
 #last-news article:hover img.thumbnail {
   opacity: .5;
 }
-/* line 200, ../sass/_index.scss */
+/* line 201, ../sass/_index.scss */
+#last-news article:hover .read-more a {
+  color: #fff;
+}
+/* line 205, ../sass/_index.scss */
 #last-news article .top-article {
   position: relative;
   z-index: 44;
+  padding-bottom: 1em;
   border-bottom: 2px solid rgba(34, 30, 34, 0.1);
 }
-/* line 205, ../sass/_index.scss */
+/* line 211, ../sass/_index.scss */
 #last-news article .top-article .inner {
   padding: 1em 2em;
 }
-/* line 210, ../sass/_index.scss */
+/* line 216, ../sass/_index.scss */
 #last-news article:hover .top-article {
   border: none;
 }
-/* line 214, ../sass/_index.scss */
+/* line 220, ../sass/_index.scss */
 #last-news article .category {
   width: 130px;
   display: block;
@@ -698,29 +702,24 @@ nav select {
   padding: .4em 1em;
   border-radius: 100px;
 }
-/* line 225, ../sass/_index.scss */
+/* line 231, ../sass/_index.scss */
 #last-news article h3 {
   font-family: "Fira Sans", sans-serif;
   margin: 1em 0 .7em 0;
   font-size: 1.6em;
   font-weight: 500;
 }
-/* line 232, ../sass/_index.scss */
-#last-news article .content {
-  position: relative;
-  z-index: 44;
-  padding: 2em 2em 1em 2em;
-}
-/* line 238, ../sass/_index.scss */
+/* line 237, ../sass/_index.scss */
 #last-news article p {
+  padding: 2em;
   font-size: 16px;
+  line-height: 1.6;
 }
-/* line 242, ../sass/_index.scss */
+/* line 243, ../sass/_index.scss */
 #last-news article .read-more {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 2em;
+  left: 2em;
 }
 /* line 248, ../sass/_index.scss */
 #last-news article .read-more a {
