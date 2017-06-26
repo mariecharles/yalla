@@ -825,6 +825,7 @@ nav select {
   background: #000;
   color: #fff;
   text-align: center;
+  padding: 2em 0;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
 #newsletter-home:after {
@@ -832,18 +833,17 @@ nav select {
   display: table;
   clear: both;
 }
-/* line 344, ../sass/_index.scss */
+/* line 345, ../sass/_index.scss */
 #newsletter-home h3 {
   text-align: center;
   font-weight: bold;
   font-size: 35px;
-  padding-top: 3%;
 }
 /* line 351, ../sass/_index.scss */
 #newsletter-home p {
   font-size: inherit;
   text-align: center;
-  padding-top: 1%;
+  margin-bottom: .7em;
 }
 /* line 357, ../sass/_index.scss */
 #newsletter-home div {
@@ -863,123 +863,30 @@ nav select {
 #newsletter-home div #validation {
   position: relative;
   border-radius: 23px;
-  border: 1px solid #f3f3f3;
-  background: #f3f3f3;
+  border: none;
+  background: #FAFAFA;
   margin-left: 245px;
-  padding: 10px 53px;
+  padding: 11px 53px;
   font-weight: bold;
 }
-/* line 380, ../sass/_index.scss */
+@media screen and (max-width: 580px) {
+  /* line 381, ../sass/_index.scss */
+  #newsletter-home div #newsletter {
+    width: 300px;
+  }
+  /* line 385, ../sass/_index.scss */
+  #newsletter-home div #validation {
+    padding: 11px 25px;
+  }
+}
+/* line 390, ../sass/_index.scss */
 #newsletter-home div .input-group-addo {
   position: absolute;
 }
-/* line 384, ../sass/_index.scss */
+/* line 394, ../sass/_index.scss */
 #newsletter-home div .fa-envelope {
-  background: url(assets/img-layout/mail.svg) no-repeat center center;
+  background: url("../img-layout/mail.svg") no-repeat center center;
   position: absolute;
-}
-
-/* line 392, ../sass/_index.scss */
-#footer .information {
-  background: #f3f3f3;
-  color: #000;
-}
-/* line 3, ../sass/partials/_clearfix.scss */
-#footer .information:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 399, ../sass/_index.scss */
-#footer .logo-footer {
-  width: 30%;
-  float: left;
-}
-@media screen and (max-width: 580px) {
-  /* line 399, ../sass/_index.scss */
-  #footer .logo-footer {
-    float: none;
-    display: block;
-    margin: 10% auto;
-    padding-top: 10%;
-  }
-}
-/* line 410, ../sass/_index.scss */
-#footer .logo-footer img {
-  display: block;
-  margin: 10% auto;
-}
-/* line 416, ../sass/_index.scss */
-#footer .resume-footer {
-  width: 70%;
-  margin: 2% auto;
-  float: right;
-}
-/* line 3, ../sass/partials/_clearfix.scss */
-#footer .resume-footer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 422, ../sass/_index.scss */
-#footer .resume-footer div {
-  width: 23%;
-  float: left;
-}
-@media screen and (max-width: 880px) {
-  /* line 422, ../sass/_index.scss */
-  #footer .resume-footer div {
-    width: 50%;
-    margin: 2% auto;
-  }
-}
-@media screen and (max-width: 580px) {
-  /* line 422, ../sass/_index.scss */
-  #footer .resume-footer div {
-    width: 100%;
-  }
-}
-/* line 435, ../sass/_index.scss */
-#footer .resume-footer a {
-  line-height: 2em;
-  color: #000;
-}
-/* line 440, ../sass/_index.scss */
-#footer .resume-footer a:hover {
-  color: #fff;
-}
-/* line 445, ../sass/_index.scss */
-#footer .legal-footer {
-  background: #fff;
-  margin: 3% auto;
-}
-/* line 450, ../sass/_index.scss */
-#footer .legal-footer ul {
-  text-align: center;
-  width: 100%;
-}
-/* line 455, ../sass/_index.scss */
-#footer .legal-footer li {
-  font-size: 14px;
-  font-weight: bold;
-  display: inline-block;
-  margin: 0 2%;
-}
-@media screen and (max-width: 580px) {
-  /* line 455, ../sass/_index.scss */
-  #footer .legal-footer li {
-    width: 100%;
-  }
-}
-/* line 466, ../sass/_index.scss */
-#footer .legal-footer a {
-  font-size: 14px;
-  font-weight: bold;
-}
-/* line 471, ../sass/_index.scss */
-#footer .legal-footer b {
-  font-size: 14px;
-  color: #000;
 }
 
 /* line 3, ../sass/_aboutus.scss */
@@ -1875,4 +1782,107 @@ body[id*="admin-"] main .inner:after {
 /* line 56, ../sass/_adminvolunteers.scss */
 #admin-volunteers .all-volunteers > div:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+
+/* line 2, ../sass/partials/_footer.scss */
+#footer .information {
+  background: #f3f3f3;
+  color: #000;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#footer .information:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 9, ../sass/partials/_footer.scss */
+#footer .logo-footer {
+  width: 30%;
+  float: left;
+}
+@media screen and (max-width: 580px) {
+  /* line 9, ../sass/partials/_footer.scss */
+  #footer .logo-footer {
+    float: none;
+    display: block;
+    margin: 10% auto;
+    padding-top: 10%;
+  }
+}
+/* line 20, ../sass/partials/_footer.scss */
+#footer .logo-footer img {
+  display: block;
+  margin: 10% auto;
+}
+/* line 26, ../sass/partials/_footer.scss */
+#footer .resume-footer {
+  width: 70%;
+  margin: 2% auto;
+  float: right;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#footer .resume-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 32, ../sass/partials/_footer.scss */
+#footer .resume-footer div {
+  width: 23%;
+  float: left;
+}
+@media screen and (max-width: 880px) {
+  /* line 32, ../sass/partials/_footer.scss */
+  #footer .resume-footer div {
+    width: 50%;
+    margin: 2% auto;
+  }
+}
+@media screen and (max-width: 580px) {
+  /* line 32, ../sass/partials/_footer.scss */
+  #footer .resume-footer div {
+    width: 100%;
+  }
+}
+/* line 45, ../sass/partials/_footer.scss */
+#footer .resume-footer a {
+  line-height: 2em;
+  color: #000;
+}
+/* line 50, ../sass/partials/_footer.scss */
+#footer .resume-footer a:hover {
+  color: #fff;
+}
+/* line 55, ../sass/partials/_footer.scss */
+#footer .legal-footer {
+  background: #fff;
+  margin: 3% auto;
+}
+/* line 59, ../sass/partials/_footer.scss */
+#footer .legal-footer ul {
+  text-align: center;
+  width: 100%;
+}
+/* line 64, ../sass/partials/_footer.scss */
+#footer .legal-footer li {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 2%;
+}
+@media screen and (max-width: 580px) {
+  /* line 64, ../sass/partials/_footer.scss */
+  #footer .legal-footer li {
+    width: 100%;
+  }
+}
+/* line 75, ../sass/partials/_footer.scss */
+#footer .legal-footer a {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 80, ../sass/partials/_footer.scss */
+#footer .legal-footer b {
+  font-size: 14px;
+  color: #000;
 }

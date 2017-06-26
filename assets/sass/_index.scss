@@ -338,20 +338,20 @@
 #newsletter-home {
     background: #000;
     color: #fff;
-    text-align: center; //peut-etre le retirer
+    text-align: center;
+    padding: 2em 0;
     @include clearfix;
 
     h3 {
         text-align: center;
         font-weight: bold;
         font-size: 35px;
-        padding-top: 3%;
     }
 
     p {
         font-size: inherit;
         text-align: center;
-        padding-top: 1%;
+        margin-bottom: .7em;
     }
 
     div {
@@ -370,11 +370,21 @@
         #validation {
             position: relative;
             border-radius: 23px;
-            border: 1px solid #f3f3f3;
-            background: #f3f3f3;
+            border: none;
+            background: $lgrey;
             margin-left: 245px;
-            padding: 10px 53px;
+            padding: 11px 53px;
             font-weight: bold;
+        }
+
+        @media screen and (max-width: $mobile) {
+          #newsletter {
+            width: 300px;
+          }
+
+          #validation {
+            padding: 11px 25px;
+          }
         }
 
         .input-group-addo {
@@ -382,95 +392,8 @@
         }
 
         .fa-envelope {
-            background:url(assets/img-layout/mail.svg) no-repeat center center;
+            background:url('../img-layout/mail.svg') no-repeat center center;
             position: absolute;
-        }
-    }
-}
-
-#footer {
-    .information {
-    background: #f3f3f3;
-    color: #000;
-    @include clearfix;
-    }
-
-
-    .logo-footer {
-        width: 30%;
-        float: left;
-
-        @media screen and (max-width: $mobile) {
-          float: none;
-          display: block;
-          margin: 10% auto;
-          padding-top: 10%;
-        }
-
-        img {
-            display: block;
-            margin: 10% auto;
-        }
-    }
-
-    .resume-footer {
-        @include clearfix;
-        width: 70%;
-        margin: 2% auto;
-        float: right;
-
-        div {
-            width: 23%;
-            float: left;
-            @media screen and (max-width: $tablet) {
-              width: 50%;
-              margin: 2% auto;
-            }
-
-            @media screen and (max-width: $mobile) {
-              width: 100%;
-            }
-        }
-
-        a {
-            line-height: 2em;
-            color: #000;
-        }
-
-        a:hover {
-            color: #fff;
-        }
-    }
-
-    .legal-footer {
-        background: #fff;
-        margin: 3% auto;
-
-
-        ul {
-            text-align: center;
-            width: 100%;
-        }
-
-        li {
-            font-size: 14px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 0 2%;
-
-            @media screen and (max-width: $mobile) {
-              width: 100%;
-            }
-        }
-
-        a {
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        b {
-            font-size: 14px;
-            color: #000;
         }
     }
 }
