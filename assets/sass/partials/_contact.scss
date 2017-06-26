@@ -1,0 +1,118 @@
+main, header {
+    position: relative;
+}
+
+#contact {
+    padding-top: 10%;
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: center;
+    z-index: 667;
+    @include clearfix;
+
+    &.active {
+        display: block;
+    }
+
+    h3 {
+        float: left;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .cross {
+        float: right;
+        width: 30px;
+    }
+
+    div {
+        display: inline-block;
+        width: 60%;
+        font-weight: bold;
+
+        .adresse {
+            padding-bottom: 12%;
+        }
+
+        .adresse-mail {
+            padding-top: 12%;
+        }
+    }
+
+    .first-fields {
+        float: left;
+        width: 100%;
+        text-align: left;
+
+        input {
+            padding: 1% 2%;
+            margin: 3%;
+            width: 26%;
+            color: #fff;
+            border: 1.5px solid transparent;
+            border-bottom: 1.5px solid #fff;
+            background: transparent;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .content-contact {
+        width: 60%;
+        float: left;
+
+        textarea {
+            background: transparent;
+            color: #fff;
+            border: 1.5px solid #fff;
+            padding: 3%;
+            width: 100%;
+        }
+    }
+
+    .info-contact {
+        width: 35%;
+        float: right;
+        text-align: left;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .button-message {
+        float: left;
+        text-align: left;
+        padding-top: 3%;
+
+        input {
+            background: #fff;
+            color: #000;
+            border: 1px solid #fff;
+            padding: 1% 4%;
+        }
+    }
+
+    // WEBKIT POUR PLACEHILDER
+    ::-webkit-input-placeholder { /* Chrome */
+      color: #fff;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: #fff;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: #fff;
+      opacity: 1;
+    }
+    :-moz-placeholder { /* Firefox 4 - 18 */
+      color: #fff;
+      opacity: 1;
+    }
+
+}

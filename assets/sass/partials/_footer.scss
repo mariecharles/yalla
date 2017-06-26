@@ -32,6 +32,7 @@
         div {
             width: 23%;
             float: left;
+          
             @media screen and (max-width: $tablet) {
               width: 50%;
               margin: 2% auto;

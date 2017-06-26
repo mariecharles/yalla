@@ -27,5 +27,30 @@ var inner_header = document.querySelector('#inner-header');
 
 menu_burger.addEventListener('click', function() {
     inner_header.classList.toggle('hidde');
-    body.classList.toggle('header-active');
+    body.classList.toggle('window-active');
 });
+
+
+//formulaire contact
+var contact = document.querySelector('header .contact-page');
+var contenu_contact = document.querySelector('#contact');
+var contact_cross = document.querySelector('.cross');
+var contact_container = document.querySelector('#contact .container');
+
+contact.addEventListener('click', function() {
+    contenu_contact.classList.add('active');
+    body.classList.toggle('window-active');
+})
+
+contact_cross.addEventListener('click', function() {
+    contenu_contact.classList.remove('active');
+    body.classList.toggle('window-active');
+})
+
+// window.addEventListener('click', function(e) {
+//     if (contact_container.contains(e.target)) {
+//     console.log('SALUT');
+// } else {
+//         contenu_contact.classList.remove('active');
+//     }
+// });
