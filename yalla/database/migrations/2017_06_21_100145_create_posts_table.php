@@ -23,6 +23,8 @@ class CreatePostsTable extends Migration
             $table->string('slug')->unique();
             $table->string('title');
             $table->longText('content');
+            $table->longText('resume');
+            $table->longText('meta_description');
             $table->string('img')->nullable();
             $table->integer('active')->default(1);
             $table->string('lang');

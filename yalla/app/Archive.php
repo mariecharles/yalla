@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Archive extends Model
 {
-    protected $fillable = ['title', 'slug', 'content' , 'img', 'category_id', 'seo_id', 'lang', 'saved_id'];
+    protected $fillable = ['title', 'slug', 'content' , 'img', 'category_id', 'seo_id', 'lang', 'saved_id', 'resume', 'meta_description'];
 }
