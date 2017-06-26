@@ -169,27 +169,28 @@ body[id*="admin-"]:after {
 /* line 30, ../sass/partials/_reset.scss */
 select {
   -webkit-appearance: none;
+  padding: .4em 1em;
 }
 
-/* line 34, ../sass/partials/_reset.scss */
+/* line 35, ../sass/partials/_reset.scss */
 body[id*="admin-"] {
   overflow: hidden;
 }
-/* line 37, ../sass/partials/_reset.scss */
+/* line 38, ../sass/partials/_reset.scss */
 body[id*="admin-"] main {
   height: 83vh;
   overflow-y: auto;
 }
-/* line 41, ../sass/partials/_reset.scss */
+/* line 42, ../sass/partials/_reset.scss */
 body[id*="admin-"] main::-webkit-scrollbar {
   width: .5em;
 }
-/* line 45, ../sass/partials/_reset.scss */
+/* line 46, ../sass/partials/_reset.scss */
 body[id*="admin-"] main::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
   background: transparent;
 }
-/* line 50, ../sass/partials/_reset.scss */
+/* line 51, ../sass/partials/_reset.scss */
 body[id*="admin-"] main::-webkit-scrollbar-thumb {
   background-color: #FAFAFA;
   outline: 1px solid slategrey;
@@ -1128,11 +1129,33 @@ body[id*="admin-"] #admin-actions .icon-action div > div[class*="my-"] {
   transition: .3s ease-out;
 }
 /* line 130, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action div > div[class*="my-"].my-space {
+  padding: 0;
+}
+/* line 133, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action div > div[class*="my-"].my-space li {
+  padding: .6em 0;
+  border-bottom: 1px solid #000;
+}
+/* line 137, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action div > div[class*="my-"].my-space li:first-child {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+/* line 142, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action div > div[class*="my-"].my-space li:last-child {
+  border: none;
+}
+/* line 146, ../sass/partials/_headeradmin.scss */
+body[id*="admin-"] #admin-actions .icon-action div > div[class*="my-"].my-space li:hover a {
+  font-weight: bolder;
+}
+/* line 152, ../sass/partials/_headeradmin.scss */
 body[id*="admin-"] #admin-actions .icon-action div > div[class*="my-"] h3 {
   text-transform: uppercase;
   font-weight: bolder;
 }
-/* line 136, ../sass/partials/_headeradmin.scss */
+/* line 158, ../sass/partials/_headeradmin.scss */
 body[id*="admin-"] #admin-actions .icon-action span.push {
   position: absolute;
   top: 0;
@@ -1241,7 +1264,7 @@ body[id*="admin-"] main .inner:after {
 }
 /* line 31, ../sass/_adminhome.scss */
 #admin-home .all-articles {
-  width: 45%;
+  width: 75%;
   float: left;
   background: #FAFAFA;
   border-radius: 10px;
@@ -1281,7 +1304,13 @@ body[id*="admin-"] main .inner:after {
 #admin-home .all-articles article {
   padding: 1em 2em;
 }
-/* line 70, ../sass/_adminhome.scss */
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-home .all-articles article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 72, ../sass/_adminhome.scss */
 #admin-home .all-articles article:first-child {
   padding-top: 1.4em;
 }
@@ -1289,35 +1318,34 @@ body[id*="admin-"] main .inner:after {
 #admin-home .all-articles article h3 {
   margin-bottom: 0.4em;
 }
-/* line 78, ../sass/_adminhome.scss */
+/* line 76, ../sass/_adminhome.scss */
 #admin-home .all-articles article:hover {
   background: grey;
 }
-/* line 81, ../sass/_adminhome.scss */
+/* line 78, ../sass/_adminhome.scss */
 #admin-home .all-articles article:hover .actions {
   display: inline-block;
 }
-/* line 86, ../sass/_adminhome.scss */
-#admin-home .all-articles article > div {
-  display: inline-block;
+/* line 81, ../sass/_adminhome.scss */
+#admin-home .all-articles article .infos {
+  float: left;
 }
-/* line 89, ../sass/_adminhome.scss */
-#admin-home .all-articles article > div.actions {
-  display: none;
-  margin-left: 6em;
+/* line 82, ../sass/_adminhome.scss */
+#admin-home .all-articles article .actions {
+  float: right;
 }
-/* line 95, ../sass/_adminhome.scss */
+/* line 84, ../sass/_adminhome.scss */
 #admin-home .all-articles article .actions a,
 #admin-home .all-articles article span {
   font-size: 14px;
 }
-/* line 103, ../sass/_adminhome.scss */
+/* line 92, ../sass/_adminhome.scss */
 #admin-home .stats {
-  width: 52%;
+  width: 22%;
   float: right;
 }
 @media screen and (max-width: 880px) {
-  /* line 103, ../sass/_adminhome.scss */
+  /* line 92, ../sass/_adminhome.scss */
   #admin-home .stats {
     width: 100%;
     float: none;
@@ -1327,81 +1355,48 @@ body[id*="admin-"] main .inner:after {
   }
 }
 @media screen and (max-width: 580px) {
-  /* line 103, ../sass/_adminhome.scss */
+  /* line 92, ../sass/_adminhome.scss */
   #admin-home .stats {
     padding-left: 2em;
   }
 }
-/* line 121, ../sass/_adminhome.scss */
+/* line 110, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats > div {
   background: #FAFAFA;
-  width: 31%;
-  margin-right: 3%;
-  float: left;
+  width: 100%;
   padding: 1.7em .8em;
+  margin-bottom: 1em;
 }
-/* line 128, ../sass/_adminhome.scss */
+/* line 116, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats > div:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 580px) {
-  /* line 119, ../sass/_adminhome.scss */
+  /* line 108, ../sass/_adminhome.scss */
   #admin-home .stats .quick-stats {
     width: 20%;
     width: 300%;
     overflow-x: scroll;
   }
 }
-/* line 139, ../sass/_adminhome.scss */
+/* line 127, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats .head {
   margin-bottom: 1em;
 }
-/* line 142, ../sass/_adminhome.scss */
+/* line 130, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats .head h3 {
   font-weight: bolder;
   text-transform: uppercase;
   font-size: 15px;
 }
-/* line 148, ../sass/_adminhome.scss */
+/* line 136, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats .head span.last-date {
   font-size: .8em;
 }
-/* line 153, ../sass/_adminhome.scss */
+/* line 141, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats .nb {
   font-size: 3.8em;
   font-weight: bolder;
-}
-/* line 159, ../sass/_adminhome.scss */
-#admin-home .stats .tab {
-  display: none;
-  clear: both;
-  float: none;
-  width: 100%;
-  padding-top: 3em;
-}
-/* line 3, ../sass/partials/_clearfix.scss */
-#admin-home .stats .tab:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 167, ../sass/_adminhome.scss */
-#admin-home .stats .tab h2 {
-  font-size: 1.5em;
-  display: inline-block;
-  margin-bottom: 1.8em;
-  padding-top: .2em;
-}
-/* line 174, ../sass/_adminhome.scss */
-#admin-home .stats .tab select {
-  float: right;
-  border-radius: 0;
-  padding: .6em 1.3em;
-}
-/* line 180, ../sass/_adminhome.scss */
-#admin-home .stats .tab .stats-frame {
-  padding: 3em;
-  background: #FAFAFA;
 }
 
 /* line 1, ../sass/_adminarticles.scss */
@@ -1529,9 +1524,8 @@ body[id*="admin-"] main .inner:after {
 #admin-add-article .aside-content > div select {
   float: right;
   margin-right: 1em;
-  padding: .4em 1em;
 }
-/* line 109, ../sass/_adminarticles.scss */
+/* line 108, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div input {
   outline: none;
   display: block;
@@ -1542,7 +1536,7 @@ body[id*="admin-"] main .inner:after {
   border: none;
   border-bottom: 1px solid #000;
 }
-/* line 120, ../sass/_adminarticles.scss */
+/* line 119, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div .all-tags .tag {
   background: red;
   padding: .2em 1.5em;
@@ -1554,7 +1548,7 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 126, ../sass/_adminarticles.scss */
+/* line 125, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div .all-tags .tag i {
   display: none;
   float: left;
@@ -1566,11 +1560,11 @@ body[id*="admin-"] main .inner:after {
   color: #fff;
   margin-right: 1em;
 }
-/* line 138, ../sass/_adminarticles.scss */
+/* line 137, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content > div .all-tags .tag:hover i {
   display: block;
 }
-/* line 145, ../sass/_adminarticles.scss */
+/* line 144, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content button {
   display: block;
   float: left;
@@ -1580,7 +1574,7 @@ body[id*="admin-"] main .inner:after {
   font-size: 16px;
   padding: .7em 1em;
 }
-/* line 154, ../sass/_adminarticles.scss */
+/* line 153, ../sass/_adminarticles.scss */
 #admin-add-article .aside-content button:last-child {
   margin-right: 0;
   background: #FAFAFA;
@@ -1592,26 +1586,26 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 169, ../sass/_adminarticles.scss */
+/* line 168, ../sass/_adminarticles.scss */
 #admin-all-articles > .head {
   background: #FAFAFA;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
-/* line 174, ../sass/_adminarticles.scss */
+/* line 173, ../sass/_adminarticles.scss */
 #admin-all-articles .head > .actions > div {
   display: inline-block;
   padding: 1em 3em;
   border-right: 1px solid #000;
   cursor: pointer;
 }
-/* line 180, ../sass/_adminarticles.scss */
+/* line 179, ../sass/_adminarticles.scss */
 #admin-all-articles .head > .actions > div select {
   border: none;
   background: transparent;
 }
 
-/* line 188, ../sass/_adminarticles.scss */
+/* line 187, ../sass/_adminarticles.scss */
 #admin-filter-articles {
   width: 90%;
   margin: 2em auto;
@@ -1622,30 +1616,30 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 193, ../sass/_adminarticles.scss */
+/* line 192, ../sass/_adminarticles.scss */
 #admin-filter-articles span.nb {
   font-weight: bolder;
   line-height: 2.8;
 }
-/* line 198, ../sass/_adminarticles.scss */
+/* line 197, ../sass/_adminarticles.scss */
 #admin-filter-articles select {
   float: right;
   background: transparent;
   padding: .5em 2em;
 }
 
-/* line 205, ../sass/_adminarticles.scss */
+/* line 204, ../sass/_adminarticles.scss */
 #admin-view-articles {
   width: 90%;
   margin: 0 auto;
 }
-/* line 212, ../sass/_adminarticles.scss */
+/* line 211, ../sass/_adminarticles.scss */
 #admin-view-articles.actions-on .checkbox {
   opacity: 1;
   width: 10%;
   max-width: 999px;
 }
-/* line 218, ../sass/_adminarticles.scss */
+/* line 217, ../sass/_adminarticles.scss */
 #admin-view-articles.actions-on .wrapper {
   width: 90%;
   background: #F1F1F1;
@@ -1656,7 +1650,7 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 225, ../sass/_adminarticles.scss */
+/* line 224, ../sass/_adminarticles.scss */
 #admin-view-articles article {
   width: 100%;
   border-radius: 15px;
@@ -1668,7 +1662,7 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 231, ../sass/_adminarticles.scss */
+/* line 230, ../sass/_adminarticles.scss */
 #admin-view-articles article .checkbox {
   opacity: 0;
   float: left;
@@ -1677,7 +1671,7 @@ body[id*="admin-"] main .inner:after {
   line-height: 5;
   overflow: hidden;
 }
-/* line 240, ../sass/_adminarticles.scss */
+/* line 239, ../sass/_adminarticles.scss */
 #admin-view-articles article .wrapper {
   width: 100%;
   float: right;
@@ -1690,34 +1684,104 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 248, ../sass/_adminarticles.scss */
+/* line 247, ../sass/_adminarticles.scss */
 #admin-view-articles article .content {
   float: left;
 }
-/* line 250, ../sass/_adminarticles.scss */
+/* line 249, ../sass/_adminarticles.scss */
 #admin-view-articles article .content h3 {
   font-weight: bolder;
 }
-/* line 253, ../sass/_adminarticles.scss */
+/* line 252, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions {
   float: right;
 }
-/* line 256, ../sass/_adminarticles.scss */
+/* line 255, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .author, #admin-view-articles article .actions .return {
   display: block;
   text-align: right;
 }
-/* line 261, ../sass/_adminarticles.scss */
+/* line 260, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .ctas {
   clear: both;
   margin-top: 1.5em;
 }
-/* line 266, ../sass/_adminarticles.scss */
+/* line 265, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .cta {
   border: 1px solid #000;
   padding: .5em 2em;
 }
-/* line 273, ../sass/_adminarticles.scss */
+/* line 272, ../sass/_adminarticles.scss */
 #admin-view-articles .pagination {
   text-align: center;
+}
+
+/* line 1, ../sass/_adminvolunteers.scss */
+#admin-volunteers {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 5, ../sass/_adminvolunteers.scss */
+#admin-volunteers > .head {
+  padding-top: 3em;
+  margin-bottom: 3em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-volunteers > .head:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 10, ../sass/_adminvolunteers.scss */
+#admin-volunteers > .head h2 {
+  float: left;
+  font-size: 1.6em;
+  font-weight: bolder;
+}
+/* line 16, ../sass/_adminvolunteers.scss */
+#admin-volunteers > .head select {
+  float: right;
+}
+/* line 22, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers > div {
+  width: 100%;
+  padding: 1.6em 3em;
+  background: #FAFAFA;
+  border-radius: 30px;
+  margin-bottom: 2em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-volunteers .all-volunteers > div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 30, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers > div .infos {
+  float: left;
+  padding-top: .5em;
+}
+/* line 35, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers > div h3 {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+/* line 40, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers > div .actions {
+  float: right;
+  text-align: right;
+}
+/* line 44, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers > div .actions button {
+  display: block;
+  border: none;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 100px;
+  padding: .5em 1.6em;
+  margin-top: .5em;
+}
+/* line 56, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers > div:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
