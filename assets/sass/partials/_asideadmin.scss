@@ -18,7 +18,16 @@
       top: 25%;
     }
   }
- 
+
+  li {
+    transition: .4s ease-out;
+  }
+
+  li:hover {
+    background: rgba(0,0,0,.1);
+    transition: .3s ease;
+  }
+
   a {
     display: block;
     padding: 1.5em 2em;

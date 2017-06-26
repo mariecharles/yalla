@@ -13,11 +13,21 @@ $lgrey: #FAFAFA;
 // WIDTHS VARIABLES
 
 $headerWidth: 90%;
+$adminMainWidth: 90%;
+
+// RESPONSIVE VARIABLES
+
+$tablet: 880px;
+$mobile: 580px;
 
 //bolder
 
 b {
 font-weight: bold;
+}
+
+span.return {
+  display: block;
 }
 
 
@@ -39,5 +49,6 @@ font-weight: bold;
 @import "partials/headeradmin";
 @import "partials/asideadmin";
 @import "adminhome";
+@import "adminarticles";
 
 @import "partials/footer";

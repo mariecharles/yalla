@@ -8,18 +8,44 @@ body[id*="admin-"] {
     .inner {
       width: $headerWidth;
       margin: 0 auto;
+      @include clearfix;
+    }
+
+    #bm {
+      position: relative;
+      width: 30px;
+
+      span {
+        position: absolute;
+        background: red;
+        width: 100%;
+        height: 3px;
+
+        &:first-child {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 8px;
+        }
+
+        &:last-child {
+          top: 17px;
+        }
+      }
     }
   }
 
-
+  // CTAS AND ICON ACTION
   #admin-actions {
     float: right;
     @include clearfix;
 
+    // CTAS AND ICON ACTION
     & > div {
       float: left;
     }
- 
+
     .cta {
       border: 1px solid #000;
       margin: 0 .5em;
@@ -28,7 +54,17 @@ body[id*="admin-"] {
     .icon-action {
       @include clearfix;
 
-      & > span {
+      & > div {
+        float: left;
+        position: relative;
+      }
+
+      & > div:hover > div[class*="my-"] {
+        opacity: 1;
+        transition: .4s ease-in;
+      }
+
+      div > span {
         display: block;
         position: relative;
         float: left;
@@ -36,6 +72,26 @@ body[id*="admin-"] {
         cursor: pointer;
         font-size: 1.8em;
         line-height: .8;
+      }
+
+      div > div[class*="my-"] {
+        overflow: hidden;
+        position: absolute;
+        z-index: 666;
+        background: $lgrey;
+        width: 200px;
+        top: 3em;
+        left: -100%;
+        padding: 1em;
+        text-align: center;
+        border: 1px solid #000;
+        opacity: 0;
+        transition: .3s ease-out;
+
+        h3 {
+          text-transform: uppercase;
+          font-weight: bolder;
+        }
       }
 
       span.push {

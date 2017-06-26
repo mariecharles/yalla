@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 use App\Category;
+use App\Message;
 
 
 class UserController extends Controller
@@ -16,7 +17,7 @@ class UserController extends Controller
         $posts = Post::with('category','tag')
             ->where('active', 1)->get();
 
-        $view = view('index', compact('posts'));
+        $view = view('user.index', compact('posts'));
 
         return $view;
 
@@ -30,26 +31,35 @@ class UserController extends Controller
 
         $categories = Category::all();
 
-        $view = view('pageActu', compact('posts','categories'));
+        $view = view('user.pageActu', compact('posts','categories'));
 
 
         return $view;
 
     }
 
-    public function actuDetails($param)
+    public function actuDetails($slug)
     {
 
         $post = Post::with('category','tag')
-                ->where('slug', $param)
-                ->orWhere('id', $param)->get();
-
+                ->where('slug', $slug)->get();
 
         $post = $post->first();
 
-        $view = view('detailsActu', compact('post'));
+        $view = view('user.detailsActu', compact('post'));
 
         return $view;
+
+    }
+
+    public function messageAddAction(Request $request)
+    {
+
+        $requete = $request->all();
+
+        Message::create($requete);
+
+        return 'Votre message a été envoyé avec succès !';
 
     }
 
