@@ -143,7 +143,6 @@
     position: relative;
     overflow: hidden;
     width: 31%;
-    height: 70vh;
     margin-right: 3%;
     padding: 2em 0;
     border-radius: 5px;
@@ -202,10 +201,12 @@
       color: #fff;
     }
 
+    // THE TOP OF THE ARTICLE
+
     .top-article {
       position: relative;
       z-index: 44;
-      padding-bottom: 1em;
+      padding-bottom: 1.6em;
       border-bottom: 2px solid rgba(34, 30, 34, .1);
 
       .inner {
@@ -242,10 +243,8 @@
     }
 
     .read-more {
-      position: absolute;
       z-index: 44;
-    	bottom: 2em;
-    	left: 2em;
+      padding-left: 2em;
 
         a {
             display: inline-block;
