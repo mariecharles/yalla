@@ -11,7 +11,8 @@ body:not([id*="admin-"]) header {
     background: transparent;
     transition: .4s ease-out;
 
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: $tablet) {
+        background: #fff;
         padding-top: 0;
         padding-bottom: 3%;
     }
@@ -33,7 +34,7 @@ body:not([id*="admin-"]) header {
       .logo-desktop {
           display: block;
       }
-      @media screen and (max-width: 580px) {
+      @media screen and (max-width: $tablet) {
           .logo-desktop {
               display: none;
           }
@@ -45,7 +46,7 @@ body:not([id*="admin-"]) header {
           width: 100px;
           height: auto;
       }
-      @media screen and (max-width: 580px) {
+      @media screen and (max-width: $tablet) {
           .logo-mobile {
               display: block;
           }
@@ -86,7 +87,7 @@ body:not([id*="admin-"]) header {
         right: 20px;
     }
 
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: $tablet) {
         .menu-burger, .share-header {
             display: block;
         }
@@ -94,9 +95,8 @@ body:not([id*="admin-"]) header {
 
     }
 
-    // END OF INNER
     nav {
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: $tablet) {
                 width: 100%;
                 text-align: center;
                 padding: 10%;
@@ -104,36 +104,31 @@ body:not([id*="admin-"]) header {
     }
 
 
-    ul {
-        font-size: 0;
-    }
+    ul { font-size: 0; }
 
     li {
         font-size: initial;
         display: inline-block;
         padding: 0.3em 1em;
 
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: $tablet) {
                 display: block;
                 padding-top: 9%;
         }
 
-        img {
-          width: 6px;
-        }
+        img { width: 6px; }
 
 
         &.active a {
             padding-bottom: 0.8em;
-            //border-bottom: 3px solid $yellow;
 
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: $tablet) {
             border: 0;
             font-weight: bold;
             }
         }
 
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: $tablet) {
             a {
                 font-size: 24px;
             }
@@ -145,7 +140,7 @@ body:not([id*="admin-"]) h1 {
     float: left;
     padding-top: 0.7em;
 
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: $tablet) {
         float: none;
         width: 100px;
         margin: 0 auto;
@@ -158,7 +153,8 @@ body:not([id*="admin-"]) h1 {
 
 body:not([id*="admin-"]) #inner-header {
     float: right;
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: $tablet) {
+        width: 100%;
         display: none;
         height: 100vh;
     }
@@ -173,7 +169,7 @@ body:not([id*="admin-"]) #inner-header {
     nav {
         display: inline-block;
 
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: $tablet) {
             text-align: center;
             width: 100%;
     }
@@ -181,7 +177,7 @@ body:not([id*="admin-"]) #inner-header {
     .cta {
         margin: 0 1.5em;
 
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: $tablet) {
             margin: 0 auto;
             width: 70%;
             display: block;
@@ -197,7 +193,7 @@ body:not([id*="admin-"]) #inner-header {
         padding: 0.7em 1em;
         border-radius: 100px;
 
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: $tablet) {
             display: block;
             margin: 0 auto;
     }
