@@ -14,10 +14,9 @@
     <p><?=$message->name?></p>
     <p><?=$message->mail?></p>
 
-    <a href="<?=url('admin/messages/'. $message->id)?>">Voir</a>
-    <a href="<?=url('admin/modifier-un-membre/'. $member->id)?>">Modifier un membre</a>
+    <a href="<?=url('admin/message-details/'. $message->id)?>">Répondre</a>
 
-    {{ Form::open(['route' => ['message.delete', $->id], 'method' => 'delete']) }}
+    {{ Form::open(['route' => ['message.delete', $message->id], 'method' => 'delete']) }}
     <button type="submit">Supprimer</button>
     {{ Form::close() }}
 

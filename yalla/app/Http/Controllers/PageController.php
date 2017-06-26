@@ -40,6 +40,13 @@ class PageController extends Controller
         return $view;
     }
 
+    public function categoryAddAction()
+    {
+        $view = view('admin.categoryForm');
+
+        return $view;
+    }
+
     public function memberEditAction($id)
     {
         $member = Member::where('id', $id)->get();

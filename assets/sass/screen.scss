@@ -7,6 +7,7 @@ $Roboto: 'Roboto', sans-serif;
 // COLORS VARIABLES
 
 $yellow: #FFD52B;
+$orange: #e28413;
 
 $lgrey: #FAFAFA;
 
@@ -14,6 +15,7 @@ $lgrey: #FAFAFA;
 
 $headerWidth: 90%;
 $adminMainWidth: 90%;
+$adminRWD: 95%;
 
 // RESPONSIVE VARIABLES
 
@@ -23,7 +25,7 @@ $mobile: 580px;
 //bolder
 
 b {
-font-weight: bold;
+font-weight: bolder;
 }
 
 span.return {
@@ -50,5 +52,6 @@ span.return {
 @import "partials/asideadmin";
 @import "adminhome";
 @import "adminarticles";
+@import "adminvolunteers";
 
 @import "partials/footer";

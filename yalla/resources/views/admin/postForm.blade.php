@@ -23,6 +23,9 @@
     {!! Form::label('content', 'Contenu') !!}
     {!! Form::textarea('content', isset($post->slug)?$post->content:'') !!}
 
+    {!! Form::label('resume', 'Résumé') !!}
+    {!! Form::textarea('resume', isset($post->slug)?$post->resume:'') !!}
+
     {!! Form::label('slug', 'Nom dans l\'URL') !!}
     {!! Form::text('slug', isset($post->slug)?$post->slug:'') !!}
 
@@ -44,6 +47,9 @@
     </ul>
 
     {!! Form::text('tags', isset($post->slug)?$tag->name:'') !!}
+
+    {!! Form::label('meta_description', 'Description pour le référencement') !!}
+    {!! Form::textarea('meta_description', isset($post->slug)?$post->meta_description:'') !!}
 
     <button type="submit"><?= isset($post->slug)?'Modifier':'Ajouter'?></button>
 

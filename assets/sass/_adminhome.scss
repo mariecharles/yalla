@@ -2,6 +2,8 @@ body[id*="admin-"] {
     main {
         width: 85%;
         float: right;
+        overflow-x: hidden;
+        padding-bottom: 2em;
 
         .inner {
             width: 95%;
@@ -9,19 +11,35 @@ body[id*="admin-"] {
             padding-top: 2em;
             @include clearfix;
         }
-    }
+
+        @media screen and (max-width: $tablet) {
+          width: $adminRWD;
+          float: none;
+          margin: 0 auto;
+
+          .inner {
+            width: 100%;
+            margin: 0;
+          }
+        }
+    } // END OF MAIN
 }
 
 #admin-home {
     @include clearfix;
 
     .all-articles {
-        width: 45%;
+        width: 75%;
         float: left;
         background: $lgrey;
         border-radius: 10px;
         margin-right: 3%;
         padding: 2em 0;
+
+        @media screen and (max-width: $tablet) {
+          width: 100%;
+          float: none;
+        }
 
         .head {
             padding-bottom: 1.6em;
@@ -48,31 +66,20 @@ body[id*="admin-"] {
 
         article {
             padding: 1em 2em;
+            @include clearfix;
 
-            &:first-child {
-              padding-top: 1.4em;
-            }
+            // THE FIRST ARTICLE
+            &:first-child { padding-top: 1.4em; }
 
-            h3 {
-                margin-bottom: 0.4em;
-            }
+            h3 { margin-bottom: 0.4em; }
 
             &:hover {
                 background: grey;
-
-                .actions {
-                  display: inline-block;
-                }
+                .actions { display: inline-block;}
             }
 
-            & > div {
-                display: inline-block;
-
-                &.actions {
-                  display: none;
-                    margin-left: 6em;
-                }
-            }
+            .infos { float: left;}
+            .actions { float: right; }
 
             .actions a,
             span {
@@ -83,20 +90,38 @@ body[id*="admin-"] {
     }
 
     .stats {
-        width: 52%;
+        width: 22%;
         float: right;
 
+        @media screen and (max-width: $tablet) {
+          width: 100%;
+          float: none;
+          clear: both;
+          margin-top: 3em;
+          overflow-x: scroll;
+        }
+
+        @media screen and (max-width: $mobile) {
+          padding-left: 2em;
+        }
+
         .quick-stats {
+
             & > div {
                 background: $lgrey;
-                width: 31%;
-                margin-right: 3%;
-                float: left;
+                width: 100%;
                 padding: 1.7em .8em;
+                margin-bottom: 1em;
 
                 &:last-child {
                     margin-right: 0;
                 }
+            }
+
+            @media screen and (max-width: $mobile) {
+              width: 20%;
+              width: 300%;
+              overflow-x: scroll;
             }
 
             .head {
@@ -116,33 +141,6 @@ body[id*="admin-"] {
             .nb {
               font-size: 3.8em;
               font-weight: bolder;
-            }
-        }
-
-        .tab {
-            clear: both;
-            float: none;
-            width: 100%;
-            padding-top: 3em;
-            @include clearfix;
-
-            h2 {
-              font-size: 1.5em;
-              display: inline-block;
-              margin-bottom: 1.8em;
-              padding-top: .2em;
-            }
-
-            select {
-              float: right;
-              border-radius: 0;
-              padding: .6em 1.3em;
-            }
-
-            .stats-frame {
-              padding: 3em;
-              background: $lgrey;
-
             }
         }
     }
