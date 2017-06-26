@@ -206,6 +206,8 @@
   width: $adminMainWidth;
   margin: 0 auto;
 
+  // WHEN ACTIONS ARE ON
+
   &.actions-on {
     .checkbox {
       opacity: 1;
@@ -238,16 +240,16 @@
     .wrapper {
       width: 100%;
       float: right;
+      padding: 1.6em 2em;
       background: #F1F1F1;
       @include clearfix;
     }
 
     .content {
       float: left;
-
       h3 { font-weight: bolder; }
-
     }
+
     .actions {
       float: right;
 

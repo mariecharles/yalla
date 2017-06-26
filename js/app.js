@@ -36,7 +36,13 @@ title_add_article.addEventListener('click', function() {
 
 var section_view_article = document.querySelector('#admin-view-articles');
 var checkbox_select = document.querySelector('#admin-all-articles .selected input[type="checkbox"]');
+var article_checkboxs = document.querySelectorAll('#admin-all-articles article input[type="checkbox"]');
+var count_checkboxs = 0;
 
 checkbox_select.addEventListener('click', function() {
     section_view_article.classList.toggle('actions-on');
 });
+
+// for (var i = 0; i < article_checkboxs.length; i++) {
+//
+// }
