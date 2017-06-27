@@ -17,6 +17,7 @@
             border: none;
             padding: 13%;
             margin-left: 12%;
+            width: 83%;
         }
 
         ::-webkit-input-placeholder { /* Chrome */
@@ -44,6 +45,7 @@
     display: inline-block;
     width: 83%;
     padding-top: 2%;
+    padding-left: 2%;
     color: $orange;
 
     input {
@@ -52,8 +54,12 @@
 
     .delete-checkbox-mail {
         display: inline-block;
+        //padding-left: 2%;
+        width: 25%;
+
         p {
             display: inline-block;
+            padding-left: 7%;
         }
     }
 
@@ -75,30 +81,31 @@
         tr {
             font-weight: bold;
             display: block;
-            /* background: pink; */
             padding: 2% 0;
             border-bottom: 1px solid $mgrey
         }
 
         td {
-            //border-bottom: 1px solid $mgrey;
+            padding: 0 1%;
+
             &:first-child {
                 width: 5%;
                 text-align: center;
             }
 
             &:nth-child(2) {
-                width: 30%;
+                width: 21%;
             }
 
             &:nth-child(3) {
-                width: 38%;
+                width: 42%;
             }
 
             &:nth-child(4) {
-                width: 22%;
+                width: 24%;
                 font-weight: lighter;
             }
+
         }
     }
 }
