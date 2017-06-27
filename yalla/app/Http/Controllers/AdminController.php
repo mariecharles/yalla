@@ -24,11 +24,31 @@ class AdminController extends Controller
 
         $members = Member::all();
 
-        $view = view('admin.adminIndex', compact('posts','categories','members'));
+        $count = Post::get()->count();
+
+        $online = Post::where('active', 1)->get()->count();
+        $offline = Post::where('active', 0)->get()->count();
+
+        $view = view('admin.adminIndex', compact('posts','categories','members', 'count', 'online','offline'));
 
         return $view;
 
     }
+
+    public function upload($file)
+    {
+
+        $destinationPath = 'img-content';
+
+        $extension = $file->getClientOriginalExtension();
+
+        $fileName = rand(11111,99999).'.'.$extension;
+
+        $file->move($destinationPath, $fileName); // uploading file to given path
+
+        return $fileName;
+    }
+
 
     public function categoryAddAction(Request $request)
     {
@@ -74,11 +94,16 @@ class AdminController extends Controller
 
       $requete = $request->all();
 
+      $image = $this->upload($request->file('img'));
+
+      $requete['img'] = $image;
+
       $post = Post::create($requete);
 
-        $post->saveTags($request->get('tags'));
+      $post->saveTags($request->get('tags'));
 
-        return redirect()->action('AdminController@index');
+
+      return redirect()->action('AdminController@index');
 
     }
 
@@ -88,7 +113,11 @@ class AdminController extends Controller
     {
         $requete = $request->all();
 
+        $image = $this->upload($request->file('img'));
+
         $post = Post::find($id);
+
+        $requete['img'] = $image;
 
         $post->update($requete);
 
@@ -256,19 +285,6 @@ class AdminController extends Controller
 
         return redirect()->action('AdminController@getMessages');
 
-    }
-
-    private function upload($file)
-    {
-        $destinationPath = 'img-content/uploads';
-
-        $extension = $file->getClientOriginalExtension();
-
-        $fileName = rand(11111,99999).'.'.$extension;
-
-        $file->move($destinationPath, $fileName); // uploading file to given path
-
-        return $fileName;
     }
 
 

@@ -12,7 +12,7 @@
 <body>
 <h1><?= isset($post->slug)?'Modifier l\'article':'Ajouter un article'; ?></h1>
 
-{!! Form::open(isset($post->slug)?['url' => route('post.update', $post->id), 'method' => 'put']:['url' => route('post.add')]) !!}
+{!! Form::open(isset($post->slug)?['url' => route('post.update', $post->id), 'method' => 'put', 'files' => true]:['url' => route('post.add'), 'files' => true]) !!}
 
     {!! Form::label('title', 'Titre de l\'article') !!}
     {!! Form::text('title', isset($post->slug)?$post->title:'') !!}
