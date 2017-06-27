@@ -2546,6 +2546,121 @@ body[id*="admin-"] main .inner:after {
   font-weight: lighter;
 }
 
+/* line 2, ../sass/_adminpartners.scss */
+#admin-partners .all-partners {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 4em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-partners main .head:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 11, ../sass/_adminpartners.scss */
+#admin-partners main .head span.nb {
+  font-size: .8em;
+  color: #ff9806;
+}
+/* line 16, ../sass/_adminpartners.scss */
+#admin-partners main .head .trait {
+  font-size: inherit;
+  margin: 0 10px;
+}
+/* line 21, ../sass/_adminpartners.scss */
+#admin-partners main .head h2 {
+  font-size: 2em;
+  float: left;
+  font-weight: bolder;
+}
+/* line 27, ../sass/_adminpartners.scss */
+#admin-partners main .head .new-partner {
+  float: right;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #ff9806;
+  padding: 0 1em;
+  height: 40px;
+  line-height: 2.3;
+  color: #ff9806;
+  font-weight: bolder;
+  border-radius: 100px;
+  line-height: .2;
+  padding: 1.3em 2.4em;
+  cursor: pointer;
+}
+/* line 37, ../sass/_adminpartners.scss */
+#admin-partners main .head .new-partner:hover {
+  background: #ff9806;
+  color: #fff;
+}
+/* line 42, ../sass/_adminpartners.scss */
+#admin-partners main .head .new-partner span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+/* line 50, ../sass/_adminpartners.scss */
+#admin-partners .list-partners {
+  margin-top: 3em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-partners .list-partners:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 55, ../sass/_adminpartners.scss */
+#admin-partners .partner {
+  background: #fff;
+  width: 31%;
+  margin-right: 3%;
+  float: left;
+  border: 1px solid #d9d9d9;
+  border-radius: 3.2px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 3em;
+}
+/* line 65, ../sass/_adminpartners.scss */
+#admin-partners .partner:nth-child(3n+3) {
+  margin-right: 0;
+}
+/* line 69, ../sass/_adminpartners.scss */
+#admin-partners .partner:nth-child(3n+4) {
+  clear: both;
+}
+/* line 73, ../sass/_adminpartners.scss */
+#admin-partners .partner figure {
+  padding: 5em 0;
+  text-align: center;
+}
+/* line 78, ../sass/_adminpartners.scss */
+#admin-partners .partner .caption {
+  border-top: 1px solid #d9d9d9;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-partners .partner .caption:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 82, ../sass/_adminpartners.scss */
+#admin-partners .partner .caption p {
+  padding: 1.4em 0 1.4em 20px;
+  float: left;
+  width: 80%;
+  border-right: 1px solid #d9d9d9;
+  font-weight: bolder;
+}
+/* line 90, ../sass/_adminpartners.scss */
+#admin-partners .partner .caption span {
+  width: 20%;
+  display: block;
+  float: right;
+  text-align: center;
+  line-height: 4;
+}
+
 /* line 2, ../sass/partials/_footer.scss */
 #footer .information {
   background: #f3f3f3;
