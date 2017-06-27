@@ -17,7 +17,7 @@ body#login {
   main {
     width: $headerWidth;
     margin: 0 auto;
-    padding: 5em 0 9em 0;
+    padding: 3em 0 9em 0;
 
     h2, b, span {
       font-size: 1.5em;
@@ -70,6 +70,32 @@ body#login {
   }
 
   @media screen and (max-width: $tablet) {
-    background: red;
+    header {
+      margin-bottom: 0;
+    }
+    section {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+
+    header {
+      padding-top: 2.5em;
+    }
+    main {
+      h2, b {
+        font-size: 1.3em;
+        margin-bottom: 1.3em;
+
+        span {
+          font-size: 1em;
+        }
+      }
+    }
+
+    section {
+      width: 90%;
+    }
   }
 }

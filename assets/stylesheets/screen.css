@@ -1157,7 +1157,7 @@ body#login header h1 {
 body#login main {
   width: 90%;
   margin: 0 auto;
-  padding: 5em 0 9em 0;
+  padding: 3em 0 9em 0;
 }
 /* line 22, ../sass/_login.scss */
 body#login main h2, body#login main b, body#login main span {
@@ -1210,9 +1210,32 @@ body#login section a {
   margin-top: 1.6em;
 }
 @media screen and (max-width: 880px) {
-  /* line 1, ../sass/_login.scss */
-  body#login {
-    background: red;
+  /* line 73, ../sass/_login.scss */
+  body#login header {
+    margin-bottom: 0;
+  }
+  /* line 76, ../sass/_login.scss */
+  body#login section {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 580px) {
+  /* line 83, ../sass/_login.scss */
+  body#login header {
+    padding-top: 2.5em;
+  }
+  /* line 87, ../sass/_login.scss */
+  body#login main h2, body#login main b {
+    font-size: 1.3em;
+    margin-bottom: 1.3em;
+  }
+  /* line 91, ../sass/_login.scss */
+  body#login main h2 span, body#login main b span {
+    font-size: 1em;
+  }
+  /* line 97, ../sass/_login.scss */
+  body#login section {
+    width: 90%;
   }
 }
 
