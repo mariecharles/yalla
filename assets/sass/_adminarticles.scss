@@ -269,22 +269,4 @@
             }
         }
     }
-
-    .pagination {
-        display: block;
-        margin-top: 3em;
-        text-align: center;
-
-        .arrow {
-          font-weight: bold;
-          background: $mgrey;
-          padding: .5em .8em;
-          border-radius: 4px;
-          margin: 0 3px;
-        }
-
-        span:not(.arrow) {
-          margin: 0 10px;
-        }
-    }
 }
