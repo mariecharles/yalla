@@ -1201,6 +1201,20 @@ body#login section input[type="submit"] {
   color: #ff9806;
   font-weight: bolder;
 }
+/* line 63, ../sass/_login.scss */
+body#login section a {
+  display: block;
+  text-align: right;
+  color: #ff9806;
+  font-weight: bolder;
+  margin-top: 1.6em;
+}
+@media screen and (max-width: 880px) {
+  /* line 1, ../sass/_login.scss */
+  body#login {
+    background: red;
+  }
+}
 
 /* line 1, ../sass/partials/_contact.scss */
 main, header {

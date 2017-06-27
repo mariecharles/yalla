@@ -58,7 +58,18 @@ body#login {
       background: $lorange;
       color: $orange;
       font-weight: bolder;
-
     }
+
+    a {
+      display: block;
+      text-align: right;
+      color: $orange;
+      font-weight: bolder;
+      margin-top: 1.6em;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    background: red;
   }
 }
