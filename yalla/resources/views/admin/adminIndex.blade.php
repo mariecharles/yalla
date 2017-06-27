@@ -25,16 +25,20 @@
     <meta name="twitter:image" content="">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- tinyMCE links -->
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea.article-content' });</script>
 </head>
 
-<body id="admin-home">
+<body id="admin-articles">
 
 <header>
     <div class="inner">
         <div id="admin-actions">
             <div class="ctas">
-                <span class="cta new-volunteer"><a href="{{ url('admin/ajouter-un-membre') }}">+ Ajouter un bénévole</a></span>
-                <span class="cta new-article"><a href="{{ url('admin/ajouter-un-article') }}">+ Nouvel article</a></span>
+                <span class="cta new-volunteer"><a href="{{url('admin/ajouter-un-membre')}}">+ Ajouter un bénévole</a></span>
+                <span class="cta new-article"><a href="{{url('admin/ajouter-un-article')}}">+ Nouvel article</a></span>
             </div>
             <div class="icon-action">
                 <div class="messages">
@@ -57,10 +61,9 @@
 
 <nav id="admin-aside">
     <ul>
-        <li class="active"><a href="admin-home.html">Tableau de bord</a></li>
-        <li><a href="admin-articles.html">Articles</a></li>
+        <li class="active"><a href="{{url('admin')}}">Tableau de bord</a></li>
+        <li><a href="{{url('admin/articles')}}">Articles</a></li>
         <li><a href="">Membres</a></li>
-        <li><a href="">Bénévoles</a></li>
     </ul>
 </nav>
 
@@ -81,7 +84,7 @@
             <div class="content">
                 @foreach ($posts as $post)
                     <article>
-                        <a href="" class="container">
+                        <a href="{{url('articles/'. $post->slug)}}" class="container">
                             <div class="infos">
                                 <h3>{{ $post->title }}</h3>
                                 <span class="author">Ecrit par <b>Brenda Contreras</b></span>
@@ -148,8 +151,6 @@
 </body>
 <script src="js/app.js"></script>
 <script>
-
-
 
     var postStatus = document.querySelectorAll('.filters span');
 

@@ -20,16 +20,12 @@ class AdminController extends Controller
     {
         $posts = Post::with('category','tag')->get();
 
-        $categories = Category::all();
-
-        $members = Member::all();
-
         $count = Post::get()->count();
 
         $online = Post::where('active', 1)->get()->count();
         $offline = Post::where('active', 0)->get()->count();
 
-        $view = view('admin.adminIndex', compact('posts','categories','members', 'count', 'online','offline'));
+        $view = view('admin.adminIndex', compact('posts', 'count', 'online','offline'));
 
         return $view;
 
@@ -57,6 +53,21 @@ class AdminController extends Controller
         Category::create($requete);
 
         return redirect()->action('AdminController@index');
+
+    }
+
+    public function ActuAction()
+    {
+        $posts = Post::with('category','tag')->get();
+
+        $count = Post::get()->count();
+
+        $online = Post::where('active', 1)->get()->count();
+        $offline = Post::where('active', 0)->get()->count();
+
+        $view = view('admin.adminActualites', compact('posts', 'count', 'online','offline'));
+
+        return $view;
 
     }
 
@@ -104,7 +115,7 @@ class AdminController extends Controller
       $ValidationRules = [
 
         'title' => 'required|string|min:5',
-        'slug' => 'required|string|min:5|unique',
+        'slug' => 'required|string|min:5',
         'content' => 'required',
         'resume' => 'required',
         'img' => 'image|mimes:jpeg,bmp,png'
@@ -195,7 +206,6 @@ class AdminController extends Controller
         $save->active = $post->active;
         $save->lang = $post->lang;
         $save->resume = $post->resume;
-        $save->meta_description = $post->meta_description;
         $save->created_at = $post->created_at;
 
         $save->save();
@@ -260,6 +270,13 @@ class AdminController extends Controller
     {
 
         $requete = $request->all();
+
+        if($request->hasfile('img'))
+        {
+            $image = $this->upload($request->file('img'));
+
+            $requete['img'] = $image;
+        }
 
         $ValidationRules = [
 
