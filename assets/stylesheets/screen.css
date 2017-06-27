@@ -1,9 +1,9 @@
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 b {
   font-weight: bolder;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 .return {
   display: block;
 }
@@ -1482,19 +1482,19 @@ body[id*="admin-"] #admin-actions .icon-action span.push {
 }
 
 /* line 2, ../sass/partials/_adminelements.scss */
-body[id*="admin-"] .head-all-articles {
+body[id*="admin-"] div[class*="head-all"] {
   padding-bottom: 20px;
   border-bottom: 3px solid #f7f7f7;
   margin-bottom: 3em;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
-body[id*="admin-"] .head-all-articles:after {
+body[id*="admin-"] div[class*="head-all"]:after {
   content: "";
   display: table;
   clear: both;
 }
 /* line 8, ../sass/partials/_adminelements.scss */
-body[id*="admin-"] .head-all-articles a {
+body[id*="admin-"] div[class*="head-all"] a {
   display: block;
   float: left;
   font-size: 16px;
@@ -1503,14 +1503,14 @@ body[id*="admin-"] .head-all-articles a {
   padding: 0 1em;
 }
 /* line 16, ../sass/partials/_adminelements.scss */
-body[id*="admin-"] .head-all-articles a.active {
+body[id*="admin-"] div[class*="head-all"] a.active {
   position: relative;
   font-size: 17px;
   color: #ff9806;
   font-weight: bold;
 }
 /* line 22, ../sass/partials/_adminelements.scss */
-body[id*="admin-"] .head-all-articles a.active::before {
+body[id*="admin-"] div[class*="head-all"] a.active::before {
   content: '';
   position: absolute;
   background: #ff9806;
@@ -1520,15 +1520,15 @@ body[id*="admin-"] .head-all-articles a.active::before {
   left: 0;
 }
 /* line 34, ../sass/partials/_adminelements.scss */
-body[id*="admin-"] .head-all-articles a:not(.active) {
+body[id*="admin-"] div[class*="head-all"] a:not(.active) {
   color: rgba(0, 0, 34, 0.5);
 }
 /* line 38, ../sass/partials/_adminelements.scss */
-body[id*="admin-"] .head-all-articles .vue {
+body[id*="admin-"] div[class*="head-all"] .vue {
   float: right;
 }
 /* line 41, ../sass/partials/_adminelements.scss */
-body[id*="admin-"] .head-all-articles .vue span.active {
+body[id*="admin-"] div[class*="head-all"] .vue span.active {
   color: #ff9806;
   background: #ff9806;
 }
@@ -1621,6 +1621,41 @@ body[id*="admin-"] article .more span {
   background: #d9d9d9;
   margin-bottom: 3px;
   cursor: pointer;
+}
+/* line 126, ../sass/partials/_adminelements.scss */
+body[id*="admin-"] .pagination {
+  display: block;
+  margin-top: 3em;
+  text-align: center;
+}
+/* line 131, ../sass/partials/_adminelements.scss */
+body[id*="admin-"] .pagination .arrow {
+  font-weight: bold;
+  background: #f7f7f7;
+  padding: .5em .8em;
+  border-radius: 4px;
+  margin: 0 3px;
+}
+/* line 139, ../sass/partials/_adminelements.scss */
+body[id*="admin-"] .pagination span:not(.arrow) {
+  margin: 0 10px;
+}
+/* line 144, ../sass/partials/_adminelements.scss */
+body[id*="admin-"] .order-by {
+  float: right;
+}
+/* line 147, ../sass/partials/_adminelements.scss */
+body[id*="admin-"] .order-by label,
+body[id*="admin-"] .order-by option,
+body[id*="admin-"] .order-by select {
+  color: #ff9806;
+  font-weight: bolder;
+}
+/* line 154, ../sass/partials/_adminelements.scss */
+body[id*="admin-"] .order-by select {
+  border: 1px solid #ff9806;
+  background: none;
+  border-radius: 200px;
 }
 
 /* line 2, ../sass/_adminhome.scss */
@@ -2182,93 +2217,99 @@ body[id*="admin-"] main .inner:after {
   border: 1px solid #000;
   padding: 0.5em 2em;
 }
-/* line 273, ../sass/_adminarticles.scss */
-#admin-view-articles .pagination {
-  display: block;
-  margin-top: 3em;
-  text-align: center;
-}
-/* line 278, ../sass/_adminarticles.scss */
-#admin-view-articles .pagination .arrow {
-  font-weight: bold;
-  background: #f7f7f7;
-  padding: .5em .8em;
-  border-radius: 4px;
-  margin: 0 3px;
-}
-/* line 286, ../sass/_adminarticles.scss */
-#admin-view-articles .pagination span:not(.arrow) {
-  margin: 0 10px;
-}
 
 /* line 1, ../sass/_adminvolunteers.scss */
 #admin-volunteers {
   width: 90%;
   margin: 0 auto;
 }
-/* line 5, ../sass/_adminvolunteers.scss */
-#admin-volunteers > .head {
-  padding-top: 3em;
-  margin-bottom: 3em;
-}
 /* line 3, ../sass/partials/_clearfix.scss */
-#admin-volunteers > .head:after {
+#admin-volunteers:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 10, ../sass/_adminvolunteers.scss */
-#admin-volunteers > .head h2 {
+/* line 6, ../sass/_adminvolunteers.scss */
+#admin-volunteers .head-all-articles {
   float: left;
-  font-size: 1.6em;
-  font-weight: bolder;
 }
-/* line 16, ../sass/_adminvolunteers.scss */
-#admin-volunteers > .head select {
-  float: right;
+/* line 10, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers {
+  clear: both;
 }
-/* line 22, ../sass/_adminvolunteers.scss */
-#admin-volunteers .all-volunteers > div {
+/* line 12, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .volunteer > a {
+  display: block;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-volunteers .all-volunteers .volunteer > a:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 17, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .volunteer {
+  background: red;
   width: 100%;
-  padding: 1.6em 3em;
-  background: #FAFAFA;
+  padding: 1.7em 4em;
+  background: #fff;
   border-radius: 30px;
   margin-bottom: 2em;
 }
-/* line 3, ../sass/partials/_clearfix.scss */
-#admin-volunteers .all-volunteers > div:after {
-  content: "";
-  display: table;
-  clear: both;
+/* line 25, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .volunteer div {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2em;
 }
-/* line 30, ../sass/_adminvolunteers.scss */
-#admin-volunteers .all-volunteers > div .infos {
-  float: left;
-  padding-top: .5em;
-}
-/* line 35, ../sass/_adminvolunteers.scss */
-#admin-volunteers .all-volunteers > div h3 {
+/* line 32, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .volunteer h3 {
   font-weight: bolder;
   font-size: 1.2em;
 }
-/* line 40, ../sass/_adminvolunteers.scss */
-#admin-volunteers .all-volunteers > div .actions {
-  float: right;
-  text-align: right;
+/* line 37, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .volunteer .volunteer-status {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #fdeed8;
+  padding: 0 1em;
+  height: 40px;
+  line-height: 2.3;
+  background: #fdeed8;
+  padding: 0 2em;
+  color: #ff9806;
+  font-weight: bold;
 }
-/* line 44, ../sass/_adminvolunteers.scss */
-#admin-volunteers .all-volunteers > div .actions button {
+/* line 45, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .volunteer .function-status {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  padding: 0 1em;
+  height: 40px;
+  line-height: 2.3;
+  padding: 0 2em;
+}
+/* line 49, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .volunteer .function-status span {
+  font-weight: bolder;
+}
+/* line 52, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .volunteer .infos {
+  padding-left: .7em;
+  width: 25%;
+}
+/* line 62, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .profile-pic {
+  width: 10%;
+}
+/* line 66, ../sass/_adminvolunteers.scss */
+#admin-volunteers .all-volunteers .profile-pic span {
   display: block;
-  border: none;
-  background: none;
-  border: 1px solid #000;
+  width: 100px;
+  height: 100px;
   border-radius: 100px;
-  padding: .5em 1.6em;
-  margin-top: .5em;
-}
-/* line 56, ../sass/_adminvolunteers.scss */
-#admin-volunteers .all-volunteers > div:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: green;
 }
 
 /* line 2, ../sass/partials/_footer.scss */
