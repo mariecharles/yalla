@@ -24,7 +24,7 @@ Route::get('contact', 'PageController@contactAction');
 
 
 Route::get('admin', 'AdminController@index');
-Route::get('admin/details/{slug}', 'AdminController@actuDetails');
+Route::get('admin/articles/details/{slug}', 'AdminController@actuDetails');
 Route::get('admin/archives', 'AdminController@getArchives');
 
 Route::get('admin/ajouter-un-article', 'PageController@postAddAction');
@@ -33,7 +33,7 @@ Route::get('admin/ajouter-un-membre', 'PageController@memberAddAction');
 Route::get('admin/modifier-un-membre/{id}', 'PageController@memberEditAction');
 Route::get('admin/ajouter-une-categorie', 'PageController@categoryAddAction');
 
-
+Route::get('admin/articles', 'AdminController@actuAction');
 Route::delete('admin/delete/{id}',array('uses' => 'AdminController@postDeleteAction', 'as' => 'post.delete'));
 Route::get('admin/save/{id}',array('uses' => 'AdminController@postSaveAction', 'as' => 'post.save'));
 Route::post('admin/add',array('uses' => 'AdminController@postAddAction', 'as' => 'post.add'));
