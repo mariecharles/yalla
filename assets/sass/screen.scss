@@ -10,6 +10,7 @@ $yellow: #FFD52B;
 $lorange: #fdeed8;
 $orange: #ff9806;
 $pink: #fc1053;
+$dblue: #000022;
 
 $lgrey: #FAFAFA;
 $lmgrey: #fcfcfc;
@@ -73,5 +74,6 @@ font-weight: bolder;
 @import "adminvolunteers";
 @import "adminmail";
 @import "adminpartners";
+@import "adminnewpartner";
 
 @import "partials/footer";
