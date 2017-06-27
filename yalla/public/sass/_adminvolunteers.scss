@@ -1,0 +1,61 @@
+#admin-volunteers {
+  width: $adminMainWidth;
+  margin: 0 auto;
+
+  & > .head {
+    @include clearfix;
+    padding-top: 3em;
+    margin-bottom: 3em;
+
+    h2 {
+      float: left;
+      font-size: 1.6em;
+      font-weight: bolder;
+    }
+
+    select {
+      float: right;
+    }
+  } // END OF HEAD
+
+  .all-volunteers {
+    & > div {
+      width: 100%;
+      padding: 1.6em 3em;
+      background: $lgrey;
+      border-radius: 30px;
+      margin-bottom: 2em;
+      @include clearfix;
+
+      .infos {
+        float: left;
+        padding-top: .5em;
+      }
+
+      h3 {
+        font-weight: bolder;
+        font-size: 1.2em;
+      }
+
+      .actions {
+        float: right;
+        text-align: right;
+
+        button {
+          display: block;
+          border: none;
+          background: none;
+          border: 1px solid #000;
+          border-radius: 100px;
+          padding: .5em 1.6em;
+          margin-top: .5em;;
+        }
+      }
+    }
+
+    & > div:hover {
+      background: rgba(0,0,0,.2);
+    }
+  }
+
+}
