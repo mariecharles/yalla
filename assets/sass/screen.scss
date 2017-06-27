@@ -7,10 +7,13 @@ $Roboto: 'Roboto', sans-serif;
 // COLORS VARIABLES
 
 $yellow: #FFD52B;
-$orange: #e28413;
+$orange: #ff9806;
 $pink: #fc1053;
 
 $lgrey: #FAFAFA;
+$lmgrey: #fcfcfc;
+$mgrey: #f7f7f7;
+$ldgrey: #d9d9d9;
 
 // WIDTHS VARIABLES
 
@@ -29,8 +32,21 @@ b {
 font-weight: bolder;
 }
 
-span.return {
+.return {
   display: block;
+}
+
+.ctbtn {
+
+}
+
+@mixin ctbtn($color) {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid $color;
+  padding: 0 1em;
+  height: 40px;
+  line-height: 2.3;
 }
 
 
