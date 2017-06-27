@@ -140,7 +140,7 @@ body[id*="admin-"] {
     .cta.cta-black a {
       color: #fff; }
 
-body:not([id*="admin-"]).header-active {
+body:not([id*="admin-"]).window-active {
   overflow: hidden; }
 
 body:not([id*="admin-"]) header {
@@ -670,7 +670,10 @@ main, header {
     width: 60%;
     font-weight: bold;
     padding-top: 8%; }
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 1050px) {
+      #contact .container {
+        width: 80%; } }
+    @media screen and (max-width: 880px) {
       #contact .container {
         width: 100%;
         text-align: center; } }
@@ -681,7 +684,7 @@ main, header {
     #contact .container h3 {
       text-align: left;
       font-size: 30px; }
-      @media screen and (max-width: 580px) {
+      @media screen and (max-width: 880px) {
         #contact .container h3 {
           text-align: center; } }
     #contact .container .info-contact {
@@ -689,7 +692,7 @@ main, header {
       width: 35%;
       text-align: left;
       padding-top: 12%; }
-      @media screen and (max-width: 580px) {
+      @media screen and (max-width: 880px) {
         #contact .container .info-contact {
           width: 100%;
           float: none;
@@ -703,7 +706,7 @@ main, header {
     #contact .container .first-fields {
       width: 100%;
       text-align: left; }
-      @media screen and (max-width: 580px) {
+      @media screen and (max-width: 880px) {
         #contact .container .first-fields {
           width: 80%;
           display: block;
@@ -716,7 +719,7 @@ main, header {
         border: none;
         border-bottom: 1.5px solid #fff;
         background: transparent; }
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: 880px) {
           #contact .container .first-fields input {
             width: 100%; }
             #contact .container .first-fields input:nth-child(2) {
@@ -726,7 +729,7 @@ main, header {
     #contact .container .content-message {
       text-align: left;
       width: 60%; }
-      @media screen and (max-width: 580px) {
+      @media screen and (max-width: 880px) {
         #contact .container .content-message {
           width: 80%;
           display: block;
@@ -738,7 +741,7 @@ main, header {
         border: 1.5px solid #fff;
         padding: 3%;
         width: 100%; }
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: 880px) {
           #contact .container .content-message textarea {
             padding-top: 3%; } }
     #contact .container .button-message {
