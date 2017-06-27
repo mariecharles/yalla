@@ -1,9 +1,9 @@
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 b {
   font-weight: bolder;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 span.return {
   display: block;
 }
@@ -942,6 +942,63 @@ nav select {
 }
 /* line 49, ../sass/_aboutus.scss */
 #about main .our-story.intro p {
+  margin: 1em auto 0 auto;
+  line-height: 1.7;
+}
+
+/* line 3, ../sass/_ouractions.scss */
+#actions main .wrapper {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
+/* line 9, ../sass/_ouractions.scss */
+#actions main section {
+  margin-bottom: 5em;
+}
+/* line 12, ../sass/_ouractions.scss */
+#actions main .our-actions {
+  text-align: center;
+}
+/* line 14, ../sass/_ouractions.scss */
+#actions main .our-actions h3 {
+  color: #fc1053;
+  font-weight: bolder;
+  font-size: 1.5em;
+  margin-bottom: .7em;
+}
+/* line 19, ../sass/_ouractions.scss */
+#actions main .our-actions h3 span {
+  font-size: inherit;
+  font-style: italic;
+}
+/* line 24, ../sass/_ouractions.scss */
+#actions main .our-actions p {
+  width: 70%;
+  margin: 0 auto .8em auto;
+  line-height: 1.5;
+  text-align: justify;
+}
+/* line 31, ../sass/_ouractions.scss */
+#actions main .our-actions.intro {
+  height: 100vh;
+  width: 70%;
+  margin: 1em auto 2em auto;
+  text-align: center;
+  padding-bottom: 1.2em;
+}
+/* line 34, ../sass/_ouractions.scss */
+#actions main .our-actions.intro .content {
+  transform: translateY(145%);
+}
+/* line 38, ../sass/_ouractions.scss */
+#actions main .our-actions.intro h2 {
+  font-size: 2.3em;
+  font-weight: bold;
+  color: #fc1053;
+}
+/* line 49, ../sass/_ouractions.scss */
+#actions main .our-actions.intro p {
   margin: 1em auto 0 auto;
   line-height: 1.7;
 }
