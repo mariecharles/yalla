@@ -12,13 +12,27 @@
 <body>
 <h1><?= isset($post->slug)?'Modifier l\'article':'Ajouter un article'; ?></h1>
 
+@if($errors->any())
+    <ul>
+        @foreach($errors->all() as $error)
+            <li>{{$error}}</li>
+        @endforeach
+    </ul>
+@endif
+
 {!! Form::open(isset($post->slug)?['url' => route('post.update', $post->id), 'method' => 'put', 'files' => true]:['url' => route('post.add'), 'files' => true]) !!}
+
+    {{ csrf_field() }}
 
     {!! Form::label('title', 'Titre de l\'article') !!}
     {!! Form::text('title', isset($post->slug)?$post->title:'') !!}
 
     {!! Form::label('img', 'Image') !!}
     {!! Form::file('img', '') !!}
+
+    @if (isset($post->slug))
+        <img src="{{ asset('/img-content/' . $post->img) }}" alt="Image de l'article">
+    @endif
 
     {!! Form::label('content', 'Contenu') !!}
     {!! Form::textarea('content', isset($post->slug)?$post->content:'') !!}
@@ -47,9 +61,6 @@
     </ul>
 
     {!! Form::text('tags', isset($post->slug)?$tag->name:'') !!}
-
-    {!! Form::label('meta_description', 'Description pour le référencement') !!}
-    {!! Form::textarea('meta_description', isset($post->slug)?$post->meta_description:'') !!}
 
     <button type="submit"><?= isset($post->slug)?'Modifier':'Ajouter'?></button>
 

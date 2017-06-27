@@ -13,6 +13,8 @@
 
 {!! Form::open(isset($member->lastname)?['url' => route('member.update', $member->id), 'method' => 'put']:['url' => route('member.add')]) !!}
 
+{{ csrf_field() }}
+
 {!! Form::label('lastname', 'Nom') !!}
 {!! Form::text('lastname', isset($member->lastname)?$member->lastname:'') !!}
 

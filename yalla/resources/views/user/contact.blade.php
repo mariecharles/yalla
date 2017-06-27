@@ -11,6 +11,8 @@
 
     {!! Form::open(['url' => route('message.add')]) !!}
 
+         {{ csrf_field() }}
+
         {!! Form::label('name', 'Nom, Prénom') !!}
         {!! Form::text('name','') !!}
 

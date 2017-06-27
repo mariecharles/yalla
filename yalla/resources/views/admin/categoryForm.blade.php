@@ -11,6 +11,8 @@
 
 {!! Form::open(['url' => route('category.add')]) !!}
 
+{{ csrf_field() }}
+
 {!! Form::label('name', 'Nom de la catégorie') !!}
 {!! Form::text('name','') !!}
 
