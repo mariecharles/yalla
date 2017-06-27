@@ -8,22 +8,6 @@
     <link rel="stylesheet" href="assets/stylesheets/screen.css">
     <title>Yalla! Pour les Enfants - Défendons les droits humains</title>
 
-    <meta property="og:site_name" content="Amnesty France">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:site" content="@amnestyfrance">
-    <meta name="description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
-
-    <!-- balises facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Amnesty International France - Défendons les droits humains">
-    <meta property="og:description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
-    <meta property="og:image" content="">
-
-    <!-- balises twitter -->
-    <meta name="twitter:title" content="Amnesty International France - Défendons les droits humains">
-    <meta name="twitter:description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
-    <meta name="twitter:image" content="">
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
     <!-- tinyMCE links -->
@@ -38,19 +22,15 @@
         <div id="admin-actions">
             <div class="ctas">
                 <span class="cta new-volunteer"><a href="">+ Ajouter un bénévole</a></span>
-                <span class="cta new-article"><a href="">+ Nouvel article</a></span>
+                <span class="cta new-article"><a href="admin-new-article.html">+ Nouvel article</a></span>
             </div>
             <div class="icon-action">
                 <div class="messages">
-                  <span class="nb-message">OO<span class="push"></span></span>
+                  <a href="admin-mail.html">
+                    <span class="nb-message">OO<span class="push"></span></span>
+                  </a>
                   <div class="my-messages">
                     <h3>Mes messages reçus</h3>
-                  </div>
-                </div>
-                <div class="notifications">
-                  <span class="nb-notifs">UU <span class="push"></span></span>
-                  <div class="my-notifs">
-                    <h3>Mes notifications reçues</h3>
                   </div>
                 </div>
                 <div class="my-space"><span>MM</span></div>
@@ -63,8 +43,8 @@
       <ul>
           <li class="active"><a href="admin-home.html">Tableau de bord</a></li>
           <li><a href="admin-articles.html">Articles</a></li>
-          <li><a href="">Membres</a></li>
-          <li><a href="">Bénévoles</a></li>
+          <li><a href="">Partenaires</a></li>
+          <li><a href="admin-volunteers.html">Bénévoles</a></li>
       </ul>
   </nav>
 
@@ -91,7 +71,7 @@
           <!-- <h2><span>-</span> Tous les articles</h2> -->
           <div class="actions">
             <div class="selected">
-              <input type="checkbox">
+              <input type="checkbox" class="select-all">
               <label for="">Tous les articles</label>
             </div>
             <div class="uncheck">
@@ -116,8 +96,8 @@
 
             <article>
               <div class="checkbox">
-               <input type="checkbox">
-             </div>
+                 <input type="checkbox" class="check-status">
+               </div>
                 <a href="" class="container">
                   <div class="infos">
                     <h3>Fest-noz solidaire le 29 octobre à Poullalouen</h3>
@@ -159,6 +139,42 @@
     </main>
 
   </body>
-  <script src="js/app.js"></script>
+  <!-- <script src="js/app.js"></script> -->
+
+  <script>
+
+  var article_checkboxs = document.querySelectorAll('#admin-all-articles article input[type="checkbox"]');
+
+  var admin_uncheck = document.querySelector('#admin-all-articles .uncheck');
+
+  var section_view_article = document.querySelector('#admin-view-articles');
+
+  var btn_select_all = document.querySelector('#admin-all-articles .select-all');
+
+  admin_uncheck.addEventListener('click', function() {
+    console.log(article_checkboxs.checked);
+      for (var i = 0; article_checkboxs.length; i++) {
+        article_checkboxs[i].checked = false;
+      }
+
+      btn_select_all.checked = false;
+      return btn_select_all;
+  });
+
+  btn_select_all.addEventListener('click', function() {
+    for (var i = 0; article_checkboxs.length; i++) {
+      article_checkboxs[i].checked = true;
+    }
+    //
+    // if (btn_select_all.checked == false) {
+    //   console.log('JETAIS PAS CHECKED');
+    // } else {
+    //   console.log('JE SUIS CHECK');
+    // }
+  });
+
+
+
+  </script>
 
   </html>

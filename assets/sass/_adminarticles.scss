@@ -51,59 +51,30 @@
 #admin-view-articles {
   clear: both;
   padding-top: 4em;
-    // WHEN ACTIONS ARE ON
-    &.actions-on {
-        .checkbox {
-            opacity: 1;
-            width: 10%;
-            max-width: 999px;
-        }
-
-        .wrapper {
-            width: 90%;
-            background: #F1F1F1;
-            @include clearfix;
-        }
-    }
 
     article {
         width: 100%;
         border-radius: 15px;
         margin-bottom: 1.7em;
-        padding: 2.4em 2em;
+        padding: 2.4em 3.5em;
         @include clearfix;
 
+        div {
+          margin-right: 3em;
+        }
+
         .checkbox {
-            opacity: 0;
             float: left;
-            max-width: 0;
             text-align: center;
-            overflow: hidden;
             margin-top: 10px;
         }
 
-        a.container > div {
-          margin-right: 3.5em;
+        .check-status {
+          border: 0;
         }
 
         .actions {
             float: right;
-
-            .author,
-            .return {
-                display: block;
-                text-align: right;
-            }
-
-            .ctas {
-                clear: both;
-                margin-top: 1.5em;
-            }
-
-            .cta {
-                border: 1px solid #000;
-                padding: 0.5em 2em;
-            }
         }
     }
 }
