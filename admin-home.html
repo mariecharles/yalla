@@ -29,26 +29,31 @@
 
 <body id="admin-home">
 
-    <header>
-      <div id="bm" class="opn">
-          <span></span>
-          <span></span>
-          <span></span>
-      </div>
-        <div class="inner">
-          <div id="admin-actions">
-              <div class="ctas">
-                  <span class="cta"><a href="">+ Ajouter un bénévole</a></span>
-                  <span class="cta"><a href="">+ Nouvel article</a></span>
-              </div>
-              <div class="icon-action">
-                  <div class="message">OO<span class="push">2</span></div>
-                  <div class="notification">UU <span class="push">1</span></div>
-                  <span>MM</span>
-              </div>
-          </div>
+  <header>
+      <div class="inner">
+        <div id="admin-actions">
+            <div class="ctas">
+                <span class="cta new-volunteer"><a href="">+ Ajouter un bénévole</a></span>
+                <span class="cta new-article"><a href="">+ Nouvel article</a></span>
+            </div>
+            <div class="icon-action">
+                <div class="messages">
+                  <span class="nb-message">OO<span class="push"></span></span>
+                  <div class="my-messages">
+                    <h3>Mes messages reçus</h3>
+                  </div>
+                </div>
+                <div class="notifications">
+                  <span class="nb-notifs">UU <span class="push"></span></span>
+                  <div class="my-notifs">
+                    <h3>Mes notifications reçues</h3>
+                  </div>
+                </div>
+                <div class="my-space"><span>MM</span></div>
+            </div>
         </div>
-    </header>
+      </div>
+  </header>
 
     <nav id="admin-aside">
         <ul>
@@ -63,51 +68,40 @@
         <div class="inner">
           <section class="all-articles">
               <div class="head">
-                  <h2 class="active">Tous les articles <span>(34)</span></h2>
-                  <a href="">Publier <span>(19)</span></a>
-                  <a href="">Brouillon <span>(15)</span></a>
+                  <div class="filters">
+                    <a class="active">Tous les articles <span>(34)</span></a>
+                    <a href="">Articles en ligne <span>(19)</span></a>
+                    <a href="">Articles hors ligne <span>(15)</span></a>
+                  </div>
+                  <div class="vue">
+                    <span class="active">o</span>
+                    <span>o</span>
+                  </div>
               </div>
               <div class="content">
-                <article>
-                  <a href="">
-                    <h3>Fest-noz solidaire le 29 octobre à Poullalouen</h3>
-                    <div class="infos">
-                      <span class="post-status">Billet publié le <span class="date">26 juillet</span></span>
-                    </div>
-                  </a>
 
-                    <div class="actions">
-                      <a href="">Voir</a>
-                      <a href="">Modifier</a>
-                      <a href="">Supprimer</a>
-                    </div>
-                </article>
                 <article>
-                  <a href="">
-                    <h3>Fest-noz solidaire le 29 octobre à Poullalouen</h3>
-                    <div class="infos">
-                      <span class="post-status">Billet publié le <span class="date">26 juillet</span></span>
-                    </div>
+                    <a href="" class="container">
+                      <div class="infos">
+                        <h3>Fest-noz solidaire le 29 octobre à Poullalouen</h3>
+                        <span class="author">Ecrit par <b>Brenda Contreras</b></span>
+                      </div>
+                      <div class="post-status online">
+                        <span class="round"></span>
+                        <span class"status">Article en ligne</span>
+                      </div>
+                      <div class="date-published">
+                        <p>Publié le <b class="return">26 septembre</b></p>
+                      </div>
+                      <div class="category">
+                        <span class="cat">Santé</span>
+                      </div>
                     </a>
 
-                    <div class="actions">
-                      <a href="">Voir</a>
-                      <a href="">Modifier</a>
-                      <a href="">Supprimer</a>
-                    </div>
-                </article>
-                <article>
-                  <a href="">
-                    <h3>Fest-noz solidaire le 29 octobre à Poullalouen</h3>
-                    <div class="infos">
-                      <span class="post-status">Billet publié le <span class="date">26 juillet</span></span>
-                    </div>
-                    </a>
-
-                    <div class="actions">
-                      <a href="">Voir</a>
-                      <a href="">Modifier</a>
-                      <a href="">Supprimer</a>
+                    <div class="more">
+                      <span></span>
+                      <span></span>
+                      <span></span>
                     </div>
                 </article>
               </div>
