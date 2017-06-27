@@ -8,6 +8,7 @@ $Roboto: 'Roboto', sans-serif;
 
 $yellow: #FFD52B;
 $orange: #e28413;
+$pink: #fc1053;
 
 $lgrey: #FAFAFA;
 
@@ -46,7 +47,7 @@ span.return {
 @import "ouractions";
 @import "ournews";
 @import "supportus";
-@import "partials/contact";
+@import "contact";
 
 @import "partials/headeradmin";
 @import "partials/asideadmin";
