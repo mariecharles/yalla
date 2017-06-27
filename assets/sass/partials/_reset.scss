@@ -57,5 +57,8 @@ body[id*="admin-"] {
       outline: 1px solid slategrey;
     }
 	}
+}
 
+input[type="submit"] {
+	cursor: pointer;
 }
