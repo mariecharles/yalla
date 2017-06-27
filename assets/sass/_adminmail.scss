@@ -1,0 +1,104 @@
+#manage-mail {
+    width: 16%;
+    float: left;
+    height: 87vh;
+    display: inline-block;
+    border-right: 1px solid $mgrey;
+    border-left: 1px solid $mgrey;
+    background: #fff;
+
+    li {
+
+        &:nth-child(3) {
+            border-left: 6px solid #000;
+          }
+
+        input {
+            border: none;
+            padding: 13%;
+            margin-left: 12%;
+        }
+
+        ::-webkit-input-placeholder { /* Chrome */
+          color: #000;
+        }
+
+    }
+
+    .new {
+        background: #000;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+    }
+
+    a {
+        display: block;
+        padding: 1.5em 0.9em;
+        border-bottom: 1px solid $mgrey;
+
+    }
+}
+
+.filter-mail {
+    display: inline-block;
+    width: 83%;
+    padding-top: 2%;
+    color: $orange;
+
+    input {
+        border: 1px solid $orange;
+    }
+
+    .delete-checkbox-mail {
+        display: inline-block;
+        p {
+            display: inline-block;
+        }
+    }
+
+    .order-by {
+        display: inline-block;
+    }
+}
+
+.traffic-mail {
+    width: 84%;
+    margin: 0 auto;
+    float: right;
+
+    table {
+        width: 100%;
+        font-weight: bold;
+        background: #fff;
+
+        tr {
+            font-weight: bold;
+            display: block;
+            /* background: pink; */
+            padding: 2% 0;
+            border-bottom: 1px solid $mgrey
+        }
+
+        td {
+            //border-bottom: 1px solid $mgrey;
+            &:first-child {
+                width: 5%;
+                text-align: center;
+            }
+
+            &:nth-child(2) {
+                width: 30%;
+            }
+
+            &:nth-child(3) {
+                width: 38%;
+            }
+
+            &:nth-child(4) {
+                width: 22%;
+                font-weight: lighter;
+            }
+        }
+    }
+}

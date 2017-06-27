@@ -31,7 +31,7 @@
   <script>tinymce.init({ selector:'textarea.article-content' });</script>
 </head>
 
-<body id="admin-articles">
+<body id="admin-mail">
 
   <header>
       <div class="inner">
@@ -63,35 +63,80 @@
   </nav>
 
     <main>
-      <section id="admin-volunteers">
-        <div class="head-all-articles">
-            <div class="filters">
-              <a class="active">Tous les bénévoles <span>(34)</span></a>
-              <a href="">Administrateurs <span>(19)</span></a>
-              <a href="">Bénévoles <span>(15)</span></a>
-            </div>
-        </div>
+      <aside id="manage-mail">
+            <ul>
+                <li><!--<span>ICOMOON SEARCH A METTRE</span>--><input type="search" placeholder="Rechercher" name="search"></li>
+                <li><a href="#" class="new">nouveau message</a></li>
+                <li class="active"><a href="#">Boite de réception</a></li>
+                <li><a href="#">Messages Envoyés</a></li>
+                <li><a href="#">Messages Supprimés</a></li>
+            </ul>
+      </aside>
+
+      <div class="filter-mail">
+          <div class="delete-checkbox-mail">
+              <input type="checkbox" id="" name="delete-mail">
+              <p>0 éléments sélectionnés</p>
+          </div>
 
         <div class="order-by">
           <label for="">Trier par : </label>
           <select name="" id="">
-            <option value="">Date de création</option>
-            <option value="">Auteur</option>
+            <option value="">Date</option>
+            <option value="">Nom</option>
           </select>
         </div>
+      </div>
 
-        <div class="all-volunteers">
-
+        <div class="traffic-mail">
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="" name="delete-mail">
+                    </td>
+                    <td>Wayne, Luna</td>
+                    <td>Toursim is back in fullswing in cancun mexico</td>
+                    <td>Hello Yalla, can you pl</td>
+                    <td>21/06/17</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="" name="delete-mail">
+                    </td>
+                    <td>Wayne, Luna</td>
+                    <td>Toursim is back in fullswing in cancun mexico</td>
+                    <td>Hello Yalla, can you pl</td>
+                    <td>21/06/17</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="" name="delete-mail">
+                    </td>
+                    <td>Wayne, Luna</td>
+                    <td>Toursim is back in fullswing in cancun mexico</td>
+                    <td>Hello Yalla, can you pl</td>
+                    <td>21/06/17</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="" name="delete-mail">
+                    </td>
+                    <td>Wayne, Luna</td>
+                    <td>Toursim is back in fullswing in cancun mexico</td>
+                    <td>Hello Yalla, can you pl</td>
+                    <td>21/06/17</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="delete-mail" name="delete-mail">
+                    </td>
+                    <td>Wayne, Luna</td>
+                    <td>Toursim is back in fullswing in cancun mexico</td>
+                    <td>Hello Yalla, can you pl</td>
+                    <td>21/06/17</td>
+                </tr>
+            </table>
         </div>
-
-        <div class="pagination">
-          <span class="arrow"><<</span>
-          <span class="arrow"><</span>
-          <span>Page <b>1</b> sur <b>4</b></span>
-          <span class="arrow">></span>
-          <span class="arrow">>></span>
-        </div>
-      </section>
 
     </main>
 
