@@ -31,7 +31,7 @@
   <script>tinymce.init({ selector:'textarea.article-content' });</script>
 </head>
 
-<body id="admin-articles">
+<body id="admin-new">
 
   <header>
       <div class="inner">
@@ -69,93 +69,50 @@
   </nav>
 
     <main>
-      <section id="admin-all-articles">
+      <section id="admin-add-article">
+        <h2>Ecrire un nouvel article</h2>
 
-        <div class="head-all-articles">
-            <div class="filters">
-              <a class="active">Tous les articles <span>(34)</span></a>
-              <a href="">Articles en ligne <span>(19)</span></a>
-              <a href="">Articles hors ligne <span>(15)</span></a>
-            </div>
-        </div>
-
-        <div class="order-by">
-          <label for="">Trier par : </label>
-          <select name="" id="">
-            <option value="">Date de création</option>
-            <option value="">Auteur</option>
-          </select>
-        </div>
-
-        <div class="head">
-          <!-- <h2><span>-</span> Tous les articles</h2> -->
-          <div class="actions">
-            <div class="selected">
-              <input type="checkbox">
-              <label for="">Tous les articles</label>
-            </div>
-            <div class="uncheck">
-              <span>Décocher toutes les cases</span>
-            </div>
-            <div class="action-status">
-              <label for="">Mettre :</label>
+        <div class="wrapper">
+          <div class="main-content">
+            <input type="text" placeholder="Entrer un titre">
+            <input type="text" placeholder="Entrer le slug">
+            <textarea class="article-content">Next, get a free TinyMCE Cloud API key!</textarea>
+          </div>
+          <!-- end of main-content -->
+          <div class="aside-content">
+            <h3>Options de publication</h3>
+            <div class="status">
+              <span>Status</span>
               <select name="" id="">
-                <option value="">En ligne</option>
-                <option value="">Hors ligne</option>
+                <option value="" data-status="offline">Article hors ligne <i>i</i></option>
+                <option value="" data-status="online">Article en ligne</option>
               </select>
             </div>
-            <div class="delete">
-              <span><i>pp</i> Supprimer</span>
+            <div class="visibility">
+              <span>Catégories</span>
+              <select name="" id="">
+                <option value="">Education <i>i</i></option>
+                <option value="">Santé <i>i</i></option>
+              </select>
             </div>
-          </div>
-          <!-- end of actions -->
-        </div>
-        <!-- end of head -->
-
-          <div id="admin-view-articles">
-
-            <article>
-              <div class="checkbox">
-               <input type="checkbox">
-             </div>
-                <a href="" class="container">
-                  <div class="infos">
-                    <h3>Fest-noz solidaire le 29 octobre à Poullalouen</h3>
-                    <span class="author">Ecrit par <b>Brenda Contreras</b></span>
-                  </div>
-                  <div class="post-status online">
-                    <span class="round"></span>
-                    <span class"status">Article en ligne</span>
-                  </div>
-                  <div class="date-published">
-                    <p>Publié le <b class="return">26 septembre</b></p>
-                  </div>
-                  <div class="category">
-                    <span class="cat">Santé</span>
-                  </div>
-                </a>
-
-                <div class="actions">
-                  <span>v</span>
-                  <span>m</span>
-                  <span>d</span>
-                </div>
-            </article>
-
-            <div class="pagination">
-              <span class="arrow"><<</span>
-              <span class="arrow"><</span>
-              <span>Page <b>1</b> sur <b>4</b></span>
-              <span class="arrow">></span>
-              <span class="arrow">>></span>
+            <div class="desc">
+              <span>Méta description</span>
+              <textarea name="name" rows="8" placeholder="Votre méta description..."></textarea>
             </div>
-            <!-- end of pagination -->
+            <div class="add-tags">
+              <span>Tags (3 maximum)</span>
+              <input type="text" name="tags" placeholder="Commencez à taper...">
+              <input type="hidden" name="tags" value="">
+              <div class="all-tags">
+                <span class="tag"><i>x</i>salut</span>
+              </div>
+            </div>
+            <button type="submit" class="publish">Publier</button>
+            <!-- <button class="set-draft">Enregistrer comme brouillon</button> -->
           </div>
-          <!-- end of admin view articles -->
-
+          <!-- end of aside content -->
         </div>
       </section>
-
     </main>
 
   </body>

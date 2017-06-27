@@ -1713,58 +1713,7 @@ body[id*="admin-"] main .inner:after {
     float: none;
   }
 }
-/* line 44, ../sass/_adminhome.scss */
-#admin-home .all-articles .head-all-articles {
-  padding-bottom: 20px;
-  border-bottom: 3px solid #f7f7f7;
-  margin-bottom: 3em;
-}
-/* line 3, ../sass/partials/_clearfix.scss */
-#admin-home .all-articles .head-all-articles:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 50, ../sass/_adminhome.scss */
-#admin-home .all-articles .head-all-articles a {
-  display: block;
-  float: left;
-  font-size: 16px;
-  font-weight: bolder;
-  margin: 0 10px;
-  padding: 0 1em;
-}
-/* line 58, ../sass/_adminhome.scss */
-#admin-home .all-articles .head-all-articles a.active {
-  position: relative;
-  font-size: 17px;
-  color: #ff9806;
-  font-weight: bold;
-}
-/* line 64, ../sass/_adminhome.scss */
-#admin-home .all-articles .head-all-articles a.active::before {
-  content: '';
-  position: absolute;
-  background: #ff9806;
-  width: 100%;
-  height: 6px;
-  bottom: -25px;
-  left: 0;
-}
-/* line 76, ../sass/_adminhome.scss */
-#admin-home .all-articles .head-all-articles a:not(.active) {
-  color: rgba(0, 0, 34, 0.5);
-}
-/* line 80, ../sass/_adminhome.scss */
-#admin-home .all-articles .head-all-articles .vue {
-  float: right;
-}
-/* line 83, ../sass/_adminhome.scss */
-#admin-home .all-articles .head-all-articles .vue span.active {
-  color: #ff9806;
-  background: #ff9806;
-}
-/* line 91, ../sass/_adminhome.scss */
+/* line 46, ../sass/_adminhome.scss */
 #admin-home .all-articles article {
   background: #fff;
   padding: 2em 1.5em;
@@ -1778,7 +1727,7 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 99, ../sass/_adminhome.scss */
+/* line 54, ../sass/_adminhome.scss */
 #admin-home .all-articles article a.container {
   display: block;
   float: left;
@@ -1789,25 +1738,25 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 106, ../sass/_adminhome.scss */
+/* line 61, ../sass/_adminhome.scss */
 #admin-home .all-articles article a.container > div {
   float: left;
   margin-right: 1.3em;
 }
-/* line 111, ../sass/_adminhome.scss */
+/* line 66, ../sass/_adminhome.scss */
 #admin-home .all-articles article h3 {
   font-size: 16px;
   margin-bottom: 0.4em;
 }
-/* line 116, ../sass/_adminhome.scss */
+/* line 71, ../sass/_adminhome.scss */
 #admin-home .all-articles article:hover {
   background: #f7f7f7;
 }
-/* line 120, ../sass/_adminhome.scss */
+/* line 75, ../sass/_adminhome.scss */
 #admin-home .all-articles article .author, #admin-home .all-articles article .author b {
   font-size: 16px;
 }
-/* line 124, ../sass/_adminhome.scss */
+/* line 79, ../sass/_adminhome.scss */
 #admin-home .all-articles article .post-status {
   position: relative;
   border-radius: 5px;
@@ -1818,7 +1767,7 @@ body[id*="admin-"] main .inner:after {
   color: #fc1053;
   font-weight: bold;
 }
-/* line 134, ../sass/_adminhome.scss */
+/* line 89, ../sass/_adminhome.scss */
 #admin-home .all-articles article .post-status .round {
   position: absolute;
   border-radius: 100px;
@@ -1828,7 +1777,7 @@ body[id*="admin-"] main .inner:after {
   left: 15px;
   top: 40%;
 }
-/* line 145, ../sass/_adminhome.scss */
+/* line 100, ../sass/_adminhome.scss */
 #admin-home .all-articles article .category {
   position: relative;
   border-radius: 5px;
@@ -1837,14 +1786,14 @@ body[id*="admin-"] main .inner:after {
   height: 40px;
   line-height: 2.3;
 }
-/* line 149, ../sass/_adminhome.scss */
+/* line 104, ../sass/_adminhome.scss */
 #admin-home .all-articles article .more {
   float: right;
   width: 5%;
   line-height: 2.8;
   cursor: pointer;
 }
-/* line 154, ../sass/_adminhome.scss */
+/* line 109, ../sass/_adminhome.scss */
 #admin-home .all-articles article .more span {
   display: inline-block;
   width: 7px;
@@ -1854,13 +1803,13 @@ body[id*="admin-"] main .inner:after {
   margin-bottom: 3px;
   cursor: pointer;
 }
-/* line 170, ../sass/_adminhome.scss */
+/* line 125, ../sass/_adminhome.scss */
 #admin-home .stats {
   width: 20%;
   float: right;
 }
 @media screen and (max-width: 880px) {
-  /* line 170, ../sass/_adminhome.scss */
+  /* line 125, ../sass/_adminhome.scss */
   #admin-home .stats {
     width: 100%;
     float: none;
@@ -1870,12 +1819,12 @@ body[id*="admin-"] main .inner:after {
   }
 }
 @media screen and (max-width: 580px) {
-  /* line 170, ../sass/_adminhome.scss */
+  /* line 125, ../sass/_adminhome.scss */
   #admin-home .stats {
     padding-left: 2em;
   }
 }
-/* line 188, ../sass/_adminhome.scss */
+/* line 143, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats > div {
   background: #fff;
   width: 100%;
@@ -1883,49 +1832,43 @@ body[id*="admin-"] main .inner:after {
   margin-bottom: 1em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
 }
-/* line 195, ../sass/_adminhome.scss */
+/* line 150, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats > div:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 580px) {
-  /* line 186, ../sass/_adminhome.scss */
+  /* line 141, ../sass/_adminhome.scss */
   #admin-home .stats .quick-stats {
     width: 20%;
     width: 300%;
     overflow-x: scroll;
   }
 }
-/* line 206, ../sass/_adminhome.scss */
+/* line 161, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats .head {
   margin-bottom: 1em;
 }
-/* line 209, ../sass/_adminhome.scss */
+/* line 164, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats .head h3 {
   font-weight: bolder;
   text-transform: uppercase;
   font-size: 15px;
 }
-/* line 215, ../sass/_adminhome.scss */
+/* line 170, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats .head span.last-date {
   font-size: .8em;
 }
-/* line 220, ../sass/_adminhome.scss */
+/* line 175, ../sass/_adminhome.scss */
 #admin-home .stats .quick-stats .nb {
   font-size: 3.8em;
   font-weight: bolder;
 }
 
-/* line 2, ../sass/_adminarticles.scss */
-#admin-articles main section {
+/* line 1, ../sass/_adminnewarticle.scss */
+#admin-add-article {
   width: 90%;
   margin: 0 auto;
   padding-top: 3em;
-}
-
-/* line 9, ../sass/_adminarticles.scss */
-#admin-add-article {
-  display: none;
-  background: #fff;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
 #admin-add-article:after {
@@ -1933,76 +1876,40 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 14, ../sass/_adminarticles.scss */
+/* line 7, ../sass/_adminnewarticle.scss */
 #admin-add-article h2 {
   display: block;
   position: relative;
   z-index: 555;
-  padding: 1em 0 1em 2em;
   font-weight: bolder;
-  font-size: 1.2em;
-  background: #FAFAFA;
+  font-size: 1.6em;
+  margin-bottom: 1em;
 }
-/* line 23, ../sass/_adminarticles.scss */
-#admin-add-article h2 span {
-  font-size: inherit;
-}
-/* line 26, ../sass/_adminarticles.scss */
-#admin-add-article h2 span.less {
-  display: none;
-}
-/* line 30, ../sass/_adminarticles.scss */
-#admin-add-article h2 span.more {
-  display: inline-block;
-}
-/* line 36, ../sass/_adminarticles.scss */
-#admin-add-article.opened h2 {
-  border-bottom: 1px solid #000;
-}
-/* line 39, ../sass/_adminarticles.scss */
-#admin-add-article.opened h2 .more {
-  display: none;
-}
-/* line 43, ../sass/_adminarticles.scss */
-#admin-add-article.opened h2 .less {
-  display: inline-block;
-}
-/* line 48, ../sass/_adminarticles.scss */
+/* line 16, ../sass/_adminnewarticle.scss */
 #admin-add-article .wrapper {
   display: block;
   position: relative;
-  width: 90%;
-  margin: 0 auto;
   z-index: 11;
-  opacity: 0;
-  transform: translateY(-100%);
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.5s ease-out;
 }
-/* line 60, ../sass/_adminarticles.scss */
-#admin-add-article .wrapper.show {
-  margin: 2em auto;
-  transition: 0.6s ease-in-out;
-  transform: none;
-  opacity: 1;
-  max-height: 999px;
-}
-/* line 69, ../sass/_adminarticles.scss */
+/* line 22, ../sass/_adminnewarticle.scss */
 #admin-add-article .main-content {
   width: 65%;
   float: left;
 }
-/* line 73, ../sass/_adminarticles.scss */
+/* line 26, ../sass/_adminnewarticle.scss */
 #admin-add-article .main-content input {
   display: block;
   width: 100%;
-  padding: 0.6em 1em;
-  margin-bottom: 2em;
-  background: #FAFAFA;
+  padding: 1em 1em;
+  margin-bottom: 1em;
+  background: #f7f7f7;
   border: none;
 }
-/* line 83, ../sass/_adminarticles.scss */
+/* line 33, ../sass/_adminnewarticle.scss */
+#admin-add-article .main-content input::-webkit-input-placeholder {
+  color: #000;
+}
+/* line 39, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content {
   width: 30%;
   margin-left: 5%;
@@ -2014,18 +1921,18 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 89, ../sass/_adminarticles.scss */
+/* line 45, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content h3 {
-  background: #FAFAFA;
   font-weight: bolder;
   text-transform: uppercase;
   padding: 1.2em 1em;
+  background: #fdeed8;
+  color: #ff9806;
 }
-/* line 96, ../sass/_adminarticles.scss */
+/* line 53, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content > div {
-  border-bottom: 1px solid #000;
-  padding: 1em 0;
-  background: #FAFAFA;
+  padding: 1em 2em;
+  background: #fff;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
 #admin-add-article .aside-content > div:after {
@@ -2033,34 +1940,41 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 102, ../sass/_adminarticles.scss */
-#admin-add-article .aside-content > div.add-tags {
-  border: none;
-}
-/* line 106, ../sass/_adminarticles.scss */
+/* line 58, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content > div span {
   display: block;
-  float: left;
-  margin-left: 1em;
-  line-height: 2;
+  margin-bottom: 10px;
 }
-/* line 113, ../sass/_adminarticles.scss */
+/* line 63, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content > div select {
-  float: right;
-  margin-right: 1em;
+  background: #fff;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  padding: 0 1em;
+  height: 40px;
+  line-height: 2.3;
 }
-/* line 118, ../sass/_adminarticles.scss */
+/* line 68, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content > div input {
   outline: none;
   display: block;
-  width: 90%;
+  width: 100%;
   margin: 1em auto;
   padding: 0.3em 0;
   background: transparent;
   border: none;
   border-bottom: 1px solid #000;
 }
-/* line 129, ../sass/_adminarticles.scss */
+/* line 79, ../sass/_adminnewarticle.scss */
+#admin-add-article .aside-content > div textarea {
+  width: 100%;
+  border: none;
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 1em;
+}
+/* line 87, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content > div .all-tags .tag {
   background: red;
   padding: 0.2em 1.5em;
@@ -2072,7 +1986,7 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 135, ../sass/_adminarticles.scss */
+/* line 93, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content > div .all-tags .tag i {
   display: none;
   float: left;
@@ -2084,11 +1998,11 @@ body[id*="admin-"] main .inner:after {
   color: #fff;
   margin-right: 1em;
 }
-/* line 147, ../sass/_adminarticles.scss */
+/* line 105, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content > div .all-tags .tag:hover i {
   display: block;
 }
-/* line 154, ../sass/_adminarticles.scss */
+/* line 112, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content button {
   display: block;
   float: left;
@@ -2097,11 +2011,21 @@ body[id*="admin-"] main .inner:after {
   border-radius: 0;
   font-size: 16px;
   padding: 0.7em 1em;
+  background: #fdeed8;
+  color: #ff9806;
+  font-weight: bolder;
 }
-/* line 163, ../sass/_adminarticles.scss */
+/* line 125, ../sass/_adminnewarticle.scss */
 #admin-add-article .aside-content button:last-child {
   margin-right: 0;
   background: #FAFAFA;
+}
+
+/* line 2, ../sass/_adminarticles.scss */
+#admin-articles main section {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 3em;
 }
 
 /* line 3, ../sass/partials/_clearfix.scss */
@@ -2110,57 +2034,57 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 175, ../sass/_adminarticles.scss */
+/* line 12, ../sass/_adminarticles.scss */
 #admin-all-articles .head-all-articles {
   float: left;
 }
-/* line 179, ../sass/_adminarticles.scss */
+/* line 16, ../sass/_adminarticles.scss */
 #admin-all-articles .order-by {
   float: right;
 }
-/* line 182, ../sass/_adminarticles.scss */
+/* line 19, ../sass/_adminarticles.scss */
 #admin-all-articles .order-by label,
 #admin-all-articles .order-by option,
 #admin-all-articles .order-by select {
   color: #ff9806;
   font-weight: bolder;
 }
-/* line 189, ../sass/_adminarticles.scss */
+/* line 26, ../sass/_adminarticles.scss */
 #admin-all-articles .order-by select {
   border: 1px solid #ff9806;
   background: none;
   border-radius: 200px;
 }
-/* line 196, ../sass/_adminarticles.scss */
+/* line 33, ../sass/_adminarticles.scss */
 #admin-all-articles .head {
   clear: both;
   background: #f7f7f7;
 }
-/* line 200, ../sass/_adminarticles.scss */
+/* line 37, ../sass/_adminarticles.scss */
 #admin-all-articles .head .actions > div {
   display: inline-block;
   padding: 1em 3em;
   cursor: pointer;
 }
-/* line 205, ../sass/_adminarticles.scss */
+/* line 42, ../sass/_adminarticles.scss */
 #admin-all-articles .head .actions > div select {
   background: transparent;
   border-radius: 200px;
   padding-right: 0;
 }
 
-/* line 214, ../sass/_adminarticles.scss */
+/* line 51, ../sass/_adminarticles.scss */
 #admin-view-articles {
   clear: both;
   padding-top: 4em;
 }
-/* line 219, ../sass/_adminarticles.scss */
+/* line 56, ../sass/_adminarticles.scss */
 #admin-view-articles.actions-on .checkbox {
   opacity: 1;
   width: 10%;
   max-width: 999px;
 }
-/* line 225, ../sass/_adminarticles.scss */
+/* line 62, ../sass/_adminarticles.scss */
 #admin-view-articles.actions-on .wrapper {
   width: 90%;
   background: #F1F1F1;
@@ -2171,7 +2095,7 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 232, ../sass/_adminarticles.scss */
+/* line 69, ../sass/_adminarticles.scss */
 #admin-view-articles article {
   width: 100%;
   border-radius: 15px;
@@ -2184,7 +2108,7 @@ body[id*="admin-"] main .inner:after {
   display: table;
   clear: both;
 }
-/* line 239, ../sass/_adminarticles.scss */
+/* line 76, ../sass/_adminarticles.scss */
 #admin-view-articles article .checkbox {
   opacity: 0;
   float: left;
@@ -2193,26 +2117,26 @@ body[id*="admin-"] main .inner:after {
   overflow: hidden;
   margin-top: 10px;
 }
-/* line 248, ../sass/_adminarticles.scss */
+/* line 85, ../sass/_adminarticles.scss */
 #admin-view-articles article a.container > div {
   margin-right: 3.5em;
 }
-/* line 252, ../sass/_adminarticles.scss */
+/* line 89, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions {
   float: right;
 }
-/* line 255, ../sass/_adminarticles.scss */
+/* line 92, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .author,
 #admin-view-articles article .actions .return {
   display: block;
   text-align: right;
 }
-/* line 261, ../sass/_adminarticles.scss */
+/* line 98, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .ctas {
   clear: both;
   margin-top: 1.5em;
 }
-/* line 266, ../sass/_adminarticles.scss */
+/* line 103, ../sass/_adminarticles.scss */
 #admin-view-articles article .actions .cta {
   border: 1px solid #000;
   padding: 0.5em 2em;
