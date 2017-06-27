@@ -953,6 +953,59 @@ body[id*="admin-"] {
       #admin-aside li:hover {
         background: initial; } }
 
+/* line 1, ../sass/partials/_adminelements.scss */
+.head-all-articles {
+  padding-bottom: 20px;
+  border-bottom: 3px solid #f7f7f7;
+  margin-bottom: 3em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+.head-all-articles:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 7, ../sass/partials/_adminelements.scss */
+.head-all-articles a {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 0 10px;
+  padding: 0 1em;
+}
+/* line 15, ../sass/partials/_adminelements.scss */
+.head-all-articles a.active {
+  position: relative;
+  font-size: 17px;
+  color: #ff9806;
+  font-weight: bold;
+}
+/* line 21, ../sass/partials/_adminelements.scss */
+.head-all-articles a.active::before {
+  content: '';
+  position: absolute;
+  background: #ff9806;
+  width: 100%;
+  height: 6px;
+  bottom: -25px;
+  left: 0;
+}
+/* line 33, ../sass/partials/_adminelements.scss */
+.head-all-articles a:not(.active) {
+  color: rgba(0, 0, 34, 0.5);
+}
+/* line 37, ../sass/partials/_adminelements.scss */
+.head-all-articles .vue {
+  float: right;
+}
+/* line 40, ../sass/partials/_adminelements.scss */
+.head-all-articles .vue span.active {
+  color: #ff9806;
+  background: #ff9806;
+}
+
+/* line 2, ../sass/_adminhome.scss */
 body[id*="admin-"] main {
   width: 85%;
   float: right;
@@ -985,110 +1038,158 @@ body[id*="admin-"] main {
   float: left;
   border-radius: 10px;
   margin-right: 3%;
-  padding: 2em 0; }
-  @media screen and (max-width: 880px) {
-    #admin-home .all-articles {
-      width: 100%;
-      float: none; } }
-  #admin-home .all-articles .head {
-    padding-bottom: 20px;
-    border-bottom: 3px solid #f7f7f7;
-    margin-bottom: 3em; }
-    #admin-home .all-articles .head:after {
-      content: "";
-      display: table;
-      clear: both; }
-    #admin-home .all-articles .head a {
-      display: block;
-      float: left;
-      font-size: 16px;
-      font-weight: bolder;
-      margin: 0 10px;
-      padding: 0 1em; }
-      #admin-home .all-articles .head a.active {
-        position: relative;
-        font-size: 17px;
-        color: #ff9806;
-        font-weight: bold; }
-        #admin-home .all-articles .head a.active::before {
-          content: '';
-          position: absolute;
-          background: #ff9806;
-          width: 100%;
-          height: 6px;
-          bottom: -25px;
-          left: 0; }
-    #admin-home .all-articles .head a:not(.active) {
-      color: rgba(0, 0, 34, 0.5); }
-    #admin-home .all-articles .head .vue {
-      float: right; }
-      #admin-home .all-articles .head .vue span.active {
-        color: #ff9806;
-        background: #ff9806; }
-  #admin-home .all-articles article {
-    background: #fff;
-    padding: 2em 1.5em;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-    margin-bottom: 1em; }
-    #admin-home .all-articles article:after {
-      content: "";
-      display: table;
-      clear: both; }
-    #admin-home .all-articles article a.container {
-      display: block;
-      float: left; }
-      #admin-home .all-articles article a.container:after {
-        content: "";
-        display: table;
-        clear: both; }
-    #admin-home .all-articles article a.container > div {
-      float: left;
-      margin-right: 1.3em; }
-    #admin-home .all-articles article h3 {
-      font-size: 16px;
-      margin-bottom: 0.4em; }
-    #admin-home .all-articles article:hover {
-      background: #f7f7f7; }
-    #admin-home .all-articles article .author, #admin-home .all-articles article .author b {
-      font-size: 16px; }
-    #admin-home .all-articles article .post-status {
-      position: relative;
-      border-radius: 5px;
-      border: 1px solid #fc1053;
-      height: 40px;
-      line-height: 2.3;
-      padding: 0 1em 0 35px;
-      color: #fc1053;
-      font-weight: bold; }
-      #admin-home .all-articles article .post-status .round {
-        position: absolute;
-        border-radius: 100px;
-        width: 7px;
-        height: 7px;
-        background: #fc1053;
-        left: 15px;
-        top: 40%; }
-    #admin-home .all-articles article .category {
-      position: relative;
-      border-radius: 5px;
-      border: 1px solid #d9d9d9;
-      padding: 0 1em;
-      height: 40px;
-      line-height: 2.3; }
-    #admin-home .all-articles article .more {
-      float: right;
-      width: 5%;
-      line-height: 2.8;
-      cursor: pointer; }
-      #admin-home .all-articles article .more span {
-        display: inline-block;
-        width: 7px;
-        height: 7px;
-        border-radius: 100px;
-        background: #d9d9d9;
-        margin-bottom: 3px;
-        cursor: pointer; }
+  padding: 2em 0;
+}
+@media screen and (max-width: 880px) {
+  /* line 32, ../sass/_adminhome.scss */
+  #admin-home .all-articles {
+    width: 100%;
+    float: none;
+  }
+}
+/* line 44, ../sass/_adminhome.scss */
+#admin-home .all-articles .head-all-articles {
+  padding-bottom: 20px;
+  border-bottom: 3px solid #f7f7f7;
+  margin-bottom: 3em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-home .all-articles .head-all-articles:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 50, ../sass/_adminhome.scss */
+#admin-home .all-articles .head-all-articles a {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 0 10px;
+  padding: 0 1em;
+}
+/* line 58, ../sass/_adminhome.scss */
+#admin-home .all-articles .head-all-articles a.active {
+  position: relative;
+  font-size: 17px;
+  color: #ff9806;
+  font-weight: bold;
+}
+/* line 64, ../sass/_adminhome.scss */
+#admin-home .all-articles .head-all-articles a.active::before {
+  content: '';
+  position: absolute;
+  background: #ff9806;
+  width: 100%;
+  height: 6px;
+  bottom: -25px;
+  left: 0;
+}
+/* line 76, ../sass/_adminhome.scss */
+#admin-home .all-articles .head-all-articles a:not(.active) {
+  color: rgba(0, 0, 34, 0.5);
+}
+/* line 80, ../sass/_adminhome.scss */
+#admin-home .all-articles .head-all-articles .vue {
+  float: right;
+}
+/* line 83, ../sass/_adminhome.scss */
+#admin-home .all-articles .head-all-articles .vue span.active {
+  color: #ff9806;
+  background: #ff9806;
+}
+/* line 91, ../sass/_adminhome.scss */
+#admin-home .all-articles article {
+  background: #fff;
+  padding: 2em 1.5em;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 1em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-home .all-articles article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 99, ../sass/_adminhome.scss */
+#admin-home .all-articles article a.container {
+  display: block;
+  float: left;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-home .all-articles article a.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 106, ../sass/_adminhome.scss */
+#admin-home .all-articles article a.container > div {
+  float: left;
+  margin-right: 1.3em;
+}
+/* line 111, ../sass/_adminhome.scss */
+#admin-home .all-articles article h3 {
+  font-size: 16px;
+  margin-bottom: 0.4em;
+}
+/* line 116, ../sass/_adminhome.scss */
+#admin-home .all-articles article:hover {
+  background: #f7f7f7;
+}
+/* line 120, ../sass/_adminhome.scss */
+#admin-home .all-articles article .author, #admin-home .all-articles article .author b {
+  font-size: 16px;
+}
+/* line 124, ../sass/_adminhome.scss */
+#admin-home .all-articles article .post-status {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #fc1053;
+  height: 40px;
+  line-height: 2.3;
+  padding: 0 1em 0 35px;
+  color: #fc1053;
+  font-weight: bold;
+}
+/* line 134, ../sass/_adminhome.scss */
+#admin-home .all-articles article .post-status .round {
+  position: absolute;
+  border-radius: 100px;
+  width: 7px;
+  height: 7px;
+  background: #fc1053;
+  left: 15px;
+  top: 40%;
+}
+/* line 145, ../sass/_adminhome.scss */
+#admin-home .all-articles article .category {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  padding: 0 1em;
+  height: 40px;
+  line-height: 2.3;
+}
+/* line 149, ../sass/_adminhome.scss */
+#admin-home .all-articles article .more {
+  float: right;
+  width: 5%;
+  line-height: 2.8;
+  cursor: pointer;
+}
+/* line 154, ../sass/_adminhome.scss */
+#admin-home .all-articles article .more span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 100px;
+  background: #d9d9d9;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+/* line 170, ../sass/_adminhome.scss */
+
 #admin-home .stats {
   width: 20%;
   float: right; }
@@ -1127,218 +1228,328 @@ body[id*="admin-"] main {
     font-size: 3.8em;
     font-weight: bolder; }
 
+/* line 2, ../sass/_adminarticles.scss */
+#admin-articles main section {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 3em;
+}
+
+/* line 9, ../sass/_adminarticles.scss */
 #admin-add-article {
-  background: #fff; }
-  #admin-add-article:after {
-    content: "";
-    display: table;
-    clear: both; }
-  #admin-add-article h2 {
-    display: block;
-    position: relative;
-    z-index: 555;
-    padding: 1em 0 1em 2em;
-    font-weight: bolder;
-    font-size: 1.2em;
-    background: #FAFAFA; }
-    #admin-add-article h2 span {
-      font-size: inherit; }
-      #admin-add-article h2 span.less {
-        display: none; }
-      #admin-add-article h2 span.more {
-        display: inline-block; }
-  #admin-add-article.opened h2 {
-    border-bottom: 1px solid #000; }
-    #admin-add-article.opened h2 .more {
-      display: none; }
-    #admin-add-article.opened h2 .less {
-      display: inline-block; }
-  #admin-add-article .wrapper {
-    display: block;
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-    z-index: 11;
-    opacity: 0;
-    transform: translateY(-100%);
-    max-height: 0;
-    overflow: hidden;
-    transition: .5s ease-out; }
-    #admin-add-article .wrapper.show {
-      margin: 2em auto;
-      transition: .6s ease-in-out;
-      transform: none;
-      opacity: 1;
-      max-height: 999px; }
-  #admin-add-article .main-content {
-    width: 65%;
-    float: left; }
-    #admin-add-article .main-content input {
-      display: block;
-      width: 100%;
-      padding: .6em 1em;
-      margin-bottom: 2em;
-      background: #FAFAFA;
-      border: none; }
-  #admin-add-article .aside-content {
-    width: 30%;
-    margin-left: 5%;
-    float: right; }
-    #admin-add-article .aside-content:after {
-      content: "";
-      display: table;
-      clear: both; }
-    #admin-add-article .aside-content h3 {
-      background: #FAFAFA;
-      font-weight: bolder;
-      text-transform: uppercase;
-      padding: 1.2em 1em; }
-    #admin-add-article .aside-content > div {
-      border-bottom: 1px solid #000;
-      padding: 1em 0;
-      background: #FAFAFA; }
-      #admin-add-article .aside-content > div:after {
-        content: "";
-        display: table;
-        clear: both; }
-      #admin-add-article .aside-content > div.add-tags {
-        border: none; }
-      #admin-add-article .aside-content > div span {
-        display: block;
-        float: left;
-        margin-left: 1em;
-        line-height: 2; }
-      #admin-add-article .aside-content > div select {
-        float: right;
-        margin-right: 1em; }
-      #admin-add-article .aside-content > div input {
-        outline: none;
-        display: block;
-        width: 90%;
-        margin: 1em auto;
-        padding: .3em 0;
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid #000; }
-      #admin-add-article .aside-content > div .all-tags .tag {
-        background: red;
-        padding: .2em 1.5em;
-        cursor: pointer; }
-        #admin-add-article .aside-content > div .all-tags .tag:after {
-          content: "";
-          display: table;
-          clear: both; }
-        #admin-add-article .aside-content > div .all-tags .tag i {
-          display: none;
-          float: left;
-          width: 20px;
-          height: 20px;
-          background: rgba(0, 0, 0, 0.7);
-          border-radius: 100px;
-          text-align: center;
-          color: #fff;
-          margin-right: 1em; }
-        #admin-add-article .aside-content > div .all-tags .tag:hover i {
-          display: block; }
-    #admin-add-article .aside-content button {
-      display: block;
-      float: left;
-      margin: 1em 10px 1em 0;
-      border: none;
-      border-radius: 0;
-      font-size: 16px;
-      padding: .7em 1em; }
-      #admin-add-article .aside-content button:last-child {
-        margin-right: 0;
-        background: #FAFAFA; }
+  display: none;
+  background: #fff;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-add-article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 14, ../sass/_adminarticles.scss */
+#admin-add-article h2 {
+  display: block;
+  position: relative;
+  z-index: 555;
+  padding: 1em 0 1em 2em;
+  font-weight: bolder;
+  font-size: 1.2em;
+  background: #FAFAFA;
+}
+/* line 23, ../sass/_adminarticles.scss */
+#admin-add-article h2 span {
+  font-size: inherit;
+}
+/* line 26, ../sass/_adminarticles.scss */
+#admin-add-article h2 span.less {
+  display: none;
+}
+/* line 29, ../sass/_adminarticles.scss */
+#admin-add-article h2 span.more {
+  display: inline-block;
+}
+/* line 36, ../sass/_adminarticles.scss */
+#admin-add-article.opened h2 {
+  border-bottom: 1px solid #000;
+}
+/* line 39, ../sass/_adminarticles.scss */
+#admin-add-article.opened h2 .more {
+  display: none;
+}
+/* line 42, ../sass/_adminarticles.scss */
+#admin-add-article.opened h2 .less {
+  display: inline-block;
+}
+/* line 47, ../sass/_adminarticles.scss */
+#admin-add-article .wrapper {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 11;
+  opacity: 0;
+  transform: translateY(-100%);
+  max-height: 0;
+  overflow: hidden;
+  transition: .5s ease-out;
+}
+/* line 59, ../sass/_adminarticles.scss */
+#admin-add-article .wrapper.show {
+  margin: 2em auto;
+  transition: .6s ease-in-out;
+  transform: none;
+  opacity: 1;
+  max-height: 999px;
+}
+/* line 68, ../sass/_adminarticles.scss */
+#admin-add-article .main-content {
+  width: 65%;
+  float: left;
+}
+/* line 72, ../sass/_adminarticles.scss */
+#admin-add-article .main-content input {
+  display: block;
+  width: 100%;
+  padding: .6em 1em;
+  margin-bottom: 2em;
+  background: #FAFAFA;
+  border: none;
+}
+/* line 82, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content {
+  width: 30%;
+  margin-left: 5%;
+  float: right;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-add-article .aside-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 88, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content h3 {
+  background: #FAFAFA;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 1.2em 1em;
+}
+/* line 95, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div {
+  border-bottom: 1px solid #000;
+  padding: 1em 0;
+  background: #FAFAFA;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-add-article .aside-content > div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 101, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div.add-tags {
+  border: none;
+}
+/* line 105, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div span {
+  display: block;
+  float: left;
+  margin-left: 1em;
+  line-height: 2;
+}
+/* line 112, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div select {
+  float: right;
+  margin-right: 1em;
+}
+/* line 117, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div input {
+  outline: none;
+  display: block;
+  width: 90%;
+  margin: 1em auto;
+  padding: .3em 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+/* line 128, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div .all-tags .tag {
+  background: red;
+  padding: .2em 1.5em;
+  cursor: pointer;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-add-article .aside-content > div .all-tags .tag:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 134, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div .all-tags .tag i {
+  display: none;
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 100px;
+  text-align: center;
+  color: #fff;
+  margin-right: 1em;
+}
+/* line 146, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content > div .all-tags .tag:hover i {
+  display: block;
+}
+/* line 153, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content button {
+  display: block;
+  float: left;
+  margin: 1em 10px 1em 0;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  padding: .7em 1em;
+}
+/* line 162, ../sass/_adminarticles.scss */
+#admin-add-article .aside-content button:last-child {
+  margin-right: 0;
+  background: #FAFAFA;
+}
+
 
 #admin-all-articles:after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
+/* line 176, ../sass/_adminarticles.scss */
 #admin-all-articles > .head {
-  background: #FAFAFA;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000; }
+  background: #f7f7f7;
+}
+/* line 179, ../sass/_adminarticles.scss */
 #admin-all-articles .head > .actions > div {
   display: inline-block;
   padding: 1em 3em;
-  border-right: 1px solid #000;
-  cursor: pointer; }
-  #admin-all-articles .head > .actions > div select {
-    border: none;
-    background: transparent; }
+  cursor: pointer;
+}
+/* line 184, ../sass/_adminarticles.scss */
+#admin-all-articles .head > .actions > div select {
+  border: none;
+  background: transparent;
+}
 
+/* line 192, ../sass/_adminarticles.scss */
 #admin-filter-articles {
   width: 90%;
-  margin: 2em auto; }
-  #admin-filter-articles:after {
-    content: "";
-    display: table;
-    clear: both; }
-  #admin-filter-articles span.nb {
-    font-weight: bolder;
-    line-height: 2.8; }
-  #admin-filter-articles select {
-    float: right;
-    background: transparent;
-    padding: .5em 2em; }
+  margin: 2em auto;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-filter-articles:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 197, ../sass/_adminarticles.scss */
+#admin-filter-articles span.nb {
+  font-weight: bolder;
+  line-height: 2.8;
+}
+/* line 202, ../sass/_adminarticles.scss */
+#admin-filter-articles select {
+  float: right;
+  background: transparent;
+  padding: .5em 2em;
+}
 
+/* line 209, ../sass/_adminarticles.scss */
 #admin-view-articles {
   width: 90%;
-  margin: 0 auto; }
-  #admin-view-articles.actions-on .checkbox {
-    opacity: 1;
-    width: 10%;
-    max-width: 999px; }
-  #admin-view-articles.actions-on .wrapper {
-    width: 90%;
-    background: #F1F1F1; }
-    #admin-view-articles.actions-on .wrapper:after {
-      content: "";
-      display: table;
-      clear: both; }
-  #admin-view-articles article {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 1em; }
-    #admin-view-articles article:after {
-      content: "";
-      display: table;
-      clear: both; }
-    #admin-view-articles article .checkbox {
-      opacity: 0;
-      float: left;
-      max-width: 0;
-      text-align: center;
-      line-height: 5;
-      overflow: hidden; }
-    #admin-view-articles article .wrapper {
-      width: 100%;
-      float: right;
-      padding: 1.6em 2em;
-      background: #F1F1F1; }
-      #admin-view-articles article .wrapper:after {
-        content: "";
-        display: table;
-        clear: both; }
-    #admin-view-articles article .content {
-      float: left; }
-      #admin-view-articles article .content h3 {
-        font-weight: bolder; }
-    #admin-view-articles article .actions {
-      float: right; }
-      #admin-view-articles article .actions .author, #admin-view-articles article .actions .return {
-        display: block;
-        text-align: right; }
-      #admin-view-articles article .actions .ctas {
-        clear: both;
-        margin-top: 1.5em; }
-      #admin-view-articles article .actions .cta {
-        border: 1px solid #000;
-        padding: .5em 2em; }
-  #admin-view-articles .pagination {
-    text-align: center; }
+  margin: 0 auto;
+}
+/* line 216, ../sass/_adminarticles.scss */
+#admin-view-articles.actions-on .checkbox {
+  opacity: 1;
+  width: 10%;
+  max-width: 999px;
+}
+/* line 222, ../sass/_adminarticles.scss */
+#admin-view-articles.actions-on .wrapper {
+  width: 90%;
+  background: #F1F1F1;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-view-articles.actions-on .wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 229, ../sass/_adminarticles.scss */
+#admin-view-articles article {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-view-articles article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 235, ../sass/_adminarticles.scss */
+#admin-view-articles article .checkbox {
+  opacity: 0;
+  float: left;
+  max-width: 0;
+  text-align: center;
+  line-height: 5;
+  overflow: hidden;
+}
+/* line 244, ../sass/_adminarticles.scss */
+#admin-view-articles article .wrapper {
+  width: 100%;
+  float: right;
+  padding: 1.6em 2em;
+  background: #fff;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-view-articles article .wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 252, ../sass/_adminarticles.scss */
+#admin-view-articles article .content {
+  float: left;
+}
+/* line 254, ../sass/_adminarticles.scss */
+#admin-view-articles article .content h3 {
+  font-weight: bolder;
+}
+/* line 257, ../sass/_adminarticles.scss */
+#admin-view-articles article .actions {
+  float: right;
+}
+/* line 260, ../sass/_adminarticles.scss */
+#admin-view-articles article .actions .author, #admin-view-articles article .actions .return {
+  display: block;
+  text-align: right;
+}
+/* line 265, ../sass/_adminarticles.scss */
+#admin-view-articles article .actions .ctas {
+  clear: both;
+  margin-top: 1.5em;
+}
+/* line 270, ../sass/_adminarticles.scss */
+#admin-view-articles article .actions .cta {
+  border: 1px solid #000;
+  padding: .5em 2em;
+}
+/* line 277, ../sass/_adminarticles.scss */
+#admin-view-articles .pagination {
+  text-align: center;
+}
+
 
 #admin-volunteers {
   width: 90%;
