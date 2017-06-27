@@ -1003,6 +1003,137 @@ nav select {
   line-height: 1.7;
 }
 
+/* line 1, ../sass/partials/_contact.scss */
+main, header {
+  position: relative;
+}
+
+/* line 5, ../sass/partials/_contact.scss */
+#contact {
+  padding-top: 10%;
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  text-align: center;
+  z-index: 667;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#contact:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 17, ../sass/partials/_contact.scss */
+#contact.active {
+  display: block;
+}
+/* line 21, ../sass/partials/_contact.scss */
+#contact h3 {
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+}
+/* line 27, ../sass/partials/_contact.scss */
+#contact .cross {
+  float: right;
+  width: 30px;
+}
+/* line 32, ../sass/partials/_contact.scss */
+#contact div {
+  display: inline-block;
+  width: 60%;
+  font-weight: bold;
+}
+/* line 37, ../sass/partials/_contact.scss */
+#contact div .adresse {
+  padding-bottom: 12%;
+}
+/* line 41, ../sass/partials/_contact.scss */
+#contact div .adresse-mail {
+  padding-top: 12%;
+}
+/* line 46, ../sass/partials/_contact.scss */
+#contact .first-fields {
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+/* line 51, ../sass/partials/_contact.scss */
+#contact .first-fields input {
+  padding: 1% 2%;
+  margin: 3%;
+  width: 26%;
+  color: #fff;
+  border: 1.5px solid transparent;
+  border-bottom: 1.5px solid #fff;
+  background: transparent;
+}
+/* line 60, ../sass/partials/_contact.scss */
+#contact .first-fields input:first-child {
+  margin-left: 0;
+}
+/* line 66, ../sass/partials/_contact.scss */
+#contact .content-contact {
+  width: 60%;
+  float: left;
+}
+/* line 70, ../sass/partials/_contact.scss */
+#contact .content-contact textarea {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid #fff;
+  padding: 3%;
+  width: 100%;
+}
+/* line 79, ../sass/partials/_contact.scss */
+#contact .info-contact {
+  width: 35%;
+  float: right;
+  text-align: left;
+}
+/* line 85, ../sass/partials/_contact.scss */
+#contact a {
+  color: #fff;
+}
+/* line 89, ../sass/partials/_contact.scss */
+#contact .button-message {
+  float: left;
+  text-align: left;
+  padding-top: 3%;
+}
+/* line 94, ../sass/partials/_contact.scss */
+#contact .button-message input {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  padding: 1% 4%;
+}
+/* line 103, ../sass/partials/_contact.scss */
+#contact ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #fff;
+}
+/* line 106, ../sass/partials/_contact.scss */
+#contact :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+}
+/* line 109, ../sass/partials/_contact.scss */
+#contact ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+/* line 113, ../sass/partials/_contact.scss */
+#contact :-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #fff;
+  opacity: 1;
+}
+
 /* line 1, ../sass/partials/_headeradmin.scss */
 body[id*="admin-"] {
   position: relative;
