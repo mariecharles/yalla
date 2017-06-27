@@ -38,13 +38,15 @@ var contact_cross = document.querySelector('.cross');
 var contact_container = document.querySelector('#contact .container');
 
 contact.addEventListener('click', function() {
-    contenu_contact.classList.add('active');
+    contenu_contact.classList.toggle('active');
     body.classList.toggle('window-active');
+    console.log("jejej");
 })
 
 contact_cross.addEventListener('click', function() {
     contenu_contact.classList.remove('active');
     body.classList.toggle('window-active');
+    console.log("kekeke");
 })
 
 // window.addEventListener('click', function(e) {
