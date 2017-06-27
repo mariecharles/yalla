@@ -7,8 +7,13 @@ $Roboto: 'Roboto', sans-serif;
 // COLORS VARIABLES
 
 $yellow: #FFD52B;
+$orange: #ff9806;
+$pink: #fc1053;
 
 $lgrey: #FAFAFA;
+$lmgrey: #fcfcfc;
+$mgrey: #f7f7f7;
+$ldgrey: #d9d9d9;
 
 // WIDTHS VARIABLES
 
@@ -24,32 +29,48 @@ $mobile: 580px;
 //bolder
 
 b {
-font-weight: bold;
+font-weight: bolder;
 }
 
-span.return {
+.return {
   display: block;
+}
+
+.ctbtn {
+
+}
+
+@mixin ctbtn($color) {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid $color;
+  padding: 0 1em;
+  height: 40px;
+  line-height: 2.3;
 }
 
 
 // IMPORTING FILES
 
-@import "partials/_clearfix";
-@import "partials/_fonts";
-@import "partials/_reset";
-@import "partials/_ctas";
+@import "partials/clearfix";
+@import "partials/fonts";
+@import "partials/reset";
+@import "partials/ctas";
 
-@import "partials/_header";
+@import "partials/header";
 @import "index";
 @import "aboutus";
 @import "ouractions";
 @import "ournews";
 @import "supportus";
-@import "contact";
+@import "partials/contact";
 
-@import "partials/_headeradmin";
-@import "partials/_asideadmin";
+@import "partials/headeradmin";
+@import "partials/asideadmin";
+@import "partials/adminelements";
+
 @import "adminhome";
 @import "adminarticles";
+@import "adminvolunteers";
 
-@import "partials/_footer";
+@import "partials/footer";

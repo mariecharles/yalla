@@ -10,7 +10,7 @@ use App\Category;
 use App\Archive;
 use App\Message;
 use Illuminate\Support\Facades\Mail;
-
+use Illuminate\Validation\Validator;
 
 
 class AdminController extends Controller
@@ -94,16 +94,41 @@ class AdminController extends Controller
 
       $requete = $request->all();
 
-      $image = $this->upload($request->file('img'));
+       if($request->hasfile('img'))
+        {
+            $image = $this->upload($request->file('img'));
 
-      $requete['img'] = $image;
+            $requete['img'] = $image;
+        }
+
+      $ValidationRules = [
+
+        'title' => 'required|string|min:5',
+        'slug' => 'required|string|min:5|unique',
+        'content' => 'required',
+        'resume' => 'required',
+        'img' => 'image|mimes:jpeg,bmp,png'
+
+      ];
+
+      $validationMessages = [
+
+        'title.required' => 'Vous devez renseigner un titre pour cet article',
+        'slug.required' => 'Vous devez renseigner un nom pour l\'URL',
+        'content.required' => 'Vous devez renseigner le contenu de l\'article',
+        'resume.required' => 'Vous devez renseigner un résumé pour votre article: celui-ci sera nécessaire pour son référencement',
+        'img.image' => 'L\'image doit être valide, au format jpeg, bmp ou png.',
+       ];
+
+
+      $this->validate($request, $ValidationRules, $validationMessages);
+
 
       $post = Post::create($requete);
-
       $post->saveTags($request->get('tags'));
 
-
       return redirect()->action('AdminController@index');
+
 
     }
 
@@ -113,11 +138,36 @@ class AdminController extends Controller
     {
         $requete = $request->all();
 
-        $image = $this->upload($request->file('img'));
+        if($request->hasfile('img'))
+        {
+            $image = $this->upload($request->file('img'));
+
+            $requete['img'] = $image;
+        }
 
         $post = Post::find($id);
 
-        $requete['img'] = $image;
+        $ValidationRules = [
+
+            'title' => 'required|string|min:5',
+            'slug' => 'required|string|min:5',
+            'content' => 'required',
+            'resume' => 'required',
+            'img' => 'image|mimes:jpeg,bmp,png'
+
+        ];
+
+        $validationMessages = [
+
+            'title.required' => 'Vous devez renseigner un titre pour cet article',
+            'slug.required' => 'Vous devez renseigner un nom pour l\'URL',
+            'content.required' => 'Vous devez renseigner le contenu de l\'article',
+            'resume.required' => 'Vous devez renseigner un résumé pour votre article: celui-ci sera nécessaire pour son référencement',
+            'img.image' => 'L\'image doit être valide, au format jpeg, bmp ou png.',
+        ];
+
+
+        $this->validate($request, $ValidationRules, $validationMessages);
 
         $post->update($requete);
 
@@ -211,6 +261,32 @@ class AdminController extends Controller
 
         $requete = $request->all();
 
+        $ValidationRules = [
+
+            'lastname' => 'required|string',
+            'firstname' => 'required|string',
+            'address' => 'required',
+            'city' => 'required',
+            'postal_code' => 'required',
+            'country' => 'required',
+            'phone' => 'required'
+
+        ];
+
+        $validationMessages = [
+
+            'lastname.required' => 'Vous devez renseigner un nom',
+            'firstname.required' => 'Vous devez renseigner un prénom',
+            'address.required' => 'Vous devez renseigner une adresse',
+            'city.required' => 'Vous devez renseigner une ville',
+            'postal_code.required' => 'Vous devez renseigner un code postal',
+            'phone.required' => 'vous devez renseigner un numéro de téléphone'
+
+        ];
+
+
+        $this->validate($request, $ValidationRules, $validationMessages);
+
         Member::create($requete);
 
         return redirect()->action('AdminController@index');
@@ -224,6 +300,31 @@ class AdminController extends Controller
         $requete = $request->all();
 
         $member = Member::find($id);
+
+        $ValidationRules = [
+
+            'lastname' => 'required|string',
+            'firstname' => 'required|string',
+            'address' => 'required',
+            'city' => 'required',
+            'postal_code' => 'required',
+            'country' => 'required',
+            'phone' => 'required'
+
+        ];
+
+        $validationMessages = [
+
+            'lastname.required' => 'Vous devez renseigner un nom',
+            'firstname.required' => 'Vous devez renseigner un prénom',
+            'address.required' => 'Vous devez renseigner une adresse',
+            'city.required' => 'Vous devez renseigner une ville',
+            'postal_code.required' => 'Vous devez renseigner un code postal',
+            'phone.required' => 'vous devez renseigner un numéro de téléphone'
+
+        ];
+
+        $this->validate($request, $ValidationRules, $validationMessages);
 
         $member->update($requete);
 

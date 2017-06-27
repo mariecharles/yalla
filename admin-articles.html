@@ -114,7 +114,6 @@
         </div>
       </section>
 
-
       <section id="admin-all-articles">
 
         <div class="head-all-articles">
@@ -123,11 +122,16 @@
               <a href="">Articles en ligne <span>(19)</span></a>
               <a href="">Articles hors ligne <span>(15)</span></a>
             </div>
-            <div class="vue">
-              <span class="active">o</span>
-              <span>o</span>
-            </div>
         </div>
+
+        <div class="order-by">
+          <label for="">Trier par : </label>
+          <select name="" id="">
+            <option value="">Date de création</option>
+            <option value="">Auteur</option>
+          </select>
+        </div>
+
         <div class="head">
           <!-- <h2><span>-</span> Tous les articles</h2> -->
           <div class="actions">
@@ -139,9 +143,10 @@
               <span>Décocher toutes les cases</span>
             </div>
             <div class="action-status">
+              <label for="">Mettre :</label>
               <select name="" id="">
-                <option value="">Mettre : En ligne</option>
-                <option value="">Mettre : Hors ligne</option>
+                <option value="">En ligne</option>
+                <option value="">Hors ligne</option>
               </select>
             </div>
             <div class="delete">
@@ -152,84 +157,42 @@
         </div>
         <!-- end of head -->
 
-        <div id="admin-filter-articles">
-            <span class="nb">4 articles</span>
-            <select name="filter-categories" id="">
-              <option value="all">Trier par :</option>
-              <option value="date">Date</option>
-              <option value="categories">Catégories</option>
-            </select>
-        </div>
-
           <div id="admin-view-articles">
-            <article>
-              <div class="checkbox">
-                <input type="checkbox">
-              </div>
-              <div class="wrapper">
-                <div class="content">
-                  <h3>Fest-noz solidaire du 29 octobre à Paris</h3>
-                  <span class="date">27 septembre 2016</span>
-                  <span class="category">Education</span>
-                </div>
-
-                <div class="actions">
-                  <span class="author">Posté par <span class="return">Mary LEMELAND</span></span>
-                  <div class="ctas">
-                    <span class="cta status">En ligne</span>
-                    <span class="cta modify">Modifier</span>
-                  </div>
-                </div>
-              </div>
-            </article>
 
             <article>
               <div class="checkbox">
-                <input type="checkbox">
-              </div>
-              <div class="wrapper">
-                <div class="content">
-                  <h3>Fest-noz solidaire du 29 octobre à Paris</h3>
-                  <span class="date">27 septembre 2016</span>
-                  <span class="category">Education</span>
-                </div>
+               <input type="checkbox">
+             </div>
+                <a href="" class="container">
+                  <div class="infos">
+                    <h3>Fest-noz solidaire le 29 octobre à Poullalouen</h3>
+                    <span class="author">Ecrit par <b>Brenda Contreras</b></span>
+                  </div>
+                  <div class="post-status online">
+                    <span class="round"></span>
+                    <span class"status">Article en ligne</span>
+                  </div>
+                  <div class="date-published">
+                    <p>Publié le <b class="return">26 septembre</b></p>
+                  </div>
+                  <div class="category">
+                    <span class="cat">Santé</span>
+                  </div>
+                </a>
 
                 <div class="actions">
-                  <span class="author">Posté par <span class="return">Mary LEMELAND</span></span>
-                  <div class="ctas">
-                    <span class="cta status">En ligne</span>
-                    <span class="cta modify">Modifier</span>
-                  </div>
+                  <span>v</span>
+                  <span>m</span>
+                  <span>d</span>
                 </div>
-              </div>
-            </article>
-            <article>
-              <div class="checkbox">
-                <input type="checkbox">
-              </div>
-              <div class="wrapper">
-                <div class="content">
-                  <h3>Fest-noz solidaire du 29 octobre à Paris</h3>
-                  <span class="date">27 septembre 2016</span>
-                  <span class="category">Education</span>
-                </div>
-
-                <div class="actions">
-                  <span class="author">Posté par <span class="return">Mary LEMELAND</span></span>
-                  <div class="ctas">
-                    <span class="cta status">En ligne</span>
-                    <span class="cta modify">Modifier</span>
-                  </div>
-                </div>
-              </div>
             </article>
 
             <div class="pagination">
-              <span><<</span>
-              <span><</span>
-              <span>1/1</span>
-              <span>></span>
-              <span>>></span>
+              <span class="arrow"><<</span>
+              <span class="arrow"><</span>
+              <span>Page <b>1</b> sur <b>4</b></span>
+              <span class="arrow">></span>
+              <span class="arrow">>></span>
             </div>
             <!-- end of pagination -->
           </div>

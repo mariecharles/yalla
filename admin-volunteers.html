@@ -33,84 +33,131 @@
 
 <body id="admin-articles">
 
-    <header>
-        <div class="inner">
-          <div id="admin-actions">
-              <div class="ctas">
-                  <span class="cta"><a href="">+ Ajouter un bénévole</a></span>
-                  <span class="cta"><a href="">+ Nouvel article</a></span>
-              </div>
-              <div class="icon-action">
-                  <div class="messages">
-                    <span class="nb-message">OO<span class="push">2</span></span>
-                    <div class="my-messages">
-                      <h3>Mes messages reçus</h3>
-                    </div>
+  <header>
+      <div class="inner">
+        <div id="admin-actions">
+            <div class="ctas">
+                <span class="cta new-volunteer"><a href="">+ Ajouter un bénévole</a></span>
+                <span class="cta new-article"><a href="">+ Nouvel article</a></span>
+            </div>
+            <div class="icon-action">
+                <div class="messages">
+                  <span class="nb-message">OO<span class="push"></span></span>
+                  <div class="my-messages">
+                    <h3>Mes messages reçus</h3>
                   </div>
-                  <div class="notifications">
-                    <span class="nb-notifs">UU <span class="push">1</span></span>
-                    <div class="my-notifs">
-                      <h3>Mes notifications reçues</h3>
-                    </div>
+                </div>
+                <div class="notifications">
+                  <span class="nb-notifs">UU <span class="push"></span></span>
+                  <div class="my-notifs">
+                    <h3>Mes notifications reçues</h3>
                   </div>
-                  <div class="myspace">
-                    <span>MM</span>
-                    <div class="my-space">
-                      <ul>
-                        <li>Mary LEMELAND</li>
-                        <li><a href="">Réglages comptes</a></li>
-                        <li><a href="">Se déconnecter</a></li>
-                      </ul>
-                    </div>
-                  </div>
-              </div>
-          </div>
+                </div>
+                <div class="my-space"><span>MM</span></div>
+            </div>
         </div>
-    </header>
+      </div>
+  </header>
 
-    <nav id="admin-aside">
-        <ul>
-            <li><a href="">Tableau de bord</a></li>
-            <li><a href="">Articles</a></li>
-            <li><a href="">Membres</a></li>
-            <li class="active"><a href="">Bénévoles</a></li>
-        </ul>
-    </nav>
+  <nav id="admin-aside">
+      <ul>
+          <li ><a href="admin-home.html">Tableau de bord</a></li>
+          <li><a href="admin-articles.html">Articles</a></li>
+          <li><a href="">Membres</a></li>
+          <li class="active"><a href="">Bénévoles</a></li>
+      </ul>
+  </nav>
 
     <main>
       <section id="admin-volunteers">
-        <div class="head">
-          <h2>Tous les bénévoles</h2>
+        <div class="head-all-articles">
+            <div class="filters">
+              <a class="active">Tous les bénévoles <span>(34)</span></a>
+              <a href="">Administrateurs <span>(19)</span></a>
+              <a href="">Bénévoles <span>(15)</span></a>
+            </div>
+        </div>
+
+        <div class="order-by">
+          <label for="">Trier par : </label>
           <select name="" id="">
-            <option value="name">Trier par nom</option>
-            <option value="date">Trier par ancienneté</option>
+            <option value="">Date de création</option>
+            <option value="">Auteur</option>
           </select>
         </div>
+        
         <div class="all-volunteers">
           <div class="volunteer">
-            <div class="infos">
-              <h3>Mary LEMELAND</h3>
-              <p>Marraine depuis le 27 septembre 2016</p>
-            </div>
-            <div class="actions">
-              <a href="">Plus d'infos -></a>
-              <button class="parameters">
-                Paramètres du compte
-              </button>
-            </div>
+            <a href="">
+              <div class="profile-pic">
+                <span></span>
+              </div>
+              <div class="infos">
+                <h3>Mary LEMELAND</h3>
+                <p>Basée à Paris</p>
+              </div>
+
+              <div class="volunteer-status">
+                <span>Bénévole</span>
+              </div>
+              <div class="function-status">
+                <span>Rédactrice</span>
+              </div>
+              <div class="date">
+                <p>Membre depuis <b class="return">23/01/2017</b></p>
+              </div>
+            </a>
           </div>
           <div class="volunteer">
-            <div class="infos">
-              <h3>Mary LEMELAND</h3>
-              <p>Marraine depuis le 27 septembre 2016</p>
-            </div>
-            <div class="actions">
-              <a href="">Plus d'infos -></a>
-              <button class="parameters">
-                Paramètres du compte
-              </button>
-            </div>
+            <a href="">
+              <div class="profile-pic">
+                <span></span>
+              </div>
+              <div class="infos">
+                <h3>Mary LEMELAND</h3>
+                <p>Basée à Paris</p>
+              </div>
+
+              <div class="volunteer-status">
+                <span>Bénévole</span>
+              </div>
+              <div class="function-status">
+                <span>Rédactrice</span>
+              </div>
+              <div class="date">
+                <p>Membre depuis <b class="return">23/01/2017</b></p>
+              </div>
+            </a>
           </div>
+          <div class="volunteer">
+            <a href="">
+              <div class="profile-pic">
+                <span></span>
+              </div>
+              <div class="infos">
+                <h3>Mary LEMELAND</h3>
+                <p>Basée à Paris</p>
+              </div>
+
+              <div class="volunteer-status">
+                <span>Bénévole</span>
+              </div>
+              <div class="function-status">
+                <span>Rédactrice</span>
+              </div>
+              <div class="date">
+                <p>Membre depuis <b class="return">23/01/2017</b></p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <span class="arrow"><<</span>
+          <span class="arrow"><</span>
+          <span>Page <b>1</b> sur <b>4</b></span>
+          <span class="arrow">></span>
+          <span class="arrow">>></span>
         </div>
       </section>
 
