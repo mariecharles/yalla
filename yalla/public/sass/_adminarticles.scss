@@ -1,279 +1,290 @@
 #admin-articles {
-  main section {
-    width: $adminMainWidth;
-    margin: 0 auto;
-    padding-top: 3em;
-  }
+    main section {
+        width: $adminMainWidth;
+        margin: 0 auto;
+        padding-top: 3em;
+    }
 }
 
 #admin-add-article {
-  display: none;
-  @include clearfix;
-  background: #fff;
-
-  h2 {
-    display: block;
-    position: relative;
-    z-index: 555;
-    padding: 1em 0 1em 2em;
-    font-weight: bolder;
-    font-size: 1.2em;
-    background: $lgrey;
-
-    span {
-      font-size: inherit;
-
-      &.less {
-        display: none;
-      }
-      &.more {
-        display: inline-block;
-      }
-    }
-
-  }
-
-  &.opened h2 {
-    border-bottom: 1px solid #000;
-
-    .more {
-      display: none;
-    }
-    .less {
-      display: inline-block;
-    }
-  }
-
-  .wrapper {
-    display: block;
-    position: relative;
-    width: $adminMainWidth;
-    margin: 0 auto;
-    z-index: 11;
-    opacity: 0;
-    transform: translateY(-100%);
-    max-height: 0;
-    overflow: hidden;
-    transition: .5s ease-out;
-
-    &.show {
-      margin: 2em auto;
-      transition: .6s ease-in-out;
-      transform: none;
-      opacity: 1;
-      max-height: 999px;
-    }
-  }
-
-  .main-content {
-    width: 65%;
-    float: left;
-
-      input {
-        display: block;
-        width: 100%;
-        padding: .6em 1em;
-        margin-bottom: 2em;
-        background: $lgrey;
-        border: none;
-      }
-  }
-
-  .aside-content {
-    width: 30%;
-    margin-left: 5%;
-    float: right;
+    display: none;
     @include clearfix;
+    background: #fff;
 
-    h3 {
-      background: $lgrey;
-      font-weight: bolder;
-      text-transform: uppercase;
-      padding: 1.2em 1em;
+    h2 {
+        display: block;
+        position: relative;
+        z-index: 555;
+        padding: 1em 0 1em 2em;
+        font-weight: bolder;
+        font-size: 1.2em;
+        background: $lgrey;
+
+        span {
+            font-size: inherit;
+
+            &.less {
+                display: none;
+            }
+
+            &.more {
+                display: inline-block;
+            }
+        }
     }
 
-    & > div {
-      border-bottom: 1px solid #000;
-      padding: 1em 0;
-      @include clearfix;
-      background: $lgrey;
-
-      &.add-tags {
-        border: none;
-      }
-
-      span {
-        display: block;
-        float: left;
-        margin-left: 1em;
-        line-height: 2;
-      }
-
-      select {
-        float: right;
-        margin-right: 1em;
-      }
-
-      input {
-        outline: none;
-        display: block;
-        width: 90%;
-        margin: 1em auto;
-        padding: .3em 0;
-        background: transparent;
-        border: none;
+    &.opened h2 {
         border-bottom: 1px solid #000;
-      }
 
-      .all-tags .tag {
-        background: red;
-        padding: .2em 1.5em;
-        cursor: pointer;
+        .more {
+            display: none;
+        }
+
+        .less {
+            display: inline-block;
+        }
+    }
+
+    .wrapper {
+        display: block;
+        position: relative;
+        width: $adminMainWidth;
+        margin: 0 auto;
+        z-index: 11;
+        opacity: 0;
+        transform: translateY(-100%);
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-out;
+
+        &.show {
+            margin: 2em auto;
+            transition: 0.6s ease-in-out;
+            transform: none;
+            opacity: 1;
+            max-height: 999px;
+        }
+    }
+
+    .main-content {
+        width: 65%;
+        float: left;
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 0.6em 1em;
+            margin-bottom: 2em;
+            background: $lgrey;
+            border: none;
+        }
+    }
+
+    .aside-content {
+        width: 30%;
+        margin-left: 5%;
+        float: right;
         @include clearfix;
 
-        i {
-          display: none;
-          float: left;
-          width: 20px;
-          height: 20px;
-          background: rgba(0,0,0,.7);
-          border-radius: 100px;
-          text-align: center;
-          color: #fff;
-          margin-right: 1em;
+        h3 {
+            background: $lgrey;
+            font-weight: bolder;
+            text-transform: uppercase;
+            padding: 1.2em 1em;
         }
 
-        &:hover i {
-          display: block;
+        & > div {
+            border-bottom: 1px solid #000;
+            padding: 1em 0;
+            @include clearfix;
+            background: $lgrey;
+
+            &.add-tags {
+                border: none;
+            }
+
+            span {
+                display: block;
+                float: left;
+                margin-left: 1em;
+                line-height: 2;
+            }
+
+            select {
+                float: right;
+                margin-right: 1em;
+            }
+
+            input {
+                outline: none;
+                display: block;
+                width: 90%;
+                margin: 1em auto;
+                padding: 0.3em 0;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #000;
+            }
+
+            .all-tags .tag {
+                background: red;
+                padding: 0.2em 1.5em;
+                cursor: pointer;
+                @include clearfix;
+
+                i {
+                    display: none;
+                    float: left;
+                    width: 20px;
+                    height: 20px;
+                    background: rgba(0,0,0,.7);
+                    border-radius: 100px;
+                    text-align: center;
+                    color: #fff;
+                    margin-right: 1em;
+                }
+
+                &:hover i {
+                    display: block;
+                }
+            }
         }
+        // END OF DIVS
 
-      }
-    } // END OF DIVS
+        button {
+            display: block;
+            float: left;
+            margin: 1em 10px 1em 0;
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+            padding: 0.7em 1em;
 
-  button {
-    display: block;
-    float: left;
-    margin: 1em 10px 1em 0;
-    border: none;
-    border-radius: 0;
-    font-size: 16px;
-    padding: .7em 1em;
-
-    &:last-child {
-      margin-right: 0;
-      background: $lgrey;
+            &:last-child {
+                margin-right: 0;
+                background: $lgrey;
+            }
+        }
     }
-  }
-
-  } // END OF ASIDE CONTENT
-
-
+    // END OF ASIDE CONTENT
 }
 
 #admin-all-articles {
-  @include clearfix;
+    @include clearfix;
 
-  & > .head {
-    background: $mgrey;
-  }
-  .head > .actions > div {
-    display: inline-block;
-    padding: 1em 3em;
-    cursor: pointer;
-
-    select {
-      border: none;
-      background: transparent;
+    .head-all-articles {
+        float: left;
     }
 
-  }
-}
+    .order-by {
+        float: right;
 
-#admin-filter-articles {
-  width: $adminMainWidth;
-  margin: 2em auto;
-  @include clearfix;
+        label,
+        option,
+        select {
+            color: $orange;
+            font-weight: bolder;
+        }
 
-  span.nb {
-    font-weight: bolder;
-    line-height: 2.8;
-  }
+        select {
+            border: 1px solid $orange;
+            background: none;
+            border-radius: 200px;
+        }
+    }
 
-  select {
-    float: right;
-    background: transparent;
-    padding: .5em 2em;
-  }
+    .head {
+        clear: both;
+        background: $mgrey;
+
+        .actions > div {
+            display: inline-block;
+            padding: 1em 3em;
+            cursor: pointer;
+
+            select {
+                background: transparent;
+                border-radius: 200px;
+                padding-right: 0;
+            }
+        }
+    }
 }
 
 #admin-view-articles {
-  width: $adminMainWidth;
-  margin: 0 auto;
+  clear: both;
+  padding-top: 4em;
+    // WHEN ACTIONS ARE ON
+    &.actions-on {
+        .checkbox {
+            opacity: 1;
+            width: 10%;
+            max-width: 999px;
+        }
 
-  // WHEN ACTIONS ARE ON
-
-  &.actions-on {
-    .checkbox {
-      opacity: 1;
-      width: 10%;
-      max-width: 999px;
+        .wrapper {
+            width: 90%;
+            background: #F1F1F1;
+            @include clearfix;
+        }
     }
 
-    .wrapper {
-      width: 90%;
-      background: #F1F1F1;
-      @include clearfix;
+    article {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 1.7em;
+        padding: 2.4em 2em;
+        @include clearfix;
+
+        .checkbox {
+            opacity: 0;
+            float: left;
+            max-width: 0;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        a.container > div {
+          margin-right: 3.5em;
+        }
+
+        .actions {
+            float: right;
+
+            .author,
+            .return {
+                display: block;
+                text-align: right;
+            }
+
+            .ctas {
+                clear: both;
+                margin-top: 1.5em;
+            }
+
+            .cta {
+                border: 1px solid #000;
+                padding: 0.5em 2em;
+            }
+        }
     }
-  }
 
-  article {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 1em;
-    @include clearfix;
-
-    .checkbox {
-      opacity: 0;
-      float: left;
-      max-width: 0;
-      text-align: center;
-      line-height: 5;
-      overflow: hidden;
-    }
-
-    .wrapper {
-      width: 100%;
-      float: right;
-      padding: 1.6em 2em;
-      background: #fff;
-      @include clearfix;
-    }
-
-    .content {
-      float: left;
-      h3 { font-weight: bolder; }
-    }
-
-    .actions {
-      float: right;
-
-      .author, .return {
+    .pagination {
         display: block;
-        text-align: right;
-      }
+        margin-top: 3em;
+        text-align: center;
 
-      .ctas {
-        clear: both;
-        margin-top: 1.5em;
-      }
+        .arrow {
+          font-weight: bold;
+          background: $mgrey;
+          padding: .5em .8em;
+          border-radius: 4px;
+          margin: 0 3px;
+        }
 
-      .cta {
-        border: 1px solid #000;
-        padding: .5em 2em;
-      }
+        span:not(.arrow) {
+          margin: 0 10px;
+        }
     }
-  }
-
-  .pagination { text-align: center; }
-
 }

@@ -1,0 +1,101 @@
+body#login {
+
+  header {
+    position: initial;
+    display: block;
+    text-align: center;
+    margin-bottom: 3em;
+    padding-top: 4em;
+
+    h1 {
+      display: block;
+      width: 100%;
+      font-size: 2em;
+      text-align: center;
+    }
+  }
+  main {
+    width: $headerWidth;
+    margin: 0 auto;
+    padding: 3em 0 9em 0;
+
+    h2, b, span {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .breadcrumb {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  section {
+    width: 40%;
+    margin: 0 auto;
+    label, input {
+      display: block;
+    }
+
+    div {
+      margin-bottom: 1.5em;
+    }
+
+    label {
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+        border: 0;
+       background: $mgrey;
+       padding: .7em 1em;
+    }
+
+    input[type="submit"] {
+      background: $lorange;
+      color: $orange;
+      font-weight: bolder;
+    }
+
+    a {
+      display: block;
+      text-align: right;
+      color: $orange;
+      font-weight: bolder;
+      margin-top: 1.6em;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    header {
+      margin-bottom: 0;
+    }
+    section {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+
+    header {
+      padding-top: 2.5em;
+    }
+    main {
+      h2, b {
+        font-size: 1.3em;
+        margin-bottom: 1.3em;
+
+        span {
+          font-size: 1em;
+        }
+      }
+    }
+
+    section {
+      width: 90%;
+    }
+  }
+}
