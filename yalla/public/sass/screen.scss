@@ -1,0 +1,55 @@
+// FONTS VARIABLES
+
+$Source: 'Source Serif Pro', sans-serif;
+$Fira: 'Fira Sans', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+
+// COLORS VARIABLES
+
+$yellow: #FFD52B;
+
+$lgrey: #FAFAFA;
+
+// WIDTHS VARIABLES
+
+$headerWidth: 90%;
+$adminMainWidth: 90%;
+$adminRWD: 95%;
+
+// RESPONSIVE VARIABLES
+
+$tablet: 880px;
+$mobile: 580px;
+
+//bolder
+
+b {
+font-weight: bold;
+}
+
+span.return {
+  display: block;
+}
+
+
+// IMPORTING FILES
+
+@import "partials/_clearfix";
+@import "partials/_fonts";
+@import "partials/_reset";
+@import "partials/_ctas";
+
+@import "partials/_header";
+@import "index";
+@import "aboutus";
+@import "ouractions";
+@import "ournews";
+@import "supportus";
+@import "contact";
+
+@import "partials/_headeradmin";
+@import "partials/_asideadmin";
+@import "adminhome";
+@import "adminarticles";
+
+@import "partials/_footer";

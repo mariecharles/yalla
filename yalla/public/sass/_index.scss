@@ -1,0 +1,474 @@
+#intro {
+  padding: 10em 0 6em 0;
+  background: $lgrey;
+
+  img {
+    display: block;
+    width: $headerWidth;
+    margin: 0 auto;
+  }
+
+  h2 {
+    width: 28%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+
+    @media screen and (max-width: 880px) {
+      width: 55%;
+    }
+
+    span.bolder {
+      font-size: inherit;
+      font-weight: bolder;
+    }
+  }
+
+  .social-network-intro {
+      width: $headerWidth;
+      margin: 0 auto;
+
+      @media screen and (max-width: 880px) {
+        display: none;
+      }
+
+      li {
+          display: inline-block;
+          margin: 0 1%;
+      }
+  }
+}
+
+#know-more {
+  width: $headerWidth;
+  margin: 4em auto;
+  @include clearfix;
+
+  .one-fact {
+      float: left;
+      width: 33%;
+      height: 110vh;
+      padding: 3%;
+      /* margin-right: 3%; */
+      text-align: center;
+      position: relative;
+
+    @media screen and (max-width: 880px) {
+      width: 50%;
+      margin: 3% 0;
+    }
+
+    @media screen and (max-width: 580px) {
+      width: 100%;
+      margin: 3% 0;
+    }
+
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+        background: #c5c5c5;
+
+        @media screen and (max-width: 580px) {
+             display: none;
+        }
+    }
+
+    &:nth-child(3) {
+        background: #b8b8b8;
+
+        @media screen and (max-width: 580px) {
+          display: none;
+        }
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+
+    img {
+      display: block;
+      width: 30%;
+      margin: 0 auto 2em auto;
+    }
+
+    p {
+      width: 70%;
+      margin: 1em auto;
+    }
+
+    .jt-cta {
+        background: #000;
+        color: #fff;
+        width: 210px;
+        border-radius: 23px;
+        padding: 2%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+  }
+}
+
+#last-news {
+  background: #f3f3f3;
+  padding: 5em 0;
+  color: #000;
+
+  & > .inner {
+    width: $headerWidth;
+    margin: 0 auto;
+  }
+
+  h2 {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    border-bottom: 3px solid #000;
+  }
+
+  .all-articles {
+    @include clearfix;
+  }
+
+  article {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 31%;
+    height: 70vh;
+    margin-right: 3%;
+    padding: 2em 0;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    box-shadow: -2px 2px 7px rgba(0,0,0,.13);
+    transition: .4s ease-out;
+
+    @media screen and (max-width: 880px) {
+      width: 43%;
+      margin: 3% 3%;
+    }
+
+    @media screen and (max-width: 580px) {
+      width: 100%;
+      margin: 3% 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+        @media screen and (max-width: 580px) {
+             display: none;
+        }
+    }
+
+    &:nth-child(3) {
+        @media screen and (max-width: 580px) {
+          display: none;
+        }
+    }
+
+    img.thumbnail {
+      position: absolute;
+      top: -25%;
+      left: -50%;
+      opacity: 0;
+      z-index: 33;
+    }
+
+    &:hover {
+      background: #000;
+      color: #fff;
+      transition: .2s ease-in;
+    }
+
+    &:hover img.thumbnail {
+      opacity: .5;
+    }
+
+    .top-article {
+      position: relative;
+      z-index: 44;
+      border-bottom: 2px solid rgba(34, 30, 34, .1);
+
+      .inner {
+        padding: 1em 2em;
+      }
+    }
+
+    &:hover .top-article {
+      border: none;
+    }
+
+    .category {
+        width: 130px;
+        display: block;
+        text-align: center;
+        background: #000;
+        color: #fff;
+        padding: .4em 1em;
+        border-radius: 100px;
+    }
+
+
+    h3 {
+      font-family: $Fira;
+      margin: 1em 0 .7em 0;
+      font-size: 1.6em;
+      font-weight: 500;
+    }
+
+    .content {
+      position: relative;
+      z-index: 44;
+      padding: 2em 2em 1em 2em;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .read-more {
+        position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+
+        a {
+            display: inline-block;
+            margin-top: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        &:hover a{
+            color: #fff;
+        }
+
+        img {
+            width: 20px;
+            height: auto;
+        }
+    }
+  }
+}
+
+#act {
+    width: $headerWidth;
+    margin: 0 auto;
+    padding: 3% 0;
+
+    li {
+        position: relative;
+        display: inline-block;
+        width: 32%;
+
+        @media screen and (max-width: 880px) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: 580px) {
+          width: 100%;
+        }
+
+    }
+
+    article {
+        position: relative;
+        text-align: center;
+
+        @media screen and (max-width: 880px) {
+            height: 50vh;
+            overflow: hidden;
+        }
+    }
+
+    .content-act {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 25px 20px;
+        color: #fff;
+
+        @media screen and (max-width: 880px) {
+            top: 8%;
+        }
+    }
+
+    h3 {
+        position: relative;
+        font-size: 45px;
+        font-weight: bold;
+        padding: 5% 0;
+    }
+
+    p {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .more-act {
+        margin-bottom: 15%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @media screen and (max-width: 580px) {
+             display: none;
+        }
+    }
+}
+
+#newsletter-home {
+    background: #000;
+    color: #fff;
+    text-align: center; //peut-etre le retirer
+    @include clearfix;
+
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 35px;
+        padding-top: 3%;
+    }
+
+    p {
+        font-size: inherit;
+        text-align: center;
+        padding-top: 1%;
+    }
+
+    div {
+        padding: 2%;
+
+        #newsletter {
+            position: absolute;
+            text-align: left;
+            width: 320px;
+            padding: 10px 46px;
+            border-radius: 23px;
+            border: 1px solid #fff;
+            background: #fff;
+        }
+
+        #validation {
+            position: relative;
+            border-radius: 23px;
+            border: 1px solid #f3f3f3;
+            background: #f3f3f3;
+            margin-left: 245px;
+            padding: 10px 53px;
+            font-weight: bold;
+        }
+
+        .input-group-addo {
+            position: absolute;
+        }
+
+        .fa-envelope {
+            background:url(assets/img-layout/mail.svg) no-repeat center center;
+            position: absolute;
+        }
+    }
+}
+
+#footer {
+    .information {
+    background: #f3f3f3;
+    color: #000;
+    @include clearfix;
+    }
+
+
+    .logo-footer {
+        width: 30%;
+        float: left;
+
+        @media screen and (max-width: 580px) {
+          float: none;
+          display: block;
+          margin: 10% auto;
+          padding-top: 10%;
+        }
+
+        img {
+            display: block;
+            margin: 10% auto;
+        }
+    }
+
+    .resume-footer {
+        @include clearfix;
+        width: 70%;
+        margin: 2% auto;
+        float: right;
+
+        div {
+            width: 23%;
+            float: left;
+            @media screen and (max-width: 880px) {
+              width: 50%;
+              margin: 2% auto;
+            }
+
+            @media screen and (max-width: 580px) {
+              width: 100%;
+            }
+        }
+
+        a {
+            line-height: 2em;
+            color: #000;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+    }
+
+    .legal-footer {
+        background: #fff;
+        margin: 3% auto;
+
+
+        ul {
+            text-align: center;
+            width: 100%;
+        }
+
+        li {
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0 2%;
+
+            @media screen and (max-width: 580px) {
+              width: 100%;
+            }
+        }
+
+        a {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        b {
+            font-size: 14px;
+            color: #000;
+        }
+    }
+}
