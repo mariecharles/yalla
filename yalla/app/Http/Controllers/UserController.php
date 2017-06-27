@@ -57,6 +57,21 @@ class UserController extends Controller
 
         $requete = $request->all();
 
+        $ValidationRules = [
+
+            'name' => 'required|string',
+            'mail' => 'required|email',
+        ];
+
+        $validationMessages = [
+
+            'name.required' => 'Vous devez renseigner un code postal',
+            'mail.required' => 'vous devez renseigner un numéro de téléphone'
+
+        ];
+
+        $this->validate($request, $ValidationRules, $validationMessages);
+
         Message::create($requete);
 
         return 'Votre message a été envoyé avec succès !';
