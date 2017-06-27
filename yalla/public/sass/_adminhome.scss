@@ -4,6 +4,7 @@ body[id*="admin-"] {
         float: right;
         overflow-x: hidden;
         padding-bottom: 2em;
+        background: $lmgrey;
 
         .inner {
             width: 95%;
@@ -29,9 +30,8 @@ body[id*="admin-"] {
     @include clearfix;
 
     .all-articles {
-        width: 45%;
+        width: 77%;
         float: left;
-        background: $lgrey;
         border-radius: 10px;
         margin-right: 3%;
         padding: 2em 0;
@@ -41,67 +41,134 @@ body[id*="admin-"] {
           float: none;
         }
 
-        .head {
-            padding-bottom: 1.6em;
-            border-bottom: 1px solid #000;
+        .head-all-articles {
+            padding-bottom: 20px;
+            border-bottom: 3px solid $mgrey;
+            margin-bottom: 3em;
+            @include clearfix;
 
             a {
+                display: block;
+                float: left;
                 font-size: 16px;
                 font-weight: bolder;
                 margin: 0 10px;
+                padding: 0 1em;
+
+                &.active {
+                  position: relative;
+                  font-size: 17px;
+                  color: $orange;
+                  font-weight: bold;
+
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    background: $orange;
+                    width: 100%;
+                    height: 6px;
+                    bottom: -25px;
+                    left: 0;
+                  }
+                }
             }
 
             a:not(.active) {
-                color: grey;
+                color: rgba(0, 0, 34, 0.5);;
             }
 
-            h2 {
-                font-size: 16px;
-                font-weight: bold;
-                display: inline-block;
-                padding-left: 2em;
+            .vue {
+              float: right;
+
+              span.active {
+                color: $orange;
+                background: $orange;
+              }
             }
         }
         // END OF HEAD
 
         article {
-            padding: 1em 2em;
+            background: #fff;
+            padding: 2em 1.5em;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+            margin-bottom: 1em;
+            @include clearfix;
 
-            &:first-child {
-              padding-top: 1.4em;
+            a.container {
+              display: block;
+              float: left;
+              @include clearfix;
+            }
+
+            // infos, post status, actions
+            a.container > div {
+              float: left;
+              margin-right: 1.3em;
             }
 
             h3 {
-                margin-bottom: 0.4em;
+              font-size: 16px;
+              margin-bottom: 0.4em;
             }
 
             &:hover {
-                background: grey;
-
-                .actions {
-                  display: inline-block;
-                }
+                background: #f7f7f7;
             }
 
-            & > div {
+            .author, .author b {
+                font-size: 16px;
+            }
+
+            .post-status {
+              position: relative;
+              border-radius: 5px;
+              border: 1px solid $pink;
+              height: 40px;
+              line-height: 2.3;
+              padding: 0 1em 0 35px;
+              color: $pink;
+              font-weight: bold;
+
+              .round {
+                position: absolute;
+                border-radius: 100px;
+                width: 7px;
+                height: 7px;
+                background: $pink;
+                left: 15px;
+                top: 40%;
+              }
+            }
+
+            .category {
+              @include ctbtn($ldgrey);
+            }
+
+            .more {
+              float: right;
+              width: 5%;
+              line-height: 2.8;
+              cursor: pointer;
+              span {
                 display: inline-block;
-
-                &.actions {
-                  display: none;
-                    margin-left: 6em;
-                }
+                width: 7px;
+                height: 7px;
+                border-radius: 100px;
+                background: $ldgrey;
+                margin-bottom: 3px;
+                cursor: pointer;
+              }
             }
 
-            .actions a,
-            span {
-                font-size: 14px;
-            }
+
         }
         // END OF ARTICLE
     }
 
     .stats {
-        width: 52%;
+        width: 20%;
         float: right;
 
         @media screen and (max-width: $tablet) {
@@ -119,11 +186,11 @@ body[id*="admin-"] {
         .quick-stats {
 
             & > div {
-                background: $lgrey;
-                width: 31%;
-                margin-right: 3%;
-                float: left;
+                background: #fff;
+                width: 100%;
                 padding: 1.7em .8em;
+                margin-bottom: 1em;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
 
                 &:last-child {
                     margin-right: 0;
@@ -153,34 +220,6 @@ body[id*="admin-"] {
             .nb {
               font-size: 3.8em;
               font-weight: bolder;
-            }
-        }
-
-        .tab {
-            display: none;
-            clear: both;
-            float: none;
-            width: 100%;
-            padding-top: 3em;
-            @include clearfix;
-
-            h2 {
-              font-size: 1.5em;
-              display: inline-block;
-              margin-bottom: 1.8em;
-              padding-top: .2em;
-            }
-
-            select {
-              float: right;
-              border-radius: 0;
-              padding: .6em 1.3em;
-            }
-
-            .stats-frame {
-              padding: 3em;
-              background: $lgrey;
-
             }
         }
     }

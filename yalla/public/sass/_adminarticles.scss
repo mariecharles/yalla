@@ -1,4 +1,13 @@
+#admin-articles {
+  main section {
+    width: $adminMainWidth;
+    margin: 0 auto;
+    padding-top: 3em;
+  }
+}
+
 #admin-add-article {
+  display: none;
   @include clearfix;
   background: #fff;
 
@@ -103,7 +112,6 @@
       select {
         float: right;
         margin-right: 1em;
-        padding: .4em 1em;
       }
 
       input {
@@ -163,18 +171,14 @@
 }
 
 #admin-all-articles {
-
   @include clearfix;
 
   & > .head {
-    background: $lgrey;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    background: $mgrey;
   }
   .head > .actions > div {
     display: inline-block;
     padding: 1em 3em;
-    border-right: 1px solid #000;
     cursor: pointer;
 
     select {
@@ -241,7 +245,7 @@
       width: 100%;
       float: right;
       padding: 1.6em 2em;
-      background: #F1F1F1;
+      background: #fff;
       @include clearfix;
     }
 

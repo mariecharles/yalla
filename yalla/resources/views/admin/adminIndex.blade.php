@@ -29,22 +29,27 @@
 
 <body id="admin-home">
 
-<header class="opn">
-    <div id="bm">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+<header>
     <div class="inner">
         <div id="admin-actions">
             <div class="ctas">
-                <span class="cta"><a href="<?=url('admin/ajouter-un-article')?>">+ Nouvel article</a></span>
-                <span class="cta"><a href="<?=url('admin/ajouter-un-membre')?>">+ Ajouter un membre</a></span>
+                <span class="cta new-volunteer"><a href="{{ url('admin/ajouter-un-membre') }}">+ Ajouter un bénévole</a></span>
+                <span class="cta new-article"><a href="{{ url('admin/ajouter-un-article') }}">+ Nouvel article</a></span>
             </div>
             <div class="icon-action">
-                <div class="message">OO<span class="push">2</span></div>
-                <div class="notification">UU <span class="push">1</span></div>
-                <span>MM</span>
+                <div class="messages">
+                    <span class="nb-message">OO<span class="push"></span></span>
+                    <div class="my-messages">
+                        <h3>Mes messages reçus</h3>
+                    </div>
+                </div>
+                <div class="notifications">
+                    <span class="nb-notifs">UU <span class="push"></span></span>
+                    <div class="my-notifs">
+                        <h3>Mes notifications reçues</h3>
+                    </div>
+                </div>
+                <div class="my-space"><span>MM</span></div>
             </div>
         </div>
     </div>
@@ -52,7 +57,7 @@
 
 <nav id="admin-aside">
     <ul>
-        <li class="active"><a href="">Tableau de bord</a></li>
+        <li class="active"><a href="admin-home.html">Tableau de bord</a></li>
         <li><a href="admin-articles.html">Articles</a></li>
         <li><a href="">Membres</a></li>
         <li><a href="">Bénévoles</a></li>
@@ -62,31 +67,49 @@
 <main>
     <div class="inner">
         <section class="all-articles">
-            <div class="head">
-                <h2 class="active">Tous les articles <span>({{ $count }})</span></h2>
-                <span class="post-online">En ligne ({{ $online }})</span>
-                <span class="post-offline">Hors ligne <span>({{ $offline }})</span>
+            <div class="head-all-articles">
+                <div class="filters">
+                    <a class="active">Tous les articles <span>({{ $count }})</span></a>
+                    <span class="post-online">Articles en ligne ({{ $online }})</span>
+                    <span class="post-offline">Articles hors ligne ({{ $offline }})</span>
+                </div>
+                <div class="vue">
+                    <span class="active">o</span>
+                    <span>o</span>
+                </div>
             </div>
-            <p class="content">
+            <div class="content">
                 @foreach ($posts as $post)
                     <article>
-                        <a href="{{ url('admin/details/'. $post->slug) }}">
-                            <h3>{{ $post->title }}</h3>
+                        <a href="" class="container">
                             <div class="infos">
-                                <span class="post-status">Billet publié le <span class="date">{{ $post->created_at }}</span></span>
+                                <h3>{{ $post->title }}</h3>
+                                <span class="author">Ecrit par <b>Brenda Contreras</b></span>
+                            </div>
+                            <div class="post-status online">
+                                <span class="round"></span>
+                                {{ Form::open(['route' => ['post.publish', $post->id], 'method' => 'put']) }}
+                                    <button type="submit" class="status">Article en ligne</button>
+                                {{ Form::close() }}
+                            </div>
+                            <div class="date-published">
+                                <p>Publié le <b class="return">{{ $post->created_at }}</b></p>
+                            </div>
+                            <div class="category">
+                                <span class="cat">{{ $post->category->name }}</span>
                             </div>
                         </a>
-                        <div class="actions">
-                            {{ Form::open(['route' => ['post.publish', $post->id], 'method' => 'put']) }}
-                                <button type="submit">Dépublier</button>
-                            {{ Form::close() }}
-                            <a href="{{ url('admin/modifier-un-article/'. $post->id)}}">Modifier un article</a>
-                            <a href="{{ url('admin/save/'. $post->id) }}">Archiver</a>
+
+                        <div class="more">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </article>
                 @endforeach
             </div>
         </section>
+
         <section class="stats">
             <div class="quick-stats">
                 <div class="parrains">
@@ -119,30 +142,16 @@
                     </a>
                 </div>
             </div>
-
-            <div class="tab">
-                <h2>Statistiques</h2>
-
-                <select name="" id="">
-                    <option value="">Cette semaine <i>o</i></option>
-                    <option value="">Ce mois <i>o</i></option>
-                </select>
-
-                <div class="stats-frame">
-                    <h3>à remplacer</h3>
-                </div>
-            </div>
         </section>
     </div>
 </main>
-
-
 </body>
 <script src="js/app.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
-    var postStatus = document.querySelectorAll('div.head span');
+
+
+    var postStatus = document.querySelectorAll('.filters span');
 
 
     for ( var i = 0 ; i < postStatus.length ; i++ ) {
@@ -151,10 +160,11 @@
 
             if (this.className == 'post-online')  {
 
-            axios.get('api/posts?active=1').then(function(data) {
+                axios.get('api/posts?active=1').then(function(data) {
 
-                console.log(data);
-            });
+                    console.log(data);
+
+                });
 
             } else if (this.className == 'post-offline') {
 
@@ -166,9 +176,5 @@
             }
         });
     }
-
-
-
-
 </script>
 </html>
