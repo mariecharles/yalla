@@ -172,9 +172,10 @@ body:not([id*="admin-"]) #inner-header {
         @media screen and (max-width: $tablet) {
             text-align: center;
             width: 100%;
-    }
+        }
 
     .cta {
+        background: $pink;
         margin: 0 1.5em;
 
         @media screen and (max-width: $tablet) {
@@ -183,15 +184,16 @@ body:not([id*="admin-"]) #inner-header {
             display: block;
             margin-bottom: 11%;
             margin-top:4%;
-    }
+        }
     }
 
     select {
         -webkit-appearance: none;
-        border: 1px solid #000;
-        background: transparent;
+        border: 1px solid $dblue;
+        background: $dblue;
         padding: 0.7em 1em;
         border-radius: 100px;
+        color: #fff;
 
         @media screen and (max-width: $tablet) {
             display: block;
