@@ -28,7 +28,7 @@ class Post extends Model
 
             return trim($item); ;
 
-            } , explode(' ', $tags));
+            } , explode(',', $tags));
 
 
         $persisted_tags = Tag::whereIn('name', $tags)->get();

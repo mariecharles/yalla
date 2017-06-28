@@ -12,8 +12,6 @@ class PageController extends Controller
 
     public function postAddAction()
     {
-        $tags = Tag::all()->where('id', '<=', 3);
-
         $view = view('admin.postForm', compact('tags'));
 
         return $view;
@@ -26,9 +24,7 @@ class PageController extends Controller
 
         $post = $post->first();
 
-        $tags = Tag::all()->where('id', '<=', 3);
-
-        $view = view('admin.postForm', compact('post','tags'));
+        $view = view('admin.postForm', compact('post'));
 
         return $view;
     }

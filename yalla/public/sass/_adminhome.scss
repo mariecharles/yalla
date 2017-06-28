@@ -41,51 +41,6 @@ body[id*="admin-"] {
           float: none;
         }
 
-        .head-all-articles {
-            padding-bottom: 20px;
-            border-bottom: 3px solid $mgrey;
-            margin-bottom: 3em;
-            @include clearfix;
-
-            a {
-                display: block;
-                float: left;
-                font-size: 16px;
-                font-weight: bolder;
-                margin: 0 10px;
-                padding: 0 1em;
-
-                &.active {
-                  position: relative;
-                  font-size: 17px;
-                  color: $orange;
-                  font-weight: bold;
-
-                  &::before {
-                    content: '';
-                    position: absolute;
-                    background: $orange;
-                    width: 100%;
-                    height: 6px;
-                    bottom: -25px;
-                    left: 0;
-                  }
-                }
-            }
-
-            a:not(.active) {
-                color: rgba(0, 0, 34, 0.5);;
-            }
-
-            .vue {
-              float: right;
-
-              span.active {
-                color: $orange;
-                background: $orange;
-              }
-            }
-        }
         // END OF HEAD
 
         article {

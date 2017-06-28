@@ -1,0 +1,132 @@
+#admin-add-article {
+    width: $adminMainWidth;
+    margin: 0 auto;
+    padding-top: 3em;
+    @include clearfix;
+
+    h2 {
+        display: block;
+        position: relative;
+        z-index: 555;
+        font-weight: bolder;
+        font-size: 1.6em;
+        margin-bottom: 1em;
+    }
+
+    .wrapper {
+        display: block;
+        position: relative;
+        z-index: 11;
+    }
+
+    .main-content {
+        width: 65%;
+        float: left;
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 1em 1em;
+            margin-bottom: 1em;
+            background: $mgrey;
+            border: none;
+            &::-webkit-input-placeholder {
+              color: #000;
+            }
+        }
+    }
+
+    .aside-content {
+        width: 30%;
+        margin-left: 5%;
+        float: right;
+        @include clearfix;
+
+        h3 {
+            font-weight: bolder;
+            text-transform: uppercase;
+            padding: 1.2em 1em;
+            background: $lorange;
+            color: $orange;
+        }
+
+        & > div {
+            padding: 1em 2em;
+            @include clearfix;
+            background: #fff;
+
+            span {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            select {
+              background: #fff;
+              @include ctbtn($ldgrey);
+            }
+
+            input {
+                outline: none;
+                display: block;
+                width: 100%;
+                margin: 1em auto;
+                padding: 0.3em 0;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #000;
+            }
+
+            textarea {
+              width: 100%;
+              border: none;
+              background: $mgrey;
+              border-radius: 6px;
+              padding: 1em;
+            }
+
+            .all-tags .tag {
+                background: red;
+                padding: 0.2em 1.5em;
+                cursor: pointer;
+                @include clearfix;
+
+                i {
+                    display: none;
+                    float: left;
+                    width: 20px;
+                    height: 20px;
+                    background: rgba(0,0,0,.7);
+                    border-radius: 100px;
+                    text-align: center;
+                    color: #fff;
+                    margin-right: 1em;
+                }
+
+                &:hover i {
+                    display: block;
+                }
+            }
+        }
+        // END OF DIVS
+
+        button {
+            display: block;
+            float: left;
+            margin: 1em 10px 1em 0;
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+            padding: 0.7em 1em;
+            background: $lorange;
+            color: $orange;
+            font-weight: bolder;
+
+
+            &:last-child {
+                margin-right: 0;
+                background: $lgrey;
+            }
+        }
+    }
+    // END OF ASIDE CONTENT
+}

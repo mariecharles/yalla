@@ -66,14 +66,14 @@
         <li><a href="{{url('admin/membres')}}">Membres</a></li>
     </ul>
 </nav>
-<main>
-    <section id="admin-all-articles">
 
+<main>
+    <section id="admin-volunteers">
         <div class="head-all-articles">
             <div class="filters">
-                <a class="active">Tous les articles <span>({{ $count }})</span></a>
-                <span class="post-online">Articles en ligne ({{ $online }})</span>
-                <span class="post-offline">Articles hors ligne ({{ $offline }})</span>
+                <a class="active">Tous les bénévoles <span>({{$count}})</span></a>
+                <a href="">Administrateurs <span>({{$admin}})</span></a>
+                <a href="">Bénévoles <span>({{$benevole}})</span></a>
             </div>
         </div>
 
@@ -84,107 +84,36 @@
                 <option value="">Auteur</option>
             </select>
         </div>
+        <div class="all-volunteers">
 
-        <div class="head">
-            <!-- <h2><span>-</span> Tous les articles</h2> -->
-            <div class="actions">
-                <div class="selected">
-                    <input type="checkbox">
-                    <label for="">Tous les articles</label>
-                </div>
-                <div class="uncheck">
-                    <span>Décocher toutes les cases</span>
-                </div>
-                <div class="action-status">
-                    <label for="">Mettre :</label>
-                    <select name="" id="">
-                        <option value="">En ligne</option>
-                        <option value="">Hors ligne</option>
-                    </select>
-                </div>
-                <div class="delete">
-                    <span><i>pp</i> Supprimer</span>
-                </div>
-            </div>
-            <!-- end of actions -->
-        </div>
-        <!-- end of head -->
+            @foreach ($members as $member)
 
-        <div id="admin-view-articles">
-            @foreach ($posts as $post)
-                <article>
-                    <div class="checkbox">
-                        <input type="checkbox">
-                    </div>
-                    <a href="{{url('articles/'. $post->slug)}}" class="container">
+                <div class="volunteer">
+                    <a href="{{url('admin/modifier-un-membre/'. $member->id)}}">
+                        <div class="profile-pic">
+                            <span></span>
+                        </div>
                         <div class="infos">
-                            <h3>{{$post->title}}</h3>
-                            <span class="author">Ecrit par <b>Brenda Contreras</b></span>
+                            <h3>{{$member->firstname. ' ' .$member->lastname}}</h3>
+                            <p>Basé(e) à {{$member->city}}</p>
                         </div>
-                        <div class="post-status online">
-                            <span class="round"></span>
-                            <span class="status">
-                                {{ Form::open(['route' => ['post.publish', $post->id], 'method' => 'put']) }}
-                                    <button type="submit" class="status">Article en ligne</button>
-                                {{ Form::close() }}
-                            </span>
+
+                        <div class="volunteer-status">
+                            <span>{{$member->status}}</span>
                         </div>
-                        <div class="date-published">
-                            <p>Publié le <b class="return">{{$post->created_at}}</b></p>
+                        <div class="function-status">
+                            <span>{{$member->activity}}</span>
                         </div>
-                        <div class="category">
-                            <span class="cat">{{$post->category->name}}</span>
+                        <div class="date">
+                            <p>Membre depuis <b class="return">{{$member->created_at}}</b></p>
                         </div>
                     </a>
+                </div>
 
-                    <div class="actions">
-                        <span>v</span>
-                        <span>m</span>
-                        <span>d</span>
-                    </div>
-                </article>
             @endforeach
 
-                <p>{{$posts->links()}}</p>
-
-        </div>
-        <!-- end of admin view articles -->
-
+             <p>{{$members->links()}}</p>
         </div>
     </section>
 
 </main>
-
-</body>
-<script src="{{ asset('/js/app.js') }}"></script>
-<script src="{{ asset('/js/scripts.js') }}"></script>
-<script>
-
-    var postStatus = document.querySelectorAll('.filters span');
-
-
-    for ( var i = 0 ; i < postStatus.length ; i++ ) {
-
-        postStatus[i].addEventListener('click', function (event) {
-
-            if (this.className == 'post-online')  {
-
-                axios.get('api/posts?active=1').then(function(data) {
-
-                    console.log(data);
-
-                });
-
-            } else if (this.className == 'post-offline') {
-
-                axios.get('api/posts?active=0').then(function(data) {
-
-                    console.log(data);
-                });
-
-            }
-        });
-    }
-</script>
-
-</html>
