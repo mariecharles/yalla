@@ -11,6 +11,16 @@
         top: 0;
         left: 0;
         height: 100%;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+            bottom: 0;
+            height: 20px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding-bottom: 3em;
     }
 
     .inner {
@@ -24,11 +34,10 @@
         display: inline-block;
         vertical-align: middle;
         width: 20%;
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $tablet) {
             float: none;
+            width: 100%;
             display: block;
-            margin: 10% auto;
-            padding-top: 10%;
         }
 
         img {
@@ -59,28 +68,11 @@
             color: #fff;
             text-decoration: underline;
         }
-    }
 
-    .resume-footer {
-        @include clearfix;
-        width: 70%;
-        margin: 2% auto;
-        float: right;
-
-        div {
-            width: 23%;
-            float: left;
-            @media screen and (max-width: $tablet) {
-                width: 50%;
-                margin: 2% auto;
-            }
-            @media screen and (max-width: $mobile) {
-                width: 100%;
-            }
-        }
-
-        a:hover {
-            color: #fff;
+        @media screen and (max-width: $tablet) {
+            display: block;
+            width: 100%;
+            margin-top: 0;
         }
     }
 }
