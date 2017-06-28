@@ -10,6 +10,7 @@ $yellow: #FFD52B;
 $lorange: #fdeed8;
 $orange: #ff9806;
 $pink: #fc1053;
+$dblue: #000022;
 
 $lgrey: #FAFAFA;
 $lmgrey: #fcfcfc;
@@ -60,6 +61,7 @@ font-weight: bolder;
 @import "ouractions";
 @import "ournews";
 @import "supportus";
+@import "login";
 @import "partials/contact";
 
 @import "partials/headeradmin";
@@ -70,5 +72,9 @@ font-weight: bolder;
 @import "adminnewarticle";
 @import "adminarticles";
 @import "adminvolunteers";
+@import "adminmail";
+@import "adminpartners";
+@import "adminnewpartner";
+@import "adminnewmessage";
 
 @import "partials/footer";

@@ -63,6 +63,7 @@
     <ul>
         <li class="active"><a href="{{url('admin')}}">Tableau de bord</a></li>
         <li><a href="{{url('admin/articles')}}">Articles</a></li>
+        <li><a href="{{url('admin/partenaires')}}">Partenaires</a></li>
         <li><a href="{{url('admin/membres')}}">Membres</a></li>
     </ul>
 </nav>

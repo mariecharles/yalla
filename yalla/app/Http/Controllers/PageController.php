@@ -60,4 +60,13 @@ class PageController extends Controller
 
         return $view;
     }
+
+    public function partnerAddAction()
+    {
+        $view = view('admin.partnerForm');
+
+        return $view;
+    }
+
+
 }
