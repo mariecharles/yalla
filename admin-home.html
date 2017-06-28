@@ -78,10 +78,19 @@
                       </div>
                     </a>
 
-                    <div class="more">
-                      <span></span>
-                      <span></span>
-                      <span></span>
+                    <div class="actions">
+                        <div class="more">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                        <div class="menu-actions">
+                            <ul>
+                                <li><a href="">Visualiser</a></li>
+                                <li><a href="">Modifier</a></li>
+                                <li><a href="">Supprimer</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
               </div>
@@ -126,4 +135,18 @@
 
 </body>
 <script src="js/app.js"></script>
+
+<script>
+
+    var more_actions = document.querySelectorAll('#admin-home .all-articles .more');
+    var menu_actions = document.querySelectorAll('#admin-home .all-articles .menu-actions');
+
+    for (let i = 0; i < more_actions.length; i++) {
+        more_actions[i].addEventListener('click', function() {
+            menu_actions[i].classList.toggle('on');
+        });
+    }
+
+
+</script>
 </html>
