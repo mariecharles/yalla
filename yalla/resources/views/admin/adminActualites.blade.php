@@ -63,6 +63,7 @@
     <ul>
         <li class="active"><a href="{{url('admin')}}">Tableau de bord</a></li>
         <li><a href="{{url('admin/articles')}}">Articles</a></li>
+        <li><a href="{{url('admin/partenaires')}}">Partenaires</a></li>
         <li><a href="{{url('admin/membres')}}">Membres</a></li>
     </ul>
 </nav>
@@ -130,7 +131,7 @@
                             </span>
                         </div>
                         <div class="date-published">
-                            <p>Publié le <b class="return">{{$post->created_at}}</b></p>
+                            <p>Publié le <b class="return">{{$post->created_at->format('d F Y')}}</b></p>
                         </div>
                         <div class="category">
                             <span class="cat">{{$post->category->name}}</span>

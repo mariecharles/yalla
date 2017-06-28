@@ -50,6 +50,11 @@ Route::get('admin/messages', 'AdminController@getMessages');
 Route::get('admin/message-details/{id}', 'AdminController@messageDetails');
 Route::get('admin/send-message', array('uses' => 'AdminController@sendMessageAction', 'as' => 'send.message'));
 
+Route::get('admin/partenaires', 'AdminController@getPartners');
+Route::get('admin/ajouter-un-partenaire', 'PageController@partnerAddAction');
+Route::post('admin/add-partner',array('uses' => 'AdminController@partnerAddAction', 'as' => 'partner.add'));
+Route::delete('admin/delete-partner/{id}',array('uses' => 'AdminController@partnerDeleteAction', 'as' => 'partner.delete'));
+
 Route::post('admin/add-category', array('uses' => 'AdminController@categoryAddAction', 'as' => 'category.add'));
 
 

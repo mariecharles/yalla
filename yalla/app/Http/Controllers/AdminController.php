@@ -9,6 +9,7 @@ use App\Post;
 use App\Category;
 use App\Archive;
 use App\Message;
+use App\Partner;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Validator;
 
@@ -16,7 +17,7 @@ use Illuminate\Validation\Validator;
 
 class AdminController extends Controller
 {
-    
+
     public function Index()
     {
         $posts = Post::with('category','tag')->get();;
@@ -337,6 +338,55 @@ class AdminController extends Controller
 
         return redirect()->action('AdminController@index');
 
+    }
+
+    public function getPartners()
+    {
+        $partners = Partner::all();
+
+        $count = Partner::get()->count();
+
+        $view = view('admin.adminPartnersAll', compact('partners', 'count'));
+
+        return $view;
+    }
+
+    public function partnerAddAction(Request $request)
+    {
+        $requete = $request->all();
+
+        if($request->hasfile('img'))
+        {
+            $image = $this->upload($request->file('img'));
+
+            $requete['img'] = $image;
+        }
+
+        $ValidationRules = [
+
+            'name' => 'required|string',
+        ];
+
+        $validationMessages = [
+
+            'name.required' => 'Vous devez renseigner le nom du partenaire'
+        ];
+
+
+        $this->validate($request, $ValidationRules, $validationMessages);
+
+
+        $partner = Partner::create($requete);
+
+        return redirect()->action('AdminController@getPartners');
+    }
+
+
+    public function partnerDeleteAction($id)
+    {
+        Partner::where('id', $id)->delete();
+
+        return redirect()->action('AdminController@getPartners');
     }
 
 

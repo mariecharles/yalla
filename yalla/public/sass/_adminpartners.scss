@@ -1,0 +1,100 @@
+#admin-partners {
+  .all-partners {
+    width: $adminMainWidth;
+    margin: 0 auto;
+    padding-top: 4em;
+  }
+
+  main {
+    .head {
+      @include clearfix;
+      span.nb {
+        font-size: .8em;
+        color: $orange;
+      }
+
+      .trait {
+        font-size: inherit;
+        margin: 0 10px;
+      }
+
+      h2 {
+        font-size: 2em;
+        float: left;
+        font-weight: bolder;
+      }
+
+      .new-partner {
+        float: right;
+        @include ctbtn($orange);
+        color: $orange;
+        font-weight: bolder;
+        border-radius: 100px;
+        line-height: .2;
+        padding: 1.3em 2.4em;
+        cursor: pointer;
+
+        &:hover {
+          background: $orange;
+          color: #fff;
+        }
+
+        span {
+          font-weight: bold;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .list-partners {
+    margin-top: 3em;
+    @include clearfix;
+  }
+
+  .partner {
+    background: #fff;
+    width: 31%;
+    margin-right: 3%;
+    float: left;
+    border: 1px solid $ldgrey;
+    border-radius: 3.2px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 3em;
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n+4) {
+      clear: both;
+    }
+
+    figure {
+      padding: 5em 0;
+      text-align: center;
+    }
+
+    .caption {
+      border-top: 1px solid $ldgrey;
+      @include clearfix;
+
+      p {
+        padding: 1.4em 0 1.4em 20px;
+        float: left;
+        width: 80%;
+        border-right: 1px solid $ldgrey;
+        font-weight: bolder;
+      }
+
+      span {
+        width: 20%;
+        display: block;
+        float: right;
+        text-align: center;
+        line-height: 4;
+      }
+
+    }
+  }
+}
