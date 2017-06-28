@@ -79,9 +79,9 @@
               <div class="content">
                 <div class="field">
                   <label for="">Statut *</label>
-                  <select class="" name="">
-                    <option name="" id="">Bénévole</option>
-                    <option name="" id="">Administrateur</option>
+                  <select class="" name="" data-status="admin">
+                    <option name="" id="" data-id="admin">Administrateur</option>
+                    <option name="" id="" data-id="volunteer">Benevole</option>
                   </select>
                 </div>
                 <div class="field">
@@ -112,4 +112,18 @@
 
 </body>
 <script src="js/app.js"></script>
+
+<script>
+
+    var select_status = document.querySelector('.status .content select');
+    var my_option;
+
+    select_status.addEventListener('change', function() {
+        my_option = select_status.options[select_status.selectedIndex];
+        my_option = my_option.getAttribute('data-id');
+        select_status.setAttribute('data-status', my_option);
+        console.log(select_status.getAttribute('data-status'));
+    });
+
+</script>
 </html>
