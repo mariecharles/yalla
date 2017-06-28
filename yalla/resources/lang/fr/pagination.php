@@ -15,8 +15,8 @@ return [
 
     'previous' => '&laquo; Previous',
     'next' => 'Next &raquo;',
-    'contact' => 'contact-us',
-    'about' => 'about-us',
-    'actu' => 'news',
-    'detailactu' => 'news/{slug}'
+    'contact' => 'contactez-nous',
+    'about' => 'a-propros',
+    'actu' => 'actualites',
+    'detailactu' => 'actualites/{slug}'
 ];
