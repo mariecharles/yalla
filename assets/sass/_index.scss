@@ -2,6 +2,11 @@
     position: relative;
     margin-top: -3em;
 
+    @media screen and (max-width: $tablet) {
+        margin-top: 0;
+        padding-top: 4em;
+    }
+
     img {
         display: block;
         width: 100%;
@@ -19,8 +24,17 @@
         background: $pink;
         padding: 2em 5% 2em 4em;
         color: #fff;
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: $btablet) {
+            bottom: -1em;
             width: 55%;
+            font-size: 1.3em;
+        }
+        @media screen and (max-width: $tablet) {
+            position: relative;
+            width: 80%;
+            z-index: 77;
+            font-size: 1.1em;
+            margin: -3em auto 0 auto;
         }
 
         span.bolder {
@@ -50,6 +64,7 @@
     background: #fff;
     padding: 10em 0 6em 0;
     color: #000;
+
 
     & > .inner {
         position: relative;
@@ -172,6 +187,19 @@
             }
         }
     }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 7em;
+
+        span.bg-text {
+            font-size: 5em;
+            left: -5%;
+        }
+
+        article {
+            margin-bottom: 4em;
+        }
+    }
     // END OF ARTICLE
 
     span.cta.more {
@@ -200,7 +228,7 @@
             width: 50%;
             margin: 3% 0;
         }
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $tablet) {
             width: 100%;
             margin: 3% 0;
         }
@@ -208,9 +236,6 @@
         &:nth-child(2) {
             background: $dblue;
             color: #fff;
-            @media screen and (max-width: $mobile) {
-                display: none;
-            }
         }
         //
         // &:nth-child(3) {
@@ -256,34 +281,58 @@
 #act {
     width: $headerWidth;
     margin: 0 auto;
-    padding: 3% 0;
+    padding: 10% 0 3% 0;
+
+    ul {
+        padding: 0;
+    }
 
     li {
         position: relative;
         display: inline-block;
+        vertical-align: top;
         width: 30%;
-        margin-right: 3%;
+        margin: 0 3% 2em 0;
+        padding: 2em 0 3em 0;
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.03);
+        transition: .3s ease-out;
+
         @media screen and (max-width: $tablet) {
             width: 48%;
         }
         @media screen and (max-width: $mobile) {
             width: 100%;
         }
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+
+        &:first-child span {
+            margin-top: 1.6em;
+        }
+
+        &:hover {
+            transform: translateY(-8%);
+            transition: .2s ease-in;
+        }
     }
 
     article {
-        height: 50vh;
         position: relative;
         text-align: center;
         padding-top: 2em;
-        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .content-act {
+        height: 50vh;
+        position: relative;
+
         @media screen and (max-width: $tablet) {
-            height: 60vh;
-            overflow: hidden;
+            height: 45vh;
         }
         @media screen and (max-width: $mobile) {
             height: 50vh;
-            overflow: hidden;
         }
     }
 
@@ -326,28 +375,10 @@
     }
 
     .more-act {
-        // position: absolute;
-        // bottom: 0;
-        // left: 0;
-        // right: 0;
+        position: absolute;
+        bottom: 0;
+        left: 40%;
         cursor: pointer;
-        @media screen and (max-width: 1300px) {
-            margin-bottom: 40%;
-        }
-        @media screen and (max-width: 1200px) {
-            margin-bottom: 30%;
-        }
-        @media screen and (max-width: 1050px) {
-            margin-bottom: 23%;
-        }
-        @media screen and (max-width: 960px) {
-            img {
-                width: 50px;
-            }
-        }
-        @media screen and (max-width: 680px) {
-            display: none;
-        }
 
         span {
             display: block;
@@ -357,7 +388,7 @@
             text-align: center;
             width: 70px;
             height: 70px;
-            margin: 1em auto;
+            margin: 1em auto 0 auto;
             border-radius: 100px;
         }
     }
