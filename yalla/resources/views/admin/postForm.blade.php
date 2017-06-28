@@ -94,6 +94,9 @@
 
                     @if (isset($post->slug))
                         <img src="{{ asset('/img-content/' . $post->img) }}" alt="Image de l'article">
+
+                        @else
+                        <img src="{{ asset('/img-content/placeholder.png') }}" alt="Image par défaut">
                     @endif
 
                     {!! Form::label('content', 'Contenu') !!}
@@ -116,13 +119,13 @@
                         {!! Form::select('lang', array('fr' => 'français', 'en' => 'anglais', 'ar' => 'arabe'), isset($post->slug)?$post->visible:'' ) !!}
                     </div>
                     <div class="desc">
-                        <span>Méta description</span>
+                        <span>Meta description</span>
                         {!! Form::textarea('resume', isset($post->slug)?$post->resume:'') !!}
                     </div>
                     <div class="add-tags">
                         <span>Tags associés</span>
                         <input type="text" name="tags" placeholder="Commencez à taper...">
-                        {!! Form::hidden('tags', isset($post->slug)?$post->tag()->fisrt()->name:'', array('class' => 'tag-hidden')) !!}
+                        {!! Form::hidden('tags', isset($post->slug)?$post->tag()->first()->name:'', array('class' => 'tag-hidden')) !!}
                         <div class="all-tags">
                         </div>
                     </div>

@@ -119,8 +119,8 @@ class AdminController extends Controller
 
       $ValidationRules = [
 
-        'title' => 'required|string|min:5',
-        'slug' => 'required|string|min:5',
+        'title' => 'required|string',
+        'slug' => 'required|string',
         'content' => 'required',
         'resume' => 'required',
       ];
@@ -162,8 +162,8 @@ class AdminController extends Controller
 
         $ValidationRules = [
 
-            'title' => 'required|string|min:5',
-            'slug' => 'required|string|min:5',
+            'title' => 'required|string',
+            'slug' => 'required|string',
             'content' => 'required',
             'resume' => 'required'
         ];
@@ -183,7 +183,7 @@ class AdminController extends Controller
 
         $post->saveTags($request->get('tags'));
 
-        return redirect()->action('PageController@postEditAction', $id);
+        return redirect()->action('AdminController@actuAction');
 
     }
 
@@ -294,35 +294,28 @@ class AdminController extends Controller
             $requete['img'] = $image;
         }
 
-        /*$ValidationRules = [
+        $ValidationRules = [
 
             'lastname' => 'required|string',
             'firstname' => 'required|string',
-            'address' => 'required',
             'city' => 'required',
-            'postal_code' => 'required',
-            'country' => 'required',
-            'phone' => 'required'
-
+            'country' => 'required'
         ];
 
         $validationMessages = [
 
             'lastname.required' => 'Vous devez renseigner un nom',
             'firstname.required' => 'Vous devez renseigner un prénom',
-            'address.required' => 'Vous devez renseigner une adresse',
             'city.required' => 'Vous devez renseigner une ville',
-            'postal_code.required' => 'Vous devez renseigner un code postal',
-            'phone.required' => 'vous devez renseigner un numéro de téléphone'
-
+            'country.required' => 'Vous devez renseigner une ville',
         ];
 
 
-        $this->validate($request, $ValidationRules, $validationMessages);*/
+        $this->validate($request, $ValidationRules, $validationMessages);
 
         Member::create($requete);
 
-        return redirect()->action('AdminController@index');
+        return redirect()->action('AdminController@getMembers');
 
     }
 
@@ -334,9 +327,28 @@ class AdminController extends Controller
 
         $member = Member::find($id);
 
+        $ValidationRules = [
+
+            'lastname' => 'required|string',
+            'firstname' => 'required|string',
+            'city' => 'required',
+            'country' => 'required'
+        ];
+
+        $validationMessages = [
+
+            'lastname.required' => 'Vous devez renseigner un nom',
+            'firstname.required' => 'Vous devez renseigner un prénom',
+            'city.required' => 'Vous devez renseigner une ville',
+            'country.required' => 'Vous devez renseigner une ville',
+        ];
+
+
+        $this->validate($request, $ValidationRules, $validationMessages);
+
         $member->update($requete);
 
-        return redirect()->action('AdminController@index');
+        return redirect()->action('AdminController@getMembers');
 
     }
 
@@ -355,11 +367,11 @@ class AdminController extends Controller
     {
         $requete = $request->all();
 
-        if($request->hasfile('img'))
+        if($request->hasfile('logo'))
         {
-            $image = $this->upload($request->file('img'));
+            $image = $this->upload($request->file('logo'));
 
-            $requete['img'] = $image;
+            $requete['logo'] = $image;
         }
 
         $ValidationRules = [
