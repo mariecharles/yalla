@@ -76,11 +76,11 @@ body[id*="admin-"] {
             .post-status {
                 position: relative;
                 border-radius: 5px;
-                border: 1px solid $pink;
+                border: 1px solid #000;
                 height: 40px;
                 line-height: 2.3;
                 padding: 0 1em 0 35px;
-                color: $pink;
+                color: #000;
                 font-weight: bold;
 
                 .round {
@@ -91,6 +91,24 @@ body[id*="admin-"] {
                     background: $pink;
                     left: 15px;
                     top: 40%;
+                }
+
+                &.online {
+                    border: 1px solid $green;
+                    color: $green;
+
+                    .round {
+                        background: $green;
+                    }
+                }
+
+                &.offline {
+                    border: 1px solid $pink;
+                    color: $pink;
+
+                    .round {
+                        background: $pink;
+                    }
                 }
             }
 

@@ -1,111 +1,128 @@
 #admin-new-volunteer {
-
-  section {
-    padding-bottom: 3em;
-  }
-
-
-  h2 {
-    margin-bottom: 3em;
-    font-size: 1.6em;
-    font-weight: bolder;
-    color: $dblue;
-    text-align: center;
-  }
-
-  form {
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    @include clearfix;
-
-    & > span {
-      background: $mgrey;
-      text-align: center;
-      padding: .6em 3em;
-      font-size: 15px;
-    }
-  }
-
-  form > div {
-    width: 45%;
-    margin-right: 5%;
-    margin-bottom: 4em;
-    float: left;
-
-    &:nth-child(2n+2) {
-      margin-right: 0;
-    }
-  }
-
-  h3 {
-    text-align: center;
-    margin-bottom: 1em;
-    font-weight: bold;
-    color: $dblue;
-  }
-
-  .content {
-    background: $mgrey;
-    border-radius: 5px;
-    padding: 2em 4em;
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-      color: $dblue;
-      font-weight: bolder;
+    section {
+        padding-bottom: 3em;
     }
 
-    & > div {
-      margin-bottom: 1em;
+    h2 {
+        margin-bottom: 3em;
+        font-size: 1.6em;
+        font-weight: bolder;
+        color: $dblue;
+        text-align: center;
     }
 
-    input {
-      display: block;
-      width: 100%;
-      background: #fff;
-      border: none;
-      padding: .8em 1em;
-      border-radius: 4px;
-      border: solid 0.3px #d8d8d8;
-    }
-  }
+    form {
+        width: 70%;
+        margin: 0 auto;
+        @include clearfix;
 
-  .new-img {
-    .content { padding: 3em 3em 3em 3em;}
-    figure {
-      padding-bottom: 2.7em;
-    }
-    span {
-      display: block;
-      width: 160px;
-      height: 160px;
-      border-radius: 100%;
-      margin: 0 auto;
-      background: $ldgrey;
-      text-align: center;
-      line-height: 4.5;
-      font-size: 2em;
+        & > span {
+            display: block;
+            // background: $mgrey;
+            text-align: center;
+            padding: 0.6em 3em;
+            font-size: 15px;
+        }
     }
 
-    input {
-      background: none;
-      border: none;
+    form > div {
+        width: 45%;
+        margin-right: 5%;
+        margin-bottom: 4em;
+        float: left;
+
+        &:nth-child(2n+2) {
+            margin-right: 0;
+        }
+
+        select {
+            padding: .7em 3em .7em 1em;
+        }
+
+        select[data-status="volunteer"] {
+                border: 1px solid $lorange;
+                background: $lorange;
+                color: $orange;
+        }
+
+        select[data-status="admin"] {
+                border: 1px solid $orange;
+                background: $orange;
+                color: #fff;
+        }
     }
-  }
 
-  input[type="submit"] {
-    display: block;
-    margin: 0 auto;
-    background: $dblue;
-    color: #fff;
-    border: 0;
-    padding: 1em 3em;
-    border-radius: 4px;
-    font-weight: bolder;
-    margin-bottom: 2em;
+    h3 {
+        text-align: center;
+        margin-bottom: 1em;
+        font-weight: bold;
+        color: $dblue;
+    }
 
-  }
+    .content {
+        background: $mgrey;
+        border-radius: 5px;
+        padding: 2em 4em;
 
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: $dblue;
+            font-weight: bolder;
+        }
+
+        & > div {
+            margin-bottom: 1em;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            background: #fff;
+            border: none;
+            padding: 0.8em 1em;
+            border-radius: 4px;
+            border: solid 0.3px #d8d8d8;
+        }
+    }
+
+    .new-img {
+        .content {
+            padding: 3em;
+        }
+
+        figure {
+            padding-bottom: 2.7em;
+        }
+
+        span {
+            display: block;
+            width: 160px;
+            height: 160px;
+            border-radius: 100%;
+            margin: 0 auto;
+            background: $ldgrey;
+            text-align: center;
+            line-height: 4.5;
+            font-size: 2em;
+        }
+
+        input {
+            background: none;
+            border: none;
+        }
+    }
+
+
+    input[type="submit"] {
+        display: block;
+        margin: 0 auto;
+        background: $dblue;
+        color: #fff;
+        border: 0;
+        padding: 1em 3em;
+        border-radius: 4px;
+        font-weight: bolder;
+        margin-bottom: 2em;
+    }
 }
