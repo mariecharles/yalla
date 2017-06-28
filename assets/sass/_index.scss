@@ -133,6 +133,7 @@
                 width: 100%;
                 max-width: 100%;
                 opacity: 0.8;
+                transition: .3s ease-out;
             }
         }
         // THE TOP OF THE ARTICLE
@@ -180,13 +181,35 @@
                 margin-top: 1em;
                 font-weight: bold;
                 text-transform: uppercase;
+                transition: .3s ease-out;
             }
 
             img {
                 width: 20px;
+                opacity: 0;
+                transition: .3s ease-out;
+
             }
         }
-    }
+
+        &:hover {
+            box-shadow: 0px 2px 35px rgba(0,0,0,.33);
+
+            figure img {
+                filter: grayscale(100%);
+                transition: .2s ease-in;
+            }
+            .read-more a {
+                margin-right: 1em;
+                transition: .2s ease-in;
+            }
+
+            .read-more img {
+                opacity: 1;
+                transition: .2s ease-in;
+            }
+        }
+    } // END OF ARTICLE
 
     @media screen and (max-width: $mobile) {
         padding-top: 7em;
@@ -209,6 +232,15 @@
         margin-top: 3em;
         border: 1.7px solid $dblue;
         font-weight: bolder;
+        cursor: pointer;
+        transition: .3s ease-out;
+
+        &:hover {
+            padding-right: 4em;
+            background: $dblue;
+            color: #fff;
+            transition: .2s ease-in;
+        }
     }
 }
 
