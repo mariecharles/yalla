@@ -1368,7 +1368,19 @@ main, header {
   opacity: 1;
 }
 
-/* line 1, ../sass/partials/_headeradmin.scss */
+.container-mention {
+  width: 70%;
+  margin: 0 auto;
+  background: #fcfcfc;
+  padding: 2%;
+  margin-top: 8%; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.3em; }
+
 body[id*="admin-"] {
   position: relative;
 }
