@@ -1734,6 +1734,112 @@ body[id*="admin-"] main {
       text-align: center;
       line-height: 4; }
 
+<<<<<<< HEAD
+=======
+/* line 3, ../sass/_adminnewpartner.scss */
+#admin-new-partner main > div {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 7, ../sass/_adminnewpartner.scss */
+#admin-new-partner main > div.head {
+  padding-top: 3em;
+  margin-bottom: 7em;
+}
+/* line 13, ../sass/_adminnewpartner.scss */
+#admin-new-partner .go-back {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #000022;
+  padding: 0 1em;
+  height: 40px;
+  line-height: 2.3;
+  border: 2px solid #000022;
+  color: #000022;
+  padding: .8em 2em;
+  font-weight: bolder;
+  cursor: pointer;
+}
+/* line 22, ../sass/_adminnewpartner.scss */
+#admin-new-partner .container {
+  margin-top: 2em;
+}
+/* line 26, ../sass/_adminnewpartner.scss */
+#admin-new-partner form {
+  width: 30%;
+  margin: 0 auto;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#admin-new-partner form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 31, ../sass/_adminnewpartner.scss */
+#admin-new-partner form .submit {
+  width: 100%;
+  margin-top: 1em;
+  border: none;
+  border-radius: 4px;
+  background: #000022;
+  color: #fff;
+  padding: 1em 2em;
+  font-weight: bolder;
+}
+/* line 42, ../sass/_adminnewpartner.scss */
+#admin-new-partner form div {
+  float: left;
+}
+/* line 47, ../sass/_adminnewpartner.scss */
+#admin-new-partner .partner-name {
+  width: 100%;
+  padding: 2em;
+  border-radius: 5px;
+  background: #f7f7f7;
+}
+/* line 53, ../sass/_adminnewpartner.scss */
+#admin-new-partner .partner-name label {
+  font-weight: bolder;
+}
+/* line 57, ../sass/_adminnewpartner.scss */
+#admin-new-partner .partner-name input {
+  display: block;
+  margin-top: 1em;
+  width: 100%;
+  border: none;
+  padding: 1em 1em;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(168, 168, 168, 0.11);
+}
+/* line 68, ../sass/_adminnewpartner.scss */
+#admin-new-partner .partner-img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+/* line 72, ../sass/_adminnewpartner.scss */
+#admin-new-partner .partner-img figure {
+  background: #fff;
+  padding: 4em 3em;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(168, 168, 168, 0.11);
+}
+/* line 80, ../sass/_adminnewpartner.scss */
+#admin-new-partner .partner-img button {
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  padding: 1em;
+  color: #000022;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-top: 1em;
+  box-shadow: 0 2px 4px 0 rgba(168, 168, 168, 0.11);
+}
+
+/* line 2, ../sass/partials/_footer.scss */
+>>>>>>> 0bb8c4516b6d1de22d65da2902b1d47f7a1fe237
 #footer .information {
   background: #f3f3f3;
   color: #000; }
