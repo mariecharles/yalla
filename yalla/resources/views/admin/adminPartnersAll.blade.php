@@ -78,7 +78,7 @@
             @foreach ($partners as $partner)
 
                 <div class="partner">
-                    <figure>{{$partner->logo}}</figure>
+                    <figure><img src="{{ asset('/img-content/'.$partner->logo)}}" alt="logo"></figure>
                     <div class="caption">
                         <p>{{$partner->name}}</p>
                         {{ Form::open(['route' => ['partner.delete', $partner->id], 'method' => 'delete']) }}
@@ -86,7 +86,6 @@
                         {{ Form::close() }}
                     </div>
                 </div>
-
             @endforeach
         </div>
     </div>

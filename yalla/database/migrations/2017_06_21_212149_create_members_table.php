@@ -20,12 +20,9 @@ class CreateMembersTable extends Migration
             $table->increments('id');
             $table->string('lastname');
             $table->string('firstname');
-            $table->string('address');
-            $table->integer('postal_code');
+            $table->string('birth_date');
             $table->string('city');
             $table->string('country');
-            $table->integer('phone');
-            $table->string('mail');
             $table->string('activity');
             $table->string('status');
             $table->string('img');

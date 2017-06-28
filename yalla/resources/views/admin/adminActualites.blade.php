@@ -117,10 +117,10 @@
                     <div class="checkbox">
                         <input type="checkbox">
                     </div>
-                    <a href="{{url('articles/'. $post->slug)}}" class="container">
+                    <a href="{{url('admin/modifier-un-article/'. $post->id)}}" class="container">
                         <div class="infos">
                             <h3>{{$post->title}}</h3>
-                            <span class="author">Ecrit par <b>Brenda Contreras</b></span>
+                            <span class="author">Ecrit par <b>{{ $post->written_by }}</b></span>
                         </div>
                         <div class="post-status online">
                             <span class="round"></span>

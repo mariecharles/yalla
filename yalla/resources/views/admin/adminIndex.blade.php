@@ -85,10 +85,10 @@
             <div class="content">
                 @foreach ($posts as $post)
                     <article>
-                        <a href="{{url('articles/'. $post->slug)}}" class="container">
+                        <a href="{{url('admin/modifier-un-article/'. $post->id)}}" class="container">
                             <div class="infos">
                                 <h3>{{ $post->title }}</h3>
-                                <span class="author">Ecrit par <b>Brenda Contreras</b></span>
+                                <span class="author">Ecrit par <b>{{ $post->written_by }}</b></span>
                             </div>
                             <div class="post-status online">
                                 <span class="round"></span>
@@ -128,20 +128,11 @@
                 <div class="dons">
                     <a href="">
                         <div class="head">
-                            <h3>Nombre de dons</h3>
+                            <h3>Nombre de vues</h3>
                             <span class="last-date">Depuis le 01/06/17</span>
                         </div>
 
                         <span class="nb">5</span>
-                    </a>
-                </div>
-                <div class="dons">
-                    <a href="">
-                        <div class="head">
-                            <h3>Somme des dons</h3>
-                            <span class="last-date">Depuis le 01/06/17</span>
-                        </div>
-                        <span class="nb">3<sup> €</sup></span>
                     </a>
                 </div>
             </div>

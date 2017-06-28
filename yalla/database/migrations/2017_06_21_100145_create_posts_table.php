@@ -26,7 +26,9 @@ class CreatePostsTable extends Migration
             $table->longText('resume');
             $table->string('img');
             $table->integer('active')->default(1);
-            $table->string('lang');
+            $table->string('lang')->default('placeholder.png');
+            $table->string('written_by')->default('Marie CHARLES');
+            $table->integer('views')->default(0);;
             $table->timestamps();
         });
     }
