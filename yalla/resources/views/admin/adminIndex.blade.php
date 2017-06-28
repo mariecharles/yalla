@@ -31,13 +31,13 @@
     <script>tinymce.init({ selector:'textarea.article-content' });</script>
 </head>
 
-<body id="admin-articles">
+<body id="admin-home">
 
 <header>
     <div class="inner">
         <div id="admin-actions">
             <div class="ctas">
-                <span class="cta new-volunteer"><a href="{{url('admin/ajouter-un-membre')}}">+ Ajouter un bénévole</a></span>
+                <span class="cta new-volunteer"><a href="{{url('admin/ajouter-un-membre')}}">+ Ajouter un membre</a></span>
                 <span class="cta new-article"><a href="{{url('admin/ajouter-un-article')}}">+ Nouvel article</a></span>
             </div>
             <div class="icon-action">
@@ -63,7 +63,7 @@
     <ul>
         <li class="active"><a href="{{url('admin')}}">Tableau de bord</a></li>
         <li><a href="{{url('admin/articles')}}">Articles</a></li>
-        <li><a href="">Membres</a></li>
+        <li><a href="{{url('admin/membres')}}">Membres</a></li>
     </ul>
 </nav>
 
@@ -96,7 +96,7 @@
                                 {{ Form::close() }}
                             </div>
                             <div class="date-published">
-                                <p>Publié le <b class="return">{{ $post->created_at }}</b></p>
+                                <p>Publié le <b class="return">{{ $post->created_at->format('d F Y') }}</b></p>
                             </div>
                             <div class="category">
                                 <span class="cat">{{ $post->category->name }}</span>
@@ -112,17 +112,16 @@
                 @endforeach
             </div>
         </section>
-
         <section class="stats">
             <div class="quick-stats">
                 <div class="parrains">
                     <a href="">
                         <div class="head">
-                            <h3>Nouveaux parrains</h3>
+                            <h3>Nouveaux membres</h3>
                             <span class="last-date">Depuis le 01/06/17</span>
                         </div>
 
-                        <span class="nb">46 <sup>€</sup></span>
+                        <span class="nb">{{ $memberCount }}</span>
                     </a>
                 </div>
                 <div class="dons">
@@ -141,7 +140,7 @@
                             <h3>Somme des dons</h3>
                             <span class="last-date">Depuis le 01/06/17</span>
                         </div>
-                        <span class="nb">3</span>
+                        <span class="nb">3<sup> €</sup></span>
                     </a>
                 </div>
             </div>
@@ -149,7 +148,8 @@
     </div>
 </main>
 </body>
-<script src="js/app.js"></script>
+<script src="{{ asset('/js/app.js') }}"></script>
+<script src="{{ asset('/js/scripts.js') }}"></script>
 <script>
 
     var postStatus = document.querySelectorAll('.filters span');

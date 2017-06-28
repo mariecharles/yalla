@@ -1,61 +1,75 @@
 #admin-volunteers {
-  width: $adminMainWidth;
-  margin: 0 auto;
-
-  & > .head {
+    width: $adminMainWidth;
+    margin: 0 auto;
     @include clearfix;
-    padding-top: 3em;
-    margin-bottom: 3em;
 
-    h2 {
+    .head-all-articles {
       float: left;
-      font-size: 1.6em;
-      font-weight: bolder;
     }
 
-    select {
-      float: right;
-    }
-  } // END OF HEAD
-
-  .all-volunteers {
-    & > div {
-      width: 100%;
-      padding: 1.6em 3em;
-      background: $lgrey;
-      border-radius: 30px;
-      margin-bottom: 2em;
-      @include clearfix;
-
-      .infos {
-        float: left;
-        padding-top: .5em;
-      }
-
-      h3 {
-        font-weight: bolder;
-        font-size: 1.2em;
-      }
-
-      .actions {
-        float: right;
-        text-align: right;
-
-        button {
-          display: block;
-          border: none;
-          background: none;
-          border: 1px solid #000;
-          border-radius: 100px;
-          padding: .5em 1.6em;
-          margin-top: .5em;;
+    .all-volunteers {
+      clear: both;
+        .volunteer > a {
+            display: block;
+            @include clearfix;
         }
-      }
-    }
 
-    & > div:hover {
-      background: rgba(0,0,0,.2);
-    }
-  }
+        .volunteer {
+            background: red;
+            width: 100%;
+            padding: 1.7em 4em;
+            background: #fff;
+            border-radius: 30px;
+            margin-bottom: 2em;
 
+            div {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 2em;
+
+            } // END OF DIV
+
+            h3 {
+                font-weight: bolder;
+                font-size: 1.2em;
+            }
+
+            .volunteer-status {
+                @include ctbtn($lorange);
+                background: $lorange;
+                padding: 0 2em;
+                color: $orange;
+                font-weight: bold;
+            }
+
+            .function-status {
+                @include ctbtn($ldgrey);
+                padding: 0 2em;
+
+                span { font-weight: bolder; }
+            }
+
+            .infos {
+                padding-left: .7em;
+                width: 25%;
+            }
+        }
+
+        & > div:hover {
+            // background: rgba(0,0,0,.2);
+        }
+
+        .profile-pic {
+
+            width: 10%;
+
+            span {
+              display: block;
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                background: green;
+            }
+        }
+    }
 }
