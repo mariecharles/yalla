@@ -1735,7 +1735,10 @@ body[id*="admin-"] main {
       line-height: 4; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8278a36692d2525c0b57afa8ab7468f8fabc19dd
 /* line 3, ../sass/_adminnewpartner.scss */
 #admin-new-partner main > div {
   width: 90%;
@@ -1839,7 +1842,10 @@ body[id*="admin-"] main {
 }
 
 /* line 2, ../sass/partials/_footer.scss */
+<<<<<<< HEAD
 >>>>>>> 0bb8c4516b6d1de22d65da2902b1d47f7a1fe237
+=======
+>>>>>>> 8278a36692d2525c0b57afa8ab7468f8fabc19dd
 #footer .information {
   background: #f3f3f3;
   color: #000; }
