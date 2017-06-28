@@ -1398,23 +1398,39 @@ main, header {
   opacity: 1;
 }
 
-/* line 1, ../sass/_mentionslegales.scss */
-.container-mention {
-  width: 70%;
+/* line 3, ../sass/_legals.scss */
+#legals main {
+  padding: 9em 0 5em 0;
+  width: 90%;
   margin: 0 auto;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#legals main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 10, ../sass/_legals.scss */
+#legals h2 {
+  float: left;
+  margin: 1em auto;
+  font-size: 2.4em;
+  font-weight: bolder;
+}
+/* line 17, ../sass/_legals.scss */
+#legals .breadcrumb {
+  float: right;
+  line-height: 8;
+}
+/* line 22, ../sass/_legals.scss */
+#legals h3 {
+  font-size: 1.3em;
+}
+/* line 26, ../sass/_legals.scss */
+#legals .container {
+  clear: both;
   background: #fcfcfc;
   padding: 2%;
-  margin-top: 8%;
-}
-
-/* line 9, ../sass/_mentionslegales.scss */
-h2 {
-  font-size: 1.5em;
-}
-
-/* line 13, ../sass/_mentionslegales.scss */
-h3 {
-  font-size: 1.3em;
 }
 
 /* line 1, ../sass/partials/_headeradmin.scss */
