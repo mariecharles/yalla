@@ -225,12 +225,13 @@
         position: relative;
         background: $lgrey;
         @media screen and (max-width: $tablet) {
+            height: 90vh;
             width: 50%;
-            margin: 3% 0;
         }
         @media screen and (max-width: $tablet) {
+            padding: 3em 1em;
+            height: auto;
             width: 100%;
-            margin: 3% 0;
         }
 
         &:nth-child(2) {
@@ -253,6 +254,7 @@
             width: 70%;
             margin: 1em auto;
             line-height: 1.4;
+
         }
 
         .jt-cta {
@@ -267,6 +269,11 @@
             bottom: 0;
             left: 0;
             right: 0;
+
+            @media screen and (max-width: $tablet) {
+                position: initial;
+
+            }
         }
     }
 }
