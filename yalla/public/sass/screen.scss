@@ -25,6 +25,7 @@ $adminRWD: 95%;
 
 // RESPONSIVE VARIABLES
 
+$btablet: 1180px;
 $tablet: 880px;
 $mobile: 580px;
 
@@ -63,6 +64,7 @@ font-weight: bolder;
 @import "supportus";
 @import "login";
 @import "partials/contact";
+@import "mentionslegales";
 
 @import "partials/headeradmin";
 @import "partials/asideadmin";
