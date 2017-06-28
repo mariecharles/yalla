@@ -21,8 +21,14 @@
 {!! Form::label('firstname', 'Prénom') !!}
 {!! Form::text('firstname', isset($member->lastname)?$member->firstname:'') !!}
 
-{!! Form::label('date_birth', 'Date de naissance') !!}
-{!! Form::date('date_birth', isset($member->lastname)?$member->date_birth:'') !!}
+{!! Form::file('img') !!}
+
+@if (isset($member->lastname))
+    <img src="{{ asset('/img-content/' . $member->img) }}" alt="Image">
+@endif
+
+{!! Form::label('mail', 'Adresse e-mail') !!}
+{!! Form::text('mail', isset($member->lastname)?$member->mail:'') !!}
 
 {!! Form::label('activity', 'Activité') !!}
 {!! Form::text('activity', isset($member->lastname)?$member->activity:'') !!}
@@ -42,10 +48,11 @@
 {!! Form::label('country', 'Pays') !!}
 {!! Form::text('country', isset($member->lastname)?$member->country:'') !!}
 
-{!! Form::label('amount_given', 'Montant donné') !!}
-{!! Form::text('amount_given', isset($member->lastname)?$member->amount_given:'') !!}
+{!! Form::label('status', 'Statut') !!}
+{!! Form::text('status', isset($member->lastname)?$member->status:'') !!}
 
 <button type="submit"><?= isset($member->lastname)?'Modifier':'Ajouter'?></button>
+
 
 {!! Form::close() !!}
 </body>

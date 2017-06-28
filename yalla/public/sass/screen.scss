@@ -7,6 +7,7 @@ $Roboto: 'Roboto', sans-serif;
 // COLORS VARIABLES
 
 $yellow: #FFD52B;
+$lorange: #fdeed8;
 $orange: #ff9806;
 $pink: #fc1053;
 
@@ -34,10 +35,6 @@ font-weight: bolder;
 
 .return {
   display: block;
-}
-
-.ctbtn {
-
 }
 
 @mixin ctbtn($color) {
@@ -70,6 +67,7 @@ font-weight: bolder;
 @import "partials/adminelements";
 
 @import "adminhome";
+@import "adminnewarticle";
 @import "adminarticles";
 @import "adminvolunteers";
 

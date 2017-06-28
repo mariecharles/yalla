@@ -40,7 +40,7 @@ Route::post('admin/add',array('uses' => 'AdminController@postAddAction', 'as' =>
 Route::put('admin/update/{id}',array('uses' => 'AdminController@postUpdateAction', 'as' => 'post.update'));
 Route::put('admin/publish/{id}',array('uses' => 'AdminController@postPublishAction', 'as' => 'post.publish'));
 
-Route::get('admin/adherents/{id}', 'AdminController@memberDetails');
+Route::get('admin/membres', 'AdminController@getMembers');
 Route::delete('admin/delete-member/{id}',array('uses' => 'AdminController@memberDeleteAction', 'as' => 'member.delete'));
 Route::post('admin/add-member',array('uses' => 'AdminController@memberAddAction', 'as' => 'member.add'));
 Route::put('admin/update-member/{id}',array('uses' => 'AdminController@memberUpdateAction', 'as' => 'member.update'));

@@ -1,5 +1,5 @@
 body[id*="admin-"] {
-  .head-all-articles {
+  div[class*="head-all"] {
       padding-bottom: 20px;
       border-bottom: 3px solid $mgrey;
       margin-bottom: 3em;
@@ -121,5 +121,40 @@ body[id*="admin-"] {
       }
 
 
-  }  
+  }
+
+  .pagination {
+      display: block;
+      margin-top: 3em;
+      text-align: center;
+
+      .arrow {
+        font-weight: bold;
+        background: $mgrey;
+        padding: .5em .8em;
+        border-radius: 4px;
+        margin: 0 3px;
+      }
+
+      span:not(.arrow) {
+        margin: 0 10px;
+      }
+  }
+
+  .order-by {
+      float: right;
+
+      label,
+      option,
+      select {
+          color: $orange;
+          font-weight: bolder;
+      }
+
+      select {
+          border: 1px solid $orange;
+          background: none;
+          border-radius: 200px;
+      }
+  }
 }
