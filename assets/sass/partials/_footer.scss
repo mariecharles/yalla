@@ -1,25 +1,63 @@
 #footer {
-    .information {
-      background: #f3f3f3;
-      color: #000;
-      @include clearfix;
+    position: relative;
+    padding: .5em 0;
+    background: $dblue;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: $pink;
+        width: 20px;
+        top: 0;
+        left: 0;
+        height: 100%;
     }
 
+    .inner {
+        width: $adminMainWidth;
+        margin: 0 auto;
+        font-size: 0;
+    }
 
     .logo-footer {
-        width: 30%;
-        float: left;
-
+        font-size: initial;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20%;
         @media screen and (max-width: $mobile) {
-          float: none;
-          display: block;
-          margin: 10% auto;
-          padding-top: 10%;
+            float: none;
+            display: block;
+            margin: 10% auto;
+            padding-top: 10%;
         }
 
         img {
             display: block;
             margin: 10% auto;
+        }
+    }
+
+    div.content {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 1em;
+        width: 70%;
+        text-align: center;
+
+        p {
+            color: #fff;
+            margin-bottom: 1em;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 0.5em;
+        }
+
+        a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: underline;
         }
     }
 
@@ -33,53 +71,16 @@
             width: 23%;
             float: left;
             @media screen and (max-width: $tablet) {
-              width: 50%;
-              margin: 2% auto;
+                width: 50%;
+                margin: 2% auto;
             }
-
             @media screen and (max-width: $mobile) {
-              width: 100%;
+                width: 100%;
             }
-        }
-
-        a {
-            line-height: 2em;
-            color: #000;
         }
 
         a:hover {
             color: #fff;
-        }
-    }
-
-    .legal-footer {
-        background: #fff;
-        margin: 3% auto;
-
-        ul {
-            text-align: center;
-            width: 100%;
-        }
-
-        li {
-            font-size: 14px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 0 2%;
-
-            @media screen and (max-width: $mobile) {
-              width: 100%;
-            }
-        }
-
-        a {
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        b {
-            font-size: 14px;
-            color: #000;
         }
     }
 }
