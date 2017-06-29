@@ -1,0 +1,102 @@
+#support {
+    background: $lgrey;
+
+    .intro {
+        position: relative;
+        img {
+            max-width: 100%;
+            width: 100%;
+            z-index: 44;
+        }
+
+        h2 {
+            width: $headerWidth;
+            margin: 3em auto 2em auto;
+        }
+
+        h2, span {
+            font-size: 1.4em;
+        }
+
+        span {
+            color: $pink;
+            font-weight: bold;
+        }
+    }  
+}
+
+#funding {
+    width: $headerWidth;
+    margin: 0 auto;
+    padding: 8em 0 4em 0;
+    @include clearfix;
+
+    & > div {
+        float: left;
+        width: 45%;
+        margin-right: 5%;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    .wrapper .infos {
+        padding: 4em 0;
+        background: $mgrey;
+        margin-bottom: 6em;
+
+        span {
+            color: $pink;
+            font-weight: bolder;
+        }
+
+        .wrap {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+    }
+
+    .el {
+        h3 {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: $pink;
+            margin-bottom: 1em;
+        }
+
+        p {
+            max-width: 80%;
+            margin-bottom: 1em;
+            line-height: 1.5;
+        }
+    }
+
+    #howto {
+
+        .infos {
+            margin-bottom: 3em;;
+            p {
+                margin-bottom: 1em;
+            }
+            span {
+                color: $pink;
+                font-weight: bold;
+            }
+        }
+        .el {
+            background: $pink;
+            padding: 2em 2em 5em 2em;
+            color: #fff;
+
+            p {
+                margin: 0 auto;
+
+            }
+        }
+    }
+}
