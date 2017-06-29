@@ -31,7 +31,7 @@
                     right: 0;
                     height: 100%;
                     width: 20px;
-                    background: $pink;
+                    background: $orange;
 
                     @media screen and (max-width: $tablet) {
                         width: 10px;
@@ -176,7 +176,7 @@
             span.cta {
                 clear: both;
                 float: right;
-                background: $pink;
+                background: $orange;
                 margin-top: 1em;
                 color: #fff;
                 transition: .3s ease-out;

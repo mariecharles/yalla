@@ -18,7 +18,7 @@
             color: #fff;
             margin: 1% 0;
             color: #fff;
-            border-right: 16px solid #fc1053;
+            border-right: 16px solid $orange;
 
             h2 {
                 font-size: 1.6em;
@@ -65,7 +65,7 @@
             float: right;
 
                 h4 {
-                    color: $pink;
+                    color: $orange;
                     font-size: 1.3em;
                     font-weight: initial;
                     padding: 2% 0;
@@ -121,7 +121,7 @@
 
                 article {
                     width: 100%;
-                    background: $pink;
+                    background: $orange;
                     color: #fff;
                     padding: 12% 10%;
 
@@ -197,7 +197,7 @@
     }
 
     .color-text {
-        color: $pink;
+        color: $orange;
         font-weight: bold;
 
         &:last-child {
@@ -206,7 +206,7 @@
     }
 
     .title-actions {
-         color: $pink;
+         color: $orange;
          font-weight: bolder;
          font-size: 1.1em;
          margin-bottom: .7em;
