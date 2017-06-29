@@ -1,17 +1,14 @@
 #ournews {
     #filter-news {
-        padding-top: 10%;
+        padding-top: 13%;
         padding-bottom: 2%;
         box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.12);
-
         @media screen and (max-width: 1230px) {
             padding-top: 12%;
         }
-
         @media screen and (max-width: 1080px) {
             padding-top: 14%;
         }
-
         @media screen and (max-width: $tablet) {
             padding-top: 18%;
             box-shadow: none;
@@ -25,7 +22,6 @@
                 font-size: 1.5em;
                 font-weight: bold;
                 display: inline-block;
-
                 @media screen and (max-width: $tablet) {
                     display: block;
                     text-align: center;
@@ -34,18 +30,17 @@
 
             .order-by {
                 float: right;
-
                 @media screen and (max-width: $tablet) {
                     display: none;
                 }
 
                 label {
-                    font-weight: bold
+                    font-weight: bold;
                 }
 
                 select {
                     -webkit-appearance: none;
-                    padding: .4em 1em;
+                    padding: 0.4em 1em;
                     background: #fff;
                     border-radius: 23px;
                     width: 133px;
@@ -55,17 +50,12 @@
 
             .manage-category-mobile {
                 display: none;
-
                 @media screen and (max-width: $tablet) {
                     display: inline-block;
                     width: 100%;
                     text-align: center;
                     padding-top: 1em;
                 }
-
-                // @media screen and (max-width: 720px) {
-                //     padding-top: 1.1em;
-                // }
             }
         }
     }
@@ -80,7 +70,6 @@
             border-right: 1px dashed #000;
             padding-top: 3%;
             float: left;
-
             @media screen and (max-width: $tablet) {
                 display: none;
             }
@@ -103,27 +92,18 @@
                 width: 140px;
                 text-align: center;
                 cursor: pointer;
-
-                //WEBKIT POUR PLACEHOLDER
-                ::-webkit-input-placeholder { /* Chrome */
-                  color: $pink;
-                }
-                :-ms-input-placeholder { /* IE 10+ */
-                  color: $pink;
-                }
-                ::-moz-placeholder { /* Firefox 19+ */
-                  color: $pink;
-                  opacity: 1;
-                }
-                :-moz-placeholder { /* Firefox 4 - 18 */
-                  color: $pink;
-                  opacity: 1;
-                }
+                color: $pink;
+                transition: .3s ease-out;
 
                 &.active {
                     background: $pink;
                     color: #fff;
+                }
 
+                &:hover {
+                    background: $pink;
+                    color: #fff;
+                    transition: .2s ease-in;
                 }
             }
         }
@@ -131,7 +111,6 @@
         #container-news {
             float: right;
             width: 75%;
-
             @media screen and (max-width: $tablet) {
                 display: block;
                 float: none;
@@ -139,7 +118,6 @@
                 width: 90%;
                 padding-top: 1.1em;
             }
-
             @media screen and (max-width: $mobile) {
                 padding-top: 2em;
             }
@@ -152,11 +130,14 @@
                 border-radius: 4px;
                 overflow: hidden;
                 @include clearfix;
-
+                transition: .3s ease-out;
                 @media screen and (max-width: 1080px) {
                     height: auto;
                 }
-
+            &:hover {
+                box-shadow: 0 2px 35px 0 rgba(0, 0, 0, 0.12);
+                transition: .2s ease-in;
+            }
                 .category {
                     position: absolute;
                     z-index: 55;
@@ -175,82 +156,64 @@
                     position: absolute;
                     z-index: 56;
                     right: 29em;
-                    top: 1em;
+                    top: 1.3em;
                     left: 11em;
                     display: block;
                     text-align: center;
                     width: 300px;
                     color: #fff;
                     padding: 0.4em 2em;
-
                     @media screen and (max-width: 1370px) {
                         left: 10em;
                     }
-
                     @media screen and (max-width: 1300px) {
                         left: 8em;
                     }
-
                     @media screen and (max-width: 1210px) {
                         left: 7em;
                     }
-
                     @media screen and (max-width: 1170px) {
                         left: 6em;
                     }
-
                     @media screen and (max-width: 1080px) {
                         left: 27em;
                     }
-
                     @media screen and (max-width: 1025px) {
                         left: 26em;
                     }
-
                     @media screen and (max-width: 1000px) {
                         left: 24em;
                     }
-
                     @media screen and (max-width: 945px) {
                         left: 22em;
                     }
-
                     @media screen and (max-width: 900px) {
                         left: 21em;
                     }
-
                     @media screen and (max-width: $tablet) {
                         left: 26em;
                     }
-
                     @media screen and (max-width: 84px) {
                         left: 24em;
                     }
-
                     @media screen and (max-width: 720px) {
                         left: 18em;
                     }
-
                     @media screen and (max-width: 670px) {
                         left: 16em;
                     }
-
                     @media screen and (max-width: 625px) {
                         left: 14em;
                     }
-
                     @media screen and (max-width: 580px) {
                         left: 12em;
                     }
-
                     @media screen and (max-width: 535px) {
                         left: 10em;
                     }
-
                     @media screen and (max-width: 500px) {
                         left: 8em;
                     }
-
                     @media screen and (max-width: 460px) {
                         left: 6em;
                     }
@@ -260,8 +223,7 @@
                     position: relative;
                     width: 45%;
                     float: left;
-                    background:  linear-gradient(to bottom, rgba(0, 0, 0, 0.54), rgba(255, 255, 255, 0.18));
-
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.54), rgba(255, 255, 255, 0.18));
                     @media screen and (max-width: 1080px) {
                         width: 100%;
                         float: none;
@@ -285,23 +247,29 @@
 
                     .top-article {
                         .inner {
+                            padding-top: 2em;
                             font-weight: bold;
-                            font-size: .8em;
-                            padding-top: 7%;
-                            padding-bottom: 5%;
-
+                            font-size: 0.8em;
                             @media screen and (max-width: 1080px) {
                                 padding: 4% 0;
                             }
+                        }
+
+                        h3 {
+                            padding: 1em 0;
                         }
                     }
 
                     .content {
                         width: 90%;
+                        p {
+                            line-height: 1.5;
+                        }
+
                     }
 
                     .read-more {
-                        padding: 5% 0;
+                        padding: 1% 0;
                         display: inline-block;
                         margin-top: 1em;
                         font-weight: bold;
@@ -323,7 +291,6 @@
         text-align: center;
         clear: both;
         float: right;
-
         @media screen and (max-width: $tablet) {
             float: none;
             margin: 0 auto;
@@ -332,15 +299,20 @@
         }
 
         .arrow {
-          font-weight: bold;
-          background: $mgrey;
-          padding: .5em .8em;
-          border-radius: 4px;
-          margin: 0 3px;
+            font-weight: bold;
+            background: $mgrey;
+            padding: 0.5em 0.8em;
+            border-radius: 4px;
+            margin: 0 3px;
+        }
+
+        span {
+            cursor: pointer;
         }
 
         span:not(.arrow) {
-          margin: 0 10px;
+            cursor: pointer;
+            margin: 0 10px;
         }
     }
 }
