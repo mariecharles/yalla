@@ -142,6 +142,7 @@
 
                 @foreach ($posts as $post)
                     <article>
+                        <a href="{{url(App::getLocale() . '/' . Lang::get('pagination.detailactu') . '/'. $post->slug)}}">
                         <span class="category">{{$post->category->name}}</span>
 
                         <figure>
@@ -157,9 +158,10 @@
                             <p>{{$post->resume . '...'}}</p>
                         </div>
                         <div class="read-more">
-                            <a href="">Lire la suite</a>
+                            <span>Lire la suite</span>
                             <img src="{{ asset('/img-layout/arrow-right-read-more.svg')}}">
                         </div>
+                        </a>
                     </article>
                 @endforeach
 

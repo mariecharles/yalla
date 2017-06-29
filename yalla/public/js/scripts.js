@@ -3,10 +3,6 @@ var content_hidden = '';
 var input = document.querySelector('.add-tags input[type="text"]');
 var tags = document.querySelector('.add-tags .all-tags');
 
-var tagsCount = 0;
-
-
-
 
     input.addEventListener('keyup', function(e) {
 
@@ -38,7 +34,7 @@ var tagsCount = 0;
        }
     });
 
-    tagsCount++;
+
 
 var section_add_article = document.querySelector('#admin-add-article');
 var title_add_article = document.querySelector('#admin-add-article h2');

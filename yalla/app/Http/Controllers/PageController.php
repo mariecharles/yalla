@@ -61,6 +61,13 @@ class PageController extends Controller
         return $view;
     }
 
+    public function legalsAction()
+    {
+        $view = view('user.mentionsLegales');
+
+        return $view;
+    }
+
     public function partnerAddAction()
     {
         $view = view('admin.partnerForm');

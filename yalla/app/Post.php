@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'slug', 'content' , 'img', 'category_id', 'lang', 'resume'];
+    protected $fillable = ['title', 'slug', 'content' , 'img', 'category_id', 'lang', 'resume', 'written_by', 'views'];
 
 
     public function category()
@@ -50,7 +50,5 @@ class Post extends Model
 
 
     }
-
-    protected $guarded = ['views'];
 
 }

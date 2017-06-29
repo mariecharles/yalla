@@ -27,8 +27,11 @@ class CreateArchivesTable extends Migration
             $table->string('img');
             $table->integer('active')->default(1);
             $table->string('lang');
-            $table->timestamps();
+            $table->string('written_by');
+            $table->integer('views');
             $table->integer('saved_id');
+            $table->integer('category_id');
+            $table->timestamps();
         });
     }
 

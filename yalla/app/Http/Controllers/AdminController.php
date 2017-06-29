@@ -20,7 +20,7 @@ class AdminController extends Controller
 
     public function Index()
     {
-        $posts = Post::with('category','tag')->get();;
+        $posts = Post::with('category','tag')->limit(2)->get();
 
         $count = Post::get()->count();
 
@@ -30,7 +30,38 @@ class AdminController extends Controller
         $offline = Post::where('active', 0)->get()->count();
 
 
-        $view = view('admin.adminIndex', compact('posts', 'count', 'online','offline', 'memberCount'));
+        $allviews = Post::select('views')->get();
+
+
+        foreach ($allviews as $element) {
+
+            $pagee[] = $element['views'];
+        }
+
+        $views = array_sum($pagee);
+
+
+        $view = view('admin.adminIndex', compact('posts', 'count', 'online','offline', 'memberCount', 'allviews','views'));
+
+
+
+        return $view;
+
+    }
+
+    public function actuAction()
+    {
+        $posts = Post::with('category','tag')->paginate(5);
+
+        $count = Post::get()->count();
+
+        $memberCount = Member::where('created_at', '<=', date('2017-june-1').' 00:00:00')->get()->count();
+
+        $online = Post::where('active', 1)->get()->count();
+        $offline = Post::where('active', 0)->get()->count();
+
+
+        $view = view('admin.adminActu', compact('posts', 'count', 'online','offline', 'memberCount'));
 
         return $view;
 
@@ -61,38 +92,6 @@ class AdminController extends Controller
 
     }
 
-    public function ActuAction()
-    {
-        $posts = Post::with('category','tag')->paginate(1);
-
-        $count = Post::get()->count();
-
-        $online = Post::where('active', 1)->get()->count();
-        $offline = Post::where('active', 0)->get()->count();
-
-        $view = view('admin.adminActualites', compact('posts', 'count', 'online','offline'));
-
-        return $view;
-
-    }
-
-
-    //DETAILS POST
-
-    public function actuDetails($slug)
-    {
-
-        $post = Post::with('category','tag')
-            ->where('slug', $slug)->get();
-
-
-        $post = $post->first();
-
-        $view = view('admin.adminDetailsActu', compact('post'));
-
-        return $view;
-
-    }
 
     //SUPPRIMER UN POST
 
@@ -138,7 +137,11 @@ class AdminController extends Controller
 
 
       $post = Post::create($requete);
-      $post->saveTags($request->get('tags'));
+
+        if ($request->tags) {
+
+            $post->saveTags($request->get('tags'));
+        }
 
       return redirect()->action('AdminController@index');
 
@@ -181,7 +184,10 @@ class AdminController extends Controller
 
         $post->update($requete);
 
-        $post->saveTags($request->get('tags'));
+        if ($request->tags) {
+
+            $post->saveTags($request->get('tags'));
+        }
 
         return redirect()->action('AdminController@actuAction');
 
@@ -206,6 +212,9 @@ class AdminController extends Controller
         $save->lang = $post->lang;
         $save->resume = $post->resume;
         $save->created_at = $post->created_at;
+        $save->category_id = $post->category_id;
+        $save->written_by = $post->written_by;
+        $save->views = $post->views;
 
         $save->save();
 
@@ -371,6 +380,7 @@ class AdminController extends Controller
         {
             $image = $this->upload($request->file('logo'));
 
+
             $requete['logo'] = $image;
         }
 
@@ -404,16 +414,16 @@ class AdminController extends Controller
 
     public function getArchives()
     {
-        $archives = Archive::all();
+        $archives = Archive::paginate(5);
 
-        $view = view('admin.postsArchives', compact('archives'));
+        $view = view('admin.adminArchives', compact('archives'));
 
 
         return $view;
 
     }
 
-    public function getMessages()
+    /*public function getMessages()
     {
         $messages = Message::all();
 
@@ -456,6 +466,6 @@ class AdminController extends Controller
         return redirect()->action('AdminController@getMessages');
 
     }
-
+*/
 
 }

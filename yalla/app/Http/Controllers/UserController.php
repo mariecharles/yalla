@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
 use App\Message;
+use Illuminate\Support\Facades\App;
 
 
 class UserController extends Controller
@@ -14,8 +15,11 @@ class UserController extends Controller
     public function index()
     {
 
-        $posts = Post::with('category','tag')
-            ->where('active', 1)->get();
+        $posts = Post::with('category','tag')->orderBy('created_at', 'desc')
+            ->limit(3)
+            ->where('active', 1)
+            ->where('lang', App::getLocale())->get();
+
 
         $view = view('user.index', compact('posts'));
 
@@ -45,6 +49,8 @@ class UserController extends Controller
                 ->where('slug', $slug)->get();
 
         $post = $post->first();
+
+        $post->increment('views');
 
         $view = view('user.detailsActu', compact('post'));
 
