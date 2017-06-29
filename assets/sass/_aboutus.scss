@@ -1,56 +1,208 @@
 #about {
-  main {
-    .wrapper {
-      width: 50%;
-      margin: 0 auto;
-      padding-bottom: 3em;
+    main {
+        padding-top: 9em;
     }
 
-    section {
-      margin-bottom: 5em;
-    }
-    .our-story {
-      text-align: center;
-      h3 {
-        color: $orange;
-        font-weight: bolder;
-        font-size: 1.5em;
-        margin-bottom: .7em;
-        span {
-          font-size: inherit;
-          font-style: italic;
+    #about-us {
+        background: $lgrey;
+        padding: 3em 0;
+
+        .wrapper {
+            width: $headerWidth;
+            margin: 0 auto;
+            @include clearfix;
         }
-      }
-      p {
-        width: 70%;
-        margin: 0 auto .8em auto;
-        line-height: 1.5;
-        text-align: justify;
-      }
 
-      &.intro {
-        height: 100vh;
+        .el {
+            float: left;
+            background: #fff;
+            width: 31%;
+            margin-right: 3%;
+            border-radius: 5px;
+            box-shadow: -2px 2px 7px rgba(0,0,0,.13);
+            transition: .3s ease-out;
 
-        .content {
-          transform: translateY(145%);
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 2em;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+
+            &:hover {
+                box-shadow: 0px 2px 35px rgba(0,0,0,.33);
+                transition: .2s ease-in;
+            }
+
+            .head {
+                background: $pink;
+                padding: 2.5em 2em 1.7em 2em;
+                color: #fff;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+                h3 {
+                    font-size: 1.4em;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                }
+                p {
+                    line-height: 1.6;
+                    font-style: italic;
+                    font-size: 16px;
+                }
+            }
+
+            .content {
+                padding: 2em;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                p {
+                    margin-bottom: .5em;
+                }
+            }
+        }
+    } // END OF ABOUT US
+
+    .members {
+        width: $headerWidth;
+        margin: 0 auto;
+        padding: 4em 0;
+
+        img {
+            display: block;
+            margin: 1em auto;
+        }
+        ul {
+            @include clearfix;
+        }
+
+        li {
+            float: left;
+            width: 21%;
+            margin-right: 4%;
+            text-align: center;
+
+            @media screen and (max-width: $tablet) {
+                width: 47%;
+                margin-right: 5%;
+                margin-bottom: 2em;
+
+                &:nth-child(2n+2) {
+                    margin-right: 0;
+                }
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            h3 {
+                font-weight: bolder;
+            }
+
+        }
+    }
+
+    #how {
+        background: $lgrey;
+        padding: 5em 0;
+
+        .wrapper {
+            width: $headerWidth;
+            margin: 0 auto;
+            @include clearfix;
+            font-size: 0;
+        }
+
+        .head {
+            font-size: initial;
+            display: inline-block;
+            width: 35%;
+            vertical-align: middle;
+
+            p {
+                font-style: italic;
+            }
         }
 
         h2 {
-          font-size: 2.3em;
-          font-weight: bold;
-          color: $orange;
+            font-size: 4em;
+            font-weight: bolder;
+
+            span {
+                font-size: inherit;
+                font-weight: bolder;
+            }
         }
 
-        width: 70%;
-        margin: 1em auto 2em auto;
-        text-align: center;
-        padding-bottom: 1.2em;
+        .content {
+            width: 65%;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: right;
+            @include clearfix;
 
-        p {
-          margin: 1em auto 0 auto;
-          line-height: 1.7;
+            p {
+                clear: both;
+                width: 75%;
+                float: right;
+                margin-bottom: 1em;
+            }
+
+            span.cta {
+                clear: both;
+                float: right;
+                background: $pink;
+                margin-top: 1em;
+                color: #fff;
+                transition: .3s ease-out;
+
+                &:hover {
+                    padding-right: 4em;
+                    transition: .2s ease-in;
+                }
+            }
         }
-      }
+
+        @media screen and (max-width: $btablet) {
+            .head, .content {
+                display: block;
+                width: 100%;
+                margin-bottom: 3em;
+                text-align: left;
+
+                &.content p, &.content span.cta {
+                    float: none;
+                    margin-bottom: 2em;
+                }
+
+                &.content span.cta {
+                    display: block;
+                    width: 40%;
+                    margin-top: 3em;
+
+                    &:hover {
+                        padding-right: initial;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: $tablet) {
+            h2 {
+                font-size: 3em;
+            }
+
+            .content p {
+                width: 100%;
+                line-height: 1.5;
+            }
+        }
     }
-  }
 }
