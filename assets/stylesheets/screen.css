@@ -1917,6 +1917,235 @@ nav select {
   margin: 0 10px;
 }
 
+/* line 2, ../sass/_single.scss */
+#single main {
+  background: #FAFAFA;
+  padding-top: 9em;
+  padding-bottom: 3em;
+}
+/* line 8, ../sass/_single.scss */
+#single .breadcrumb {
+  background: #fff;
+  padding: 2em 0;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 13, ../sass/_single.scss */
+#single .breadcrumb .inner {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 18, ../sass/_single.scss */
+#single .breadcrumb a, #single .breadcrumb span {
+  margin-right: 1em;
+}
+/* line 22, ../sass/_single.scss */
+#single .breadcrumb a:last-child {
+  font-weight: bolder;
+}
+/* line 27, ../sass/_single.scss */
+#single .headings {
+  width: 90%;
+  margin: 3em auto 4em auto;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#single .headings:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 32, ../sass/_single.scss */
+#single .headings .cat {
+  display: block;
+  float: left;
+  max-width: 15%;
+  background: #fc1053;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1em 2.5em;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bolder;
+}
+/* line 45, ../sass/_single.scss */
+#single .headings .tags {
+  float: right;
+}
+/* line 49, ../sass/_single.scss */
+#single .headings .tag {
+  vertical-align: middle;
+  border: 1px solid #000022;
+  color: #000022;
+  padding: .8em 2em;
+  margin: 0 1em;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: .3s ease-out;
+}
+/* line 59, ../sass/_single.scss */
+#single .headings .tag:hover {
+  background: #000022;
+  color: #fff;
+  transition: .2s ease-in;
+}
+/* line 67, ../sass/_single.scss */
+#single main > article {
+  width: 90%;
+  margin: 2em auto 8em auto;
+  background: #fff;
+  padding-bottom: 7em;
+}
+/* line 73, ../sass/_single.scss */
+#single main > article img {
+  max-width: 100%;
+  width: 100%;
+}
+/* line 78, ../sass/_single.scss */
+#single main > article .wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 8em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#single main > article .wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 85, ../sass/_single.scss */
+#single main > article .head {
+  width: 60%;
+  margin: -10em 0 0 10%;
+  color: #fff;
+}
+/* line 91, ../sass/_single.scss */
+#single main > article h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: .3em;
+}
+/* line 98, ../sass/_single.scss */
+#single main > article .socials {
+  width: 30%;
+  float: left;
+}
+/* line 102, ../sass/_single.scss */
+#single main > article .socials ul {
+  width: 85px;
+  background: #FAFAFA;
+  border: 1px solid #d9d9d9;
+}
+/* line 107, ../sass/_single.scss */
+#single main > article .socials ul li {
+  width: 100%;
+  display: block;
+  height: 65px;
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+  cursor: pointer;
+}
+/* line 115, ../sass/_single.scss */
+#single main > article .socials ul li:last-child {
+  border: 0;
+}
+/* line 119, ../sass/_single.scss */
+#single main > article .socials ul li:hover {
+  background: #d9d9d9;
+}
+/* line 126, ../sass/_single.scss */
+#single main > article .content {
+  width: 70%;
+  float: right;
+}
+/* line 130, ../sass/_single.scss */
+#single main > article .content p {
+  width: 80%;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+/* line 139, ../sass/_single.scss */
+#single .other-articles {
+  width: 90%;
+  margin: 2em auto 5em auto;
+  clear: both;
+}
+/* line 144, ../sass/_single.scss */
+#single .other-articles h3 {
+  font-weight: bold;
+  display: inline-block;
+  max-width: 30%;
+  font-size: 1.5em;
+}
+/* line 151, ../sass/_single.scss */
+#single .other-articles span.line {
+  display: inline-block;
+  max-width: 69%;
+}
+/* line 156, ../sass/_single.scss */
+#single .other-articles .container {
+  margin-top: 2em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#single .other-articles .container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 161, ../sass/_single.scss */
+#single .other-articles article {
+  width: 31%;
+  float: left;
+  margin-right: 3%;
+  background: #fff;
+  border-radius: 5.4px;
+  padding: 2em 2.5em 3em 2.5em;
+}
+/* line 168, ../sass/_single.scss */
+#single .other-articles article:last-child {
+  margin: 0;
+}
+/* line 173, ../sass/_single.scss */
+#single .other-articles .head {
+  margin-bottom: 2em;
+}
+/* line 3, ../sass/partials/_clearfix.scss */
+#single .other-articles .head:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 177, ../sass/_single.scss */
+#single .other-articles .head p {
+  text-align: right;
+  padding: .8em 0;
+}
+/* line 183, ../sass/_single.scss */
+#single .other-articles span.category {
+  width: 50%;
+  display: block;
+  float: left;
+  background: #fc1053;
+  color: #fff;
+  padding: .8em 0;
+  text-align: center;
+  margin-left: -3em;
+  font-weight: bolder;
+}
+/* line 195, ../sass/_single.scss */
+#single .other-articles h4 a {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+/* line 200, ../sass/_single.scss */
+#single .other-articles p.content {
+  margin: 2em 0;
+  line-height: 1.4;
+}
+/* line 205, ../sass/_single.scss */
+#single .other-articles .next {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
 /* line 3, ../sass/_login.scss */
 body#login header {
   position: initial;
