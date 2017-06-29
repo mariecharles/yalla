@@ -41,19 +41,75 @@
         }//END WRAPPER ACTIONS
     }
 
-    // .past-projet {
-    //     h3 {
-    //         .container-past-project {
-    //             .content-past-project {
-    //                 floa
-    //             }
-    //         }
-    //     }
-    // }
+    .past-project {
+        width: 55%;
+        margin: 0 auto;
+        margin-top: 3em;
+        padding-bottom: 2em;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+        @include clearfix;
+
+        .wrapper {
+            width: 100%;
+
+            figure {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .content {
+            width: 80%;
+            float: right;
+
+                h4 {
+                    color: $pink;
+                    font-size: 1.3em;
+                    font-weight: initial;
+                    padding: 2% 0;
+                }
+
+                p {
+                    font-weight: bold;
+                    padding: 0 6% 3% 1%;
+
+                }
+
+            }
+
+            .socials {
+                width: 15%;
+                float: left;
+                padding-top: 3em;
+
+                ul {
+                    width: 85px;
+                    background: #FAFAFA;
+                    border: 1px solid #d9d9d9;
+
+                     li {
+                         width: 100%;
+                        display: block;
+                        height: 65px;
+                        text-align: center;
+                        border-bottom: 1px solid #d9d9d9;
+                        cursor: pointer;
+                     }
+                }
+            }
+        }
+    }
 
     .actual-project {
         width: 70%;
         margin: 0 auto;
+        padding-top: 3em;
+
+        h3 {
+            clear: both;
+        }
 
         .content-actual-project {
             ul { @include clearfix;}
@@ -73,6 +129,14 @@
                             font-weight: bold;
                         }
                 }
+
+                figure {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
             }
         }
 
@@ -81,7 +145,7 @@
     .context {
         width: 70%;
         margin: 0 auto;
-        padding-top: 10%;
+        padding-top: 4%;
         @include clearfix;
 
         &:first-child {
@@ -125,7 +189,6 @@
         font-weight: bold;
         font-size: 1.3em;
         padding: 2% 0;
-        background: pink;
     }
 
     h4 {
