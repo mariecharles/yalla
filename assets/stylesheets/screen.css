@@ -548,7 +548,59 @@ nav select {
   }
 }
 
+<<<<<<< Updated upstream
 /* line 1, ../sass/_index.scss */
+=======
+.tpc {
+  background: #FAFAFA;
+  padding: 3em 0; }
+  .tpc .wrapper {
+    width: 90%;
+    margin: 0 auto; }
+    .tpc .wrapper:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .tpc .el {
+    float: left;
+    background: #fff;
+    width: 31%;
+    margin-right: 3%;
+    border-radius: 5px;
+    box-shadow: -2px 2px 7px rgba(0, 0, 0, 0.13);
+    transition: .3s ease-out; }
+    @media screen and (max-width: 880px) {
+      .tpc .el {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2em; } }
+    .tpc .el:last-child {
+      margin: 0; }
+    .tpc .el:hover {
+      box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.33);
+      transition: .2s ease-in; }
+    .tpc .el .head {
+      background: #fc1053;
+      padding: 2.5em 2em 1.7em 2em;
+      color: #fff;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+      .tpc .el .head h3 {
+        font-size: 1.4em;
+        font-weight: bolder;
+        text-transform: uppercase; }
+      .tpc .el .head p {
+        line-height: 1.6;
+        font-style: italic;
+        font-size: 16px; }
+    .tpc .el .content {
+      padding: 2em;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+      .tpc .el .content p {
+        margin-bottom: .5em; }
+
+>>>>>>> Stashed changes
 #intro {
   position: relative;
   margin-top: -3em;
@@ -1047,6 +1099,7 @@ nav select {
   background: #000022;
   color: #fff;
   text-align: center;
+<<<<<<< Updated upstream
   padding: 2em 0;
 }
 /* line 3, ../sass/partials/_clearfix.scss */
@@ -1220,6 +1273,53 @@ nav select {
 }
 /* line 93, ../sass/_aboutus.scss */
 #about #about-us .wrapper {
+=======
+  padding: 2em 0; }
+  #newsletter-home:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #newsletter-home h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px; }
+  #newsletter-home p {
+    font-size: inherit;
+    text-align: center;
+    margin-bottom: 0.2em; }
+  #newsletter-home div {
+    padding: 2%; }
+    #newsletter-home div #newsletter {
+      position: absolute;
+      text-align: left;
+      width: 320px;
+      padding: 10px 46px;
+      border-radius: 23px;
+      border: 1px solid #fff;
+      background: #fff; }
+    #newsletter-home div #validation {
+      position: relative;
+      border-radius: 23px;
+      border: none;
+      background: #FAFAFA;
+      margin-left: 245px;
+      padding: 11px 53px;
+      font-weight: bold; }
+    @media screen and (max-width: 580px) {
+      #newsletter-home div #newsletter {
+        width: 300px; }
+      #newsletter-home div #validation {
+        padding: 11px 25px; } }
+    #newsletter-home div .input-group-addo {
+      position: absolute; }
+    #newsletter-home div .fa-envelope {
+      background: url("../img-layout/mail.svg") no-repeat center center;
+      position: absolute; }
+
+#about main {
+  padding-top: 9em; }
+#about .members {
+>>>>>>> Stashed changes
   width: 90%;
   margin: 0 auto;
 }
@@ -1441,6 +1541,7 @@ nav select {
   }
 }
 
+<<<<<<< Updated upstream
 /* line 3, ../sass/_ouractions.scss */
 #actions main .wrapper {
   width: 50%;
@@ -1497,6 +1598,100 @@ nav select {
   margin: 1em auto 0 auto;
   line-height: 1.7;
 }
+=======
+#actions main {
+  padding-bottom: 10em; }
+  #actions main .accueil-actions {
+    height: 100vh;
+    width: 100%;
+    position: relative; }
+    #actions main .accueil-actions img {
+      width: 100%; }
+    #actions main .accueil-actions .content-accueil-actions {
+      position: absolute;
+      top: 13em;
+      right: 6em;
+      text-align: right;
+      color: #fff;
+      margin: 1% 0;
+      color: #fff;
+      border-right: 16px solid #fc1053; }
+      #actions main .accueil-actions .content-accueil-actions h2 {
+        font-size: 1.6em;
+        font-weight: bold;
+        padding: 1% 3%; }
+      #actions main .accueil-actions .content-accueil-actions p {
+        font-size: 1.3em;
+        padding: 1% 3%; }
+  #actions main .tpc {
+    position: relative; }
+    #actions main .tpc .wrapper {
+      padding-bottom: 9em; }
+  #actions main .actual-project {
+    width: 70%;
+    margin: 0 auto; }
+    #actions main .actual-project .content-actual-project ul:after {
+      content: "";
+      display: table;
+      clear: both; }
+    #actions main .actual-project .content-actual-project li {
+      width: 48%;
+      float: left;
+      margin: 0 1%;
+      padding: 1% 0; }
+      #actions main .actual-project .content-actual-project li article {
+        width: 100%;
+        background: #fc1053;
+        color: #fff;
+        padding: 12% 10%; }
+        #actions main .actual-project .content-actual-project li article h5 {
+          font-weight: bold; }
+  #actions main .context {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 10%; }
+    #actions main .context:after {
+      content: "";
+      display: table;
+      clear: both; }
+    #actions main .context:first-child {
+      float: left; }
+    #actions main .context:nth-child(2) {
+      float: right; }
+    #actions main .context .context-text {
+      width: 45%;
+      margin-right: 2%;
+      float: left; }
+      #actions main .context .context-text:last-child {
+        margin-left: 2%; }
+      #actions main .context .context-text p {
+        padding: 2% 0; }
+      #actions main .context .context-text h5 {
+        padding: 1% 0; }
+      #actions main .context .context-text div {
+        width: 100%;
+        padding: 3% 0; }
+        #actions main .context .context-text div img {
+          width: 100%; }
+  #actions main h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 2% 0;
+    background: pink; }
+  #actions main h4 {
+    font-weight: bold;
+    font-size: 1.1em; }
+  #actions main .color-text {
+    color: #fc1053;
+    font-weight: bold; }
+    #actions main .color-text:last-child {
+      font-weight: initial; }
+  #actions main .title-actions {
+    color: #fc1053;
+    font-weight: bolder;
+    font-size: 1.1em;
+    margin-bottom: .7em; }
+>>>>>>> Stashed changes
 
 /* line 2, ../sass/_ournews.scss */
 #ournews #filter-news {
