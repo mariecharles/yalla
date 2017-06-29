@@ -905,15 +905,15 @@ nav {
       line-height: 1.7; }
 
 #ournews #filter-news {
-  padding-top: 8%;
+  padding-top: 10%;
   padding-bottom: 2%;
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.12); }
   @media screen and (max-width: 1230px) {
     #ournews #filter-news {
-      padding-top: 10%; } }
+      padding-top: 12%; } }
   @media screen and (max-width: 1080px) {
     #ournews #filter-news {
-      padding-top: 11%; } }
+      padding-top: 14%; } }
   @media screen and (max-width: 880px) {
     #ournews #filter-news {
       padding-top: 18%;
@@ -977,7 +977,8 @@ nav {
       border-radius: 7px;
       text-transform: capitalize;
       width: 140px;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
       #ournews #all-news #filter-categories li ::-webkit-input-placeholder {
         /* Chrome */
         color: #fc1053; }
@@ -1123,21 +1124,19 @@ nav {
         #ournews #all-news #container-news article .text-news .top-article .inner {
           font-weight: bold;
           font-size: .8em;
-          padding: 7% 0; }
+          padding-top: 7%;
+          padding-bottom: 5%; }
           @media screen and (max-width: 1080px) {
             #ournews #all-news #container-news article .text-news .top-article .inner {
               padding: 4% 0; } }
         #ournews #all-news #container-news article .text-news .content {
           width: 90%; }
         #ournews #all-news #container-news article .text-news .read-more {
-          padding: 7% 0;
+          padding: 5% 0;
           display: inline-block;
           margin-top: 1em;
           font-weight: bold;
           text-transform: uppercase; }
-          @media screen and (max-width: 1080px) {
-            #ournews #all-news #container-news article .text-news .read-more {
-              padding: 4% 0; } }
           #ournews #all-news #container-news article .text-news .read-more img {
             width: 20px; }
 #ournews .pagination {
@@ -1664,7 +1663,8 @@ body[id*="admin-"] .pagination {
     border-radius: 4px;
     margin: 0 3px; }
   body[id*="admin-"] .pagination span:not(.arrow) {
-    margin: 0 10px; }
+    margin: 0 10px;
+    cursor: pointer; }
 body[id*="admin-"] .order-by {
   float: right; }
   body[id*="admin-"] .order-by label,
