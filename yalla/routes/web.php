@@ -15,8 +15,10 @@ Route::prefix(App::getLocale())->group(function() {
 
     Route::get('/', 'UserController@index');
     Route::get(Lang::get('pagination.actu'),'UserController@pageActu');
-    Route::get(Lang::get('pagination.detailactu'), 'UserController@actuDetails');
+    Route::get(Lang::get('pagination.detailactu') . '/{slug}', 'UserController@actuDetails');
     Route::get(Lang::get('pagination.contact'), 'PageController@contactAction');
+    Route::get(Lang::get('pagination.legals'), 'PageController@legalsAction');
+
 
 });
 
@@ -43,7 +45,7 @@ Route::prefix('admin')->group(function() {
 
     Route::get('articles', 'AdminController@actuAction');
     Route::delete('delete/{id}',array('uses' => 'AdminController@postDeleteAction', 'as' => 'post.delete'));
-    Route::get('save/{id}',array('uses' => 'AdminController@postSaveAction', 'as' => 'post.save'));
+    Route::delete('save/{id}',array('uses' => 'AdminController@postSaveAction', 'as' => 'post.save'));
     Route::post('add',array('uses' => 'AdminController@postAddAction', 'as' => 'post.add'));
     Route::put('update/{id}',array('uses' => 'AdminController@postUpdateAction', 'as' => 'post.update'));
     Route::put('publish/{id}',array('uses' => 'AdminController@postPublishAction', 'as' => 'post.publish'));

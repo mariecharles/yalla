@@ -24,11 +24,11 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->longText('content');
             $table->longText('resume');
-            $table->string('img');
+            $table->string('img')->default('placeholder.png');;
             $table->integer('active')->default(1);
-            $table->string('lang')->default('placeholder.png');
-            $table->string('written_by')->default('Marie CHARLES');
-            $table->integer('views')->default(0);;
+            $table->string('lang');
+            $table->string('written_by')->default('Mary Lemeland-Mellionec');
+            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

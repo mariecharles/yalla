@@ -1,72 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('/stylesheets/screen.css') }}">
-    <title>Yalla! Pour les Enfants - Défendons les droits humains</title>
-
-    <meta property="og:site_name" content="Amnesty France">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:site" content="@amnestyfrance">
-    <meta name="description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
-
-    <!-- balises facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Amnesty International France - Défendons les droits humains">
-    <meta property="og:description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
-    <meta property="og:image" content="">
-
-    <!-- balises twitter -->
-    <meta name="twitter:title" content="Amnesty International France - Défendons les droits humains">
-    <meta name="twitter:description" content="Suivez toute l'actualité et les derniers sujets sur les droits humains sur Amnesty International">
-    <meta name="twitter:image" content="">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
-    <!-- tinyMCE links -->
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea.article-content' });</script>
-</head>
+@include('admin.head')
 
 <body id="admin-home">
 
-<header>
-    <div class="inner">
-        <div id="admin-actions">
-            <div class="ctas">
-                <span class="cta new-volunteer"><a href="{{url('admin/ajouter-un-membre')}}">+ Ajouter un membre</a></span>
-                <span class="cta new-article"><a href="{{url('admin/ajouter-un-article')}}">+ Nouvel article</a></span>
-            </div>
-            <div class="icon-action">
-                <div class="messages">
-                    <span class="nb-message">OO<span class="push"></span></span>
-                    <div class="my-messages">
-                        <h3>Mes messages reçus</h3>
-                    </div>
-                </div>
-                <div class="notifications">
-                    <span class="nb-notifs">UU <span class="push"></span></span>
-                    <div class="my-notifs">
-                        <h3>Mes notifications reçues</h3>
-                    </div>
-                </div>
-                <div class="my-space"><span>MM</span></div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<nav id="admin-aside">
-    <ul>
-        <li class="active"><a href="{{url('admin')}}">Tableau de bord</a></li>
-        <li><a href="{{url('admin/articles')}}">Articles</a></li>
-        <li><a href="{{url('admin/partenaires')}}">Partenaires</a></li>
-        <li><a href="{{url('admin/membres')}}">Membres</a></li>
-    </ul>
-</nav>
+@include('admin.headeraside')
 
 <main>
     <div class="inner">
@@ -89,6 +25,7 @@
                             <div class="infos">
                                 <h3>{{ $post->title }}</h3>
                                 <span class="author">Ecrit par <b>{{ $post->written_by }}</b></span>
+                                <div class="author">Langue: <b>{{ $post->lang }}</b></div>
                             </div>
                             <div class="post-status online">
                                 <span class="round"></span>
@@ -103,11 +40,22 @@
                                 <span class="cat">{{ $post->category->name }}</span>
                             </div>
                         </a>
-
-                        <div class="more">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="actions">
+                            <div class="more">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="menu-actions">
+                                <ul>
+                                    {{ Form::open(['route' => ['post.save', $post->id], 'method' => 'delete']) }}
+                                         <li><a href=""><button type="submit">Archiver</button></a></li>
+                                    {{ Form::close() }}
+                                    {{ Form::open(['route' => ['post.delete', $post->id], 'method' => 'delete']) }}
+                                         <li><a href=""><button type="submit" class="delete-btn">Supprimer</button></a></li>
+                                    {{ Form::close() }}
+                                </ul>
+                            </div>
                         </div>
                     </article>
                 @endforeach
@@ -132,7 +80,7 @@
                             <span class="last-date">Depuis le 01/06/17</span>
                         </div>
 
-                        <span class="nb">5</span>
+                        <span class="nb">{{ $views }}</span>
                     </a>
                 </div>
             </div>
@@ -169,5 +117,19 @@
             }
         });
     }
+
+
+    var more_actions = document.querySelectorAll('#admin-home .all-articles .more');
+    var menu_actions = document.querySelectorAll('#admin-home .all-articles .menu-actions');
+
+
+
+    for (let i = 0; i < more_actions.length; i++) {
+        more_actions[i].addEventListener('click', function() {
+            menu_actions[i].classList.toggle('on');
+        });
+    }
+
+
 </script>
 </html>

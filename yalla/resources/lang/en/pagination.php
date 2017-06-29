@@ -18,5 +18,6 @@ return [
     'contact' => 'contact-us',
     'about' => 'about-us',
     'actu' => 'news',
-    'detailactu' => 'news/{slug}'
+    'detailactu' => 'news',
+    'legals' => 'legal-notices'
 ];
