@@ -31,7 +31,7 @@ menu_burger.addEventListener('click', function() {
 });
 
 
-//formulaire contact 
+//formulaire contact
 var contact = document.querySelector('header .contact-page');
 var contenu_contact = document.querySelector('#contact');
 var contact_cross = document.querySelector('.cross');
