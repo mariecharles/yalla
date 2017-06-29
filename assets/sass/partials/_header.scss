@@ -12,7 +12,7 @@ body:not([id*="admin-"]) header {
     transition: .4s ease-out;
 
     @media screen and (max-width: $btablet) {
-        background: #fff;
+        background: $dblue;
         padding-top: 0;
         padding-bottom: 3%;
     }
