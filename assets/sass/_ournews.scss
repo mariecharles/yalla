@@ -1,15 +1,15 @@
 #ournews {
     #filter-news {
-        padding-top: 8%;
+        padding-top: 10%;
         padding-bottom: 2%;
         box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.12);
 
         @media screen and (max-width: 1230px) {
-            padding-top: 10%;
+            padding-top: 12%;
         }
 
         @media screen and (max-width: 1080px) {
-            padding-top: 11%;
+            padding-top: 14%;
         }
 
         @media screen and (max-width: $tablet) {
@@ -102,6 +102,7 @@
                 text-transform: capitalize;
                 width: 140px;
                 text-align: center;
+                cursor: pointer;
 
                 //WEBKIT POUR PLACEHOLDER
                 ::-webkit-input-placeholder { /* Chrome */
@@ -286,7 +287,8 @@
                         .inner {
                             font-weight: bold;
                             font-size: .8em;
-                            padding: 7% 0;
+                            padding-top: 7%;
+                            padding-bottom: 5%;
 
                             @media screen and (max-width: 1080px) {
                                 padding: 4% 0;
@@ -299,15 +301,11 @@
                     }
 
                     .read-more {
-                        padding: 7% 0;
+                        padding: 5% 0;
                         display: inline-block;
                         margin-top: 1em;
                         font-weight: bold;
                         text-transform: uppercase;
-
-                        @media screen and (max-width: 1080px) {
-                            padding: 4% 0;
-                        }
 
                         img {
                             width: 20px;
