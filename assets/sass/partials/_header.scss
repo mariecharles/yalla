@@ -118,6 +118,9 @@ body:not([id*="admin-"]) header {
 
         img { width: 6px; }
 
+        a {
+            color: $orange;
+        }
 
         &.active a {
             padding-bottom: 0.8em;
@@ -175,7 +178,7 @@ body:not([id*="admin-"]) #inner-header {
         }
 
     .cta {
-        background: $pink;
+        background: $orange;
         margin: 0 1.5em;
 
         @media screen and (max-width: $btablet) {

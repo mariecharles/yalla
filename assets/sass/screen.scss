@@ -38,6 +38,10 @@ font-weight: bolder;
   display: block;
 }
 
+.contact-page {
+    color: $orange;
+}
+
 @mixin ctbtn($color) {
   position: relative;
   border-radius: 5px;

@@ -4,6 +4,9 @@ b {
 .return {
   display: block; }
 
+.contact-page {
+  color: #ff9806; }
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -400,6 +403,8 @@ body:not([id*="admin-"]) header li {
         padding-top: 9%; } }
     body:not([id*="admin-"]) header li img {
       width: 6px; }
+    body:not([id*="admin-"]) header li a {
+      color: #ff9806; }
     body:not([id*="admin-"]) header li.active a {
       padding-bottom: 0.8em; }
       @media screen and (max-width: 1180px) {
@@ -441,7 +446,7 @@ nav {
       width: 100%; } }
   #header-actions .cta,
   nav .cta {
-    background: #fc1053;
+    background: #ff9806;
     margin: 0 1.5em; }
     @media screen and (max-width: 1180px) {
       #header-actions .cta,
@@ -494,7 +499,7 @@ nav {
       box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.33);
       transition: .2s ease-in; }
     .tpc .el .head {
-      background: #fc1053;
+      background: #ff9806;
       padding: 2.5em 2em 1.7em 2em;
       color: #fff;
       border-top-left-radius: 5px;
@@ -533,7 +538,7 @@ nav {
     margin: 0 auto;
     text-align: right;
     font-size: 1.5em;
-    background: #fc1053;
+    background: #ff9806;
     padding: 2em 5% 2em 4em;
     color: #fff; }
     @media screen and (max-width: 1180px) {
@@ -637,7 +642,7 @@ nav {
       left: -.5em;
       display: block;
       text-align: center;
-      background: #fc1053;
+      background: #ff9806;
       width: 180px;
       color: #fff;
       padding: 0.4em 2em;
@@ -736,7 +741,7 @@ nav {
       margin: 1em auto;
       line-height: 1.4; }
     #know-more .one-fact .jt-cta {
-      background: #fc1053;
+      background: #ff9806;
       color: #fff;
       width: 210px;
       border-radius: 23px;
@@ -911,7 +916,7 @@ nav {
         right: 0;
         height: 100%;
         width: 20px;
-        background: #fc1053; }
+        background: #ff9806; }
         @media screen and (max-width: 880px) {
           #about .intro .caption .inner::before {
             width: 10px; } }
@@ -1017,7 +1022,7 @@ nav {
     #about #how .content span.cta {
       clear: both;
       float: right;
-      background: #fc1053;
+      background: #ff9806;
       margin-top: 1em;
       color: #fff;
       transition: .3s ease-out; }
@@ -1062,7 +1067,7 @@ nav {
       color: #fff;
       margin: 1% 0;
       color: #fff;
-      border-right: 16px solid #fc1053; }
+      border-right: 16px solid #ff9806; }
       #actions main .accueil-actions .content-accueil-actions h2 {
         font-size: 1.6em;
         font-weight: bold;
@@ -1094,7 +1099,7 @@ nav {
         width: 80%;
         float: right; }
         #actions main .past-project .wrapper .content h4 {
-          color: #fc1053;
+          color: #ff9806;
           font-size: 1.3em;
           font-weight: initial;
           padding: 2% 0; }
@@ -1133,7 +1138,7 @@ nav {
       padding: 1% 0; }
       #actions main .actual-project .content-actual-project li article {
         width: 100%;
-        background: #fc1053;
+        background: #ff9806;
         color: #fff;
         padding: 12% 10%; }
         #actions main .actual-project .content-actual-project li article h5 {
@@ -1177,12 +1182,12 @@ nav {
     font-weight: bold;
     font-size: 1.1em; }
   #actions main .color-text {
-    color: #fc1053;
+    color: #ff9806;
     font-weight: bold; }
     #actions main .color-text:last-child {
       font-weight: initial; }
   #actions main .title-actions {
-    color: #fc1053;
+    color: #ff9806;
     font-weight: bolder;
     font-size: 1.1em;
     margin-bottom: .7em; }
@@ -1254,7 +1259,7 @@ nav {
       padding-bottom: 3px;
       margin-bottom: 5%; }
     #ournews #all-news #filter-categories li {
-      border: 1px solid #fc1053;
+      border: 1px solid #ff9806;
       padding: 4% 6%;
       margin: 5% 0;
       border-radius: 7px;
@@ -1262,13 +1267,13 @@ nav {
       width: 140px;
       text-align: center;
       cursor: pointer;
-      color: #fc1053;
+      color: #ff9806;
       transition: .3s ease-out; }
       #ournews #all-news #filter-categories li.active {
-        background: #fc1053;
+        background: #ff9806;
         color: #fff; }
       #ournews #all-news #filter-categories li:hover {
-        background: #fc1053;
+        background: #ff9806;
         color: #fff;
         transition: .2s ease-in; }
   #ournews #all-news #container-news {
@@ -1471,7 +1476,7 @@ nav {
   #single .headings .cat {
     display: block;
     float: left;
-    background: #fc1053;
+    background: #ff9806;
     color: #fff;
     border-radius: 5px;
     padding: 1em 2.5em;
@@ -1637,7 +1642,7 @@ nav {
     width: 50%;
     display: block;
     float: left;
-    background: #fc1053;
+    background: #ff9806;
     color: #fff;
     padding: .8em 0;
     text-align: center;
@@ -1667,7 +1672,7 @@ nav {
     #support .intro h2, #support .intro span {
       font-size: 1.4em; }
     #support .intro span {
-      color: #fc1053;
+      color: #ff9806;
       font-weight: bold; }
 
 #funding {
@@ -1689,7 +1694,7 @@ nav {
     background: #f7f7f7;
     margin-bottom: 6em; }
     #funding .wrapper .infos span {
-      color: #fc1053;
+      color: #ff9806;
       font-weight: bolder; }
     #funding .wrapper .infos .wrap {
       width: 70%;
@@ -1699,7 +1704,7 @@ nav {
   #funding .el h3 {
     font-size: 1.4em;
     font-weight: bold;
-    color: #fc1053;
+    color: #ff9806;
     margin-bottom: 1em; }
   #funding .el p {
     max-width: 80%;
@@ -1710,10 +1715,10 @@ nav {
     #funding #howto .infos p {
       margin-bottom: 1em; }
     #funding #howto .infos span {
-      color: #fc1053;
+      color: #ff9806;
       font-weight: bold; }
   #funding #howto .el {
-    background: #fc1053;
+    background: #ff9806;
     padding: 2em 2em 5em 2em;
     color: #fff; }
     #funding #howto .el p {
@@ -3072,7 +3077,7 @@ main {
   #footer::before {
     content: '';
     position: absolute;
-    background: #fc1053;
+    background: #ff9806;
     width: 20px;
     top: 0;
     left: 0;

@@ -84,7 +84,7 @@
             }
 
             li {
-                border: 1px solid #fc1053;
+                border: 1px solid $orange;
                 padding: 4% 6%;
                 margin: 5% 0;
                 border-radius: 7px;
@@ -92,16 +92,16 @@
                 width: 140px;
                 text-align: center;
                 cursor: pointer;
-                color: $pink;
+                color: $orange;
                 transition: .3s ease-out;
 
                 &.active {
-                    background: $pink;
+                    background: $orange;
                     color: #fff;
                 }
 
                 &:hover {
-                    background: $pink;
+                    background: $orange;
                     color: #fff;
                     transition: .2s ease-in;
                 }
